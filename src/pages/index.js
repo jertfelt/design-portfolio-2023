@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import gifImage from "../../public/TJ-GIF1-SDochNMR-hatkarlek_mindregif.gif"
 
 import styles from '@component/styles/Home.module.scss'
 import HeadIndex from '@component/components/Head'
 import Header from '@component/components/Header/Header'
+import Homepage from './Homepage/Homepage'
 
 
 export default function Home() {
@@ -11,8 +10,8 @@ export default function Home() {
     <>
     <HeadIndex/>
     <Header/>
-      <main className={styles.main}>
-  
+      <main className="main">
+      <Homepage/>
       </main>
     </>
   )

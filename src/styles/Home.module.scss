@@ -1,0 +1,18 @@
+.image{
+  
+  z-index:-1;
+
+}
+
+
+.title{
+  position: absolute;
+  top:150px;
+  z-index:1;
+  left:30%;
+  h1{
+    color:var(--blue);
+    font-size:54px;
+    filter: drop-shadow(2px 2px 2px var(--white));
+  }
+}
