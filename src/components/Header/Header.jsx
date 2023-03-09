@@ -1,25 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.scss"
+import logo from "../../../public/logo512.png"
 
 const Header = () => {
   return (  <header id="site_header"
   className={styles.siteheader}>
     <nav className={styles.sitenav}>
-      <Image src=""
-      width={200}
-      height={200}
-      className="homebutt"
+      <Link href="/">
+      <Image src={logo}
+      width={50}
+      height={50}
+      className={styles.logonav}
       alt="logotyp"/>
+      </Link>
       <span>
       <Link href="/"
       className={styles.navlink}>Hem</Link>
-      <p
+      {/* <p
       id="aboutMe"
       className={styles.navlink}
       >
       Om mig
-      </p>
+      </p> */}
       
       <Link href="https://www.tovajertfelt.se"
       className={styles.navlink}

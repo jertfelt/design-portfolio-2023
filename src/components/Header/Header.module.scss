@@ -11,6 +11,9 @@
   padding:2rem;
   top:0;
 }
+.logonav{
+  border-radius:50%;
+}
 .sitenav{
   display: flex;
   align-items: flex-end;
@@ -20,28 +23,23 @@
   img{
     position: fixed;
     left:10%;
-    top:0.7rem;
-  
   }
   span{
-   
     display: flex;
+    gap:2rem;
   align-items: flex-end;
   flex-direction: row;
     position: fixed;
     top:2rem;
     right:1rem;
-  
   }
 }
 //MOBILVERSION!
 .navlink{
-  
   text-decoration:overline;
   padding:1rem;
 }
 
 .navlink:hover{
   text-decoration: none;
- 
 }
