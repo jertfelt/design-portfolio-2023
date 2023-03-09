@@ -1,0 +1,47 @@
+.siteheader{
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  padding:2rem;
+  top:0;
+}
+.sitenav{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom:3rem;
+  img{
+    position: fixed;
+    left:10%;
+    top:0.7rem;
+  
+  }
+  span{
+   
+    display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+    position: fixed;
+    top:2rem;
+    right:1rem;
+  
+  }
+}
+//MOBILVERSION!
+.navlink{
+  
+  text-decoration:overline;
+  padding:1rem;
+}
+
+.navlink:hover{
+  text-decoration: none;
+ 
+}
