@@ -10,7 +10,6 @@ const Homepage = () => {
     <h1>Tova Jertfelt</h1>
     </div>
     <Image src={gifImage}
-   
     className={styles.image}
     alt="Animated gif illustration"
     fill
