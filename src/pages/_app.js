@@ -5,13 +5,12 @@ import { ThemeProvider } from 'styled-components';
 import HeadIndex from '@component/components/Head';
 import Header from '@component/components/Header/Header';
 import Theme, {lightTheme, darkTheme} from '@component/components/stylings/Theme';
-
+import { useMode } from '@component/components/stylings/useMode';
 
 export default function App({ Component, pageProps }) {
   const [theme, themeToggler, mountedComponent] = useMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   if(!mountedComponent) return <div/>
-
   return (
     <Fragment>
     <HeadIndex/>

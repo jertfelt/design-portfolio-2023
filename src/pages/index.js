@@ -28,8 +28,6 @@ flex-direction:column;
 align-items:flex-start;
 padding:.5rem;
 `
-
-
 const TextContainerRight = styled.div`
 padding-right:2rem;
 h3{
@@ -45,9 +43,6 @@ p{
   width:400px;
 }
 `
-
-
-
 
 const Homepage = () => {
   return ( 

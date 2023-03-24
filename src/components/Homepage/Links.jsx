@@ -45,6 +45,7 @@ padding:1rem;
 @media (max-width: 700px){
  font-size:2rem;
 }
+height:20vh;
 `
 const LinkOne = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
@@ -250,28 +251,34 @@ const router = useRouter()
 
   return (   
   <Body>
-    <Link href="/frontend" >
+    <Link href="/Frontend" >
     <BackgroundOne value="Frontend">
       <LinkContainer>
       <LinkOne>Frontend,</LinkOne>
       </LinkContainer>
     </BackgroundOne>
     </Link>
-    {/* <BackgroundTwo>
+    <Link href="/art">
+     <BackgroundTwo>
       <LinkContainer>
-      <LinkTwo><Link to="/art">Konst,</Link></LinkTwo>
+      <LinkTwo>Konst,</LinkTwo>
       </LinkContainer>
     </BackgroundTwo>
+    </Link>
+    <Link href="/design">
     <BackgroundThree>
       <LinkContainer>
-      <LinkThree><Link to="/design">Design & </Link></LinkThree>
+      <LinkThree>Design & </LinkThree>
       </LinkContainer>
     </BackgroundThree>
+    </Link>
+    <Link href="/illustration">
     <BackgroundFour>
       <LinkContainer>
-      <LinkFour><Link to="/illustration">Illustration</Link></LinkFour>
+      <LinkFour>Illustration</LinkFour>
       </LinkContainer>
-    </BackgroundFour> */}
+    </BackgroundFour> 
+    </Link>
     </Body> );
 }
  

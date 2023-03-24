@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import ArtMenu from './ArtMenu';
 import FrontendMenu from './FrontendMenu';
@@ -72,15 +72,15 @@ console.log(key, "KEU", {key}, "KEY")
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-      {noContext && 
-      <Link to="/about">
+  
+      <Link href="/about">
         Om mig
-      </Link>}
-      {contextArt.chosenArt && <ArtMenu/>}
-      {contextFrontEnd.chosenfe && <FrontendMenu/>}
-      {contextDesign.chosen && <DesignMenu/>}
-      {contextIllustration.chosenIll && <IllMenu/>}
-      <Link to="/contact">
+      </Link>
+   <ArtMenu/> 
+   <FrontendMenu/>
+   <DesignMenu/>
+   <IllMenu/>
+      <Link href="/contact">
         Kontakt
       </Link>
     </StyledMenu>

@@ -1,8 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-export default Document {
+const Document = () => {
 
-  render() { 
     return (
     <Html>
       <Head>
@@ -18,5 +17,6 @@ export default Document {
       </body>
     </Html>
   )
-  }
+  
 }
+export default Document
