@@ -3,11 +3,11 @@ import styled from "styled-components"
 const Button = styled.button`
   background:transparent;
   border:none;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.textPrimary};
   border-radius: 30px;
-  min-width:40px;
+  min-width:50px;
   cursor: pointer;
-  font-size:1.2rem;
+  font-size:1.5rem;
   gap: 4px;
   [data-icon]:before {
     font-family: 'ussfont';
@@ -16,9 +16,16 @@ const Button = styled.button`
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
   }
-  &:hover,&:focus, &:active{
-    background: ${({ theme }) => theme.text};
-}
+ 
+  &:hover{
+    color:${({ theme }) => theme.contrast};
+   
+  }
+  &:active{
+    color:${({ theme }) => theme.white};
+
+  }
+
 `;
 
 const Toggle = ({theme, toggleTheme }) => {
@@ -33,13 +40,13 @@ const Toggle = ({theme, toggleTheme }) => {
           aria-hidden="true" 
           data-icon="&#x263E;"/>
           <span>
-           </span>
+          </span>
           </>
           ):(
             <>
             <span 
             aria-hidden="true" 
-            data-icon=" &#9788;"/>
+            data-icon="&#9788;"/>
             <span>
               </span>
             </>
