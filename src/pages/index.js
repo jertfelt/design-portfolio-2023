@@ -57,6 +57,9 @@ const Homepage = () => {
   <h3>Utbildad på Konstfack & Nackademin YH Frontend-programmet</h3>
   <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
   </TextContainerRight>
+  <div>
+    <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/>
+  </div>
   </HomepageComponent> );
 }
  

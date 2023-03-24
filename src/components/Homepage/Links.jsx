@@ -10,6 +10,7 @@ display: grid;
   grid-template-rows: 1fr;
   height: 30vh;
 }
+margin-left:-2rem;
 `
 const BackgroundOne = styled.div`
 background-color: ${({ theme }) => theme.contrast};
@@ -45,7 +46,8 @@ padding:1rem;
 @media (max-width: 700px){
  font-size:2rem;
 }
-height:20vh;
+min-height:30vh;
+max-height:30vh;
 `
 const LinkOne = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);

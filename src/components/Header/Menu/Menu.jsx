@@ -72,7 +72,6 @@ console.log(key, "KEU", {key}, "KEY")
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-  
       <Link href="/about">
         Om mig
       </Link>
