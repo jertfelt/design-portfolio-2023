@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
+import frontendPic from "../../public/frontend.png"
 
 const HomepageComponent = styled.section`
 max-width: 100vw;
@@ -47,10 +48,10 @@ p{
 const Homepage = () => {
   return ( 
   <HomepageComponent>
-    <TextContainer>
+  <TextContainer>
     <h1>Tova Jertfelt</h1>
     <h2>Frontendare, konstnär, formgivare.</h2>
-    </TextContainer>
+  </TextContainer>
   <LinksToPages/>
   <Explanation>Klicka på en rubrik ovan för att komma vidare</Explanation>
   <TextContainerRight>
@@ -58,7 +59,8 @@ const Homepage = () => {
   <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
   </TextContainerRight>
   <div>
-    <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/>
+   
+    {/* <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/> */}
   </div>
   </HomepageComponent> );
 }

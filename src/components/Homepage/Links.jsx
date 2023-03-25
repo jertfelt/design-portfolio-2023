@@ -1,6 +1,10 @@
 import styled from "styled-components"
 import Link from "next/link"
-import { useRouter } from "next/router"
+
+import { OnHoverImage } from "../hooks/onHoverImage"
+import frontendPic from "../../../public/frontend.png"
+import Image from "next/image"
+import { useState } from "react"
 
 const Body = styled.div`
 margin: 0;
@@ -11,7 +15,11 @@ display: grid;
   height: 30vh;
 }
 margin-left:-2rem;
+
 `
+
+
+
 const BackgroundOne = styled.div`
 background-color: ${({ theme }) => theme.contrast};
 color: ${({ theme }) => theme.body};
@@ -20,6 +28,8 @@ color: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.contrast};
 }
 `
+
+
 const BackgroundTwo = styled.div`
 background-color: ${({ theme }) => theme.contrast};
 color: ${({ theme }) => theme.body};
@@ -48,7 +58,10 @@ padding:1rem;
 }
 min-height:30vh;
 max-height:30vh;
+
 `
+
+
 const LinkOne = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   line-height: 1em;
@@ -64,10 +77,10 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   height: 100%;
   top: 0;
   right: 0;
-
   transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 &:hover:before{
+  --webkit-clip-path: circle(100% at 50% 50%);
   clip-path: circle(100% at 50% 50%);
 }
 &:after{
@@ -79,6 +92,16 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   top: 0;
   right: 0;
   background-color: ${({ theme }) => theme.contrast};
+  --webkit-clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    60% 0%,
+    40% 0%,
+    40% 100%,
+    60% 100%,
+    60% 100%,
+    40% 100%
+  );
   clip-path: polygon(
     40% 0%,
     60% 0%,
@@ -96,6 +119,16 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   }
 }
 &:hover:after{
+  --webkit-clip-path: polygon(
+    40% 10%,
+    60% 10%,
+    60% 35%,
+    40% 35%,
+    40% 90%,
+    60% 90%,
+    60% 65%,
+    40% 65%
+  );
   clip-path: polygon(
     40% 10%,
     60% 10%,
@@ -129,6 +162,16 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   height: 100%;
   top: 0;
   right: 0;
+  --webkit-clip-path: polygon(
+    0% -20%,
+    100% -30%,
+    100% -10%,
+    0% 0%,
+    0% 130%,
+    100% 120%,
+    100% 100%,
+    0% 110%
+  )
   clip-path: polygon(
     0% -20%,
     100% -30%,
@@ -146,6 +189,16 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   }
 }
 &:hover:before{
+  --webkit-clip-path: polygon(
+    0% 10%,
+    100% 0%,
+    100% 20%,
+    0% 30%,
+    0% 100%,
+    100% 90%,
+    100% 70%,
+    0% 80%
+  );
   clip-path: polygon(
     0% 10%,
     100% 0%,
@@ -208,6 +261,7 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   top: 0;
   right: 0;
   background-color: ${({ theme }) => theme.contrast};
+  --webkit-clip-path: circle(100% at 50% calc(50%));
   clip-path: circle(100% at 50% calc(50%));
   transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -232,6 +286,12 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   transform: translate(0, -50%) scaleY(0);
   transition: transform .5s ease;
   mix-blend-mode: hue;
+  --webkit-clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 100%, 
+    90% 100%
+  )
   clip-path: polygon(
     0 0, 
     100% 0, 
@@ -248,20 +308,26 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 
 const LinksToPages = () => {
 
-const router = useRouter()
-
-
   return (   
   <Body>
+  
     <Link href="/Frontend" >
     <BackgroundOne value="Frontend">
+
       <LinkContainer>
-      <LinkOne>Frontend,</LinkOne>
+      <LinkOne>
+
+      Frontend,
+
+      </LinkOne>
+  
+
+
       </LinkContainer>
     </BackgroundOne>
     </Link>
     <Link href="/art">
-     <BackgroundTwo>
+    <BackgroundTwo>
       <LinkContainer>
       <LinkTwo>Konst,</LinkTwo>
       </LinkContainer>
