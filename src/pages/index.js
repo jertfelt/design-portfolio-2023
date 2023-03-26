@@ -107,22 +107,25 @@ hr{
 
 
 button{
-background: ${({ theme }) => theme.accent};
+background: ${({ theme }) => theme.accentTwo};
   font-weight:bold;
   border:none;
   padding:10px;
   border-radius:${({ theme }) => theme.borderradius.first};
-  color:${({ theme }) => theme.textPrimary};
+  color:${({ theme }) => theme.textSecondary};
   
   &:hover{
    color:${({ theme }) => theme.accent};
    background:${({ theme }) => theme.contrast};
-
+   border-radius:${({ theme }) => theme.borderradius.third};
   }
  
 }
 .second{
   border-radius:${({ theme }) => theme.borderradius.fourth};
+  &:hover{
+    border-radius:${({ theme }) => theme.borderradius.first};
+  }
 }
 `
 
