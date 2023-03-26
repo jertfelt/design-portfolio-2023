@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {bool, func} from "prop-types"
 
 const StyledBurger = styled.button`
-
   position: absolute;
   top: 5%;
   right: 2rem;
@@ -17,11 +16,11 @@ const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
   &:hover{
-    background:${({ theme, open }) => open ? theme.textSecondary : theme.body};
+    background:${({ theme, open }) => open ? theme.accent : theme.body};
     border-radius:${({ theme }) => theme.borderradius.first};
   }
   &:active{
-    background:${({ theme }) => theme.white};
+    background:${({ theme }) => theme.accent};
     border-radius:${({ theme }) => theme.borderradius.second};
   }
   &:focus {

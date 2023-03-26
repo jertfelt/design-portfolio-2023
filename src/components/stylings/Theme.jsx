@@ -5,11 +5,16 @@ const overallTheme = {
 }
 
 export const darkTheme = {
-  body: "#2e43cf",
-  contrast: "#d5b3e6",
+  body: "rgb(43, 42, 51)",
+  contrast: "#edf1f2",
+  accent:"#2e43cf",
+  accentTwo:"#d5b3e6",
+  accentpink: "#ff2768",
+  startbody: "#2e43cf",
+  startcontrast: "#d5b3e6",
   textPrimary: 'white',
   textSecondary: "black",
-  accent: "#483d8b",
+  startaccent: "#483d8b",
   black: 'rgb(11, 4, 4)',
   white: "#f2f2f2",
   borderradius: {
@@ -18,7 +23,6 @@ export const darkTheme = {
     third: "45% 55% 52% 48% / 50% 25% 75% 50%",
     fourth: "55% 25% 42% 98% / 90% 95% 5% 60%"
   },
-
   lightblue: "#bee5f5",
   purple: "#483d8b",
   vividblue: "#414870",
@@ -29,10 +33,15 @@ export const darkTheme = {
   yellow:"#856530"
 }
 export const lightTheme = {
-  body: '#d5b3e6',
-  contrast: "#2e43cf",
+  body: "#edf1f2",
+  contrast: "#050606",
+  accent:"#d5b3e6",
+  accentTwo:"#2e43cf",
+  accentpink: "#ff2768",
+  startbody: '#d5b3e6',
+  startcontrast: "#2e43cf",
   black: 'rgb(11, 4, 4)',
-  accent:"#483d8b",
+  startaccent:"#483d8b",
   white: "#f2f2f2",
   textPrimary: "black",
   textSecondary: "white",

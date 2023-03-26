@@ -51,7 +51,7 @@ img{
   &:hover{
     border-radius:${({ theme }) => theme.borderradius.third};
   }
-  filter: drop-shadow(0px 3px 2px ${({ theme }) => theme.contrast})
+  filter: drop-shadow(0px 3px 2px ${({ theme }) => theme.accentTwo})
 }
 ` 
 

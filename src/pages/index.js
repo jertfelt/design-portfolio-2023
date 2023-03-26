@@ -1,25 +1,30 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
-import { InstagramButton, LinkedInButton } from "@component/components/SVG/Icons"
-
 
 const HomepageComponent = styled.section`
 max-width: 100vw;
 width:100vw;
+
 padding-top:4rem;
 display:flex;
 flex-direction: column;
 box-sizing: border-box;
 color: ${({ theme }) => theme.textPrimary};
+@media (max-width: 700px){
+  margin-left:-1rem;
+  margin-top:-1rem;
+}
 `
 const TextContainer = styled.div`
 padding:2rem;
 h1{
-font-size:2.5rem;
+font-size:4.5rem;
+color: ${({ theme }) => theme.accentTwo};
 }
-h3{
+h2{
   width:100%;
-  font-size:.8rem;
+  font-size:2rem;
+  line-height:2rem;
   }
 `
 const Explanation = styled.div`
@@ -47,37 +52,79 @@ p{
 `
 const ThreeColumnGrid= styled.div`
 margin: 0;
+
 display:grid;
 @media (min-width: 700px){
+  padding-top:5rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-
 }
 ` 
 
 const Column = styled.div`
 display:flex;
 flex-direction:column;
-gap:50vh;
-
+gap:2rem;
+@media (min-width:1050px){
+  gap:30vh;
+}
 div{
 
   h3{
     font-size:1.2rem;
-    line-height:1.2rem;
-    color:${({ theme }) => theme.contrast};
+    line-height:1.5rem;
+    color:${({ theme }) => theme.accentTwo};
     padding-bottom:.5rem;
     }
   p{
     line-height:1rem;
     font-size:.8rem;
-    width:400px;
+    @media (min-width:1050px){
+      width:600px;
+    }
     text-align: justify;
     text-justify: inter-word;
   }
 }
 `
+const Footer = styled.footer`
+background:${({ theme }) => theme.body};
+div{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  padding:4rem;
+  align-items:center;
+}
+margin: 0;
+margin-left:-2rem;
+margin-right:-2rem;
+margin-bottom:-2rem;
 
+hr{
+  color:${({ theme }) => theme.accentTwo};
+}
+
+
+button{
+background: ${({ theme }) => theme.accent};
+  font-weight:bold;
+  border:none;
+  padding:10px;
+  border-radius:${({ theme }) => theme.borderradius.first};
+  color:${({ theme }) => theme.textPrimary};
+  
+  &:hover{
+   color:${({ theme }) => theme.accent};
+   background:${({ theme }) => theme.contrast};
+
+  }
+ 
+}
+.second{
+  border-radius:${({ theme }) => theme.borderradius.fourth};
+}
+`
 
 const Homepage = () => {
   return ( 
@@ -90,7 +137,6 @@ const Homepage = () => {
     <h1>Tova Jertfelt</h1>
     <h2>Frontendare, konstnär, formgivare.</h2>
     </div>
-  
   <div>
   <h3>Utbildad på Konstfack & Nackademin YH Frontend-programmet</h3>
   <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
@@ -122,7 +168,14 @@ const Homepage = () => {
       </div>*/}
 
   </HomepageComponent> 
-
+  <Footer>
+    <hr></hr>
+    <div>
+      <p>Läs mer:</p>
+    <button><a href="https://www.linkedin.com/in/tovajertfelt/">LinkedIn</a></button>
+    <button className="second"><a href="https://www.linkedin.com/jertfelt/">Instagram</a></button>
+    </div>
+  </Footer>
   </>
 );
 }
