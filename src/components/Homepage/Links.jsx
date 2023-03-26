@@ -1,23 +1,6 @@
 import styled from "styled-components"
 import Link from "next/link"
 
-import { OnHoverImage } from "../hooks/onHoverImage"
-import frontendPic from "../../../public/frontend.png"
-import Image from "next/image"
-import { useState } from "react"
-
-const Body = styled.div`
-margin: 0;
-display: grid;
-@media (min-width: 700px){
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  height: 30vh;
-}
-margin-left:-2rem;
-
-`
-
 
 
 const BackgroundOne = styled.div`
@@ -60,90 +43,6 @@ max-height:30vh;
 
 `
 
-
-const LinkOne = styled.div`
-transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
-  line-height: 1em;
-&:hover{
-  color: ${({ theme }) => theme.textPrimary};
-  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
-}
-&:before{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
-}
-&:hover:before{
-  --webkit-clip-path: circle(100% at 50% 50%);
-  clip-path: circle(100% at 50% 50%);
-}
-&:after{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color: ${({ theme }) => theme.contrast};
-  --webkit-clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    60% 0%,
-    40% 0%,
-    40% 100%,
-    60% 100%,
-    60% 100%,
-    40% 100%
-  );
-  clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    60% 0%,
-    40% 0%,
-    40% 100%,
-    60% 100%,
-    60% 100%,
-    40% 100%
-  );
-  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
-  @media (max-width: 700px){
-    height: 100%;
-    width:100%;
-  }
-}
-&:hover:after{
-  --webkit-clip-path: polygon(
-    40% 10%,
-    60% 10%,
-    60% 35%,
-    40% 35%,
-    40% 90%,
-    60% 90%,
-    60% 65%,
-    40% 65%
-  );
-  clip-path: polygon(
-    40% 10%,
-    60% 10%,
-    60% 35%,
-    40% 35%,
-    40% 90%,
-    60% 90%,
-    60% 65%,
-    40% 65%
-  );
-
-  @media (max-width: 700px){
-    background-color: transparent;
-  }
-}
-`
 const LinkTwo = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 &:hover{
@@ -188,26 +87,7 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   }
 }
 &:hover:before{
-  // // --webkit-clip-path: polygon(
-  // //   0% 10%,
-  // //   100% 0%,
-  // //   100% 20%,
-  // //   0% 30%,
-  // //   0% 100%,
-  // //   100% 90%,
-  // //   100% 70%,
-  // //   0% 80%
-  // // );
-  // // clip-path: polygon(
-  // //   0% 10%,
-  // //   100% 0%,
-  // //   100% 20%,
-  // //   0% 30%,
-  // //   0% 100%,
-  // //   100% 90%,
-  // //   100% 70%,
-  // //   0% 80%
-  // // );
+  
   background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, ${({ theme }) => theme.body} 24px), repeating-linear-gradient(${({ theme }) => theme.contrast}, ${({ theme }) => theme.contrast});
 background-color: #9ac36d;
 }
@@ -344,7 +224,8 @@ background-size: calc(2*59px) calc(2*59px);
 `
 
 const BodyTwo = styled.div`
-margin-left:-2rem;
+
+height:100vh;
 `
 
 
@@ -370,6 +251,7 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 &:hover:before{
   --webkit-clip-path: circle(100% at 50% 50%);
   clip-path: circle(100% at 50% 50%);
+  
 }
 &:after{
   content: "";
@@ -381,17 +263,8 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   right: 0;
 
 
-  --webkit-clip-path: polygon(
-    40% 0%,
-    60% 0%,
-    60% 0%,
-    40% 0%,
-    40% 100%,
-    60% 100%,
-    60% 100%,
-    40% 100%
-  );
-  clip-path: polygon(0% 0%, 
+ 
+  clip-path: polygon(0%     0%, 
     0% 0%, 
     0% 00%, 
     0% 100%, 
@@ -406,24 +279,14 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 }
 &:hover:after{
   background-color: ${({ theme }) => theme.body};
-  --webkit-clip-path: polygon(
-    40% 00%,
-    60% 10%,
-    60% 35%,
-    40% 35%,
-    40% 90%,
-    60% 90%,
-    60% 65%,
-    40% 65%
-  );
-  
-  
-  clip-path: polygon(9% 0%, 
-    66% 0%, 
+
+  clip-path: polygon(
+    0% 0%, 
+    50% 0%, 
     90% 50%, 
-    66% 100%, 
-    9% 100%, 
-    30% 50%);
+    50% 100%, 
+    0% 100%, 
+    0% 50%);
 
 background-image: radial-gradient(${({ theme }) => theme.contrast} 2px, transparent 1px);
 background-size: 32px 32px;
@@ -439,45 +302,7 @@ background-color: ${({ theme }) => theme.body};
 const LinksToPages = () => {
 
   return (   <>
-  <Body>
-  
-    <Link href="/Frontend" >
-    <BackgroundOne value="Frontend">
 
-      <LinkContainer>
-      <LinkOne>
-
-      Frontend,
-
-      </LinkOne>
-  
-
-
-      </LinkContainer>
-    </BackgroundOne>
-    </Link>
-    <Link href="/art">
-    <BackgroundTwo>
-      <LinkContainer>
-      <LinkTwo>Konst,</LinkTwo>
-      </LinkContainer>
-    </BackgroundTwo>
-    </Link>
-    <Link href="/design">
-    <BackgroundThree>
-      <LinkContainer>
-      <LinkThree>Design & </LinkThree>
-      </LinkContainer>
-    </BackgroundThree>
-    </Link>
-    <Link href="/illustration">
-    <BackgroundFour>
-      <LinkContainer>
-      <LinkFour>Illustration</LinkFour>
-      </LinkContainer>
-    </BackgroundFour> 
-    </Link>
-    </Body>
     <BodyTwo>
       
     <Link href="/Frontend" >
@@ -514,7 +339,8 @@ const LinksToPages = () => {
       </LinkContainer>
     </BackgroundFour> 
     </Link>
-      </BodyTwo></> );
+      </BodyTwo>
+</> );
 }
  
 export default LinksToPages;

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
-import frontendPic from "../../public/frontend.png"
+import { InstagramButton, LinkedInButton } from "@component/components/SVG/Icons"
 
 
 const HomepageComponent = styled.section`
@@ -45,12 +45,68 @@ p{
   width:400px;
 }
 `
+const ThreeColumnGrid= styled.div`
+margin: 0;
+display:grid;
+@media (min-width: 700px){
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+
+}
+` 
+
+const Column = styled.div`
+display:flex;
+flex-direction:column;
+gap:50vh;
+
+div{
+
+  h3{
+    font-size:1.2rem;
+    line-height:1.2rem;
+    color:${({ theme }) => theme.contrast};
+    padding-bottom:.5rem;
+    }
+  p{
+    line-height:1rem;
+    font-size:.8rem;
+    width:400px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+`
+
 
 const Homepage = () => {
   return ( 
-
+  <>
   <HomepageComponent>
+  <ThreeColumnGrid>
   <TextContainer>
+  <Column>
+  <div>
+    <h1>Tova Jertfelt</h1>
+    <h2>Frontendare, konstnär, formgivare.</h2>
+    </div>
+  
+  <div>
+  <h3>Utbildad på Konstfack & Nackademin YH Frontend-programmet</h3>
+  <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
+
+  </div>
+ 
+  </Column>
+  </TextContainer>
+  <LinksToPages/>
+  
+  <div>
+   
+  
+  </div>
+  </ThreeColumnGrid>
+  {/* <TextContainer>
     <h1>Tova Jertfelt</h1>
     <h2>Frontendare, konstnär, formgivare.</h2>
   </TextContainer>
@@ -62,9 +118,12 @@ const Homepage = () => {
   </TextContainerRight>
   <div>
    
-    {/* <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/> */}
-  </div>
+    {/* <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/> 
+      </div>*/}
+
   </HomepageComponent> 
+
+  </>
 );
 }
  
