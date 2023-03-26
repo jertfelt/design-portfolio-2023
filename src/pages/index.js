@@ -2,6 +2,7 @@ import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import frontendPic from "../../public/frontend.png"
 
+
 const HomepageComponent = styled.section`
 max-width: 100vw;
 width:100vw;
@@ -47,6 +48,7 @@ p{
 
 const Homepage = () => {
   return ( 
+
   <HomepageComponent>
   <TextContainer>
     <h1>Tova Jertfelt</h1>
@@ -62,7 +64,8 @@ const Homepage = () => {
    
     {/* <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/> */}
   </div>
-  </HomepageComponent> );
+  </HomepageComponent> 
+);
 }
  
 export default Homepage;
