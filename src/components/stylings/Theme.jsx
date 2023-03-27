@@ -34,7 +34,7 @@ export const darkTheme = {
   frontendcolors:{
     background:  "#414870",
     contrast: "#867794",
-    accent:"red",
+    accent:"#856530",
    },
 }
 export const lightTheme = {
@@ -59,7 +59,7 @@ export const lightTheme = {
    frontendcolors:{
     background:  "#867794",
     contrast: "#414870",
-    accent:"red",
+    accent:"#856530",
    },
    lightblue: "#bee5f5",
    purple: "#483d8b",
