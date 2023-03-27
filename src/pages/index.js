@@ -19,6 +19,7 @@ const TextContainer = styled.div`
 padding:2rem;
 h1{
 font-size:4.5rem;
+line-height:4rem;
 color: ${({ theme }) => theme.accentTwo};
 }
 h2{
@@ -120,7 +121,6 @@ background: ${({ theme }) => theme.accentTwo};
   }
  
 }
-
 `
 
 const Homepage = () => {

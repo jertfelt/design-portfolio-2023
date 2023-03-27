@@ -6,6 +6,7 @@ import HeadIndex from '@component/components/Head';
 import Header from '@component/components/Header/Header';
 import Theme, {lightTheme, darkTheme} from '@component/components/stylings/Theme';
 import { useMode } from '@component/components/stylings/useMode';
+import AppProvider from '@component/context/AppContext';
 
 export default function App({ Component, pageProps }) {
   const [theme, themeToggler, mountedComponent] = useMode();
@@ -17,10 +18,12 @@ export default function App({ Component, pageProps }) {
     <Theme>
     <ThemeProvider theme={themeMode}>
     <GlobalStyle/>
+    <AppProvider>
     <Header
     theme={theme}
     toggleTheme={themeToggler}/>
     <Component {...pageProps} />
+    </AppProvider>
     </ThemeProvider>
     </Theme>
     </Fragment>)

@@ -1,7 +1,8 @@
+import { useContext } from "react"
 import styled from "styled-components"
 import Link from "next/link"
 import { AppContext } from "@component/context/AppContext"
-import { useContext } from "react"
+
 
 
 const BackgroundOne = styled.div`
@@ -284,40 +285,73 @@ background-color: ${({ theme }) => theme.body};
 
 
 const LinksToPages = () => {
-  const {selectedPage, setSelectedPage} = useContext(AppContext);
+  const {setSelectedPage} = useContext(AppContext);
+
+  const selection = (e) => {
+    console.log(e.target.outerText)
+    switch(e.target.outerText){
+      case "Frontend,":
+        setSelectedPage({value:"frontend", url:"/frontend"})
+        break;
+      case "Konst,":
+        setSelectedPage({value:"art", url:"/art"})
+        break;
+      case "Design &":
+        setSelectedPage({value:"design", url:"/design"})
+        break;
+      case "Illustration":
+        setSelectedPage({value:"illustration", url:"/illustration"})
+        break;
+      default: 
+      setSelectedPage({value:"", url:"/"})
+    }
+  }
   return (  
     <BodyTwo>
-    <Link href={{pathname: "/frontend", query:{key:"frontend"}}}>
-    <BackgroundOne>
-      <LinkContainer>
-      <LinkOnev2 >
-      Frontend,
-      </LinkOnev2>
-      </LinkContainer>
-    </BackgroundOne>
-    </Link>
-    <Link href={{pathname: "/art", query:{key:"art"}}}>
-    <BackgroundTwo>
-      <LinkContainer>
-      <LinkTwo>Konst,</LinkTwo>
-      </LinkContainer>
-    </BackgroundTwo>
-    </Link>
-    <Link href={{pathname: "/design", query:{key:"design"}}}>
-    <BackgroundThree>
-      <LinkContainer>
-      <LinkThree>Design & </LinkThree>
-      </LinkContainer>
-    </BackgroundThree>
-    </Link>
-    <Link href={{pathname: "/illustration", query:{key:"illustration"}}}>
-    <BackgroundFour>
-      <LinkContainer>
-      <LinkFour>Illustration</LinkFour>
-      </LinkContainer>
-    </BackgroundFour> 
-    </Link>
-      </BodyTwo>
+      <div 
+      value="frontendNav"
+      onClick={(e) => selection(e)}>
+      <Link href={{pathname: "/frontend", query:{key:"frontend"}}}>
+      <BackgroundOne>
+        <LinkContainer>
+        <LinkOnev2 >
+        Frontend,
+        </LinkOnev2>
+        </LinkContainer>
+      </BackgroundOne>
+      </Link>
+      </div>
+      <div 
+      onClick={(e) => selection(e)}>
+      <Link href={{pathname: "/art", query:{key:"art"}}}>
+      <BackgroundTwo>
+        <LinkContainer>
+        <LinkTwo>Konst,</LinkTwo>
+        </LinkContainer>
+      </BackgroundTwo>
+      </Link>
+      </div>
+      <div
+      onClick={(e) => selection(e)}>
+      <Link href={{pathname: "/design", query:{key:"design"}}}>
+      <BackgroundThree>
+        <LinkContainer>
+        <LinkThree>Design & </LinkThree>
+        </LinkContainer>
+      </BackgroundThree>
+      </Link>
+      </div> 
+      <div 
+      onClick={(e) => selection(e)}>
+      <Link href={{pathname: "/illustration", query:{key:"illustration"}}}>
+      <BackgroundFour>
+        <LinkContainer>
+        <LinkFour>Illustration</LinkFour>
+        </LinkContainer>
+      </BackgroundFour> 
+      </Link>
+      </div>
+    </BodyTwo>
  );
 }
  
