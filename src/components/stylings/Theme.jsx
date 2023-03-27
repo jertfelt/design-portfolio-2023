@@ -30,7 +30,11 @@ export const darkTheme = {
   black: "black",
   brown: "#766c5a",
   lavendel: "#867794",
-  yellow:"#856530"
+  yellow:"#856530",
+  frontendcolors:{
+    background:  "#483d8b",
+   
+   },
 }
 export const lightTheme = {
   body: "#edf1f2",
@@ -51,7 +55,10 @@ export const lightTheme = {
     third: "45% 55% 52% 48% / 50% 25% 75% 50%",
     fourth: "55% 25% 42% 98% / 90% 95% 5% 60%"
    },
-
+   frontendcolors:{
+    background:  "#867794",
+  
+   },
    lightblue: "#bee5f5",
    purple: "#483d8b",
    vividblue: "#414870",

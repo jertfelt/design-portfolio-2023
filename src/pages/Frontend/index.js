@@ -1,3 +1,4 @@
+import MainFrontend from "@component/components/Frontend/MainFrontend";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 
@@ -9,7 +10,10 @@ const FrontendPage = () => {
     }
   },[])
   
-  return ( <section>Testing NEXTJS Pages</section> );
+  return ( 
+    <MainFrontend/>
+    
+    );
 }
  
 export default FrontendPage;
