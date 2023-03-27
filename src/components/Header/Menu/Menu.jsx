@@ -2,12 +2,13 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import ArtMenu from './ArtMenu';
 import FrontendMenu from './FrontendMenu';
 import DesignMenu from './DesignMenu';
 import IllMenu from './IllMenu';
 import Start from './Start';
+import { AppContext } from '@component/context/AppContext';
 
 
 const StyledMenu = styled.nav`
@@ -55,8 +56,7 @@ const DropDownMenu = ({open, setOpen}) => {
 const ref= useRef()
 const router = useRouter()
 const {key} = router.query;
-
-console.log(key, "KEU", {key}, "KEY")
+const {selectedPage} = useContext(AppContext)
 
   useEffect(() => {
     const handleEsc = (event) => {
@@ -77,11 +77,15 @@ console.log(key, "KEU", {key}, "KEY")
       <Link href="/contact">
         Kontakt
       </Link>
-    <Start/>
-    <ArtMenu/> 
-    <FrontendMenu/>
+    {selectedPage && selectedPage.value==="" &&  <Start/>}
+    {selectedPage && selectedPage.value==="frontend" && <FrontendMenu/>}
+    {selectedPage && selectedPage.value==="art" &&  <ArtMenu/>}
+    {selectedPage && selectedPage.value==="design" &&
     <DesignMenu/>
-    <IllMenu/>
+    }
+    {selectedPage && selectedPage.value==="illustration" &&
+   <IllMenu/>
+    }
     </StyledMenu>
 );
 }

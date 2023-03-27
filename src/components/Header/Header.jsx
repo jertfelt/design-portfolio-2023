@@ -7,7 +7,8 @@ import Burger from "./Burger/Burger";
 import DropDownMenu from "./Menu/Menu";
 import { useOnClickOutside } from "../hooks/useOnclickOutside";
 
-import {useState, useRef } from 'react';
+import {useState, useRef, useContext } from 'react';
+import { AppContext } from "@component/context/AppContext";
 
 const HeaderComponent = styled.header`
 left: 0;
@@ -59,11 +60,12 @@ const Header = ({theme, toggleTheme}) => {
   const [open, setOpen] = useState(false);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
+  const {setSelectedPage} = useContext(AppContext)
   return (  
 
   <HeaderComponent>
     <NavComponent>
-    <LogoNav>
+    <LogoNav onClick={() => setSelectedPage({value:"", url:"/"})}>
       <Link href="/">
       <Image src={logo}
       width={50}

@@ -1,4 +1,4 @@
 const FrontendMenu = () => {
-  return ( <li>hej</li> );
+  return ( <li>hejhej</li> );
 }
 export default FrontendMenu;
