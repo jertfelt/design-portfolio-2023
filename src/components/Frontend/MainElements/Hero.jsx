@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import profilepic from "../../../../public/apathy.png"
+import profilepic from "../../../../public/tova-linkedin-portratt.png"
 
 
 const PageWrapper = styled.div`
@@ -30,11 +30,12 @@ line-height:3.7rem;
 `
 
 const HeroPic = styled(Image)`
+padding-top:2rem;
 transition: all 1.8s ease-in;
 filter: drop-shadow(0 6mm 4mm ${({theme}) => theme.frontendcolors.background});
-transform: rotate(10deg);
+transform: rotate(3deg);
 overflow: hidden;
-border-radius: ${({theme}) => theme.borderradius.fourth};
+border-radius: ${({theme}) => theme.borderradius.first};
 height:300px;
 width:300px;
 
@@ -53,7 +54,7 @@ width:300px;
 
 
 const ParagraphRow = styled.div`
-margin-top:-3rem;
+margin-top:-4rem;
 display:flex;
 gap:5rem;
 p{

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import BgImg from "./MainElements/BackgroundImg";
+import AboutMe from "./MainElements/AboutMe";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -13,7 +14,8 @@ z-index:0;`
 const MainFrontend = () => {
   return ( <Section>
     <BgImg/>
-    hej</Section> );
+    <AboutMe/>
+   </Section> );
 }
  
 export default MainFrontend;
