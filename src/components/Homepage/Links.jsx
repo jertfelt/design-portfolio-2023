@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Link from "next/link"
-
+import { AppContext } from "@component/context/AppContext"
+import { useContext } from "react"
 
 
 const BackgroundOne = styled.div`
@@ -275,7 +276,6 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 background-image: radial-gradient(${({ theme }) => theme.accent} 2px, transparent 1px);
 background-size: 32px 32px;
 background-color: ${({ theme }) => theme.body};
-
   @media (max-width: 700px){
     background-color: ${({ theme }) => theme.body};
   }
@@ -284,12 +284,11 @@ background-color: ${({ theme }) => theme.body};
 
 
 const LinksToPages = () => {
-
-  return (   <>
-
+  const {selectedPage, setSelectedPage} = useContext(AppContext);
+  return (  
     <BodyTwo>
-    <Link href="/Frontend" >
-    <BackgroundOne value="Frontend">
+    <Link href={{pathname: "/frontend", query:{key:"frontend"}}}>
+    <BackgroundOne>
       <LinkContainer>
       <LinkOnev2 >
       Frontend,
@@ -297,21 +296,21 @@ const LinksToPages = () => {
       </LinkContainer>
     </BackgroundOne>
     </Link>
-    <Link href="/art">
+    <Link href={{pathname: "/art", query:{key:"art"}}}>
     <BackgroundTwo>
       <LinkContainer>
       <LinkTwo>Konst,</LinkTwo>
       </LinkContainer>
     </BackgroundTwo>
     </Link>
-    <Link href="/design">
+    <Link href={{pathname: "/design", query:{key:"design"}}}>
     <BackgroundThree>
       <LinkContainer>
       <LinkThree>Design & </LinkThree>
       </LinkContainer>
     </BackgroundThree>
     </Link>
-    <Link href="/illustration">
+    <Link href={{pathname: "/illustration", query:{key:"illustration"}}}>
     <BackgroundFour>
       <LinkContainer>
       <LinkFour>Illustration</LinkFour>
@@ -319,7 +318,7 @@ const LinksToPages = () => {
     </BackgroundFour> 
     </Link>
       </BodyTwo>
-</> );
+ );
 }
  
 export default LinksToPages;

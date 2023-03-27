@@ -69,18 +69,17 @@ gap:2rem;
   gap:30vh;
 }
 div{
-
   h3{
-    font-size:1.2rem;
-    line-height:1.5rem;
+    font-size:1.3rem;
+    line-height:1.8rem;
     color:${({ theme }) => theme.accentTwo};
     padding-bottom:.5rem;
     }
   p{
-    line-height:1rem;
-    font-size:.8rem;
+    line-height:1.5rem;
+    font-size:1rem;
     @media (min-width:1050px){
-      width:600px;
+      max-width:550px;
     }
     text-align: justify;
     text-justify: inter-word;
@@ -111,22 +110,17 @@ background: ${({ theme }) => theme.accentTwo};
   font-weight:bold;
   border:none;
   padding:10px;
-  border-radius:${({ theme }) => theme.borderradius.first};
+
   color:${({ theme }) => theme.textSecondary};
   
   &:hover{
    color:${({ theme }) => theme.accent};
    background:${({ theme }) => theme.contrast};
-   border-radius:${({ theme }) => theme.borderradius.third};
+ 
   }
  
 }
-.second{
-  border-radius:${({ theme }) => theme.borderradius.fourth};
-  &:hover{
-    border-radius:${({ theme }) => theme.borderradius.first};
-  }
-}
+
 `
 
 const Homepage = () => {
@@ -172,11 +166,11 @@ const Homepage = () => {
 
   </HomepageComponent> 
   <Footer>
-    <hr></hr>
+
     <div>
-      <p>Läs mer:</p>
+
     <button><a href="https://www.linkedin.com/in/tovajertfelt/">LinkedIn</a></button>
-    <button className="second"><a href="https://www.linkedin.com/jertfelt/">Instagram</a></button>
+    <button className="second"><a href="https://www.instagram.com/jertfelt/">Instagram</a></button>
     </div>
   </Footer>
   </>

@@ -1,5 +1,5 @@
 const Art = () => {
-  return (<section>Art</section>  );
+  return (
+  <section>Art</section>  );
 }
- 
 export default Art;

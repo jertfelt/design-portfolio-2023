@@ -7,6 +7,7 @@ import ArtMenu from './ArtMenu';
 import FrontendMenu from './FrontendMenu';
 import DesignMenu from './DesignMenu';
 import IllMenu from './IllMenu';
+import Start from './Start';
 
 
 const StyledMenu = styled.nav`
@@ -26,29 +27,30 @@ transition: transform 0.3s ease-in-out;
 z-index:10;
 filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.black});
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-// // @media (max-width: ${({ theme }) => theme.mobile}) {
-// //   width: 100%;
-// // }
+@media (max-width: ${({ theme }) => theme.mobile}) {
+  width: 100%;
+}
 
 a {
-  font-size: 1.8rem;
- 
-  line-height:2.4rem;
+  font-size: 1.5rem;
+  line-height:2rem;
   font-weight: bold;
   color: ${({ theme }) => theme.textSecondary};
   text-decoration: none;
   transition: color 0.3s linear;
   
-  // // @media (max-width: ${({ theme }) => theme.mobile}) {
-  // //   font-size: 1.5rem;
-  // //   text-align: center;
-  // // }
-
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
   &:hover {
-    color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.accent};
   }
 }
 `;
+
+
+
 const DropDownMenu = ({open, setOpen}) => {
 const ref= useRef()
 const router = useRouter()
@@ -72,16 +74,14 @@ console.log(key, "KEU", {key}, "KEY")
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-      <Link href="/about">
-        Om mig
-      </Link>
-   <ArtMenu/> 
-   <FrontendMenu/>
-   <DesignMenu/>
-   <IllMenu/>
       <Link href="/contact">
         Kontakt
       </Link>
+    <Start/>
+    <ArtMenu/> 
+    <FrontendMenu/>
+    <DesignMenu/>
+    <IllMenu/>
     </StyledMenu>
 );
 }
