@@ -70,7 +70,7 @@ const Header = ({theme, toggleTheme}) => {
       <Image src={logo}
       width={50}
       height={50}
-      alt="logotyp"/>
+      alt="Logotyp designad 2014 av Tova Jertfelt: ett litet t och ett litet j som transformerats."/>
       </Link>
       </LogoNav>
       <span>

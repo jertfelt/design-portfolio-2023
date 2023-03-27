@@ -19,6 +19,8 @@ align-items:center;
 background: ${({ theme }) => theme.contrast};
 height: 120vh;
 width:30vh;
+
+
 text-align: left;
 padding: 2rem;
 position: absolute;
@@ -31,7 +33,9 @@ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 @media (max-width: ${({ theme }) => theme.mobile}) {
   width: 100%;
 }
-
+@media (min-width: 1050px){
+  max-width:25vh;
+}
 a {
   font-size: 1.5rem;
   line-height:2rem;
@@ -74,9 +78,6 @@ const {selectedPage} = useContext(AppContext)
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-      <Link href="/contact">
-        Kontakt
-      </Link>
     {selectedPage && selectedPage.value==="" &&  <Start/>}
     {selectedPage && selectedPage.value==="frontend" && <FrontendMenu/>}
     {selectedPage && selectedPage.value==="art" &&  <ArtMenu/>}
@@ -86,6 +87,9 @@ const {selectedPage} = useContext(AppContext)
     {selectedPage && selectedPage.value==="illustration" &&
    <IllMenu/>
     }
+    <Link href="/contact">
+      &#9993; Kontakt
+    </Link>
     </StyledMenu>
 );
 }

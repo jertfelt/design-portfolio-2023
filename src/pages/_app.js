@@ -1,4 +1,3 @@
-import '@component/styles/globals.scss'
 import GlobalStyle from '@component/components/stylings/globalStyles';
 import { Fragment } from 'react';
 import { ThemeProvider } from 'styled-components';

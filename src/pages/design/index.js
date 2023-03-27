@@ -1,5 +1,5 @@
-const Illustration = () => {
-  return ( <section>Illustration</section> );
+const Design = () => {
+  return ( <section>DEISGN</section> );
 }
  
-export default Illustration;
+export default Design;

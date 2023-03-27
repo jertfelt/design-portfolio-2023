@@ -23,7 +23,6 @@ const Button = styled.button`
   }
   &:active{
     color:${({ theme }) => theme.white};
-
   }
 
 `;
