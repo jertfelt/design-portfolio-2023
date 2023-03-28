@@ -2,6 +2,7 @@ import styled from "styled-components"
 import BgImg from "./MainElements/BackgroundImg";
 import AboutMe from "./MainElements/AboutMe";
 import GridWithQuotes from "./MainElements/QuotesAboutMe";
+import CasesPage from "./MainElements/Cases";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -18,6 +19,7 @@ const MainFrontend = () => {
     <BgImg/>
     <AboutMe/>
     <GridWithQuotes/>
+    <CasesPage/>
    </Section> );
 }
  

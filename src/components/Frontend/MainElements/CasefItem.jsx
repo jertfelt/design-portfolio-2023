@@ -1,0 +1,103 @@
+import styled, {css} from "styled-components"
+import Link from "next/link"
+import { flex, device, fonts } from "@component/components/stylings/Stylings";
+
+const CaseContainer = styled.article`
+&:hover{
+  hr{
+    color: ${({theme}) => theme.frontendcolors.alternative};
+    width:0%;
+  }
+}
+hr{
+  color:${({theme}) => theme.white};
+  width:100%;
+}
+border-radius: 29px;
+
+color:${({theme}) => theme.lightblue};
+${flex({align:"flex-start", justify:"flex-start"})}
+
+a{
+  text-decoration: none;
+  color:${({theme}) => theme.lightblue};
+}
+
+button{
+  cursor:pointer;
+  border:2px solid ${({theme}) => theme.lightblue};
+  color:${({theme}) => theme.lightblue};
+  padding:10px;
+  font-size:16px;
+  font-family:JetBrains Mono;
+  background-color: transparent;
+  &:hover{
+   border-radius:${({theme}) => theme.borderradius.first};
+   border-color:${({theme}) => theme.frontendcolors.alternativecontrast};
+  }
+  &:active, &:focus{
+    border-radius:${({theme}) => theme.borderradius.first};
+    color:${({theme}) => theme.white};
+   border-color:${({theme}) => theme.white};
+  }
+  
+}
+`
+
+const CaseHeader = styled.h3`
+color: ${({theme}) => theme.lightblue};
+text-transform: uppercase;
+font-size:${fonts.fontSizes.large};
+flex-wrap: wrap;
+line-height:2.8rem;
+margin-bottom:-.5rem;
+`
+const Description = styled.p`
+font-size:${fonts.fontSizes.medium};
+color:${({theme}) => theme.white};
+text-align: left;
+margin-top:0;
+`
+const Subtitle = styled.h4`
+text-transform:uppercase;
+`
+
+
+const CasefItem = ({item}) => {
+
+ 
+  return (<>
+    <CaseContainer key={item.id}
+    >
+      <hr></hr>
+    {item && <>
+     
+        <CaseHeader>    
+          <Link href={'/cases/' + item.id} 
+                state={{data: item.id}}
+                key={item.id}>
+                {item.title}
+          </Link>
+         </CaseHeader> 
+
+        <Link href={'/cases/' + item.id} 
+        key={item.id}>   
+          <Subtitle>{item.sub}</Subtitle> 
+          <Description>{item.text}
+          </Description>
+          
+          <Link href={'/cases/' + item.id} state={{data: item.id}}><button>Se mer här</button>
+          </Link>
+
+        </Link>
+        
+      </>
+     }
+
+      </CaseContainer>
+      
+      
+   </>
+  );
+}
+export default CasefItem;

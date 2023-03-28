@@ -13,11 +13,10 @@ gap: 2rem;
   padding:2rem;
   gap:4rem;
   max-width:900px;
- }
- @media screen and (max-width: 1050px){
   grid-template-columns: repeat(1, 1fr);
   max-width:400px;
  }
+
  ${props => 
   props.cverfarenhet && 
   css`  
@@ -45,8 +44,8 @@ ${props =>
   props.numbers && 
   css`  
   gap:5em;
-  @media screen and (max-width:1000px){
-    gap:2rem;
+  @media screen and (max-width:700px){
+    gap:1rem;
     display:flex;
     flex-direction:column;
   }

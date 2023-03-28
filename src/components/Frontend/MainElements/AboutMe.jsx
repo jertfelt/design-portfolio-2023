@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "@component/components/stylings/Containers";
+import { fonts } from "@component/components/stylings/Stylings";
 import { Grid } from "@component/components/stylings/Grids";
 import Link from "next/link";
 import CountingUp from "./Counter";
@@ -36,7 +37,9 @@ max-width:50%;
 padding:2rem;
 padding-left:4rem;
 padding-bottom:5rem;
-
+@media (max-width:1000px){
+  left:0%;
+}
 `
 const BigNumber = styled.h3`
 font-size:70px;
@@ -46,19 +49,25 @@ font-family: Arya;
 font-weight: 500;
 padding:2rem;
 background-color: ${({theme}) => theme.frontendcolors.contrast};
-border-radius: ${({theme}) => theme.borderradius.fourth};
+border-radius: ${({theme}) => theme.borderradius.first};
 max-width:300px;
+@media (max-width:1000px){
+ padding:1rem;
+}
 
 `
 const Text = styled.p`
 color:${({theme}) => theme.textPrimary};
-font-size:18px;
+font-size:${fonts.fontSizes.medium};
 margin-top:-3em;
 padding-left:1rem;
 padding-right:1rem;
 text-align:left;
 width:80%;
 line-height:150%;
+@media (max-width:900px){
+  font-size:${fonts.fontSizes.mediumsmall};
+}
 `
 const Row = styled.div`
 display:flex;
@@ -120,9 +129,8 @@ const AboutMe = () => {
 
       </Grid>
       <Numbers>
-
       <Container
-    xlarge>
+      xlarge>
       <Grid numbers>
         <CountingUp
           number = {11}

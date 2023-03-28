@@ -11,7 +11,9 @@ padding-bottom: ${padding.paddingSizes.medium};
 background-color: transparent;
 position: relative;
 z-index:1;
-@media screen and ${device.maxtablet}{ background-color:${({theme}) => theme.frontendcolors.accent};}
+@media screen and ${device.maxtablet}{ 
+  background-color:${({theme}) => theme.frontendcolors.contrast};}
+
 &::before {
   top: 0;
   -webkit-transform: skewY(-4deg);
@@ -52,46 +54,53 @@ z-index:1;
 const GridThree = styled.div`
 display:grid;
 @media screen and ${device.laptop}{
-grid-template-columns: .5fr .2fr .7fr;}
+grid-template-columns: repeat(2, 1fr);}
+@media screen and (max-width:700px){
+  grid-template-columns: repeat(1, 1fr);
+}
 justify-items:start;
 align-items:start;
 column-gap:2rem;
+row-gap:2rem;
 padding:5em;
 margin:5em;
 div{
   text-align:center;
   display:flex;
   flex-wrap:wrap;
-    background-color: ${({theme}) => theme.frontendcolors.background};
+  background-color:${({theme}) => theme.frontendcolors.background};
+  color:${({theme}) => theme.textPrimary};
+  border-radius:29px;
   &:hover{
-    border-radius: ${({theme}) => theme.borderradius.first};
     filter: drop-shadow(0 2mm 4mm ${({theme}) => theme.frontendcolors.accent});
   }
   @media screen and ${device.maxtablet}{
     max-width:500px;
   }
-  @media screen and ${device.maxmobile}{
-    background-color:transparent;
-  }
+
   padding:1rem;
   padding-bottom:3rem;
   blockquote{
-    width:80%;
+    width:90%;
   }
-  p{width:90%;}
+  p{width:90%;
+  text-align:left;
+  }
   
 }
 blockquote{
-  font-family:Roboto;
   h3{
-    font-family: Arya;
-    font-size:40px;
+    font-family:Merriweather Sans;
+    font-size:30px;
+    line-height:36px;
+    text-align:left;
     color:${({theme}) => theme.frontendcolors.lightblue};
   }
   h4{
     text-align:left;
-    margin-top:-2rem;
     font-size:18px;
+    line-height:22px;
+    font-weight:normal;
   }
 }
 @media screen and ${device.maxtablet}{
@@ -109,7 +118,7 @@ const GridWithQuotes = () => {
     <blockquote>
   <h3>{item.headline}</h3>
   <h4>“{item.quote}”</h4>
-  <p>{item.name}</p>   
+  <p><i>{item.name}</i></p>   
   </blockquote>
   </div>
   ) )}

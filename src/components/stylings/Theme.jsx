@@ -36,6 +36,8 @@ export const darkTheme = {
     contrast: "#867794",
     accent:"#856530",
     lightblue:"#bee5f5",
+    alternative: "#856530",
+    alternativecontrast: "#483d8b",
    },
 }
 export const lightTheme = {
@@ -62,6 +64,8 @@ export const lightTheme = {
     contrast: "#414870",
     accent:"#856530",
     lightblue:"#bee5f5",
+    alternative: "#766c5a",
+    alternativecontrast: "#5f8898",
    },
    lightblue: "#bee5f5",
    purple: "#483d8b",
