@@ -22,9 +22,6 @@ h2{
   transition: all .8s ease-out;
   max-width:200px;
 }
-p{
-  
-}
 `
 
 const Numbers = styled.section`
@@ -32,8 +29,8 @@ color:${({theme}) => theme.textPrimary};
 font-size:18px;
 line-height:1.8rem;
 position:relative;
-left: 30%;
-max-width:50%;
+left: 10%;
+
 padding:2rem;
 padding-left:4rem;
 padding-bottom:5rem;
@@ -106,6 +103,9 @@ color: ${({theme}) => theme.frontendcolors.lightblue};
 `
 
 const AboutMe = () => {
+  let date =  new Date().getFullYear();
+  let experience = date - 2011;
+
   return ( 
   <MainSection>
     <Container xlargegreyslantedafter>
@@ -132,8 +132,9 @@ const AboutMe = () => {
       <Container
       xlarge>
       <Grid numbers>
+        
         <CountingUp
-          number = {11}
+          number = {experience}
           text = {"års erfarenhet som digital formgivare, både som frilans och anställd."}
         />
         <div>

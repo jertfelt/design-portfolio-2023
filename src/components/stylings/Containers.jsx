@@ -7,7 +7,7 @@ ${props =>
   css`
   width:100%;
   margin:0;
-  margin-right:-2rem;
+
   `}
   ${props => 
   props.xlargegreyslantedafter && css`
