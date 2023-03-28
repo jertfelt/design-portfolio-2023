@@ -20,9 +20,7 @@ gap: 2rem;
  ${props => 
   props.cverfarenhet && 
   css`  
-  @media (min-width: 600px) {
-  grid-template-columns: repeat(3, 1fr);
- }
+ 
   
   `}
 ${props => props.about && css`
@@ -54,8 +52,10 @@ ${props =>
     props.cv && 
     css`  
 gap: 5rem;
+
 @media (min-width: 700px) {
   grid-template-columns: repeat(2, 1fr);
+  padding:2rem;
  }
     `}
     ${props => 

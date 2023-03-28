@@ -7,7 +7,7 @@ ${props =>
   css`
   width:100%;
   margin:0;
-
+  z-index:3;
   `}
   ${props => 
   props.xlargegreyslantedafter && css`

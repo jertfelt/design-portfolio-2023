@@ -3,6 +3,8 @@ import BgImg from "./MainElements/BackgroundImg";
 import AboutMe from "./MainElements/AboutMe";
 import GridWithQuotes from "./MainElements/QuotesAboutMe";
 import CasesPage from "./MainElements/Cases";
+import Footer from "./MainElements/Footer";
+import CVFrontend from "./MainElements/CV";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -20,6 +22,8 @@ const MainFrontend = () => {
     <AboutMe/>
     <GridWithQuotes/>
     <CasesPage/>
+    <CVFrontend/>
+    <Footer/>
    </Section> );
 }
  

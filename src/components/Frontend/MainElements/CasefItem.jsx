@@ -2,18 +2,7 @@ import styled, {css} from "styled-components"
 import Link from "next/link"
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
 
-const CaseContainer = styled.article`
-&:hover{
-  hr{
-    color: ${({theme}) => theme.frontendcolors.alternative};
-    width:0%;
-  }
-}
-hr{
-  color:${({theme}) => theme.white};
-  width:100%;
-}
-border-radius: 29px;
+export const CaseContainer = styled.article`
 
 color:${({theme}) => theme.lightblue};
 ${flex({align:"flex-start", justify:"flex-start"})}
@@ -21,6 +10,9 @@ ${flex({align:"flex-start", justify:"flex-start"})}
 a{
   text-decoration: none;
   color:${({theme}) => theme.lightblue};
+  &:hover{
+    color:${({theme}) => theme.frontendcolors.alternativecontrast};
+  }
 }
 
 button{
@@ -38,13 +30,13 @@ button{
   &:active, &:focus{
     border-radius:${({theme}) => theme.borderradius.first};
     color:${({theme}) => theme.white};
-   border-color:${({theme}) => theme.white};
+    border-color:${({theme}) => theme.white};
   }
   
 }
 `
 
-const CaseHeader = styled.h3`
+export const CaseHeader = styled.h3`
 color: ${({theme}) => theme.lightblue};
 text-transform: uppercase;
 font-size:${fonts.fontSizes.large};
@@ -52,26 +44,25 @@ flex-wrap: wrap;
 line-height:2.8rem;
 margin-bottom:-.5rem;
 `
-const Description = styled.p`
+export const Description = styled.p`
 font-size:${fonts.fontSizes.medium};
 color:${({theme}) => theme.white};
 text-align: left;
 margin-top:0;
+
+
+
 `
-const Subtitle = styled.h4`
+export const Subtitle = styled.h4`
 text-transform:uppercase;
 `
 
 
 const CasefItem = ({item}) => {
-
- 
   return (<>
     <CaseContainer key={item.id}
     >
-      <hr></hr>
     {item && <>
-     
         <CaseHeader>    
           <Link href={'/cases/' + item.id} 
                 state={{data: item.id}}
