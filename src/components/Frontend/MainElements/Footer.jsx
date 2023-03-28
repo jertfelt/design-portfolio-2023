@@ -13,7 +13,7 @@ height:5vh;
 bottom:100;
 align-items:center;
 justify-content:center;
-background:${({theme}) => theme.frontendcolors.alternative};
+background:${({theme}) => theme.frontendcolors.alternativecontrast};
 @media screen and ${device.maxmobile}{
 height:10vh;
 bottom:120;

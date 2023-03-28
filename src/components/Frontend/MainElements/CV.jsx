@@ -67,6 +67,7 @@ h2{
 
 const Row = styled.div`
 ${flex}
+gap:4rem;
 @media only screen and (${device.laptop}){
   ${flex({direction:"row", align:"center", justify:"center"})}
   padding:5em;
@@ -88,6 +89,9 @@ h4{
 @media  screen and (max-width:600px){
   padding-left:1rem;
 }
+li{
+  line-height:1.5rem;
+}
 img{
   border-radius: 50%;
   margin-top:1rem;
@@ -100,7 +104,27 @@ ${props =>
     background-color:${({theme}) => theme.frontendcolors.alternativecontrast};
   }
   `}
-  
+  ${props => 
+  props.techstack && 
+  css`
+ 
+    h3{
+      text-align:center;
+    }
+    ul{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap:1rem;
+      
+      width:100%;
+      li{
+        &:hover{
+          color:${({theme}) => theme.frontendcolors.lightblue};
+        }
+      }
+    }
+ 
+  `}
 `
 const Period = styled.p`
 font-size:${fonts.fontSizes.mediumsmall};
@@ -287,6 +311,14 @@ span{
   
 }
 `
+
+const Centered = styled.div`
+display:flex;
+width:100%;
+align-items:center;
+justify-content:center;
+`
+
 const CVFrontend = () => {
   const [buttonMsg, setButtonMsg] = useState("Läs mer om frontend på Nackademin")
   const [show, setShow] = useState(false);
@@ -383,19 +415,42 @@ const CVFrontend = () => {
       
       <CVContent>
         <h2>Erfarenhet</h2>
-        <div>
+        <Row>
         {erfarenhet && erfarenhet.map((item,i) => (
-          <GridItem key={i}>        <Period>{item.name}</Period>
+          <GridItem key={i}>
+        {i !== 0 && <div>
+          <h3>{item.name}</h3>
         <ul>
         
         {item.li.map(item => (
           <li>{item}</li>
         ))}
           </ul>
-       
+        </div>}
         </GridItem>
         ))}
-        </div>
+        </Row>
+        <Centered>
+        {erfarenhet && erfarenhet.map((item,i) => (
+          <GridItem 
+          techstack
+          key={i}>
+        {i === 0 && <>
+          <h3>{item.name}</h3>
+        <ul>
+        {item.li.map(item => (
+          <li>{item}</li>
+        ))}
+          </ul>
+        </>}
+        </GridItem>
+        ))}
+        </Centered>
+        <Grid>
+      
+       
+          
+        </Grid>
        
       
       </CVContent>

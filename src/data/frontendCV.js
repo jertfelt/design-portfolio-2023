@@ -167,7 +167,6 @@ export const erfarenhet =[
     "SASS",
     "ARIA-labels",
     "Media queries",
-    "Styled components",
     "Graph.js",
     "HTML5",
     "Node versions",
@@ -180,7 +179,9 @@ export const erfarenhet =[
     "EJS",
     "MongoDB",
     "Jest",
-    "Git Pages"
+    "Git Pages",
+    "Styled components"
+  
   ]
   },
   {name:"Yrkeskunskaper",
