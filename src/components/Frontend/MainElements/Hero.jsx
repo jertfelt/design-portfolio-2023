@@ -85,13 +85,21 @@ grid-template-columns: 1fr 2fr;
   align-items: start;
   column-gap: 50px;
   row-gap: 10px;
- 
-  // //   display:flex;
-  // //   flex-direction:column-reverse;
-  // //   div{
-  // //     z-index:2;
-  // //   }
-  // // }
+  @media screen and (max-width:900px){
+    display:flex;
+    flex-direction:column;
+    padding-bottom:5rem;
+    div{
+      z-index:2;
+    }
+   }
+   @media screen and (max-width:700px){
+    margin-top:-2rem;
+    padding-bottom:1rem;
+   
+   }
+   
+  
 `
 
 

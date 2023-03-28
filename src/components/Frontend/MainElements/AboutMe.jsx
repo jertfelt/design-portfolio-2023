@@ -93,7 +93,7 @@ a:focus{
 `
 
 const Emphasis = styled.span`
-color: ${({theme}) => theme.lightblue};
+color: ${({theme}) => theme.frontendcolors.lightblue};
 `
 
 const AboutMe = () => {

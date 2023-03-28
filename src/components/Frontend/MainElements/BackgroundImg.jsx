@@ -6,12 +6,11 @@ import HeroContent from "./Hero";
 const Wrapper = styled.div`
 position: fixed;
 height: 120vh;
-width: 100vw;
+width: 100%;
 overflow: hidden;
 z-index: 1;
 @media screen and (max-width:1050px){ 
   border-radius: ${({theme}) => theme.borderradius.second};
-  height:90vh;
   top:-100px;
   right:10%;
 }
@@ -23,7 +22,7 @@ z-index: 1;
 const Overlay = styled.div`
 position:fixed;
 height:150vh;
-width:100%;
+width:100vw;
 background: rgba(50, 57, 57, 0.3);
 z-index:1;`
 
@@ -33,11 +32,11 @@ margin: 0;
 text-align: left;
 padding:5rem;
 padding-top:30vh;
+padding-bottom:30vh;
 color:${({theme}) => theme.white};
 text-shadow: 1px 1px 1px ${({theme}) => theme.frontendcolors.background};
 z-index: 1;
 position: relative;
-
 
 `
 
