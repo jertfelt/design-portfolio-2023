@@ -16,16 +16,19 @@ padding:0;
 `
 
 export const GridItem = styled.article`
+color:${({theme}) => theme.textPrimary};
   max-width:100%;
 h3{
   font-family:"Arya";
   font-size:${fonts.fontSizes.large};
-  color: ${({theme}) => theme.lightblue};
+  color: ${({theme}) => theme.frontendcolors.lightblue};
   line-height:1.5rem;
 }
 h4{
+  color: ${({theme}) => theme.frontendcolors.lightblue};
   margin-top:-1rem;
   font-size:${fonts.fontSizes.medium};
+  max-width:80vw;
 }
 @media  screen and (max-width:600px){
   padding-left:1rem;
@@ -40,9 +43,19 @@ img{
 ${props => 
   props.work && 
   css`
+  max-width:400px;
+   @media screen and (max-width: 700px){
+      width:80vw;
+  }
+  h3{
+    max-width:80vw;
+  }
   &:hover{
-    border-radius:${({theme}) => theme.borderradius.third};
-    background-color:${({theme}) => theme.frontendcolors.contrast};
+    @media screen and (min-width:1000px){
+      border-radius:${({theme}) => theme.borderradius.third};
+      background-color:${({theme}) => theme.frontendcolors.alternativecontrast};
+    }
+
   }
   `}
   ${props => 
@@ -84,5 +97,6 @@ h2{
   text-decoration:underline;
   text-transform:uppercase;
   text-align:left;
+
 }
 `

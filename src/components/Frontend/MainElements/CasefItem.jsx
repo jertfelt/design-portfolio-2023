@@ -6,6 +6,11 @@ export const CaseContainer = styled.article`
 
 color:${({theme}) => theme.lightblue};
 ${flex({align:"flex-start", justify:"flex-start"})}
+@media screen and (max-width:700px){
+ 
+  padding:1rem;
+  max-width:80vw;
+}
 
 a{
   text-decoration: none;
@@ -43,6 +48,9 @@ font-size:${fonts.fontSizes.large};
 flex-wrap: wrap;
 line-height:2.8rem;
 margin-bottom:-.5rem;
+@media screen and (max-width:700px){
+ font-size:${fonts.fontSizes.medium};
+}
 `
 export const Description = styled.p`
 font-size:${fonts.fontSizes.medium};

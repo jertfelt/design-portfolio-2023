@@ -10,8 +10,20 @@ width:80%;
 position: relative;
 z-index:1;
 padding:2rem;
-padding-bottom:5rem;
+padding-bottom:3rem;
 margin-top:4rem;
+@media screen and (max-width:700px){
+  width:100vw;
+  padding:3rem;
+  padding-bottom:8rem;
+  padding-left:10rem;
+}
+@media screen and (max-width:500px){
+  width:100vw;
+  padding:3rem;
+  padding-left:10rem;
+  margin-top:-2rem;
+}
 
 &::before {
   top: 0;
@@ -52,6 +64,14 @@ const Arbete = ({work}) => {
 <CVContent>
 <h2>Arbete</h2>
 <Grid cv>
+<GridItem work>
+  <Period>Oktober 2022- Mars 2023</Period>
+    <h3>Praktik!
+    </h3>
+    <Bread>Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.
+    Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.
+    </Bread>
+  </GridItem>
   {work && work.map(item => item).map((item,index) =>(
     <GridItem 
     work
@@ -64,14 +84,7 @@ const Arbete = ({work}) => {
     ))
   
   }
-  <GridItem work>
-  <Period>Oktober 2022- Mars 2023</Period>
-    <h3>Praktik!
-    </h3>
-    <Bread>Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.
-    Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.
-    </Bread>
-  </GridItem>
+
   </Grid>
   
   </CVContent>

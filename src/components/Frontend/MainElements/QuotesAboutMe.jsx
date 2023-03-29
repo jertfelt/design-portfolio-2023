@@ -1,7 +1,6 @@
 import { quotesAboutMe } from "@component/data/quotesaboutme";
 import styled from "styled-components";
-import { flex, device, borders, padding } from "@component/components/stylings/Stylings";
-import { useState } from "react";
+import { device, padding } from "@component/components/stylings/Stylings";
 
 const Section = styled.div`
 min-height:80vh;
@@ -12,7 +11,12 @@ background-color: transparent;
 position: relative;
 z-index:1;
 @media screen and ${device.maxtablet}{ 
-  background-color:${({theme}) => theme.frontendcolors.contrast};}
+}
+  @media screen and (max-width:700px){
+    padding:1rem;   
+    margin:0;
+    width:100%;
+   }
 
 &::before {
   top: 0;
@@ -53,7 +57,7 @@ z-index:1;
 `
 const GridThree = styled.div`
 display:grid;
-@media screen and ${device.laptop}{
+@media screen and ${device.tablet}{
 grid-template-columns: repeat(2, 1fr);}
 @media screen and (max-width:700px){
   grid-template-columns: repeat(1, 1fr);
@@ -64,13 +68,18 @@ column-gap:2rem;
 row-gap:2rem;
 padding:5em;
 margin:5em;
+@media screen and (max-width:700px){
+ padding:1rem;   
+ row-gap:1rem;
+}
 div{
   text-align:center;
   display:flex;
   flex-wrap:wrap;
-  background-color:${({theme}) => theme.frontendcolors.background};
-  color:${({theme}) => theme.textPrimary};
-  border-radius:29px;
+  background-color:${({theme}) => theme.frontendcolors.contrast};
+  color:${({theme}) => theme.textSecondary};
+  border-radius:49px;
+ 
   &:hover{
     filter: drop-shadow(0 2mm 4mm ${({theme}) => theme.frontendcolors.accent});
   }
@@ -80,6 +89,11 @@ div{
 
   padding:1rem;
   padding-bottom:3rem;
+  @media screen and (max-width:700px){
+    padding:1rem;   
+    row-gap:1rem;
+    width:100%;
+   }
   blockquote{
     width:90%;
   }
@@ -99,7 +113,7 @@ blockquote{
   h4{
     text-align:left;
     font-size:18px;
-    line-height:22px;
+    line-height:26px;
     font-weight:normal;
   }
 }
@@ -110,7 +124,8 @@ blockquote{
 `
 
 const GridWithQuotes = () => {
-  return ( <Section>
+  return ( 
+  <Section>
       <GridThree>
     {quotesAboutMe.map(item => (
   <div
@@ -123,7 +138,6 @@ const GridWithQuotes = () => {
   </div>
   ) )}
     </GridThree>
-
   </Section> );
 }
  

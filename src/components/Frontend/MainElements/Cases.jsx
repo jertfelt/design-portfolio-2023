@@ -49,6 +49,7 @@ color:${({theme}) => theme.white};
   text-align:center;
   font-size: ${fonts.fontSizes.medium};
   padding-bottom:2rem;
+
   a{
     color:${({theme}) => theme.vividblue};
     text-decoration:none;
@@ -57,6 +58,7 @@ color:${({theme}) => theme.white};
       background-color: ${({theme}) => theme.frontendcolors.lightblue};
       border-radius: ${({theme}) => theme.borderradius.first};
     }
+  }
 `
 
 const Headline = styled.h2`
@@ -84,7 +86,12 @@ p{
 }
 max-width:900px;
 margin: 0 auto;
+@media screen and (max-width:900px){
+  grid-template-columns: repeat(1, 1fr);
+  padding:1rem;
+  gap:1rem;
 
+}
 `
 
 const SocietyIcon = styled.article`
@@ -96,6 +103,9 @@ p{
 }
 h3{
   font-family: JetBrains Mono;
+}
+@media screen and (max-width:900px){
+  padding:1rem;
 }
 `
 
@@ -163,8 +173,6 @@ const CasesPage = () => {
           <CaseHeader>    
          Society Icon
          </CaseHeader> 
-
-      
           <Subtitle>Praktik Frontend Januari - Mars 2023</Subtitle> 
           <Description>
             Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, städa i node, städa i CSS, se över API-anropen, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.

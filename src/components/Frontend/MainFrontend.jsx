@@ -13,7 +13,10 @@ width:100vw;
 margin:0;
 height:100%;
 min-height:100vh;
-z-index:0;`
+z-index:0;
+@media screen and (max-width:700px){
+  background-color: ${({theme}) => theme.frontendcolors.contrast};
+ }`
 
 
 const MainFrontend = () => {

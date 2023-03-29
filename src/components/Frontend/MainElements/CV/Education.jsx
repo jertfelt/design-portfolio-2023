@@ -14,6 +14,18 @@ z-index:1;
 padding-bottom:3rem;
 padding-top:3rem;
 padding:2rem;
+@media screen and (max-width:700px){
+  width:100vw;
+  padding:3rem;
+  padding-bottom:8rem;
+  padding-left:10rem;
+}
+@media screen and (max-width:500px){
+  width:100vw;
+  padding:3rem;
+  padding-left:10rem;
+  padding-bottom:5rem;
+}
 &::before {
   top: 0;
   -webkit-transform: skewY(-4deg);
@@ -57,6 +69,9 @@ span{
   margin:0;
   padding:0;
   margin-bottom:1rem;
+}
+@media screen and (max-width:700px){
+  display:none;
 }
 `
 
@@ -117,23 +132,27 @@ const Education = ({courses, education}) => {
         key={index}>
           <Period>{item.period}</Period>
         <h3>{item.school}</h3>
-        <h4>{item.title}</h4>
-       
+        <h4>{item.title}</h4> 
         <Bread>{item.text}</Bread>
-        {item.school === "Nackademin" &&  
+        {item.school === "Nackademin" && <>
+       
       <BlobInGrid>
-            <CountingUp
+        <CountingUp
+        type="utbildning"
         number={done}
         percent ={true}
         />
-        </BlobInGrid>}
-        </GridItem>
-        ))}
-      <Knapp 
+        </BlobInGrid>
+        <Knapp 
         aria-label="button"
         type="button"
         onClick={reveal}>{buttonMsg}
       </Knapp>
+      </> 
+     }
+        </GridItem>
+        ))}
+   
       </Grid>
       {show && <Row>
     {/* <Nackademin/> */}

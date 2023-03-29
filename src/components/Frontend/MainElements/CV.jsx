@@ -18,6 +18,9 @@ height:100%;
 z-index:10;
 ${flex}
 padding-bottom:10em;
+@media (max-width:700px){
+  background: ${({theme}) => theme.frontendcolors.background};
+}
 `
 const IntroParagraph = styled.p`
 line-height:150%;
@@ -32,7 +35,7 @@ width:100%;
 height:50%;
 
 a{
-  color:${({theme}) => theme.frontendcolors.lightblue};
+color:${({theme}) => theme.frontendcolors.lightblue};
 font-weight:bold;
 
 &:hover{
@@ -52,11 +55,15 @@ padding:2rem;
 margin-bottom:2rem;
 &:hover{
   border-radius: ${({theme}) => theme.borderradius.second};
-}`
+}
+@media (max-width:700px){
+  background: ${({theme}) => theme.frontendcolors.contrast};
+}
+
+`
 
 
 const CVFrontend = () => {
-
   return (  
   <Container xlarge>
     <Content>

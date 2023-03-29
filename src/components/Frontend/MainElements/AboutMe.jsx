@@ -113,6 +113,8 @@ line-height:1.8rem;
 p{
   width:80%;
 }
+@media screen and (max-width:700px){
+}
 `
 
 const AboutMe = () => {
@@ -147,7 +149,6 @@ const AboutMe = () => {
       <Container
       xlarge>
       <Grid numbers>
-        
         <CountingUp
           number = {experience}
           text = {t("frontendpage.countinguptxt")}

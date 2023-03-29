@@ -22,7 +22,6 @@ const FrontendPage = () => {
   },[])
   
   return ( <>
-    
     <MainFrontend/>
     </>
     );

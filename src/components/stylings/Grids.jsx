@@ -5,26 +5,25 @@ display: grid;
 max-width: 1000px;
 margin: 0 auto;
 gap: 2rem;
-@media (min-width: 600px) {
+
+@media (min-width: 1050px) {
   grid-template-columns: repeat(3, 1fr);
  }
  @media screen and (max-width: 1050px){
   grid-template-columns: repeat(2, 1fr);
-  padding:2rem;
-  gap:4rem;
-  max-width:900px;
+ }
+ @media screen and (max-width: 700px){
+
   grid-template-columns: repeat(1, 1fr);
-  max-width:400px;
+  row-gap:1rem;
+  column-gap:1rem;
  }
 
  ${props => 
   props.cverfarenhet && 
   css`  
- 
-  
   `}
 ${props => props.about && css`
-
 line-height:150%;
 padding:1rem;
 padding-top:8rem;
@@ -34,7 +33,12 @@ color:${({theme}) => theme.textPrimary};
   gap: 5rem;
 }
 @media (max-width: 1000px){
-  gap:3rem;
+  gap:2rem;
+  padding:2rem;
+}
+@media screen and (max-width:700px){
+padding:2rem;
+   
 }
 
 `}
@@ -46,6 +50,7 @@ ${props =>
     gap:1rem;
     display:flex;
     flex-direction:column;
+    max-width:80%;
   }
   `}
   ${props => 
@@ -58,11 +63,6 @@ gap: 5rem;
   padding:2rem;
  }
     `}
-    ${props => 
-      props.cases && 
-      css`  
-      
-  
-      `}
+ 
   
 `

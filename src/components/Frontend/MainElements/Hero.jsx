@@ -17,16 +17,12 @@ text-align:left;
 font-size: 3.5rem;
 text-transform: uppercase;
 line-height:3.7rem;
-  // // @media only screen and (max-width: 700px
-  // // ){
-  // // font-size:48px;
-  // // line-height:3rem;
-  // // }
-  // // @media only screen and (max-width: 500px
-  // //   ){
-  // //   font-size:40px;
-  // //   line-height:3rem;
-  // //   }
+@media screen and (max-width:700px){
+ font-size:2.5rem;
+ line-height:3rem;
+ margin:0;
+  }
+
 `
 
 const HeroPic = styled(Image)`
@@ -38,18 +34,11 @@ overflow: hidden;
 border-radius: ${({theme}) => theme.borderradius.first};
 height:300px;
 width:300px;
-
-// //   height:200px;
-// //   width:200px;
-// //   filter: drop-shadow(0 2mm 1mm #867794);
-// //   position:fixed;
-// //   z-index:-1;
-// //   top:10%;
-// //   right:20%;;
-// // }
-
-// //   display:none;
-// // }
+@media screen and (max-width:700px){
+height:200px;
+width:200px;
+padding-left:50%;
+}
 `
 
 
@@ -67,6 +56,10 @@ button{
 
 line-height:150%;
 font-size:18px;
+@media screen and (max-width:700px){
+  margin:0;
+  width:80%;
+  }
 `
 
 const Paragraph = styled.p `
@@ -74,6 +67,10 @@ font-family: Arya;
 max-width:300px;
 margin-bottom:-3rem;
 font-size:20px;
+@media screen and (max-width:700px){
+  margin:0;
+
+  }
 `
 
 const Grid = styled.div`
