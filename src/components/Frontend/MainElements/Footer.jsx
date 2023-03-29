@@ -18,6 +18,7 @@ background:${({theme}) => theme.frontendcolors.alternativecontrast};
 height:10vh;
 bottom:120;
 padding:0;
+
 }
 `
 
@@ -28,6 +29,7 @@ gap:10px;
 font-family: Arya;
 font-size:  ${fonts.fontSizes.medium};
 line-height: 1.4rem;
+
 a{
   border-style: solid;
   border-color: transparent;

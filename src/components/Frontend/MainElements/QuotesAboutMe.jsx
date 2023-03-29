@@ -15,6 +15,7 @@ z-index:1;
   @media screen and (max-width:700px){
     padding:1rem;   
     margin:0;
+    margin-left:-2rem;
     width:100%;
    }
 
@@ -81,7 +82,7 @@ div{
   border-radius:49px;
  
   &:hover{
-    filter: drop-shadow(0 2mm 4mm ${({theme}) => theme.frontendcolors.accent});
+    filter: drop-shadow(0 2mm 4mm ${({theme}) => theme.frontendcolors.alternativecontrast});
   }
   @media screen and ${device.maxtablet}{
     max-width:500px;

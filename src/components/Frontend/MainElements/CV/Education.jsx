@@ -56,6 +56,9 @@ padding:2rem;
   -webkit-transform-origin: 100%;
   transform-origin: 100%;
 }
+h2{
+  color:${({theme}) => theme.textPrimary};
+}
 `
 
 

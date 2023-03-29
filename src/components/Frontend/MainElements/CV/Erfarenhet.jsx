@@ -11,6 +11,22 @@ padding-bottom:3rem;
 padding-top:3rem;
 padding:2rem;
 margin-bottom:5em;
+@media screen and (max-width:700px){
+  background:${({theme}) => theme.frontendcolors.background};
+  width:100vw;
+  padding:3rem;
+  padding-bottom:8rem;
+  h2{
+    padding-left:10rem;
+  }
+}
+@media screen and (max-width:500px){
+  width:100vw;
+  padding:2rem;
+  h2{
+    padding-left:3rem;
+  }
+}
 &::before {
   top: 0;
   -webkit-transform: skewY(-4deg);
@@ -41,10 +57,13 @@ margin-bottom:5em;
   transform: skewY(8deg);
   -webkit-transform-origin: 100%;
   transform-origin: -10%;
+  @media screen and (max-width:700px){
+    display:none;
+  }
 }
 `
 const ErfarenhetStyle = styled.div`
-color:white;
+color: ${({theme}) => theme.textPrimary};
 ul{
 list-style:none;
 }
@@ -54,6 +73,7 @@ display:flex;
 width:100%;
 align-items:center;
 justify-content:center;
+
 `
 
 

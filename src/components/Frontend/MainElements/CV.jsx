@@ -20,6 +20,7 @@ ${flex}
 padding-bottom:10em;
 @media (max-width:700px){
   background: ${({theme}) => theme.frontendcolors.background};
+  padding-bottom:0;
 }
 `
 const IntroParagraph = styled.p`
