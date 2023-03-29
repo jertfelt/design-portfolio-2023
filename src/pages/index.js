@@ -4,8 +4,7 @@ import LinksToPages from "@component/components/Homepage/Links"
 const HomepageComponent = styled.section`
 max-width: 100vw;
 width:100vw;
-
-padding-top:4rem;
+padding-top:2rem;
 display:flex;
 flex-direction: column;
 box-sizing: border-box;
@@ -17,6 +16,7 @@ color: ${({ theme }) => theme.textPrimary};
 `
 const TextContainer = styled.div`
 padding:2rem;
+padding-left:5rem;
 h1{
 font-size:4.5rem;
 line-height:4rem;
@@ -53,11 +53,12 @@ p{
 `
 const ThreeColumnGrid= styled.div`
 margin: 0;
-
 display:grid;
 @media (min-width: 700px){
   padding-top:5rem;
   grid-template-columns: repeat(2, 1fr);
+  row-gap:1rem;
+ 
   grid-template-rows: 1fr;
 }
 ` 

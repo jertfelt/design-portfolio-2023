@@ -6,11 +6,13 @@ import Header from '@component/components/Header/Header';
 import Theme, {lightTheme, darkTheme} from '@component/components/stylings/Theme';
 import { useMode } from '@component/components/stylings/useMode';
 import AppProvider from '@component/context/AppContext';
+import { AppWithTranslation, appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) =>{
   const [theme, themeToggler, mountedComponent] = useMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   if(!mountedComponent) return <div/>
+
   return (
     <Fragment>
     <HeadIndex/>
@@ -27,3 +29,5 @@ export default function App({ Component, pageProps }) {
     </Theme>
     </Fragment>)
 }
+
+export default appWithTranslation(App)

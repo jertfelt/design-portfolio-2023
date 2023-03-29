@@ -35,7 +35,7 @@ position: relative;
 z-index: 0;
 font-size: 2.5em;
 padding:1rem;
-min-height:22vh;
+min-height:20vh;
 max-height:25vh;
 `
 
@@ -288,7 +288,7 @@ const LinksToPages = () => {
   const {setSelectedPage} = useContext(AppContext);
 
   const selection = (e) => {
-    console.log(e.target.outerText)
+
     switch(e.target.outerText){
       case "Frontend,":
         setSelectedPage({value:"frontend", url:"/frontend"})

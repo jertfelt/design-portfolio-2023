@@ -87,6 +87,7 @@ const {selectedPage} = useContext(AppContext)
     {selectedPage && selectedPage.value==="illustration" &&
    <IllMenu/>
     }
+     <Link href={{ pathname, query }} as={asPath} locale={locale}></Link>
     <Link href="/contact">
       &#9993; Kontakt
     </Link>
