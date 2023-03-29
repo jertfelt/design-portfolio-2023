@@ -99,7 +99,7 @@ useEffect(() => {
     }
 
     <Link href="/contact">
-      &#9993; {t("menu.Kontakt")}
+      &#9993; Kontakt 
     </Link>
     {/* <LocaleSwitcher/> */}
     </StyledMenu>

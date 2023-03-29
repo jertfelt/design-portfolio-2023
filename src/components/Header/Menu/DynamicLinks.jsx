@@ -32,10 +32,16 @@ useEffect(() => {
 
   return(
     <Others>
-{data && data.filter(item => item.value !== selectedPage.value).map((item,i) => (
-<Link href={item.url} 
+{data && data.map((item,i) => (<>
+{item.value === selectedPage.value ?
+  <Link 
+href={item.url} 
 key={i}
-onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text}</Link>
+onClick={() => setSelectedPage({value:item.value, url: item.url})}><i>{item.text === "Konst" ? <>Konst</>: item.text}</i></Link>: <Link 
+href={item.url} 
+key={i}
+onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text === "Konst" ? <>Konst</>: item.text}</Link>}
+</>
 )
 
 )}
@@ -43,3 +49,5 @@ onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text ==
   )
   
 }
+
+// data.filter(item => item.value !== selectedPage.value)

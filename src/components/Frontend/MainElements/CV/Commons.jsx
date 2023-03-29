@@ -84,12 +84,13 @@ ${props =>
 export const Row = styled.div`
 ${flex}
 gap:4rem;
+ ${flex({direction:"row", align:"center", justify:"center"})}
 @media only screen and (${device.laptop}){
   ${flex({direction:"row", align:"center", justify:"center"})}
   padding:5em;
  
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:800px){
   ${flex({direction:"column", align:"flex-start", justify:"center"})}
  gap:1rem;
  padding-left:5rem;

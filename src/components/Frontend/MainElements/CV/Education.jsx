@@ -4,6 +4,7 @@ import CountingUp from "../Counter";
 import { Bread, CVContent, GridItem, Period, Row } from "./Commons";
 import { Grid } from "@component/components/stylings/Grids";
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
+import Nackademin from "./Nackademin";
 
 
 const EducationStyle =styled.section`
@@ -64,6 +65,7 @@ h2{
 
 const BlobInGrid = styled.div`
 margin-top:-2rem;
+margin-bottom:2rem;
 padding:0;
 display:flex;
 align-items:center;
@@ -78,7 +80,8 @@ span{
 }
 `
 
-const Knapp = styled.button`
+export const Knapp = styled.button`
+
 padding:18px;
 font-size:${fonts.fontSizes.mediumsmall};
 border-color:${({theme}) => theme.white};
@@ -102,6 +105,15 @@ max-width:50%;
 }
 `
 
+const Mobile = styled.div`
+@media screen and (min-width:800px){
+display:none;
+}`
+
+const NotMobile = styled.div`
+@media screen and (max-width:800px){
+display:none;
+}`
 
 const Education = ({courses, education}) => {
   const [doneCourses, setCourses] = useState([]);
@@ -111,7 +123,7 @@ const Education = ({courses, education}) => {
   const reveal = () => {
     if(show){
       setShow(false)
-      setButtonMsg("Läs mer om vad jag gör på Nackademin")
+      setButtonMsg("Nackademins kurser")
     }
     else{
       setShow(true)
@@ -151,15 +163,22 @@ const Education = ({courses, education}) => {
         type="button"
         onClick={reveal}>{buttonMsg}
       </Knapp>
+      {show && <Mobile>
+    <Nackademin
+    courses={courses}
+    />
+    </Mobile> }
       </> 
      }
         </GridItem>
         ))}
    
       </Grid>
-      {show && <Row>
-    {/* <Nackademin/> */}
-    </Row> }
+      {show && <NotMobile>
+    <Nackademin
+    courses={courses}
+    />
+    </NotMobile> }
     </CVContent>
     </EducationStyle>  );
 }
