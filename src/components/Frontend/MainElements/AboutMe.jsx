@@ -4,6 +4,7 @@ import { fonts } from "@component/components/stylings/Stylings";
 import { Grid } from "@component/components/stylings/Grids";
 import Link from "next/link";
 import CountingUp from "./Counter";
+import {useTranslation } from "next-i18next";
 
 const MainSection = styled.section`
 margin-bottom:3rem;
@@ -37,6 +38,7 @@ padding-bottom:5rem;
 @media (max-width:1000px){
   left:0%;
 }
+text-align:center;
 `
 const BigNumber = styled.h3`
 font-size:70px;
@@ -48,6 +50,7 @@ padding:2rem;
 background-color: ${({theme}) => theme.frontendcolors.contrast};
 border-radius: ${({theme}) => theme.borderradius.first};
 max-width:300px;
+text-align:center;
 @media (max-width:1000px){
  padding:1rem;
 }
@@ -59,7 +62,7 @@ font-size:${fonts.fontSizes.medium};
 margin-top:-3em;
 padding-left:1rem;
 padding-right:1rem;
-text-align:left;
+text-align:center;
 width:80%;
 line-height:150%;
 @media (max-width:900px){
@@ -102,32 +105,44 @@ const Emphasis = styled.span`
 color: ${({theme}) => theme.frontendcolors.lightblue};
 `
 
+const LookingForJob= styled.div`
+padding:2rem;
+font-size:1.2rem;
+color: ${({theme}) => theme.textPrimary};
+line-height:1.8rem;
+p{
+  width:80%;
+}
+`
+
 const AboutMe = () => {
   let date =  new Date().getFullYear();
   let experience = date - 2011;
-
+  const {t} = useTranslation();
   return ( 
   <MainSection>
     <Container xlargegreyslantedafter>
     <Grid 
       about>
-        <About><h2>OM MIG</h2>
-        <p>Jag har en kandidatexamen från Konstfack i Grafisk Design & Illustration, och har sedan dess jobbat med bland annat webb, copy, kommunikation, som digital producent, som webb- & bildredaktör, fotograf, skribent, layoutare och som frilansande grafisk formgivare, projektledare, konstnär, illustratör och ibland animatör. Jag har till exempel formgivit grafiska profiler (med UX-perspektiv), gjort logotyper, skapat mallar åt sociala medier, formgett årsrapporter, ritat serier & illustrerat nyheter i tidningar.<br/>
-         <Emphasis>Trots kreativa, utmanande och roliga yrkesroller så fann jag mig själv sökandes. Till slut hittade jag hem: jag älskar programmering!</Emphasis> </p></About>
-          <p>Som person är jag driven, och gillar att problemlösa. Jag försöker att se vägen framåt i alla situationer, och jag tycker om att experimentera. Efter många års erfarenhet av att både få, och ge, feedback upplever jag att jag är en bra team-medarbetare och jag uppskattar att få jobba i team där jag får bli hörd. Jag är väldigt självständig som person, och känner att tillit är oerhört viktigt. Under min studietid har jag jobbat hybrid, mestadels hemifrån, och när jag jobbar så är det med disciplin. Faktum är att jag kan ha så roligt när jag kodar att jag har svårt att sluta jobba för dagen! Jag är också nyfiken och lär mig gärna mer, det finns en särskild njutning i att upptäcka nya saker till exempel. Här tror jag att mitt personliga intresse för improvisationsteater kan spela in: att vara flexibel och tänka snabbt är bra när man felsöker och när man jobbar i agila projekt, men också att våga testa saker känns som A och O. Jag har höga krav på mitt arbete, men gillar inte prestige, jag föredrar ärlighet och ödmjukhet. Jag tycker om att bolla idéer och kod, vill vara transparent, och har inte problem med att be om hjälp när jag behöver den. Samma sak med att ge hjälp!</p>
+        <About><h2>{t("frontendpage.aboutme")}</h2>
+        <p>{t("frontendpage.aboutmetxt1")}<br/>
+         <Emphasis>{t("frontendpage.emphasis1")}</Emphasis> </p></About>
+          <p>{t("frontendpage.aboutmetxt2")}</p>
           <div>
-          <p>Vidare är jag analytisk. Jag ser mönster i allt det jag gör, och kan därför någorlunda lätt bedöma vart jag är på väg och varför, samt se risker med pågående projekt. Efter mina tidigare år som formgivare har jag också kännedom kring tillgänglighet, färg och form. Jag föredrar att förstå saker på djupet - och gör gärna saker från början, grundligt, för att förstå helt och hållet. Det gör att jag lär mig, även om det tar tid. Då jag även sitter på kunskaper inom design är det därför både ett lätt, och roligt, val att göra saker på egen hand. <br/><Emphasis>Min utbildning tar slut i maj 2023. Tills dess vill jag börja jobba! 
+          <p>{t("frontendpage.aboutmetxt3")}<br/></p>
+          </div>
+      </Grid>
+      <LookingForJob>
+        <p>
+      <Emphasis>{t("frontendpage.emphasis2")}
           </Emphasis><br/>
-          Jag letar efter en arbetsplats som kan ta emot mig som junior frontendare, som har högt i tak, som låter mig växa både självständigt och i ett team. Jag kan idag React, Next, och javascript. Jag har även tittat på node.js, mongoose, CMS-system, hosting, jest, och Google firebase som databas. <br/>
+           <br/>{t("frontendpage.aboutmetxt4")}
           </p>
           <Row>
           <ContactButton><Link href="https://www.linkedin.com/in/tovajertfelt/">Linkedin</Link></ContactButton>
-          <ContactButton><Link href="/contact">Kontakta mig</Link></ContactButton>
+          <ContactButton><Link href="/contact">{t("frontendpage.contactbtn")}</Link></ContactButton>
           </Row>
-      
-          </div>
-
-      </Grid>
+      </LookingForJob>
       <Numbers>
       <Container
       xlarge>
@@ -135,11 +150,11 @@ const AboutMe = () => {
         
         <CountingUp
           number = {experience}
-          text = {"års erfarenhet som digital formgivare, både som frilans och anställd."}
+          text = {t("frontendpage.countinguptxt")}
         />
         <div>
         <BigNumber>2021</BigNumber>
-        <Text>började jag studera frontendprogrammering genom Nackademin.</Text>
+        <Text>{t("frontendpage.bignrtxt")}</Text>
         </div>
       </Grid>
     </Container>

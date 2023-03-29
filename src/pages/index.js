@@ -1,5 +1,14 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
+import {useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+export async function getStaticProps({locale}){
+  return{
+    props:{
+      ...(await serverSideTranslations(locale, ["common"]))
+    }
+  }
+}
 
 const HomepageComponent = styled.section`
 max-width: 100vw;
@@ -125,6 +134,7 @@ background: ${({ theme }) => theme.accentTwo};
 `
 
 const Homepage = () => {
+  const {t} = useTranslation();
   return ( 
   <>
   <HomepageComponent>
@@ -133,11 +143,11 @@ const Homepage = () => {
   <Column>
   <div>
     <h1>Tova Jertfelt</h1>
-    <h2>Frontendare, konstnär, formgivare.</h2>
+    <h2>{t("startsida.h2")}</h2>
     </div>
   <div>
-  <h3>Utbildad på Konstfack & Nackademin YH Frontend-programmet</h3>
-  <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
+  <h3>{t("startsida.h3")}</h3>
+  <p>{t("startsida.par1")}</p>
 
   </div>
  
@@ -150,20 +160,7 @@ const Homepage = () => {
   
   </div>
   </ThreeColumnGrid>
-  {/* <TextContainer>
-    <h1>Tova Jertfelt</h1>
-    <h2>Frontendare, konstnär, formgivare.</h2>
-  </TextContainer>
-  <LinksToPages/>
-  <Explanation>Klicka på en rubrik ovan för att komma vidare</Explanation>
-  <TextContainerRight>
-  <h3>Utbildad på Konstfack & Nackademin YH Frontend-programmet</h3>
-  <p>Med många järn i elden har jag erfarenhet av det visuella. Jag jobbar med det digitala i främsta rum, men har erfarenhet som webbredaktör, digital producent, kodare, frilansande illustratör & formgivare, samt som konstnär.</p>
-  </TextContainerRight>
-  <div>
-   
-    {/* <img src="https://www.tovajertfelt.se/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftova-linkedin-portratt.a78d20de.png&w=1080&q=75"/> 
-      </div>*/}
+
 
   </HomepageComponent> 
   <Footer>

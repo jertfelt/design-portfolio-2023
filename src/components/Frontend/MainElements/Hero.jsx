@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import profilepic from "../../../../public/tova-linkedin-portratt.png"
-
+import {useTranslation } from "next-i18next";
 
 const PageWrapper = styled.div`
 
@@ -104,6 +104,7 @@ grid-template-columns: 1fr 2fr;
 
 
 const HeroContent = () => {
+  const {t} = useTranslation();
   return ( <section>
     <PageWrapper>
       <Grid>
@@ -113,19 +114,18 @@ const HeroContent = () => {
         alt="Svartvit bild på Tova som tittar in i kameran."
         />
         <div>
-      <Paragraph>Jag är Tova Jertfelt:</Paragraph>
+      <Paragraph>{t("frontendpage.hero1")}</Paragraph>
       <Heading
       title="Multidisciplinär & Kreativ Frontendare"
       className="headingfont">
-        Multidisciplinär<br/>
-        & Kreativ Frontendare<br/>
+        {t("frontendpage.hero2")}<br/>
+        {t("frontendpage.hero2b")}
+       
       </Heading>
       <ParagraphRow
       >
-        <p>med flera års erfarenhet av visuell kommunikation och grafisk design. Jag älskar att jag i mitt arbetsliv kan få kombinera mina tre styrkor: problemlösning, kreativitet, och osläckta nyfikenhet.</p>
-        {/* <ContactButton aria-label="Kontakta mig">
-      KONTAKT
-        </ContactButton> */}
+        <p>{t("frontendpage.hero3")}</p>
+
       </ParagraphRow>
  
       </div>

@@ -9,6 +9,9 @@ import DesignMenu from './DesignMenu';
 import IllMenu from './IllMenu';
 import Start from './Start';
 import { AppContext } from '@component/context/AppContext';
+import LocaleSwitcher from './LanguageSwitch';
+import { useTranslation } from 'next-i18next';
+
 
 
 const StyledMenu = styled.nav`
@@ -62,6 +65,13 @@ const router = useRouter()
 const {key} = router.query;
 const {selectedPage} = useContext(AppContext)
 
+const { t } = useTranslation("");
+
+useEffect(() => {
+  let lang = router.locale == "sv" ? "sv" : "en";
+  document.querySelector("html").setAttribute("lang", lang);
+}, [router.locale]);
+
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.keyCode === 27) {
@@ -87,10 +97,11 @@ const {selectedPage} = useContext(AppContext)
     {selectedPage && selectedPage.value==="illustration" &&
    <IllMenu/>
     }
-     <Link href={{ pathname, query }} as={asPath} locale={locale}></Link>
+
     <Link href="/contact">
-      &#9993; Kontakt
+      &#9993; {t("menu.Kontakt")}
     </Link>
+    {/* <LocaleSwitcher/> */}
     </StyledMenu>
 );
 }

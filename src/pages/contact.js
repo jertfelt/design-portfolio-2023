@@ -1,5 +1,16 @@
 import styled from "styled-components";
 import { contacts } from "@component/data/contactdetails";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import {useTranslation } from "next-i18next";
+import { useEffect } from "react";
+export async function getStaticProps({locale}){
+  return{
+    props:{
+      ...(await serverSideTranslations(locale, ["common"]))
+    }
+  }
+}
+
 const Section = styled.section`
 max-width: 100vw;
 width:100vw;
@@ -41,14 +52,16 @@ div{
 `
 
 const Contact = () => {
+  const {t} = useTranslation();
+
   return ( 
   <Section>
-    <h1>Kontakta mig:</h1>
+    <h1>{t("contact.h1")}</h1>
     <div>
       {contacts && contacts.map((item, index) => 
       <div key={index}>
       {item.type === "phone" || item.type === "email"
-      ?<p>{item.type.toUpperCase()}: {item.data}</p>
+      ?<p>{item.type === "phone" ? <>{t("contact.phone")}</> : item.type.toUpperCase()}: {item.data}</p>
       : <a href={item.type === "linkedin" ? `https://www.linkedin.com/in/${item.data}` : `https://www.instagram.com/${item.data}`}>
       <button>
         {item.type.toUpperCase()}

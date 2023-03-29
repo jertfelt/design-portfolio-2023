@@ -16,7 +16,6 @@ const Start = () => {
   return ( 
   <ColumnMenu>
     <DynamicLinkToOtherPages/>
-  
     <p>&#9733;</p>
   </ColumnMenu> );
 }

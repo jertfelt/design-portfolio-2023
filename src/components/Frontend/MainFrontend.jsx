@@ -17,7 +17,8 @@ z-index:0;`
 
 
 const MainFrontend = () => {
-  return ( <Section>
+  return ( 
+    <Section>
     <BgImg/>
     <AboutMe/>
     <GridWithQuotes/>

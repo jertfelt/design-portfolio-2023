@@ -3,6 +3,7 @@ import Image from "next/image"
 import styled from "styled-components";
 import HeroContent from "./Hero";
 
+
 const Wrapper = styled.div`
 position: fixed;
 height: 120vh;

@@ -12,7 +12,7 @@ import Erfarenhet from "./CV/Erfarenhet";
 const Content = styled.section`
 min-height:130vh;
 position: relative;
-background-color:rgba(50, 57, 57, 0.3);
+background-color:rgba(50, 57, 57, 0.1);
 width:100vw;
 height:100%;
 z-index:10;
@@ -72,9 +72,6 @@ const CVFrontend = () => {
         education={education}/>
         <Erfarenhet
         erfarenhet={erfarenhet}/>
-      
- 
-    
         </Content>
         </Container> );
 }

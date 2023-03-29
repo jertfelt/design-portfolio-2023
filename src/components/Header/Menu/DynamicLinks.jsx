@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import {useContext } from "react";
+import {useContext, useEffect } from "react";
 import { AppContext } from "@component/context/AppContext";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
+import { useRouter } from "next/router";
 
 const Others = styled.div`
 margin-top:16px;
@@ -19,14 +21,21 @@ export const data = [
   {value:"", url:"/", text:"Startsida"}]
 
 export const DynamicLinkToOtherPages = () => {
-  const {selectedPage, setSelectedPage} =useContext(AppContext)
+  const {selectedPage, setSelectedPage} = useContext(AppContext)
+  const router = useRouter()
+  const { t } = useTranslation("");
+
+useEffect(() => {
+  let lang = router.locale == "sv" ? "sv" : "en";
+  document.querySelector("html").setAttribute("lang", lang);
+}, [router.locale]);
 
   return(
     <Others>
 {data && data.filter(item => item.value !== selectedPage.value).map((item,i) => (
 <Link href={item.url} 
 key={i}
-onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text}</Link>
+onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text}</Link>
 )
 
 )}

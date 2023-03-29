@@ -91,10 +91,12 @@ const SocietyIcon = styled.article`
 padding:3rem;
 max-width:900px;
 margin: 0 auto;
+p{
+  line-height:1.8rem;
+}
 h3{
   font-family: JetBrains Mono;
 }
-
 `
 
 

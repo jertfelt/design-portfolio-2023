@@ -1,14 +1,45 @@
 {
-  "home": {
-    "Home title": "Home title",
-    "Home description": "Home description"
+  "menu": {
+    "Choice1": "Art",
+    "Kontakt": "Contact"
   },
-  "about": {
-    "About title": "About title",
-    "About description": "About description"
+  "startsida": {
+    "h2": "Frontend developer, artist and designer. ",
+    "h3": "With a Bachelor degree in visual communication at Konstfack & vocational degree in frontend-programming at Nackademin.",
+    "par1": "Juggling many things at once, I have years experience with working with the visual, especially in the digital space. With a skill for seeing the simplicity in complex patterns, I have always been good at delivering ideas. My curiosity has driven me to work with web editing, producing, programming, illustrations, design. Essentialy, I'm a multidisciplinary artist that enjoys doing many things.",
+    "headline": "Art,"
   },
-  "header": {
-    "Home": "Home",
-    "About": "About"
+  "contact": {
+    "h1": "Contact me",
+    "phone": "PHONE:"
+  },
+  "frontendpage":{
+    "hero1": "I am Tova Jertfelt",
+    "hero2": "MULTIDISCIPLINARY &",
+    "hero2b": "CREATIVE FRONTEND DEVELOPER",
+    "hero3": "with several years of experience within visual communication and graphic design. I love that I can, in my working life, combine my three strengths: problem solving, creativity and unquenchable curiosity.",
+    "aboutme": "ABOUT",
+    "aboutmetxt1":"I have a bachelor degree in Visual Communication and working experience within web editing, copy, communication, and freelance - working as a digital producer, project leader, within marketing and freelancing designer. Previously, I have taken part in creating graphic profiles, creating templates for social media channels, layouted annual reports, with UX-perspective in mind. With a skill for seeing the simplicity in complex patterns, I have always been good at delivering ideas backed on analysis and is a quick learner.",
+    "emphasis1": "Despite creative, challenging and fun tasks, I found myself searching for something else. Eventually, I found frontend development.",
+    "aboutmetxt2":"Two years ago I started studying frontend development at Nackademin, Stockholm. My background in design, knowledge of UI/UX, and my ability to quickly learn independently, and adapt to situations is working out for me in this line of work. My professional experience as a developer comes mainly from the internship periods, where I took part in brainstorming, pitching, and building a fullstack web application from scratch. Within this project, focus was on the frontend but also on UX/UI choices. During the other internship period, I was a consultant taking over a largely unmaintained code base with outdated dependencies, legacy code and bugs. My contribution to both projects was significant, and during both periods I showed that I can be capable, eager to learn and doesn’t shy away from challenges, and shows a delivery dependability.",
+    "aboutmetxt3":"Professionally, I have experience with working in teams from working in large organizations, both as a leader and as a follower, and am comfortable with both roles. I like to take in all perspectives and make my coworkers feel valued, I feel that it is important to give and take feedback. As a freelancer, I’m used to working independently, to maintain deadlines and to plan projects. I’m responsive, and have experience with both dealing with clients, and being one. My experience with the web comes from working in a quick-paced editorial, among others, so I’m used to deadlines with curveballs and to quickly think on your feet. In an office environment you will most likely find me glued to my work, and you will find that I work quickly, energetically, and handle more than one task at a time.",
+  "emphasis2":"My current internship ends in april 2023. I want to find an employment!",
+  "aboutmetxt4":"I'm looking for a workplace that can take me as a junior frontend developer, who has a high ceiling and lets me grow both independently and as a team member.I’m fluent in modern HTML, CSS, SASS. Javascript, and React/Next. I’m eager to learn new technologies through experience and playing around in my spare time. ",
+  "contactbtn": "Contact me",
+  "countinguptxt":"years experience as a digital designer",
+  "bignrtxt": "I started studying frontend development at Nackademin.",
+  "quotes1headline":"Secure",
+  "quotes2headline":"Driven",
+  "quotes3headline":"Teamplayer",
+  "quotes4headline":"Generous",
+  "quotes5headline":"Curious and motivated",
+  "quotes1":"Tova has good knowledge in how, and why, you work with JavaScript within frontend development, and can with certainty choose right methods.",
+  "quotes2":"Tova is very competent and driven.",
+  "quotes3":"Tova is a very competent and driven colleague. She is generous with her knowledge and uses it to a very extremely high level in her deliveries, and she makes sure to raise her colleagues with her.",
+  "quotes4": "Tova is helpful, knowledgeable and responsive to requests.",
+  "quotes5": "Tova learns quickly and eagerly, has a high work moral and is easy to work with. Besides being a good programmer she also has, thanks to her background in arts, a keen understanding for design, UX and UI. I recommend her strongly!",
+  "quotes2title": "Fredrika, classmate Nackademin",
+  "quotes3title":"Sonja Dandenell, webbredaktör Amnesty Sverige"
   }
+  
 }
