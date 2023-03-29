@@ -30,7 +30,8 @@ const FrontendMenu = () => {
   return ( 
   <ColumnMenu>
   <Links>
-  <Link href="/frontend/cv"><Button>CV</Button></Link><br/>
+  <Link href="/frontend/cases">Cases</Link>
+  <Link href="/frontend/cv">CV</Link><br/>
 
   </Links>
       <p>&#9733;</p>

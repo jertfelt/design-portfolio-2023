@@ -1,5 +1,9 @@
+import WorkInProgress from "@component/components/WorkInProgress";
+
 const Design = () => {
-  return ( <section>DEISGN</section> );
+  return ( <section>
+    <WorkInProgress/>
+  </section> );
 }
  
 export default Design;
