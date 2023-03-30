@@ -23,6 +23,32 @@ gap: 2rem;
   props.cverfarenhet && 
   css`  
   `}
+  ${props => props.casesindividual && css`
+  img{
+    max-width:100%;
+   
+  }
+  .img-container {
+    overflow: hidden;
+  }
+  .img-container img {
+  
+    transition: transform 0.3s;
+  }
+  .img-container img:hover {
+    transform: scale(1.5);
+  }
+  @media screen and (max-width: 1050px){
+    grid-template-columns: repeat(2, 1fr);
+    row-gap:1rem;
+    column-gap:0;
+   }
+   @media screen and (max-width: 700px){
+    grid-template-columns: repeat(1, 1fr);
+    row-gap:0rem;
+    column-gap:0;
+   }
+  `}
 ${props => props.about && css`
 line-height:150%;
 padding:1rem;

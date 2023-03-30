@@ -36,21 +36,29 @@ hr{
   margin-top:-2rem;
   margin-bottom:-1rem;
   box-shadow: 1px 1px 1px ${({theme}) => theme.frontendcolors.background};
+  @media(max-width:800px){
+    display:none;
+  }
 }
 h1{
   font-size:80px;
   line-height:50px;
+  @media(max-width:1000px){
+    font-size:2rem;
+  }
 }
 p{
   font-size:32px;
+  @media(max-width:1000px){
+    font-size:1.5rem;
+  }
 }
 text-shadow: 1px 1px 1px ${({theme}) => theme.frontendcolors.background};
 z-index: 1;
 position: relative;
-@media screen and (max-width:700px){
-padding:2rem;
-padding-top:10vh;
-padding-bottom:5vh;
+@media(max-width:800px){
+  padding-right:2rem;
+  margin-left:-3rem;
 }
 `
 

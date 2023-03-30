@@ -72,7 +72,7 @@ const CasefItem = ({item}) => {
     >
     {item && <>
         <CaseHeader>    
-          <Link href={'/cases/' + item.id} 
+          <Link href={'/frontend/cases/' + item.id} 
                 state={{data: item.id}}
                 key={item.id}>
                 {item.title}

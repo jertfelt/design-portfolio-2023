@@ -15,12 +15,16 @@
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "firebase": "^9.18.0",
+    "flickity": "^2.3.0",
+    "i": "^0.3.7",
     "next": "^13.2.3",
     "next-i18next": "^13.2.2",
+    "npm": "^9.6.2",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-flickity-component": "^4.0.5",
     "sass": "^1.58.3"
   }
 }

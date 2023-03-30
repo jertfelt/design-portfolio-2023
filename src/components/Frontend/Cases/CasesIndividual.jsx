@@ -1,15 +1,13 @@
-import { useRouter } from "next/router";
+
 import styled,{css} from "styled-components";
-import { Container } from "@component/components/stylings/Containers";
-import { flex, device } from "@component/components/stylings/Stylings";
+import { flex, device, fonts } from "@component/components/stylings/Stylings";
 import { Grid } from "@component/components/stylings/Grids";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import HeaderIndividual from "./HeaderCaseIndividual";
 import Image from "next/image";
 import NotFound from "@component/pages/404";
-
-
+import Carousel from "./Carousel";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -24,30 +22,85 @@ flex-direction:column;
 `
 
  const Scrollable = styled.div`
+
+ol{
+  display:none;
+}
+
+.flickity-viewport{
+  max-height:800px;
+  img{
+    max-height:800px;
+  }
+  @media (max-width:700px){
+    display:none;
+    // max-height:500px;
+
+    // margin:0;
+
+    // img{
+    //   max-height:500px;
+      
+    // }
+  }
+  @media (max-width:1000px){
+    max-height:500px;
+    img{
+      max-height:500px;
+    }
+  }
+}
+
+.flickity-button{
+  background: ${({theme}) => theme.frontendcolors.background};
+  color:${({theme}) => theme.contrast};
+  margin:1rem;
+  border:none;
+  @media (max-width:700px){
+    display:none;
+  }
+}
+
  background-color: ${({theme}) => theme.frontendcolors.background};
  color:${({theme}) => theme.textPrimary};
  padding:4rem;
  z-index:10;
 margin-top:85vh;
-min-height:100%;`
+min-height:100%;
+h2{
+  font-size: ${fonts.fontSizes.medium};
+  color:${({theme}) => theme.lightblue};
+}
+hr{
+  height:2px;
+  border:none;
+  color:${({theme}) => theme.textPrimary};
+  background-color:${({theme}) => theme.textPrimary};
+}
+`
+const About = styled.div`
+width:80%;
+font-size:20px;
+line-height:28px;
+padding-left:10px;
+padding-top:2rem;
+padding-bottom:2rem;
+@media(max-width:800px){
+   padding:0;
+   width:90%;
+}
+`
 
 const Arrow = styled.h3`
+padding-top:2rem;
 font-size:42px;
+padding:1px;
 &:hover{
-  background-color:${({theme}) => theme.frontendcolors.alternativecontrast};
+transform: rotate(5deg);
 }
-
-border-radius: 50%;
-
 text-align:center;
-padding:1rem;`
-
-const ImageWrapper = styled.div`
-width:100%;
-max-width:50vw;
-height:40vh;
-position:relative;
 `
+
 
 const RowSpaceapart = styled.div`
 display:flex;
@@ -61,8 +114,13 @@ gap:3rem;
   display:flex;
   gap:1rem;
   flex-direction:row;
- 
+ @media(max-width:800px){
+  padding-top:1rem;
+  width:100%;
+
+}
   button{
+    cursor:pointer;
     padding:6px;
     background-color: transparent;
     border: 2px solid;
@@ -77,7 +135,6 @@ gap:3rem;
 }`
 
 const CaseIndividualPage = ({array, id}) => {
-  console.log(array, id)
   let individual = array.filter(item => {
     return item.id.toString() === id
   })
@@ -88,9 +145,7 @@ const CaseIndividualPage = ({array, id}) => {
   let max = (array.length);
   const next = Number(id)+1;
   const back = Number(id)-1; 
-  console.log(next, max, back)
 
- 
   useEffect(() => {
     if (id === undefined){
       setShowButts(false)
@@ -102,7 +157,7 @@ const CaseIndividualPage = ({array, id}) => {
         setBack(true)
       }
       if (Number(id) >= max){
-        console.log(Number(id), "id")
+
         setFront(false)
       }
       setShowButts(true)
@@ -121,57 +176,22 @@ const CaseIndividualPage = ({array, id}) => {
              <h2>
             {item.tag}
             </h2>
-            <div>
+            <About>
              <h3>Om projektet:</h3>
              <p>{item.text}</p> 
              <p>{item.moreinfo.text1}</p>
-            </div>
-            <Grid>
-            <ImageWrapper>
-        <Image 
-     
-        fill
-        quality={100}
-        sizes="100vw"
-        style={{
-          objectFit: 'contain',
-        }}
-        alt={item.extra.file01.alt}
-        src={item.extra.file01.url}
-         />
-       
-        </ImageWrapper>
-        <ImageWrapper>
-        <Image 
-
-        fill
-        quality={100}
-        sizes="100vw"
-        style={{
-          objectFit: 'contain',
-        }}
-        alt={item.extra.file02.alt}
-        src={item.extra.file02.url}
-         />
-       
-        </ImageWrapper>
-        <ImageWrapper>
-        <Image 
-      
-        fill
-        quality={100}
-        sizes="100vw"
-        style={{
-          objectFit: 'contain',
-        }}
-        alt={item.extra.file03.alt}
-        src={item.extra.file03.url}
-         />
-       
-        </ImageWrapper>
-            </Grid>
+            </About>
+           <Carousel 
+           img0={item.extra.file03.url}
+           img1={item.sources.imgurl}
+           img2={item.extra.file01.url}
+           img3={item.extra.file02.url}
+           />
+        
+        <About>
         <p>{item.moreinfo.text2}</p>
         <p>{item.moreinfo.text3}</p>
+        </About>
         <hr></hr>
         <RowSpaceapart>
           <div className="links">

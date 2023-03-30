@@ -144,7 +144,7 @@ const CasesPage = () => {
         <div>
         <Headline>Cases</Headline>
         <Desc>Här finns ett urval av olika saker jag kodat.<br/> En del är från praktiken, andra är studentarbeten, andra är egna experiment.
-         {/* <br/>För att se alla mina projekt, och filtrera på sökord, gå till <Link href="/cases/"> CASES</Link>. */}
+       
         </Desc>
         </div>
       {error && <p>Kan inte ladda från databasen, försök igen senare.</p>}
