@@ -1,17 +1,17 @@
 {
-  "cases": [
+  "casesENG": [
     {
       "extra": {
         "file01": {
-          "alt": "Interaktiv graf",
+          "alt": "Interactive graph",
           "url": "/frontend/greenpeace__2.png"
         },
         "file02": {
-          "alt": "Text och bild",
+          "alt": "Text and picture",
           "url": "/frontend/greenpeace__4.png"
         },
         "file03": {
-          "alt": "Adminportal med olika funktioner",
+          "alt": "Admin",
           "url": "/frontend/greenpeace__3.png"
         }
       },
@@ -37,32 +37,32 @@
           "Styled Components",
           "Firebase"
         ],
-        "text1": "Greenpeace ville ha en hemsida som hanterar statistik från SCB och som ska ge en tydligare bild av biobränsle. Det skulle vara sökbart, interaktivt, och enkelt att ta till sig. Utöver frontend-programmering så illustrerade jag även några illustrationer.",
-        "text1part2": "Vi jobbade med verktyget GraphJS för att skapa interaktiva grafer för användaren, totalt tre stycken. Datan hämtade vi från bl.a. SCB, och lagrade på vår egen databas i Firebase. Vi byggde även en funktion där användaren kan välja ett år och se datan för det specifika året. Datan uppdateras automatiskt när Naturvårdsverket uppdaterar.",
-        "text1part3": "Vi skapade ett eget CMS-system för Greenpeace där de kan gå in och ändra i länkar, bildtexter och texter samt avpublicera/publicera hela sektioner.",
-        "text2": "Vi jobbade med verktyget GraphJS för att skapa interaktiva grafer för användaren, totalt tre stycken. Datan hämtade vi från bl.a. SCB, och lagrade på vår egen databas i Firebase. Vi byggde även en funktion där användaren kan välja ett år och se datan för det specifika året. Datan uppdateras automatiskt när Naturvårdsverket uppdaterar.",
-        "text3": "Vi skapade ett eget CMS-system för Greenpeace där de kan gå in och ändra i länkar, bildtexter och texter samt avpublicera/publicera hela sektioner."
+        "text1": "Fullstack project. Greenpeace wanted a campaign site that handles statistics from Swedish Central Data Bureu, and that would give more details on fossil fuels. The demands were that it should be SEO-friendly, interactive and easy to understand. I did the frontend, UX and some of the illustrations.",
+        "text1part2": "We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source. ",
+        "text1part3": "We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections.",
+        "text2": "We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source. ",
+        "text3": "We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections."
       },
       "sources": {
         "github": "",
-        "imgalt": "Scrollbar hero och animerad svg",
+        "imgalt": "Scrolling hero och animated svg",
         "imgurl": "/frontend/greenpeace__1.png",
         "link": "https://sverigesutslapp.se"
       },
-      "sub": "Responsiv kampanjsida med SEO-perspektiv och interaktiva grafer",
+      "sub": "Responsive campaign site with SEO-perspective",
       "tag": "NextJS",
       "tags": {
         "c1": "Netlify",
         "c2": "NextJS",
-        "c3": "GraphJS"
+        "c3": "Firebase"
       },
-      "text": "Projektarbete under min tid som praktikant på Vinnovera. Under drygt 10 veckor så jobbade jag i ett frontend-team där vi pitchade idén och sedan genomförde projektet åt Greenpeace. Tech lead: Jonas Stattin, Vinnovera. UX lead: Per Lundgren. Projektledare: Harald Mellbom. Frontend-utvecklare: Tova Jertfelt, Vidar Rehn.",
+      "text": "During 10 weeks me and one other intern created a fullstack project from scratch, with an interactive campaign site, a custom CMS, hosted on Netlify and with data on Firebase. Tech lead: Jonas Stattin, Vinnovera. UX lead: Per Lundgren. Project leader: Harald Mellbom. Frontend developers: myself and Vidar Rehn.",
       "title": "www.sverigesutslapp.se"
     },
     {
       "extra": {
         "file01": {
-          "alt": "Interaktiv graf",
+          "alt": "Ewallet",
           "url": "/frontend/ewallet.png"
         },
         "file02": {
@@ -70,7 +70,7 @@
           "url": "/frontend/ewallet--loading.png"
         },
         "file03": {
-          "alt": "Lägg till nytt: felmeddelande visas.",
+          "alt": "Error",
           "url": "/frontend/ewallet-error.png"
         }
       },
@@ -101,40 +101,40 @@
           "Life cycle hooks",
           "API calls"
         ],
-        "text1": "Det görs ett API vid start av applikationen, där jag hämtade en slumpvald användare från sidan https://randomuser.me/api/.",
-        "text1part2": "Applikationen skulle ha två routes: /cards och /addcard. I /cards skulle jag visa ett aktivt kort, samt om användaren hade flera kort så skulle dessa finnas listade. Om man ville så skulle man kunna byta aktivt kort.",
-        "text1part3": "I /addcard skulle man kunna lägga till ett nytt kort med följande information: Vendor, card number, cardholder, expire month, expire year, CCV. Vi skulle hårdkoda minst tre alternativ för kortutgivare. Förhandsvisning var ett krav.",
-        "text2": "Applikationen skulle ha två routes: /cards och /addcard. I /cards skulle jag visa ett aktivt kort, samt om användaren hade flera kort så skulle dessa finnas listade. Om man ville så skulle man kunna byta aktivt kort.",
-        "text3": "I /addcard skulle man kunna lägga till ett nytt kort med följande information: Vendor, card number, cardholder, expire month, expire year, CCV. Vi skulle hårdkoda minst tre alternativ för kortutgivare. Förhandsvisning var ett krav."
+        "text1": "At the start, an API is called, fetching a random user from here: https://randomuser.me/api/.",
+        "text1part2": "The app should have two routes: /cards och /addcard. In /cards I would show an active card, and if the user had more cards they would be shown as well. If user wanted, they could switch active card. In /addcard the user could add a new card with following information: Vendor, card number, cardholder, expire month, expire year, CCV. We also had to code at least three different alternatives for card companies. Preview was a must.",
+        "text1part3": "In this project,I worked with redux store and initial states, as well as with css stylings.",
+        "text2": "The app should have two routes: /cards och /addcard. In /cards I would show an active card, and if the user had more cards they would be shown as well. If user wanted, they could switch active card. In /addcard the user could add a new card with following information: Vendor, card number, cardholder, expire month, expire year, CCV. We also had to code at least three different alternatives for card companies. Preview was a must.",
+        "text3": "In this project,I worked with redux store and initial states, as well as with css stylings."
       },
       "sources": {
         "github": "https://github.com/jertfelt/e-wallet",
-        "imgalt": "Aktiva och inaktiva kort",
+        "imgalt": "Active and not active cards",
         "imgurl": "/frontend/ewallet--2.png",
         "link": "https://github.com/jertfelt/e-wallet"
       },
-      "sub": "Studentarbete: React + Redux",
+      "sub": "Student work: React + Redux",
       "tag": "Redux",
       "tags": {
         "c1": "Redux",
         "c2": "React CSS Modules",
         "c3": "API"
       },
-      "text": "Studentarbete där vi skulle jobba med redux och react.  Jag skapade en SPA-applikation där användaren kan hantera olika betalkort.  Användarens namn skulle i sin tur hämtas från ett externt API, och vara med på alla kort. Jag försökte också jobba med localstorage, på eget iniativ, så man kunde göra en refresh på hemsidan och behålla username och kort.",
+      "text": "Student assignment where I had to work with Redux in a React environment. I created a SPA-application where the user could handle different types of cards. The user's name would be extracted from an external API, and should be shown on all the cards.",
       "title": "E-wallet"
     },
     {
       "extra": {
         "file01": {
-          "alt": "En kurs",
+          "alt": "A course",
           "url": "/frontend/westcoast_admin2.png"
         },
         "file02": {
-          "alt": "Studentportal",
+          "alt": "Student site",
           "url": "/frontend/westcoast_student.png"
         },
         "file03": {
-          "alt": "Registrering.",
+          "alt": "Register",
           "url": "/frontend/westcoast_1.png"
         }
       },
@@ -161,40 +161,40 @@
           "Styled components",
           "React Portals"
         ],
-        "text1": "Skoluppgiften gick ut på att skriva testdrivet, här har jag jobbat med unit-testing och viss interaction testing med hjälp av Jest.",
-        "text1part2": " Jag har vidare jobbat med styled components, och testat olika filstrukturer. Vidare har jag experimenterat med dark mode/ light mode och tillgänglighet.",
-        "text1part3": "Sidan är fortfarande under uppbyggnad och kan ha vissa buggar igång. Jag håller fortfarande på att skriva klart logiken för studenter, för att lägga till kurs som student, och för att kors-referera lärare, studenter och kurser.",
-        "text2": " Jag har vidare jobbat med styled components, och testat olika filstrukturer. Vidare har jag experimenterat med dark mode/ light mode och tillgänglighet.",
-        "text3": "Sidan är fortfarande under uppbyggnad och kan ha vissa buggar igång. Jag håller fortfarande på att skriva klart logiken för studenter, för att lägga till kurs som student, och för att kors-referera lärare, studenter och kurser."
+        "text1": "The assignment was to write test driven development, and in this scenario I have worked with unit testing and interaction testing with Jest.",
+        "text1part2": "I have also chosen to work with styled components, and tested different file structures, as well as dark mode/light mode and accessibility.",
+        "text1part3": "The site is still under progress. I have used Firebase to administer the admin logins, and to have a database for the students, courses and teachers. The trick is to cross-reference the different sections, with Firebase functionality. It is hosted on Netlify. ",
+        "text2": "I have also chosen to work with styled components, and tested different file structures, as well as dark mode/light mode and accessibility.",
+        "text3": "The site is still under progress. I have used Firebase to administer the admin logins, and to have a database for the students, courses and teachers. The trick is to cross-reference the different sections, with Firebase functionality. It is hosted on Netlify. "
       },
       "sources": {
         "github": "https://github.com/jertfelt/westcoast_education-nyhjs4",
-        "imgalt": "Adminportal",
+        "imgalt": "Admin",
         "imgurl": "/frontend/westcoast_admin.png",
         "link": "https://westcoast-education.netlify.app/"
       },
-      "sub": "Studentarbete: TDD i React-miljö",
+      "sub": "TDD in React",
       "tag": "Jest",
       "tags": {
         "c1": "React",
         "c2": "Jest",
         "c3": "Firebase"
       },
-      "text": "Vi skulle bygga en adminportal till en skola med kurser och lärare. Jag har även jobbat med Netlify och firebase, och då migrerat från att jobba med localserver och json server. ",
-      "title": "Westcoast Educaton"
+      "text": "We were assigned to build a simple homepage that would reveal published courses, and an admin page for a school, with courses and teachers. An admin would be able to add courses and teachers, and assign teachers to the courses. The admin page would show courses that were published (with a minimum amount of students), unpublished and what teachers were assigned to the course. I also built a portal for the students where they could assign themselves to existing courses, change their email or name and also have a rudimentary pomofocus-timer on their own profile page. This would be made with TDD in mind, and I have also worked with Netlify and Firebase, migrating test environments from localserver and json server. All in all, it became a fullstack project",
+      "title": "Westcoast Education"
     },
     {
       "extra": {
         "file01": {
-          "alt": "En kurs",
+          "alt": "Account",
           "url": "/frontend/ekobanken--konto.png"
         },
         "file02": {
-          "alt": "Studentportal",
+          "alt": "Ekobanken",
           "url": "/frontend/ekobanken-screenshot2.png"
         },
         "file03": {
-          "alt": "Registrering.",
+          "alt": "Become customer",
           "url": "/frontend/ekobanken--screenshotblikund.png"
         }
       },
@@ -227,40 +227,40 @@
           "Bcrypt",
           "EJS"
         ],
-        "text1": "Din uppgift är att programmera en enkel “bank”, där en användare kan skapa konton, och sätta in, ta ut.Projektet skall bestå av ett REST-API, samt en frontend som kommunicerar med API:et via Javascript. Kommunikationen mellan API:et och frontend skall vara med JSON. ",
-        "text1part2": "Frontenden skulle innehålla följande:  Ett formulär för att lägga till ett nytt konto, med namn och mängd pengar. Kontonumret skall skapas automatiskt (t.ex. Mongos ID, eller https://www.npmjs.com/package/uuid). En lista på alla konton med namn, nummer och mängden pengar. För varje konto skall det vara möjligt att lägga till pengar. För varje konto skall det vara möjligt att ta bort pengar. OBS! Det skall inte gå att ta bort mer pengar än det finns på kontot! Det skall gå att ta bort konton.Banken skall vara skyddad så att man måste logga in för att använda den. Det räcker med att alla användare kan hantera samma, alltså alla konton; men om du vill får du göra så att varje användare har varsina konton. Om du gör så, behöver du fundera på om du skall knyta ihop konton och användare med referenser (https://www.mongodb.com/docs/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/), eller om du skall ha endast en collection med användare och ha kontona som en del av användar-documentet.",
-        "text1part3": "Kontofunktioner: Det skall gå att skapa nya användare.Lösenord skall vara krypterade i databasen.Man skall kunna logga in.Man ska inte kunna se konto-information om man inte är inloggad. Admin-vy när man är inloggad admin (här med alla konton): ",
-        "text2": "Frontenden skulle innehålla följande:  Ett formulär för att lägga till ett nytt konto, med namn och mängd pengar. Kontonumret skall skapas automatiskt (t.ex. Mongos ID, eller https://www.npmjs.com/package/uuid). En lista på alla konton med namn, nummer och mängden pengar. För varje konto skall det vara möjligt att lägga till pengar. För varje konto skall det vara möjligt att ta bort pengar. OBS! Det skall inte gå att ta bort mer pengar än det finns på kontot! Det skall gå att ta bort konton.Banken skall vara skyddad så att man måste logga in för att använda den. Det räcker med att alla användare kan hantera samma, alltså alla konton; men om du vill får du göra så att varje användare har varsina konton. Om du gör så, behöver du fundera på om du skall knyta ihop konton och användare med referenser (https://www.mongodb.com/docs/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/), eller om du skall ha endast en collection med användare och ha kontona som en del av användar-documentet.",
-        "text3": "Kontofunktioner: Det skall gå att skapa nya användare.Lösenord skall vara krypterade i databasen. Man skall kunna logga in.Man ska inte kunna se konto-information om man inte är inloggad. Admin-vy när man är inloggad admin (här med alla konton): "
+        "text1": "My task was to develop a simple “bank”, where a user could create accounts and insert/take out money. The project would be made with a REST-API, and a frontend that communicate with the API through Javascript. The communication would be made with JSON. ",
+        "text1part2": "The frontend was to have the following: 1) a form to add a new account, with a name and a sum of money. The account number would be created automatically through for example MongoDB:s ID, or https://www.npmjs.com/package/uuid. 2) A list on all accounts with name, account numbers and the sum of the money. For each account it would be possible to insert/withdraw money, but never more than the sum on the account. The bank should also be protected so that the user has to log in to use it. It was enough that all users could handle all accounts to pass the assignment.",
+        "text1part3": "The account: should be possible to add new users. Passwords should be encrypted in the database. A user should be able to log in, and if you are an admin you would see the admin-view.",
+        "text2": "The frontend was to have the following: 1) a form to add a new account, with a name and a sum of money. The account number would be created automatically through for example MongoDB:s ID, or https://www.npmjs.com/package/uuid. 2) A list on all accounts with name, account numbers and the sum of the money. For each account it would be possible to insert/withdraw money, but never more than the sum on the account. The bank should also be protected so that the user has to log in to use it. It was enough that all users could handle all accounts to pass the assignment.",
+        "text3": "The account: should be possible to add new users. Passwords should be encrypted in the database. A user should be able to log in, and if you are an admin you would see the admin-view."
       },
       "sources": {
         "github": "https://github.com/jertfelt/bankingapp-restAPI-node-mongodb",
-        "imgalt": "Designen snodd från ekobanken.se",
+        "imgalt": "Design completely taken from Ekobanken.se",
         "imgurl": "/frontend/ekobanken--loggedin.png",
         "link": ""
       },
-      "sub": "Fullstack och kryptering",
+      "sub": "Fullstack & Encryption",
       "tag": "NodeJS",
       "tags": {
         "c1": "mongoDB",
-        "c2": "Kryptering",
+        "c2": "Encryption",
         "c3": "NodeJS"
       },
-      "text": "Jag skulle skapa en säker bank med REST-API, med databas i mongoDB där frontenden kommunicerar med JSON. Utöver detta kunde vi jobba med kryptering och cookies. Designen är rakt av snodd från ekobanken.se ",
-      "title": "Ekobanken"
+      "text": "The assignment was to create a safe bank with REST-API, with a database set up in mongoDB, and where frotnend communicates with JSON. We were also charged with working with cookies, encryption and account authority. ",
+      "title": "Ekobank"
     },
     {
       "extra": {
         "file01": {
-          "alt": "Profilsida",
+          "alt": "Profile",
           "url": "/frontend/bookducks--profile.png"
         },
         "file02": {
-          "alt": "Logga in som medlem",
+          "alt": "Log in",
           "url": "/frontend/bookducks.png"
         },
         "file03": {
-          "alt": "Strapis struktur",
+          "alt": "Strapi",
           "url": "/frontend/bookducks-strapi.png"
         }
       },
@@ -294,40 +294,40 @@
           "SASS",
           "Node.js"
         ],
-        "text1": "Instruktioner: Du ska använda Strapi som CMS. Genom CMS-gränssnittet ska man kunna lägga till: 1) En bok med dess titel, författare, antal sidor, betyg (valfri skala t.ex 1-10), samt en bild på bokomslaget. 2) En ljudbok med dess titel, utgivningsdatum, längd, betyg (valfri skala t.ex 1-10), samt en bild på bokomslaget. 3) Samtliga böcker och ljudböcker ska även vara kopplad till en registrerad användare (som relation, id eller annat sätt) som lånar ut boken/ljudboken. (Du kan skapa upp användare med Strapis inbyggda User-collection type). 4)  Samtliga böcker och ljudböcker ska även ha en eller flera av följande genrer: Romantik, humor, skräck, barnvänlig, fantasy, sci-fi, action. (Skapa en content-type för dina genrer. Du kan också skapa egna genrer om du vill.",
-        "text1part2": "På grund av en bugg i post-funktionen (axios post) så fungerar den inte alltid, response-delen körs inte alltid igång även fast request skickas till servern. Vi tror att det är en bugg som ligger hos strapi, men ej säkert. Detta gör iallafall att vissa funktioner inte alltid är pålitliga, och att mycket tid i projektet gick ut på att felsöka detta problem, istället för att förfina koden.",
-        "text1part3": "Användaren ska kunna se en lista på samtliga böcker och ljudböcker som finns tillgängliga för utlåning. Skriv ut samtliga egenskaper för böckerna/ljudböckerna. Skriv även ut kontaktuppgifter för användaren som lånar ut boken/ljudboken (användarnamn samt email). Det ska vara möjligt för en användare att logga in samt registrera sig på sidan. Det ska tydligt framgå om användaren är inloggad i applikationen.Det ska finnas en profilsida - Denna sida ska dock kräva inloggning för att visas.  Profilsidan som visar information om användarens användarnamn, email, id, samt vilket datum användaren registrerade sig. Sidan ska även innehålla en lista över samtliga böcker och ljudböcker som användaren har lagt ut för utlåning. Det ska även finnas ytterligare en sida där registrerade användare kan lägga ut böcker och ljudböcker för utlåning. Denna sida ska kräva att användaren är inloggad. Se till att användaren kan lägga till samtliga egenskaper för boken/ljudboken, inklusive bild på bokomslag och genrer.Sidan ska ha ett professionellt utseende.Sidan ska fungera utan några större buggar.",
-        "text2": "På grund av en bugg i post-funktionen (axios post) så fungerar den inte alltid, response-delen körs inte alltid igång även fast request skickas till servern. Vi tror att det är en bugg som ligger hos strapi, men ej säkert. Detta gör iallafall att vissa funktioner inte alltid är pålitliga, och att mycket tid i projektet gick ut på att felsöka detta problem, istället för att förfina koden.",
-        "text3": "Användaren ska kunna se en lista på samtliga böcker och ljudböcker som finns tillgängliga för utlåning. Skriv ut samtliga egenskaper för böckerna/ljudböckerna. Skriv även ut kontaktuppgifter för användaren som lånar ut boken/ljudboken (användarnamn samt email). Det ska vara möjligt för en användare att logga in samt registrera sig på sidan. Det ska tydligt framgå om användaren är inloggad i applikationen.Det ska finnas en profilsida - Denna sida ska dock kräva inloggning för att visas.  Profilsidan som visar information om användarens användarnamn, email, id, samt vilket datum användaren registrerade sig. Sidan ska även innehålla en lista över samtliga böcker och ljudböcker som användaren har lagt ut för utlåning. Det ska även finnas ytterligare en sida där registrerade användare kan lägga ut böcker och ljudböcker för utlåning. Denna sida ska kräva att användaren är inloggad. Se till att användaren kan lägga till samtliga egenskaper för boken/ljudboken, inklusive bild på bokomslag och genrer.Sidan ska ha ett professionellt utseende.Sidan ska fungera utan några större buggar."
+        "text1": "We were to use Strapi as CMS. Through the CMS framework we would add 1) A book with title, author, pages, grade and a picture. 2) An augio book with title, publishing date, length, grade and a picture. 3) All books and audio books would be connected to registred users that in turn would be lending out the book. 4) All books would have one or several genres: Romance, humour, children, fantasy, sci-fi, action.",
+        "text1part2": "During this project, a bug in axios post makes the project unreliable, the response part is not always running despite request being sent to server. During trouble-solving this bug, documentation leads me to believe that it is a bug within Strapi. This made the project not as polished as I would have hoped, as a lot of time was spent on troubleshooting backend.",
+        "text1part3": " The user would be able to see a list of all the books and audio books, fetched from Strapi with axios. Both the books and the users lending out the books should be visible to the visitor. There should also be a possibility to register as a member and a profile page that requires the user to log in.",
+        "text2": "During this project, a bug in axios post makes the project unreliable, the response part is not always running despite request being sent to server. During trouble-solving this bug, documentation leads me to believe that it is a bug within Strapi. This made the project not as polished as I would have hoped, as a lot of time was spent on troubleshooting backend.",
+        "text3": "The user would be able to see a list of all the books and audio books, fetched from Strapi with axios. Both the books and the users lending out the books should be visible to the visitor. There should also be a possibility to register as a member and a profile page that requires the user to log in."
       },
       "sources": {
         "github": "https://github.com/jertfelt/bookducks/",
-        "imgalt": "Printscreen från bookducks, visar homepage.",
+        "imgalt": "Printscreen from bookducks",
         "imgurl": "/frontend/bookducks--homepage.png",
         "link": ""
       },
-      "sub": "Interaktion med CMS",
-      "tag": "CMS",
+      "sub": "Interaction with CMS",
+      "tag": "Headless CMS",
       "tags": {
         "c1": "axios",
         "c2": "strapi",
         "c3": "api"
       },
-      "text": "Skoluppgift: Jag skulle ta fram en applikation för ett community som lånar/byter böcker och ljudböcker. Uppgiften var att skapa en frontend som kan kommunicera med en databas jag skapat i CMS-systemet Strapi.",
+      "text": "Assignment: To create an application for a community that lends/trades books and audio books. The task at hand was to create a frontend that could communicate with Strapi as the database. ",
       "title": "Strapi: Bookducks"
     },
     {
       "extra": {
         "file01": {
-          "alt": "Logga in eller registrera dig",
+          "alt": "Log in or register",
           "url": "/frontend/ekoline--loggain-2.png"
         },
         "file02": {
-          "alt": "Varukorgen",
+          "alt": "Shopping cart",
           "url": "/frontend/ekoline-3.png"
         },
         "file03": {
-          "alt": "Produktsida",
+          "alt": "Product page",
           "url": "/frontend/ekoline--produkt.png"
         }
       },
@@ -355,27 +355,27 @@
           "Figma",
           "Github Pages"
         ],
-        "text1": "Det skall finnas minst 3 produktkategorier.Varje kategori skall innehålla minst 3 produkter. Produkterna skall vara lagrade som JSON. Även kategorierna skall vara lagrade som JSON.Följande sidor skall finnas: Startsida, Produktlista, Produktsida, Varukorg, Beställningssida, Skapa användare, Logga in-sida. Alla sidor skall ha en meny som visar kategorierna och länkar till produktlistan. Länken skall innehålla en querystring som avgör vilka produkter som skall visas. Det ska också finnas en länk till användarregistrering om användaren inte redan är inloggad. Man ska kunna se att man är inloggad och vem det är som är inloggad i menyn, annars en länk till inloggning.",
-        "text1part2": "Starsida: Skall innehålla en välkomsttext, samt en lista på kategorierna.Produktlista: En lista på produkterna inom en viss kategori. Produktsida: En detaljvy av produkten. Varukorg: En lista över de produkter användaren valt att köpa, KAN ligga som dropdown i en meny, eller finnas som både separat sida och som dropdown i meny.Beställningssida: En formulärsida där besökaren kan göra en “beställning” och se ett kvitto på beställningen. Skapa användare: En formulärsida där besökaren kan skapa en användare, med vissa preferenser.  Logga in: En formulärsida där besökaren kan logga in.",
-        "text1part3": "All sparad användardata skall ligga i local storage (t.ex. varukorg) HTML-koden skall vara semantisk.",
-        "text2": "Starsida: Skall innehålla en välkomsttext, samt en lista på kategorierna.Produktlista: En lista på produkterna inom en viss kategori. Produktsida: En detaljvy av produkten. Varukorg: En lista över de produkter användaren valt att köpa, KAN ligga som dropdown i en meny, eller finnas som både separat sida och som dropdown i meny.Beställningssida: En formulärsida där besökaren kan göra en “beställning” och se ett kvitto på beställningen. Skapa användare: En formulärsida där besökaren kan skapa en användare, med vissa preferenser.  Logga in: En formulärsida där besökaren kan logga in.",
-        "text3": "All sparad användardata skall ligga i local storage (t.ex. varukorg) HTML-koden skall vara semantisk."
+        "text1": "The assignment was to have at least three product categories. Each category should have at least 3 products. The products and categories would be stored as JSON, and fetched to the frontend. The following pages were a must: Homepage, Product List, Product Detail Page, Shopping Cart, Confirmation Page, Create User, Log In. All the sites would have a menu that would show categories and links to the product page. The link would be a querystring that determines which product that would be shown. There should also be a link to registrer a new user if the user isn't logged in, i.e. you should be able to see if the user is logged in, or not.",
+        "text1part2": "Homepage: should have a welcoming text and a list of the categories. Product List: A list of the products within a category. Product Detail page: A detailed view of a chosen product. Shopping cart: A list over the products that the user has chosen. Confirmation: A form where the user can do an order and then see a receipt. Create user: A form where the user can create a user account. Log in: A form where the user can log in.",
+        "text1part3": "All the saved user data would be stored in local storage, and the HTML code needed to be semantic. ",
+        "text2": "Homepage: should have a welcoming text and a list of the categories. Product List: A list of the products within a category. Product Detail page: A detailed view of a chosen product. Shopping cart: A list over the products that the user has chosen. Confirmation: A form where the user can do an order and then see a receipt. Create user: A form where the user can create a user account. Log in: A form where the user can log in.",
+        "text3": "All the saved user data would be stored in local storage, and the HTML code needed to be semantic. "
       },
       "sources": {
         "github": "https://github.com/jertfelt/webshop",
-        "imgalt": "Printscreen från bookducks, visar homepage.",
+        "imgalt": "Homepage",
         "imgurl": "/frontend/Ekoline--home.png",
         "link": "https://jertfelt.github.io/webshop/"
       },
-      "sub": "Grupparbete Nackademin",
+      "sub": "Frontend project",
       "tag": "localstorage",
       "tags": {
-        "c1": "projektarbete",
+        "c1": "Agile project",
         "c2": "JSON",
         "c3": "querystrings"
       },
-      "text": "Vår grupp hade två veckor på sig att skapa en webbutik med hjälp av localstorage och querystrings. I projektet har vi använt oss av agil projektmetod (kanban och scrum). Jag lajvade tech lead och designer. Vi jobbade också med routing i vår html-fil, tack vare querystrings.",
-      "title": "Webshop: Ekoline"
+      "text": "Group assignment at Nackademin. Our group had two weeks time to create a web shop with the help of localstorage and querystrings. In the project we have used agile project methods (kanban and scrum). I was roleplaying tech lead and designer. We also worked with routing in our html-file.",
+      "title": "Web shop: Ekoline"
     }
   ]
 }

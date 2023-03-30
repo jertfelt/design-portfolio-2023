@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import { Knapp } from "./Education";
+import { useTranslation } from "next-i18next";
 
 
 const Container = styled.section`
@@ -110,7 +111,8 @@ const Nackademin = ({courses}) => {
   const [doneCourses, setCourses] = useState([]);
   const [all, setAll] = useState([])
   const [isShown, setIsShown] = useState(false);
-
+  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
+  const {t} = useTranslation()
 
   useEffect(() => {
     setCourses(courses.filter(item => (item.done === true)))
@@ -167,22 +169,26 @@ const Nackademin = ({courses}) => {
     <Container>
     <NackademinGrid>
       <div>
-    <h3>Frontendprogrammet</h3>
-    <h4>Nackademin - Yrkeshögskola</h4>
+    <h3>{t("nackademin.h3")}</h3>
+    <h4>{t("nackademin.h4")}</h4>
     <p>2021-2023</p>
     </div>
     <Row>
-    <Canvas
+
+      {language === "sv" ? <>
+      <Canvas
       data={data2}
       options={configdata2}/>
-            <h3>Totalt {doneCourses.length} av {courses.length} kurser avklarade</h3>
+        <h3>Totalt {doneCourses.length} av {courses.length} kurser avklarade</h3>
+      </>
+          : <h3>A total of {doneCourses.length} out of {courses.length} courses completed.</h3>}
     </Row>
     <div>
     <Table>
   <tr>
-    <th>Kurs</th>
-    <th>Betyg</th>
-    <th>Omfattning</th>
+    <th>{t("nackademin.kurs")}</th>
+    <th>{t("nackademin.Betyg")}</th>
+    <th>{t("nackademin.Omfattning")}</th>
   </tr>
   {all.map(item => {
     if((item.done !== true)){
@@ -210,14 +216,14 @@ const Nackademin = ({courses}) => {
 </Table>
       {isShown && (
         <HoverElement>
-          Den här kursen är antingen igång eller kommer att bli klar under läsåret 2022-23.
+          {t("nackademin.info")}
         </HoverElement>
       )}
 
       </div>
       
     <div>
-
+    {language === "sv" ? 
       <Kursinnehåll>
           <h4>Kursbeskrivning:</h4>
           <li><b>Javascript 1 - </b>grundläggande javascript</li>
@@ -228,9 +234,9 @@ const Nackademin = ({courses}) => {
           <li><b>Interaktion med CMS - </b> Strapi CMS, Postman och Axios </li>
           <li><b>Frontend-projekt - </b> Hur man jobbar i grupparbete </li>
           <li><b>LIA 1 & 2 - </b> Lärande I Arbete. Praktik på arbetsplats.</li>
-        </Kursinnehåll>
+        </Kursinnehåll>: null}
         <Knapp>
-        <Link href="https://nackademin.se/utbildningar/frontend-utvecklare/">Läs mer på Nackademin</Link>
+        <Link href="https://nackademin.se/utbildningar/frontend-utvecklare/">{t("nackademin.btn")}</Link>
         </Knapp>
 
       <div>

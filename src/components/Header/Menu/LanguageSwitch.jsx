@@ -29,7 +29,7 @@ export default function LocaleSwitcher({open, setOpen}) {
             <Link href={{ pathname, query }} as={asPath} locale={locale}
             onClick={() => setOpen(!open)}>
               <Span>
-                {locale === "en" ? <>English <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="English"/></> : locale === "sv" ? <>Svenska <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1200px-Flag_of_Sweden.svg.png" alt="Swedish"></img></> : null}
+                {locale === "en" ? <> Change to English <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1200px-Flag_of_Sweden.svg.png" alt="Nuvarande språk: Svenska"/></> : locale === "sv" ? <>Byt till Svenska <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="Current language: English"></img></> : null}
               </Span>
             </Link>
           </span>

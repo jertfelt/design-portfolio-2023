@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { flex} from "@component/components/stylings/Stylings";
 import { Container } from "@component/components/stylings/Containers";
 
-import { work, education, courses, erfarenhet } from "@component/data/frontendCV";
+import { work, education, courses, erfarenhet, work_ENG, education_ENG, courses_ENG, erfarenhet_ENG } from "@component/data/frontendCV";
 
 import Link from "next/link";
 import Arbete from "./CV/Arbete";
 import Education from "./CV/Education";
 import Erfarenhet from "./CV/Erfarenhet";
+import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 
 const Content = styled.section`
 min-height:130vh;
@@ -65,21 +67,49 @@ margin-bottom:2rem;
 
 
 const CVFrontend = () => {
+  const {t} = useTranslation();
+  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
+  const [coursesDb, setCourses] = useState("")
+  const [workDb, setWork] = useState("")
+  const [educationDb, setEducation] = useState("")
+  const [erfarenhetDb, setErfarenhet] = useState("")
+
+  useEffect(() => {
+    if(!language){
+     setLang("sv")
+      
+    }
+    if(language !== "en"){
+      setCourses(courses)
+      setWork(work)
+      setEducation(education)
+      setErfarenhet(erfarenhet)
+    }
+    else{
+      setCourses(courses_ENG)
+      setWork(work_ENG)
+      setEducation(education_ENG)
+      setErfarenhet(erfarenhet_ENG)
+    }
+
+  },[language])
+
+
   return (  
   <Container xlarge>
     <Content>
       <Heading>
       <Title>CV</Title>
-        <IntroParagraph>Här följer relevant urval av jobb, utbildningar och erfarenheter som har med frontend att göra. Se gärna hela mitt cv på <Link href="https://www.linkedin.com/in/tovajertfelt/">Linkedin.</Link></IntroParagraph>
+        <IntroParagraph>{t("cv.info")}<Link href="https://www.linkedin.com/in/tovajertfelt/">Linkedin.</Link></IntroParagraph>
         </Heading>
         <Arbete 
-        work={work}
+        work={workDb}
         />
         <Education 
-        courses={courses}
-        education={education}/>
+        courses={coursesDb}
+        education={educationDb}/>
         <Erfarenhet
-        erfarenhet={erfarenhet}/>
+        erfarenhet={erfarenhetDb}/>
         </Content>
         </Container> );
 }

@@ -1,7 +1,8 @@
 {
   "menu": {
     "Choice1": "Art",
-    "Kontakt": "Contact"
+    "Kontakt": "Contact",
+    "Startsida": "Homepage"
   },
   "startsida": {
     "h2": "Frontend developer, artist and designer. ",
@@ -12,6 +13,33 @@
   "contact": {
     "h1": "Contact me",
     "phone": "PHONE:"
+  },
+  "cv":{
+
+    "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at",
+    "erfarenhet": "EXPERIENCE",
+    "arbete":"WORK",
+    "praktikdates":"October 2022- April 2023",
+    "praktikinfo": "Internship",
+    "praktikinfo2":"During spring 2023 I'm an intern in frontend development at Delorean (Vinnovera), Stockholm.",
+    "education" : "Education"
+  },
+  "nackademin":{
+    "h3": "Frontend Development",
+    "h4": "Nackademin - university of applied sciences",
+    "kurs": "Course",
+    "Betyg": "Grade",
+    "Omfattning": "Points",
+    "info": "This course is in process and will be done by May 2023.",
+    "btn": "Read more at Nackademin"
+  },
+  "casespage":{
+    "button": "See more",
+    "desc":"Here follows featured work that I have coded, during my time as a student, my own personal work or as an intern.",
+    "caseSI": "Internship January - April 2023",
+    "description Society": "Through Delorean/Vinnovera, I held a consulting assignment as Frontend developer at Society Icon, which is a tech-startup and offers a platform to connect companies with social media influencers in the hope of generating valuable social media marketing campaigns. Before my arrival at the company there had not been anybody working with the frontend of the site since it was built by an agency two years prior and much of the initial work dealt with updating packages/dependencies and refactoring code, such as updating Node and replacing for example jQuery-code that interfered with React applications. After that I worked with a backlog of requested features as well as a total overhaul of the website's design and UI. The platform is built with React and utilizes Redux for state management.",
+    "wannaknowmore": "Society Icon declared bankruptcy in March 2023, so the project is no longer available on the web. Please get in touch if you want to know more about my time as an intern there."
+
   },
   "frontendpage":{
     "hero1": "I am Tova Jertfelt",

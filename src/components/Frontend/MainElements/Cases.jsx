@@ -5,7 +5,8 @@ import { flex, device, fonts } from "@component/components/stylings/Stylings";
 import { getDb } from "@component/components/api/getDb";
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
 import Image from "next/image";
-import data from "../../../data/cases_EN.json"
+import casesENG from "../../../data/cases_EN.json"
+import { useTranslation } from "next-i18next";
 import { CaseContainer } from "./CasefItem";
 
 
@@ -115,8 +116,9 @@ border-radius: ${({theme}) => theme.borderradius.second};
 padding:1rem;
 `
 
-const CasesPage = ({language}) => {
-  console.log(language)
+const CasesPage = () => {
+  const {t} = useTranslation();
+  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
   const [cases, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
@@ -127,6 +129,10 @@ const CasesPage = ({language}) => {
 
 
   useEffect(() => {
+    if(!language){
+     setLang("sv")
+      
+    }
     if(language !== "en"){
       if(data){
         setCases(data)
@@ -138,7 +144,15 @@ const CasesPage = ({language}) => {
       }
     }
     else{
-
+      console.log(language)
+      if(casesENG){
+        setCases(casesENG.casesENG)
+        let featured = []
+        featured.push(casesENG.casesENG.filter(item => item.featured === true))
+        const doubled = featured.map(nested => nested.map(element => element))
+        setFeatured(doubled[0])
+        
+      }
     }
 
   },[data, language])
@@ -149,8 +163,7 @@ const CasesPage = ({language}) => {
         <Content>
         <div>
         <Headline>Cases</Headline>
-        <Desc>Här finns ett urval av olika saker jag kodat.<br/> En del är från praktiken, andra är studentarbeten, andra är egna experiment.
-       
+        <Desc>{t("casespage.desc")}
         </Desc>
         </div>
       {error && <p>Kan inte ladda från databasen, försök igen senare.</p>}
@@ -167,24 +180,22 @@ const CasesPage = ({language}) => {
         )}
         </CaseList>
         </Wrapper>}
-       
-        
         <SocietyIcon>
           <CaseContainer>
           <CaseHeader>    
          Society Icon
          </CaseHeader> 
-          <Subtitle>Praktik Frontend Januari - Mars 2023</Subtitle> 
+          <Subtitle>{t("casespage.caseSI")}</Subtitle> 
           <Description>
-            Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.
+            {t("casespage.description Society")}
             <br></br>
-            Vill du veta mer?<br/> Society Icon har gått i konkurs i mars 2023, så projektet är inte längre tillgängligt på webben.
+            {t("casespage.wannaknowmore")}
             <br/>
           
           </Description>
 
           <Tech>
-          <Subtitle>React + NODE</Subtitle>
+          <Subtitle>React NODE <br/>React Context <br/>Redux CSS/SASS Axios<br/> Postman Linear</Subtitle>
           </Tech>
     
           </CaseContainer>

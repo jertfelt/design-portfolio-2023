@@ -1,6 +1,7 @@
 import { Grid } from "@component/components/stylings/Grids";
 import { CVContent, GridItem, Bread, Period } from "./Commons";
 import styled from "styled-components";
+import { useTranslation } from "next-i18next";
 
 
 const ArbeteStyle = styled.section`
@@ -59,17 +60,17 @@ margin-top:4rem;
 
 
 const Arbete = ({work}) => {
+  const {t} = useTranslation();
   return (  
   <ArbeteStyle>
 <CVContent>
-<h2>Arbete</h2>
+<h2>{t("cv.arbete")}</h2>
 <Grid cv>
 <GridItem work>
-  <Period>Oktober 2022- Mars 2023</Period>
-    <h3>Praktik!
+  <Period>{t("cv.praktikdates")}</Period>
+    <h3>{t("cv.praktikinfo")}
     </h3>
-    <Bread>Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.
-    Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.
+    <Bread>{t("cv.praktikinfo2")}
     </Bread>
   </GridItem>
   {work && work.map(item => item).map((item,index) =>(

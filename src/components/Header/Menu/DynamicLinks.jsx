@@ -45,11 +45,11 @@ const selectAndClose = (item) => {
 href={item.url} 
 key={i}
 onClick={() => selectAndClose(item)}>
-<i>{item.text === "Konst" ? <>Konst</>: item.text}</i></Link>: 
+<i>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text === "Startsida" ? <>{t("menu.Startsida")}</> : item.text}</i></Link>: 
 <Link 
 href={item.url} 
-key={i}
-onClick={() => selectAndClose(item)}>{item.text === "Konst" ? <>Konst</>: item.text}</Link>}
+key={item.url}
+onClick={() => selectAndClose(item)}>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text === "Startsida" ? <>{t("menu.Startsida")}</> : item.text}</Link>}
 </>
 )
 

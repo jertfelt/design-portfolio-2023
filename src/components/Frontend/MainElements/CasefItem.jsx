@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components"
 import Link from "next/link"
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
+import { useTranslation } from "next-i18next";
 
 export const CaseContainer = styled.article`
 
@@ -67,6 +68,7 @@ text-transform:uppercase;
 
 
 const CasefItem = ({item}) => {
+  const {t} = useTranslation();
   return (<>
     <CaseContainer key={item.id}
     >
@@ -85,7 +87,7 @@ const CasefItem = ({item}) => {
           <Description>{item.text}
           </Description>
           
-          <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>Se mer här</button>
+          <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
           </Link>
 
         </Link>

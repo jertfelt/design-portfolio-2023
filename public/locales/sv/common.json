@@ -1,7 +1,8 @@
 {
   "menu": {
     "Choice1": "Konst",
-    "Kontakt": "Kontakt"
+    "Kontakt": "Kontakt",
+    "Startsida": "Startsida"
   },
   "startsida": {
     "h2": "Frontendare, konstnär, formgivare.",
@@ -12,6 +13,33 @@
   "contact": {
     "h1": "Kontakta mig:",
     "phone": "TELEFON"
+  },
+  "cv":{
+  
+    "info":"Här följer relevant urval av jobb, utbildningar och erfarenheter som har med frontend att göra. Se gärna hela mitt cv på",
+    "erfarenhet": "ERFARENHET",
+    "arbete":"Arbete",
+    "praktikdates":"Oktober 2022- April 2023",
+    "praktikinfo": "Praktik!",
+    "praktikinfo2":"Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.",
+    "education": "Utbildning"
+
+  },
+  "nackademin":{
+    "h3": "Frontendprogrammet",
+    "h4": "Nackademin - Yrkeshögskola",
+    "kurs": "Course",
+    "Betyg": "Grade",
+    "Omfattning": "Points",
+    "info": " Den här kursen är antingen igång eller kommer att bli klar under läsåret 2022-23.",
+    "btn": "Läs mer"
+  },
+  "casespage":{
+    "button": "Se mer",
+    "desc": "Här finns ett urval av olika saker jag kodat. En del är från praktiken, andra är studentarbeten, andra är egna experiment.",
+    "caseSI":"Praktik Januari - April 2023",
+    "description Society": " Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.",
+    "wannaknowmore":"Vill du veta mer? Society Icon har gått i konkurs i mars 2023, så projektet är inte längre tillgängligt på webben. Hör av dig så kan jag berätta mer i detalj vad vi gjorde under vår praktikperiod."
   },
   "frontendpage":{
     "hero1": "Jag är Tova Jertfelt",

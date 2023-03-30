@@ -5,6 +5,7 @@ import { Bread, CVContent, GridItem, Period, Row } from "./Commons";
 import { Grid } from "@component/components/stylings/Grids";
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
 import Nackademin from "./Nackademin";
+import { useTranslation } from "next-i18next";
 
 
 const EducationStyle =styled.section`
@@ -116,6 +117,7 @@ display:none;
 }`
 
 const Education = ({courses, education}) => {
+  const {t} = useTranslation()
   const [doneCourses, setCourses] = useState([]);
   const [buttonMsg, setButtonMsg] = useState("Läs mer om frontend på Nackademin")
   const [show, setShow] = useState(false);
@@ -132,14 +134,17 @@ const Education = ({courses, education}) => {
     }
 
   useEffect(() => {
-    setCourses(courses.filter(item => (item.done === true)))
+    if(courses){
+      setCourses(courses.filter(item => (item.done === true)))
+    }
+   
     }, [])
   const done = (doneCourses.length/courses.length *100);
 
   return (
     <EducationStyle>
     <CVContent>
-    <h2>Utbildning</h2> 
+    <h2>{t("cv.education")}</h2> 
     <Grid cv>
       
       {education && education.map(item => item).map((item,index) =>(

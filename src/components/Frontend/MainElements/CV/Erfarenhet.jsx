@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Grid } from "@component/components/stylings/Grids";
 import { CVContent, GridItem, Bread, Row, Period } from "./Commons";
+import { useTranslation } from "next-i18next";
 
 const Wisdom =styled.section`
 background-color: ${({theme}) => theme.frontendcolors.alternative};
@@ -78,11 +79,12 @@ justify-content:center;
 
 
 const Erfarenhet = ({erfarenhet}) => {
+  const {t} = useTranslation();
   return (  <Wisdom>
     <ErfarenhetStyle>
     
     <CVContent>
-      <h2>Erfarenhet</h2>
+      <h2>{t("cv.erfarenhet")}</h2>
       <Row>
       {erfarenhet && erfarenhet.map((item,i) => (
         <GridItem key={i}>

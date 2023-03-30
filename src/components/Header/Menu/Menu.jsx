@@ -61,7 +61,7 @@ const router = useRouter()
 const {key} = router.query;
 const {selectedPage} = useContext(AppContext)
 
-const { t } = useTranslation("");
+const { t } = useTranslation();
 
 useEffect(() => {
   let lang = router.locale == "sv" ? "sv" : "en";
