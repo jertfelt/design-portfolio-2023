@@ -26,10 +26,15 @@ color: ${({ theme }) => theme.textPrimary};
 h1{
   font-size:80px;
   color: ${({ theme }) => theme.accentTwo};
+  @media (max-width:800px){
+    font-size:50px;
+    padding-top:40vh;
+  }
 }
 div{
   display:flex;
   flex-direction:column;
+  
   gap:16px;
   button{
     background: ${({ theme }) => theme.accentTwo};
@@ -47,6 +52,9 @@ div{
   }
   p{
     line-height:1.5rem;
+    @media (max-width:800px){
+      line-height:.5rem;
+    }
   }
 }
 `

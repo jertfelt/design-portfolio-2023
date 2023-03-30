@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Image from "next/image";
-import Tova from "../../public/tova-poetry-slam.png"
+
 import { useRouter } from 'next/router'
+import BgImg from "./Frontend/MainElements/BackgroundImg";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};
@@ -11,12 +11,17 @@ margin:0;
 height:100%;
 min-height:100vh;
 z-index:0;
-padding-left:1rem;
+padding-left:3rem;
 padding-top:5rem;
 display:flex;
 flex-direction:column;
 width:50%;
 gap:1rem;
+p{
+   font-size:32px;
+   line-height:48px;
+   color:${({theme}) => theme.contrast};
+}
 img{
   border-radius:${({theme}) => theme.borderradius.first};
 }
@@ -24,6 +29,7 @@ button{
      background-color: ${({theme}) => theme.contrast};
      color:${({theme}) => theme.body};
      width:100px;
+     font-weight:bold;
      padding:1rem;
      border:none;
      border-radius:29px;
@@ -40,18 +46,19 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  padding-left:2rem;
   background-color: ${({theme}) => theme.body};
 }
 
 
 .glitch {
   position: relative;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
   color:  ${({theme}) => theme.contrast};
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   animation: shift 4s ease-in-out infinite alternate;
   z-index: 1;
 }
@@ -64,7 +71,7 @@ button{
   text-shadow: -1px 0 #0ff;
   width: 100%;
   color: #fff;
-  background-color: #222;
+  background-color: ${({theme}) => theme.body};
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-before 3s infinite linear alternate-reverse;
@@ -75,10 +82,10 @@ button{
   position: absolute;
   top: 0;
   left: 2px;
-  text-shadow: 1px 0 #ff00ff;
+  text-shadow: 1px 0  ${({theme}) => theme.accentpink};
   width: 100%;
-  color: #fff;
-  background-color: #222;
+  color:  ${({theme}) => theme.accentpink};
+  background-color: ${({theme}) => theme.background};
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-after 2s infinite linear alternate-reverse;
@@ -295,13 +302,13 @@ const WorkInProgress = () => {
   const router = useRouter()
   return(
     <Section>
+      
       <div className="glitch-wrapper">
       <h1 className="glitch" data-glitch="WORK IN PROGRESS">WORK IN PROGRESS</h1>
       </div>
       <p>Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.</p>
-
-       <button type="button" onClick={() => router.back()}>
-      Gå tillbaka
+      <button type="button" onClick={() => router.back()}>
+      Tillbaka
     </button>
     </Section>
   )

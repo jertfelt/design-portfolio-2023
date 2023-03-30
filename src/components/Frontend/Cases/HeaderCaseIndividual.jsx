@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { flex, device } from "@component/components/stylings/Stylings";
 import styled,{css} from "styled-components";
 
 const Wrapper = styled.div`
@@ -15,7 +14,7 @@ const Overlay = styled.div`
 position:fixed;
 height:100vh;
 width:100%;
-background: rgba(50, 57, 57, 0.5);
+background: rgba(50, 57, 57, 0.6);
 z-index:1;
 `
 const BgTxt = styled.div`

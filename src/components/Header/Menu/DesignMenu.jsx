@@ -10,7 +10,7 @@ const Links = styled.div`
 `
 
 
-const DesignMenu = () => {
+const DesignMenu = ({setOpen, open}) => {
   const {setSelectedPage} =useContext(AppContext)
   return ( 
   <ColumnMenu>
@@ -18,7 +18,8 @@ const DesignMenu = () => {
  
   </Links>
       <p>&#9733;</p>
-  <DynamicLinkToOtherPages/>
+  <DynamicLinkToOtherPages setOpen={setOpen}
+    open={open}/>
     <p>&#9733;</p>
   </ColumnMenu> ); 
 }

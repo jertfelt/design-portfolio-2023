@@ -12,8 +12,6 @@ import { AppContext } from '@component/context/AppContext';
 import LocaleSwitcher from './LanguageSwitch';
 import { useTranslation } from 'next-i18next';
 
-
-
 const StyledMenu = styled.nav`
 display: flex;
 flex-direction: column;
@@ -22,8 +20,6 @@ align-items:center;
 background: ${({ theme }) => theme.contrast};
 height: 120vh;
 width:30vh;
-
-
 text-align: left;
 padding: 2rem;
 position: absolute;
@@ -88,17 +84,24 @@ useEffect(() => {
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-    {selectedPage && selectedPage.value==="" &&  <Start/>}
-    {selectedPage && selectedPage.value==="frontend" && <FrontendMenu/>}
-    {selectedPage && selectedPage.value==="art" &&  <ArtMenu/>}
+    {selectedPage && selectedPage.value==="" &&  <Start 
+    setOpen={setOpen}
+    open={open}/>}
+    {selectedPage && selectedPage.value==="frontend" && <FrontendMenu
+    setOpen={setOpen}
+    open={open}/>}
+    {selectedPage && selectedPage.value==="art" &&  <ArtMenu
+    setOpen={setOpen}
+    open={open}/>}
     {selectedPage && selectedPage.value==="design" &&
-    <DesignMenu/>
+    <DesignMenu
+    setOpen={setOpen}
+    open={open}/>
     }
     {selectedPage && selectedPage.value==="illustration" &&
    <IllMenu/>
     }
-
-    <Link href="/contact">
+    <Link href="/contact" onClick={() => setOpen(!open)}>
       &#9993; Kontakt 
     </Link>
     {/* <LocaleSwitcher/> */}

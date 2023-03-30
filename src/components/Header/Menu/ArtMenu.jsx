@@ -8,7 +8,7 @@ import { DynamicLinkToOtherPages } from "./DynamicLinks";
 const Links = styled.div`
 `
 
-const ArtMenu = () => {
+const ArtMenu = ({setOpen, open}) => {
   const {setSelectedPage} =useContext(AppContext)
   return ( 
   <ColumnMenu>
@@ -16,7 +16,9 @@ const ArtMenu = () => {
  
   </Links>
       <p>&#9733;</p>
-  <DynamicLinkToOtherPages/>
+  <DynamicLinkToOtherPages
+  setOpen={setOpen}
+  open={open}/>
     <p>&#9733;</p>
   </ColumnMenu> );
 }

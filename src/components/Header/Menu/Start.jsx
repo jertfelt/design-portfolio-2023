@@ -12,10 +12,12 @@ p{
   color:${({ theme }) => theme.accent};
 }
 `
-const Start = () => {
+const Start = ({setOpen, open}) => {
   return ( 
   <ColumnMenu>
-    <DynamicLinkToOtherPages/>
+    <DynamicLinkToOtherPages 
+    setOpen={setOpen}
+    open={open}/>
     <p>&#9733;</p>
   </ColumnMenu> );
 }

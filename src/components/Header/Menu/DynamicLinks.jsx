@@ -20,7 +20,8 @@ export const data = [
   {value:"illustration", url:"/illustration", text:"Illustration"},
   {value:"", url:"/", text:"Startsida"}]
 
-export const DynamicLinkToOtherPages = () => {
+export const DynamicLinkToOtherPages = ({
+  setOpen, open}) => {
   const {selectedPage, setSelectedPage} = useContext(AppContext)
   const router = useRouter()
   const { t } = useTranslation("");
@@ -30,6 +31,12 @@ useEffect(() => {
   document.querySelector("html").setAttribute("lang", lang);
 }, [router.locale]);
 
+const selectAndClose = (item) => {
+  setSelectedPage({value:item.value, url: item.url})
+  setOpen(!open)
+  
+}
+
   return(
     <Others>
 {data && data.map((item,i) => (<>
@@ -37,10 +44,12 @@ useEffect(() => {
   <Link 
 href={item.url} 
 key={i}
-onClick={() => setSelectedPage({value:item.value, url: item.url})}><i>{item.text === "Konst" ? <>Konst</>: item.text}</i></Link>: <Link 
+onClick={() => selectAndClose(item)}>
+<i>{item.text === "Konst" ? <>Konst</>: item.text}</i></Link>: 
+<Link 
 href={item.url} 
 key={i}
-onClick={() => setSelectedPage({value:item.value, url: item.url})}>{item.text === "Konst" ? <>Konst</>: item.text}</Link>}
+onClick={() => selectAndClose(item)}>{item.text === "Konst" ? <>Konst</>: item.text}</Link>}
 </>
 )
 

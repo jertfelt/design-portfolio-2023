@@ -26,18 +26,19 @@ display:flex;
 flex-direction:column;
 align-items:center;
 `
-const FrontendMenu = () => {
+const FrontendMenu = ({setOpen, open}) => {
   return ( 
   <ColumnMenu>
   <Links>
-  <Link href="/frontend/cases">Cases</Link>
-  <Link href="/frontend/cv">CV</Link><br/>
-
+  <Link href="/frontend/cases"
+  onClick={() => setOpen(!open)}>Cases</Link>
+  <Link href="/frontend/cv"
+  onClick={()=> setOpen(!open)}>CV</Link><br/>
   </Links>
       <p>&#9733;</p>
- 
-    <DynamicLinkToOtherPages/>
- 
+    <DynamicLinkToOtherPages
+    setOpen={setOpen}
+    open={open}/>
     <p>&#9733;</p>
   </ColumnMenu> );
 }

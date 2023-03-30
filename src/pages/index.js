@@ -45,21 +45,7 @@ flex-direction:column;
 align-items:flex-start;
 padding:.5rem;
 `
-const TextContainerRight = styled.div`
-padding-right:2rem;
-h3{
-font-size:.8rem;
-}
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-align-items:flex-end;
-p{
-  line-height:1rem;
-  font-size:.8rem;
-  width:400px;
-}
-`
+
 const ThreeColumnGrid= styled.div`
 margin: 0;
 display:grid;
