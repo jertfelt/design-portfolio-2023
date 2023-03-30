@@ -1,9 +1,10 @@
 import landingpic from "../../../../public/background_globalwarming.png"
 import Image from "next/image"
 import styled from "styled-components";
-import HeroContent from "./Hero";
 
-const Wrapper = styled.div`
+
+
+ const Wrapper = styled.div`
 position: fixed;
 height: 120vh;
 width: 100%;
@@ -41,27 +42,32 @@ padding-bottom:5vh;
 `
 
 
-const BgImg = () => {
+const BgImgCase = ({individual}) => {
   return (<>
-    <Wrapper>
-      <Image
-        alt="Global warming"
-        src={landingpic}
-        placeholder="blur"
-        quality={100}
-        fill
-        sizes="80vw"
-        style={{
-          objectFit: 'cover',
-        }}
-      />
+   {individual.map(item => (
+      <div key={item.id}>
+        <Wrapper>
+        <Image
+      alt={item.sources.imgalt}
+      src={item.sources.imgurl}
+      
+      quality={100}
+      fill
+      sizes="80vw"
+      style={{
+        objectFit: 'cover',
+      }}
+    />
+   
     </Wrapper>
     <Overlay/>
     <BgTxt>
-    <HeroContent/>
+    test
     </BgTxt>
+    </div>
+    ))}
     </>
     );
 }
  
-export default BgImg;
+export default BgImgCase;

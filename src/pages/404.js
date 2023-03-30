@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Image from "next/image";
-import Tova from "../../public/tova-poetry-slam.png"
+import Link from 'next/link'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};
@@ -17,22 +17,6 @@ display:flex;
 flex-direction:column;
 width:50%;
 gap:1rem;
-img{
-  border-radius:${({theme}) => theme.borderradius.first};
-}
-button{
-     background-color: ${({theme}) => theme.contrast};
-     color:${({theme}) => theme.body};
-     width:100px;
-     padding:1rem;
-     border:none;
-     border-radius:29px;
-     &:hover{
-       color:${({theme}) => theme.accentpink};
-       background: transparent;
-       border: 2px solid ${({theme}) => theme.accentpink};;
-     }
-}
 
 .glitch-wrapper {
   width: 100%;
@@ -290,20 +274,24 @@ button{
   }
 }
 `
-
-const WorkInProgress = () => {
+const NotFound = () => {
   const router = useRouter()
-  return(
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/')
+    }, 5000)
+  }, [])
+
+  return (
     <Section>
       <div className="glitch-wrapper">
-      <h1 className="glitch" data-glitch="WORK IN PROGRESS">WORK IN PROGRESS</h1>
+      <h1 className="glitch" data-glitch="404">404</h1>
       </div>
-      <p>Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.</p>
-
-       <button type="button" onClick={() => router.back()}>
-      Gå tillbaka
-    </button>
-    </Section>
-  )
+      <h2>Sidan finns inte!</h2>
+      <p>Du kommer tillbaka till <Link href="/">startsidan</Link> om 5 sekunder...</p>
+      </Section>
+  );
 }
-export default WorkInProgress;
+
+export default NotFound;

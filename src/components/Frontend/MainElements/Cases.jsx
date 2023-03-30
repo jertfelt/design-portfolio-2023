@@ -1,12 +1,12 @@
 import { Container } from "@component/components/stylings/Containers";
 import styled from "styled-components";
-import { useState, useEffect, useCallback,} from "react";
-import Link from "next/link";
+import { useState, useEffect} from "react";
+
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
 import { getDb } from "@component/components/api/getDb";
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
 import Image from "next/image";
-import TechStack from "./TechStack";
+
 import { CaseContainer } from "./CasefItem";
 
 const CaseImage = styled(Image)`
@@ -122,11 +122,6 @@ const CasesPage = () => {
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
   const {data, error, loading} = getDb("/cases/")
-  const [imageSize, setSmageSize] = useState({
-    width: 300,
-    height: 300
-   });
-
   const randomize = (cases) => {
     setRandom(cases[Math.floor(Math.random()*cases.length)])
   }
@@ -175,7 +170,7 @@ const CasesPage = () => {
          </CaseHeader> 
           <Subtitle>Praktik Frontend Januari - Mars 2023</Subtitle> 
           <Description>
-            Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, städa i node, städa i CSS, se över API-anropen, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.
+            Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.
             <br></br>
             Vill du veta mer?<br/> Society Icon har gått i konkurs i mars 2023, så projektet är inte längre tillgängligt på webben.
             <br/>

@@ -1,5 +1,7 @@
+import WorkInProgress from "@component/components/WorkInProgress";
+
 const Illustration = () => {
-  return ( <section>Illustration</section> );
+  return ( <section><WorkInProgress/></section> );
 }
  
 export default Illustration;

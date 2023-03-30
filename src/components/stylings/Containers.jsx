@@ -9,6 +9,13 @@ ${props =>
   margin:0;
   z-index:3;
   `}
+  ${props => props.xlargebg && css`
+  width:100%;
+  height:100%;
+  margin:0;
+  margin-top:-5rem;
+  background-color:${({theme}) => theme.frontendcolors.background};
+  `}
   ${props => 
   props.xlargegreyslantedafter && css`
   margin-right:-2rem;

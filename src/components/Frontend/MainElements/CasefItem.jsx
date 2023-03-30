@@ -79,13 +79,13 @@ const CasefItem = ({item}) => {
           </Link>
          </CaseHeader> 
 
-        <Link href={'/cases/' + item.id} 
+        <Link href={'/frontend/cases/' + item.id} 
         key={item.id}>   
           <Subtitle>{item.sub}</Subtitle> 
           <Description>{item.text}
           </Description>
           
-          <Link href={'/cases/' + item.id} state={{data: item.id}}><button>Se mer här</button>
+          <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>Se mer här</button>
           </Link>
 
         </Link>
