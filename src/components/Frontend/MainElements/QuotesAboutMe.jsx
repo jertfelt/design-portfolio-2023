@@ -1,4 +1,4 @@
-import { quotesAboutMe } from "@component/data/quotesaboutme";
+import { quotesAboutMe, quotesAboutMe_EN} from "@component/data/quotesaboutme";
 import styled from "styled-components";
 import { device, padding } from "@component/components/stylings/Stylings";
 
@@ -124,10 +124,12 @@ blockquote{
 }
 `
 
-const GridWithQuotes = () => {
+const GridWithQuotes = ({language}) => {
+  console.log(language)
   return ( 
   <Section>
       <GridThree>
+        {language === "sv" ? <>
     {quotesAboutMe.map(item => (
   <div
   key={item.id}>
@@ -137,7 +139,20 @@ const GridWithQuotes = () => {
   <p><i>{item.name}</i></p>   
   </blockquote>
   </div>
-  ) )}
+  ) )}</>:
+  <>
+    {quotesAboutMe_EN.map(item => (
+  <div
+  key={item.id}>
+    <blockquote>
+  <h3>{item.headline}</h3>
+  <h4>“{item.quote}”</h4>
+  <p><i>{item.name}</i></p>   
+  </blockquote>
+  </div>
+  ) )}</>
+  
+  }
     </GridThree>
   </Section> );
 }

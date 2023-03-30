@@ -2,6 +2,7 @@ import { useContext } from "react"
 import styled from "styled-components"
 import Link from "next/link"
 import { AppContext } from "@component/context/AppContext"
+import {useTranslation } from "next-i18next";
 
 
 
@@ -286,12 +287,15 @@ background-color: ${({ theme }) => theme.body};
 
 const LinksToPages = () => {
   const {setSelectedPage} = useContext(AppContext);
-
+  const {t} = useTranslation();
   const selection = (e) => {
 
     switch(e.target.outerText){
       case "Frontend,":
         setSelectedPage({value:"frontend", url:"/frontend"})
+        break;
+      case "Art,":
+        setSelectedPage({value:"art", url:"/art"})
         break;
       case "Konst,":
         setSelectedPage({value:"art", url:"/art"})
@@ -326,7 +330,7 @@ const LinksToPages = () => {
       <Link href={{pathname: "/art", query:{key:"art"}}}>
       <BackgroundTwo>
         <LinkContainer>
-        <LinkTwo>Konst,</LinkTwo>
+        <LinkTwo>{t("startsida.headline")}</LinkTwo>
         </LinkContainer>
       </BackgroundTwo>
       </Link>

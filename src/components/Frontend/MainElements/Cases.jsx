@@ -1,16 +1,14 @@
 import { Container } from "@component/components/stylings/Containers";
 import styled from "styled-components";
 import { useState, useEffect} from "react";
-
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
 import { getDb } from "@component/components/api/getDb";
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
 import Image from "next/image";
-
+import data from "../../../data/cases_EN.json"
 import { CaseContainer } from "./CasefItem";
 
-const CaseImage = styled(Image)`
-`
+
 
 const Content = styled.div`
 min-height:130vh;
@@ -117,7 +115,8 @@ border-radius: ${({theme}) => theme.borderradius.second};
 padding:1rem;
 `
 
-const CasesPage = () => {
+const CasesPage = ({language}) => {
+  console.log(language)
   const [cases, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
@@ -126,16 +125,23 @@ const CasesPage = () => {
     setRandom(cases[Math.floor(Math.random()*cases.length)])
   }
 
+
   useEffect(() => {
-    if(data){
-      setCases(data)
-      let featured = []
-      featured.push(data.filter(item => item.featured === true))
-      const doubled = featured.map(nested => nested.map(element => element))
-      setFeatured(doubled[0])
-      randomize(data)
+    if(language !== "en"){
+      if(data){
+        setCases(data)
+        let featured = []
+        featured.push(data.filter(item => item.featured === true))
+        const doubled = featured.map(nested => nested.map(element => element))
+        setFeatured(doubled[0])
+        randomize(data)
+      }
     }
-  },[data])
+    else{
+
+    }
+
+  },[data, language])
 
   return (
       <Container

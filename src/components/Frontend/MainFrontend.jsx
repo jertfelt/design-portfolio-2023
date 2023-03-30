@@ -20,13 +20,16 @@ z-index:0;
 
 
 const MainFrontend = () => {
+
+  const language = document.getElementsByTagName('html')[0].getAttribute('lang');
+
   return ( 
     <Section>
     <BgImg/>
     <AboutMe/>
-    <GridWithQuotes/>
-    <CasesPage/>
-    <CVFrontend/>
+    <GridWithQuotes language={language}/>
+    <CasesPage language={language}/>
+    <CVFrontend language={language}/>
     <Footer/>
    </Section> );
 }

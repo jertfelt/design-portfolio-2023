@@ -28,3 +28,34 @@ export const quotesAboutMe = [
   },
   
 ]
+
+export const quotesAboutMe_EN = [
+
+  {id:3,
+    headline: "Secure",
+    quote:"Tova has good knowledge in how, and why, you work with JavaScript within frontend development, and can with certainty choose right methods",
+    name:"– Harald Mellbom, Vinnovera"
+  },
+  {
+    id:4,
+    headline:"Driven",
+    quote:"Tova is very competent and driven.",
+    name:"– Fredrika, classmate Nackademin"
+  },
+  {
+    id:1,
+    headline:"Teamplayer",
+    quote:"Tova is a very competent and driven colleague. She is generous with her knowledge and uses it to a very extremely high level in her deliveries, and she makes sure to raise her colleagues with her.",
+    name:"– Sonja Dandenell, webb editor Amnesty Sverige"
+  }, 
+  {id:5,
+    headline:"Generous",
+    quote:"Tova is helpful, knowledgeable and responsive to requests.",
+    name:"– Globalportalen"
+  }, {id:2,
+    headline: "Curious & motivated",
+    quote:"Tova learns quickly and eagerly, has a high work moral and is easy to work with. Besides being a good programmer she also has, thanks to her background in arts, a keen understanding for design, UX and UI. I recommend her strongly!",
+    name:"– Vidar Rehn, frontend developer"
+  },
+  
+]
