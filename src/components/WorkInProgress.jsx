@@ -302,7 +302,6 @@ const WorkInProgress = () => {
   const router = useRouter()
   return(
     <Section>
-      
       <div className="glitch-wrapper">
       <h1 className="glitch" data-glitch="WORK IN PROGRESS">WORK IN PROGRESS</h1>
       </div>

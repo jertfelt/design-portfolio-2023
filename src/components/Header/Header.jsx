@@ -6,7 +6,6 @@ import styled from "styled-components";
 import Burger from "./Burger/Burger";
 import DropDownMenu from "./Menu/Menu";
 import { useOnClickOutside } from "../hooks/useOnclickOutside";
-
 import {useState, useRef, useContext } from 'react';
 import { AppContext } from "@component/context/AppContext";
 
@@ -62,7 +61,6 @@ const Header = ({theme, toggleTheme}) => {
   useOnClickOutside(node, () => setOpen(false));
   const {setSelectedPage} = useContext(AppContext)
   return (  
-
   <HeaderComponent>
     <NavComponent>
     <LogoNav onClick={() => setSelectedPage({value:"", url:"/"})}>
@@ -87,7 +85,6 @@ const Header = ({theme, toggleTheme}) => {
         theme={theme} 
         toggleTheme={toggleTheme}/>
     </span>
-
   </NavComponent>
   </HeaderComponent>
  );

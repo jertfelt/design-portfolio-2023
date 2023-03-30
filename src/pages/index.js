@@ -2,6 +2,7 @@ import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import {useTranslation } from "next-i18next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+
 export async function getStaticProps({locale}){
   return{
     props:{
@@ -37,14 +38,7 @@ h2{
   line-height:2rem;
   }
 `
-const Explanation = styled.div`
-font-size:.8rem;
-width:100%;
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-padding:.5rem;
-`
+
 
 const ThreeColumnGrid= styled.div`
 margin: 0;
@@ -78,8 +72,7 @@ div{
     @media (min-width:1050px){
       max-width:550px;
     }
-    text-align: justify;
-    text-justify: inter-word;
+    word-spacing:3px;
   }
 }
 `
@@ -121,6 +114,7 @@ background: ${({ theme }) => theme.accentTwo};
 
 const Homepage = () => {
   const {t} = useTranslation();
+  console.log(document.getElementsByTagName('html')[0].getAttribute('lang'))
   return ( 
   <>
   <HomepageComponent>
@@ -134,27 +128,18 @@ const Homepage = () => {
   <div>
   <h3>{t("startsida.h3")}</h3>
   <p>{t("startsida.par1")}</p>
-
   </div>
- 
   </Column>
   </TextContainer>
   <LinksToPages/>
-  
   <div>
-   
-  
   </div>
   </ThreeColumnGrid>
-
-
   </HomepageComponent> 
   <Footer>
-
     <div>
-
-    <button><a href="https://www.linkedin.com/in/tovajertfelt/">LinkedIn</a></button>
-    <button className="second"><a href="https://www.instagram.com/jertfelt/">Instagram</a></button>
+    <button><a href="https://www.linkedin.com/in/tovajertfelt/" target="_blank">LinkedIn</a></button>
+    <button className="second"><a href="https://www.instagram.com/jertfelt/" target="_blank">Instagram</a></button>
     </div>
   </Footer>
   </>

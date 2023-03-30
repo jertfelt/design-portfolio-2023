@@ -6,7 +6,7 @@ import Header from '@component/components/Header/Header';
 import Theme, {lightTheme, darkTheme} from '@component/components/stylings/Theme';
 import { useMode } from '@component/components/stylings/useMode';
 import AppProvider from '@component/context/AppContext';
-import { AppWithTranslation, appWithTranslation } from 'next-i18next';
+import { appWithTranslation } from 'next-i18next';
 
 const App = ({ Component, pageProps }) =>{
   const [theme, themeToggler, mountedComponent] = useMode();

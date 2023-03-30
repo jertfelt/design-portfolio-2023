@@ -49,10 +49,12 @@ const Footer = () => {
    
       <Links>
       <Link 
-      href="https://www.linkedin.com/in/tovajertfelt/">
+      href="https://www.linkedin.com/in/tovajertfelt/"
+      target="_blank">
         Linkedin</Link>
       <Link  
-      href="https://github.com/jertfelt">Github</Link>
+      href="https://github.com/jertfelt"
+      target="_blank">Github</Link>
    
       </Links>
     </FooterStyle>);

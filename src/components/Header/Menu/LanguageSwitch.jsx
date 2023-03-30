@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styled from "styled-components";
+
+const Span = styled.span`
+padding-top:2rem;
+img{
+  border-radius:29px;
+  width:30px;
+  height:30px;
+}`
 
 export default function LocaleSwitcher() {
   const router = useRouter();
@@ -15,9 +24,9 @@ export default function LocaleSwitcher() {
         return (
           <span key={"locale-" + locale}>
             <Link href={{ pathname, query }} as={asPath} locale={locale}>
-              <span>
-                {locale === "en" ? "English" : locale === "sv" ? "Svenska" : null}
-              </span>
+              <Span>
+                {locale === "en" ? <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="English"/> : locale === "sv" ? <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1200px-Flag_of_Sweden.svg.png" alt="Swedish"></img> : null}
+              </Span>
             </Link>
           </span>
         );

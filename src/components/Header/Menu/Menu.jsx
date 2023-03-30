@@ -104,7 +104,7 @@ useEffect(() => {
     <Link href="/contact" onClick={() => setOpen(!open)}>
       &#9993; Kontakt 
     </Link>
-    {/* <LocaleSwitcher/> */}
+    <LocaleSwitcher/>
     </StyledMenu>
 );
 }
