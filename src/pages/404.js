@@ -2,14 +2,7 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-export async function getStaticProps({locale}){
-   return{
-     props:{
-       ...(await serverSideTranslations(locale, ["common"]))
-     }
-   }
- }
+
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};
@@ -284,7 +277,7 @@ gap:1rem;
 `
 const NotFound = () => {
   const router = useRouter()
-  const {t} = useTranslation();
+ 
 
   useEffect(() => {
     setTimeout(() => {
@@ -297,8 +290,8 @@ const NotFound = () => {
       <div className="glitch-wrapper">
       <h1 className="glitch" data-glitch="404">404</h1>
       </div>
-      <h2>{t("404.h2")}</h2>
-      <p>{t("404.p1")}<Link href="/">{t("404.link")}</Link> {t("404.p2")}</p>
+      <h2>Page cannot be found!</h2>
+      <p>You will be transferred back to <Link href="/">startpage </Link> within 5 seconds...</p>
       </Section>
   );
 }

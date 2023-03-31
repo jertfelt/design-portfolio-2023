@@ -8,10 +8,6 @@ const nextConfig = {
   swcMinify: true,
   i18n,
 }
-// const nextConfig = {
-//   reactStrictMode: true,
-//   swcMinify: true,
-//   i18n,
-// }
+
 
 module.exports = nextConfig;
