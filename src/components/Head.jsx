@@ -8,7 +8,7 @@ import metaArt from "../../public/art/vi-kan-battre-tova-jertfelt-kandidatexamen
 
 export const HeadTypography = () => {
   <Head>
-    <link rel="icon" href={favicon} />
+    <link rel="icon" href="../../public/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -33,7 +33,7 @@ export const HeadIndexArt = () => {
   <meta property="twitter:description" content="Multidisciplinär konstnär som rör sig mellan teckning och språket, det digitala, rörliga och stillbilder."/>
   <meta property="twitter:image" content={metaArt}/>
   
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href="../../public/favicon.ico"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -60,7 +60,7 @@ export const HeadIndexDesign = () => {
   <meta property="twitter:description" content="Multidisciplinär formgivare med erfarenhet av digital kommunikation. Tillgänglig för frilans!"/>
   <meta property="twitter:image" content={metaDesign}/>
   
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
  
@@ -87,7 +87,7 @@ export const HeadIndexIllustraion = () => {
 <meta property="twitter:description" content="Multidisciplinär illustratör som jobbar både digitalt och analogt. Tillgänglig för frilans! "/>
 <meta property="twitter:image" content={metaIllustration}/>
 
-<link rel="icon" href={favicon} />
+<link rel="icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -115,7 +115,7 @@ export const HeadIndexFrontend = () => {
 <meta property="twitter:description" content="Multidisciplinär frontendare med bakgrund inom visuell kommunikation, digital produktion och frilans söker jobb! "/>
 <meta property="twitter:image" content={metaFrontend}/>
 
-<link rel="icon" href={favicon} />
+<link rel="icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
@@ -146,7 +146,7 @@ const HeadIndex = () => {
 <meta property="twitter:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
 <meta property="twitter:image" content={mainMetaPic}/>
 
-<link rel="icon" href={favicon} />
+<link rel="icon" type="image/png" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
