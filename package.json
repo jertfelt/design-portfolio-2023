@@ -16,7 +16,6 @@
     "eslint-config-next": "13.2.3",
     "firebase": "^9.18.0",
     "flickity": "^2.3.0",
-    "i": "^0.3.7",
     "json-loader": "^0.5.7",
     "next": "^13.2.3",
     "next-i18next": "^13.2.2",
@@ -26,7 +25,6 @@
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
     "react-flickity-component": "^4.0.5",
-    "sass": "^1.58.3",
     "sharp": "^0.32.0",
     "styled-components": "^5.3.9"
   }
