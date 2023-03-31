@@ -183,9 +183,13 @@ const CaseIndividualPage = ({array, id}) => {
             </About>
            <Carousel 
            img0={item.extra.file03.url}
+           alt0={item.extra.file03.alt}
            img1={item.sources.imgurl}
+           alt1={item.souces.imgalt}
            img2={item.extra.file01.url}
+           alt2={item.extra.file01.alt}
            img3={item.extra.file02.url}
+           alt3={item.extra.file03.alt}
            />
         
         <About>

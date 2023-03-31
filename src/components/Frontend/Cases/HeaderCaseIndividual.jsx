@@ -67,14 +67,15 @@ const HeaderIndividual = ({individual}) => {
       <div key={item.id}>
         <Wrapper>
         <Image
-      alt={item.sources.imgalt}
-      src={item.sources.imgurl}
-      quality={100}
-      fill
-      sizes="80vw"
-      style={{
-        objectFit: 'cover',
-      }}
+          alt={item.sources.imgalt}
+          src={item.sources.imgurl}
+          quality={100}
+          priority={true}
+          fill
+          sizes="80vw"
+          style={{
+            objectFit: 'cover',
+          }}
     />
          </Wrapper>
           <Overlay>

@@ -4,6 +4,10 @@
     "Kontakt": "Contact",
     "Startsida": "Homepage"
   },
+  "404": {"h2": "Page doesn't exist :(",
+"p1": "You'll be transported back to the ",
+"link": "homepage",
+"p2": "within a moment..."},
   "startsida": {
     "h2": "Frontend developer, artist and designer. ",
     "h3": "With a Bachelor degree in visual communication at Konstfack & vocational degree in frontend-programming at Nackademin.",

@@ -2,6 +2,15 @@ import styled from "styled-components";
 
 import { useRouter } from 'next/router'
 import BgImg from "./Frontend/MainElements/BackgroundImg";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from "next-i18next";
+export async function getStaticProps({locale}){
+   return{
+     props:{
+       ...(await serverSideTranslations(locale, ["common"]))
+     }
+   }
+ }
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};
@@ -300,14 +309,15 @@ button{
 
 const WorkInProgress = () => {
   const router = useRouter()
+  const {t} = useTranslation()
   return(
     <Section>
       <div className="glitch-wrapper">
       <h1 className="glitch" data-glitch="WORK IN PROGRESS">WORK IN PROGRESS</h1>
       </div>
-      <p>Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.</p>
-      <button type="button" onClick={() => router.back()}>
-      Tillbaka
+      <p>{t("wip.p")}</p>
+      <button onClick={() => router.back()}>
+      {t("wip.btn")}
     </button>
     </Section>
   )

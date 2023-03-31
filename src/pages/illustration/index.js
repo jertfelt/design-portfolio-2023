@@ -20,10 +20,10 @@ const Illustration = () => {
     if(selectedPage.value !== "illustration"){
       setSelectedPage({value:"illustration", url:"/illustration"})
     }
-  },[])
+  },[selectedPage, setSelectedPage])
   
   return ( <>
-  <HeadIndexIllustraion/>
+
   <WorkInProgress/></> );
 }
  
