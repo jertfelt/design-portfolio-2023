@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { contacts } from "@component/data/contactdetails";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 import {useTranslation } from "next-i18next";
-import { useEffect } from "react";
+
 import HeadIndex from "@component/components/Head";
 export async function getStaticProps({locale}){
   return{

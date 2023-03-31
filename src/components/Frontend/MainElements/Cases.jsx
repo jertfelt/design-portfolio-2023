@@ -2,13 +2,14 @@ import { Container } from "@component/components/stylings/Containers";
 import styled from "styled-components";
 import { useState, useEffect} from "react";
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
-import { GetDb } from "@component/components/api/getDb";
+
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
 import Image from "next/image";
 import casesENG from "../../../data/cases_EN.json"
 import { useTranslation } from "next-i18next";
 import { CaseContainer } from "./CasefItem";
-
+import cases from "../../../data/cases.json"
+import { useRouter } from "next/router";
 
 
 const Content = styled.div`
@@ -116,29 +117,36 @@ border-radius: ${({theme}) => theme.borderradius.second};
 padding:1rem;
 `
 
-const CasesPage = ({language}) => {
+const CasesPage = () => {
+  const router = useRouter();
+  const { locales, locale: activeLocale } = router;
+
   const {t} = useTranslation();
-
-
-  const [cases, setCases] = useState("")
+  const [casesT, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
-  const {data, error, loading} = GetDb("/cases/")
+  // const {data, error, loading} = GetDb("/cases/")
   const randomize = (cases) => {
     setRandom(cases[Math.floor(Math.random()*cases.length)])
   }
+  
+    const language = activeLocale;
 
+  
 
+console.log(cases.cases, cases)
   useEffect(() => {
     
     if(language === "sv"){
-      if(data){
-        setCases(data)
+      if(cases){
+        setCases(cases.cases)
+    
         let featured = []
-        featured.push(data.filter(item => item.featured === true))
+        featured.push(cases.cases.filter(item => item.featured === true))
+        console.log(featured, "featured")
         const doubled = featured.map(nested => nested.map(element => element))
         setFeatured(doubled[0])
-        randomize(data)
+
       }
     }
     else if (language === "en"){
@@ -169,8 +177,9 @@ const CasesPage = ({language}) => {
         <Desc>{t("casespage.desc")}
         </Desc>
         </div>
-      {error && <p>Kan inte ladda från databasen, försök igen senare.</p>}
-      {loading ? <p>Laddar...</p>: <Wrapper>
+      {/* {error && <p>Kan inte ladda från databasen, försök igen senare.</p>} */}
+      {/* {loading ? <p>Laddar...</p>: <></>} */}
+      <Wrapper>
         <CaseList>
         {featuredCases && featuredCases.map((c) => 
               (
@@ -182,7 +191,7 @@ const CasesPage = ({language}) => {
               ) 
         )}
         </CaseList>
-        </Wrapper>}
+        </Wrapper>
         <SocietyIcon>
           <CaseContainer>
           <CaseHeader>    

@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import { GetDb } from "@component/components/api/getDb.js";
+// import { GetDb } from "@component/components/api/getDb.js";
 import {useState, useEffect, useCallback, useContext } from "react";
 import CaseIndividualPage from "@component/components/Frontend/Cases/CasesIndividual";
 import { AppContext } from "@component/context/AppContext";
 import { HeadIndexFrontend } from "@component/components/Head";
-
+import cases from "../../../data/cases.json"
 
 
 const Page = () => {
@@ -23,8 +23,8 @@ const Page = () => {
   }, [router.isReady])
 
 
-  const [cases, setCases] = useState("")
-  const {data, error, loading} = GetDb("/cases/")
+  const [cases1, setCases] = useState("")
+  // const {data, error, loading} = GetDb("/cases/")
   //fb:
   // const [result, setResult] = useState(null)
   // const fetchData = useCallback(async () => {
@@ -32,18 +32,18 @@ const Page = () => {
   //   setResult(newData)
   // })
   useEffect(() => {
-    if(data){
-      setCases(data)
+    if(cases){
+      setCases(cases.cases)
     }
-  },[data])
+  },[])
 
 
 
   return (
   <><HeadIndexFrontend/>
-      {cases &&
+      {cases1 &&
       <CaseIndividualPage
-      array = {cases}
+      array = {cases1}
       id = {id}
       />
      }

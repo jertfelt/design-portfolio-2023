@@ -24,7 +24,7 @@ const MainFrontend = () => {
 const router= useRouter();
 const {locales, locale: activeLocale} = router;
 const language = activeLocale;
-console.log(language, "LANGUAGE", activeLocale, "ACTIVE")
+
 
   return ( 
     <Section>

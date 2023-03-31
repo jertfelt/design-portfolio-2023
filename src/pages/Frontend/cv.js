@@ -3,6 +3,16 @@ import { HeadIndexFrontend } from "@component/components/Head";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 import styled from "styled-components"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+
+export async function getStaticProps({locale}){
+  return{
+    props:{
+      ...(await serverSideTranslations(locale, ["common"]))
+    }
+  }
+}
+
 
 const BackgroundCV = styled.section`
 background:${({theme}) => theme.frontendcolors.accent};
@@ -15,7 +25,7 @@ const FrontendCV = () => {
       setSelectedPage({value:"frontend", url:"/frontend"})
     }
   },[selectedPage, setSelectedPage])
-  
+
   return (<><HeadIndexFrontend/>
   <BackgroundCV>
   <CVFrontend/>

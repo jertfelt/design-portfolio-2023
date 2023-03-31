@@ -10,6 +10,7 @@ import Education from "./CV/Education";
 import Erfarenhet from "./CV/Erfarenhet";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 const Content = styled.section`
 min-height:130vh;
@@ -66,19 +67,18 @@ margin-bottom:2rem;
 `
 
 
-const CVFrontend = ({language}) => {
+const CVFrontend = () => {
   const {t} = useTranslation();
-
+  const router= useRouter();
+  const {locales, locale: activeLocale} = router;
+  const language = activeLocale;
   const [coursesDb, setCourses] = useState("")
   const [workDb, setWork] = useState("")
   const [educationDb, setEducation] = useState("")
   const [erfarenhetDb, setErfarenhet] = useState("")
 
   useEffect(() => {
-    if(!language){
-     setLang("sv")
-      
-    }
+
     if(language !== "en"){
       setCourses(courses)
       setWork(work)
@@ -100,7 +100,7 @@ const CVFrontend = ({language}) => {
     <Content>
       <Heading>
       <Title>CV</Title>
-        <IntroParagraph>{t("cv.info")}<Link href="https://www.linkedin.com/in/tovajertfelt/">Linkedin.</Link></IntroParagraph>
+        <IntroParagraph>{t("cv.info")}<Link href="https://www.linkedin.com/in/tovajertfelt/"> Linkedin.</Link></IntroParagraph>
         </Heading>
         <Arbete 
         work={workDb}

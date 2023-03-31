@@ -2,6 +2,14 @@ import Link from 'next/link'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+export async function getStaticProps({locale}){
+   return{
+     props:{
+       ...(await serverSideTranslations(locale, ["common"]))
+     }
+   }
+ }
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};

@@ -84,10 +84,7 @@ useEffect(() => {
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-    <LocaleSwitcher
-    setOpen={setOpen}
-    open={open}
-    />
+   
     {selectedPage && selectedPage.value==="" &&  <Start 
     setOpen={setOpen}
     open={open}/>}
@@ -108,6 +105,10 @@ useEffect(() => {
     <Link href="/contact" onClick={() => setOpen(!open)}>
       &#9993; {t("menu.Kontakt")}
     </Link>
+    <LocaleSwitcher
+    setOpen={setOpen}
+    open={open}
+    />
   
     </StyledMenu>
 );
