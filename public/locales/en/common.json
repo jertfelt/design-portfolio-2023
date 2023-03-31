@@ -16,7 +16,7 @@
     "form": "Fill this out and I will contact you:",
     "namn": "Your name:",
     "message": "Message",
-    "sendtbn": "Send"
+    "sendbtn": "Send"
   },
   "cv":{
     "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",

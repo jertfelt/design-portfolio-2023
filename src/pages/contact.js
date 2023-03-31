@@ -60,6 +60,30 @@ div{
 }
 `
 
+const Form = styled.form`
+max-width:500px;
+@media(max-width:700px){
+  width:80%;
+}
+display:flex;
+flex-direction: column;
+gap:.5rem;
+label{
+  line-height:1.3rem;
+  
+}
+input{
+max-width:60%;
+}
+textarea{
+  min-width:50%;
+  max-width:100%;
+}
+button{
+max-width:60%;
+}
+`
+
 const Contact = () => {
   const {t} = useTranslation();
 
@@ -81,14 +105,14 @@ const Contact = () => {
     </div>
     <div>
       <h2>{t("contact.form")}</h2>
-      <form name="contactTova" method="POST" data-netlify="true">
+      <Form name="contactTova" method="POST" data-netlify="true">
         <label htmlFor="inputName">{t("contact.namn")}</label>
         <input type="text" name="name" id="inputName"></input>
         <label htmlFor="inputEmail">Email:</label>
         <input type="email" name="email" id="inputEmail"></input>
-        <label htmlFor="textarea">{t("contact.message")}</label><textarea name="message" id="textarea"></textarea>
+        <label htmlFor="textarea">{t("contact.message")}:</label><textarea name="message" id="textarea"></textarea>
         <button type="submit">{t("contact.sendbtn")}</button>
-      </form>
+      </Form>
     </div>
   </Section></> );
 }
