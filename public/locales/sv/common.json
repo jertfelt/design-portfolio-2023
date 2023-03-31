@@ -12,7 +12,11 @@
   },
   "contact": {
     "h1": "Kontakta mig:",
-    "phone": "TELEFON"
+    "phone": "TELEFON",
+    "form": "Fyll i formuläret här så kontaktar jag dig:",
+    "namn": "Ditt namn:",
+    "message": "Meddelande",
+    "sendtbn": "Skicka"
   },
   "cv":{
   

@@ -12,7 +12,11 @@
   },
   "contact": {
     "h1": "Contact me",
-    "phone": "PHONE:"
+    "phone": "PHONE:",
+    "form": "Fill this out and I will contact you:",
+    "namn": "Your name:",
+    "message": "Message",
+    "sendtbn": "Send"
   },
   "cv":{
     "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",

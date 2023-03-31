@@ -3,6 +3,7 @@ import { contacts } from "@component/data/contactdetails";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 import {useTranslation } from "next-i18next";
 import { useEffect } from "react";
+import HeadIndex from "@component/components/Head";
 export async function getStaticProps({locale}){
   return{
     props:{
@@ -62,7 +63,8 @@ div{
 const Contact = () => {
   const {t} = useTranslation();
 
-  return ( 
+  return ( <>
+  <HeadIndex/>
   <Section>
     <h1>{t("contact.h1")}</h1>
     <div>
@@ -77,7 +79,18 @@ const Contact = () => {
     </a>}
        </div>)}
     </div>
-  </Section> );
+    <div>
+      <h2>{t("contact.form")}</h2>
+      <form name="contactTova" method="POST" data-netlify="true">
+        <label htmlFor="inputName">{t("contact.namn")}</label>
+        <input type="text" name="name" id="inputName"></input>
+        <label htmlFor="inputEmail">Email:</label>
+        <input type="email" name="email" id="inputEmail"></input>
+        <label htmlFor="textarea">{t("contact.message")}</label><textarea name="message" id="textarea"></textarea>
+        <button type="submit">{t("contact.sendbtn")}</button>
+      </form>
+    </div>
+  </Section></> );
 }
  
 export default Contact;
