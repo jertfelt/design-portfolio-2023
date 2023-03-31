@@ -71,9 +71,11 @@ padding:0;
 display:flex;
 align-items:center;
 gap:1rem;
+
 span{
   margin:0;
-  padding:0;
+  width:100px;
+
   margin-bottom:1rem;
 }
 @media screen and (max-width:700px){
@@ -119,27 +121,35 @@ display:none;
 const Education = ({courses, education}) => {
   const {t} = useTranslation()
   const [doneCourses, setCourses] = useState([]);
-  const [buttonMsg, setButtonMsg] = useState("Läs mer om frontend på Nackademin")
+  const text = t("nackademin.btn1")
+  const [buttonMsg, setButtonMsg] = useState(text)
   const [show, setShow] = useState(false);
+  const [done, setDone] = useState("")
+
 
   const reveal = () => {
     if(show){
       setShow(false)
-      setButtonMsg("Nackademins kurser")
+      const text = t("nackademin.btn1")
+      setButtonMsg(text)
     }
     else{
       setShow(true)
-      setButtonMsg("Stäng")
+      setButtonMsg("X")
     }
     }
+
 
   useEffect(() => {
     if(courses){
       setCourses(courses.filter(item => (item.done === true)))
+      setDone(doneCourses.length/courses.length *100)
     }
-   
+    
+    
     }, [])
-  const done = (doneCourses.length/courses.length *100);
+
+
 
   return (
     <EducationStyle>
@@ -155,23 +165,22 @@ const Education = ({courses, education}) => {
         <h4>{item.title}</h4> 
         <Bread>{item.text}</Bread>
         {item.school === "Nackademin" && <>
-       
-      <BlobInGrid>
-        <CountingUp
-        type="utbildning"
-        number={done}
-        percent ={true}
-        />
-        </BlobInGrid>
+      {!show && 
         <Knapp 
         aria-label="button"
         type="button"
         onClick={reveal}>{buttonMsg}
       </Knapp>
+      }
       {show && <Mobile>
     <Nackademin
     courses={courses}
     />
+       <Knapp 
+        aria-label="button"
+        type="button"
+        onClick={reveal}>{buttonMsg}
+      </Knapp>
     </Mobile> }
       </> 
      }
@@ -183,6 +192,11 @@ const Education = ({courses, education}) => {
     <Nackademin
     courses={courses}
     />
+       <Knapp 
+        aria-label="button"
+        type="button"
+        onClick={reveal}>{buttonMsg}
+      </Knapp>
     </NotMobile> }
     </CVContent>
     </EducationStyle>  );

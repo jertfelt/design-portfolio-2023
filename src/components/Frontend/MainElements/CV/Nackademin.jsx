@@ -2,14 +2,13 @@ import Canvas from "./Canvas";
 import { device, flex, fonts } from "@component/components/stylings/Stylings";
 import styled from "styled-components"
 import Link from "next/link";
-
 import { useEffect, useState } from "react";
 import { Knapp } from "./Education";
 import { useTranslation } from "next-i18next";
 
 
 const Container = styled.section`
-
+padding:2rem;
 gap:30px;
 
 margin-top:3rem;
@@ -26,8 +25,10 @@ h3{
 }
 h4{
   margin-top:-1rem;
+  color:${({theme}) => theme.textPrimary};
 }
 p{
+  color:${({theme}) => theme.lightblue};
   line-height:1.5rem;
   a{
     text-decoration: none;
@@ -39,6 +40,8 @@ p{
   padding:1rem;
   max-width:500px;
 }
+padding-top:0;
+margin-top:-1rem;
 `
 
 
@@ -84,8 +87,12 @@ const Kursinnehåll = styled.ul`
 list-style: none;
 line-height:1.3rem;
 padding-left:0;
+color:${({theme}) => theme.textPrimary};
+line-height:1.6rem;
 `
 const Table = styled.table`
+width:80%;
+color:${({theme}) => theme.textPrimary};
 border: 1px solid;
 padding:10px;
 border-radius:29px;
@@ -100,7 +107,10 @@ th, td{
   border-bottom: 1px solid ${({theme}) => theme.lightblue};
 }
 .notDone{
-  color:${({theme}) => theme.frontendcolors.lightblue};
+  color:${({theme}) => theme.frontendcolors.background};
+  &:hover{
+    color:${({theme}) => theme.frontendcolors.lightblue};
+  }
 }
 tr:hover{
   background-color:${({theme}) => theme.frontendcolors.background};
@@ -134,8 +144,8 @@ const Nackademin = ({courses}) => {
 
     const data2 = {
       labels: [
-        "Färdiga kurser (i procent)",
-        "Ej klara kurser (i procent)"
+        "%",
+        "%"
       ],
       datasets: [{
         data: [`${done}` ,(100-`${done}`)],
@@ -174,22 +184,21 @@ const Nackademin = ({courses}) => {
     <p>2021-2023</p>
     </div>
     <Row>
-
-      {language === "sv" ? <>
       <Canvas
       data={data2}
       options={configdata2}/>
-        <h3>Totalt {doneCourses.length} av {courses.length} kurser avklarade</h3>
-      </>
-          : <h3>A total of {doneCourses.length} out of {courses.length} courses completed.</h3>}
+        <h3>{doneCourses.length} {t("nackademin.total")} {courses.length}  {t("nackademin.avklarade")}</h3>
     </Row>
     <div>
     <Table>
+      <thead>
   <tr>
     <th>{t("nackademin.kurs")}</th>
     <th>{t("nackademin.Betyg")}</th>
-    <th>{t("nackademin.Omfattning")}</th>
+    {/* <th>{t("nackademin.Omfattning")}</th> */}
   </tr>
+  </thead>
+  <tbody>
   {all.map(item => {
     if((item.done !== true)){
       return <tr className="notDone"
@@ -198,7 +207,7 @@ const Nackademin = ({courses}) => {
       key={item.id}>
         <td>{item.title}</td>
         <td>N/A</td>
-        <td>{item.omfattning}</td>
+        {/* <td>{item.omfattning}</td> */}
       </tr>
     }
 
@@ -206,12 +215,14 @@ const Nackademin = ({courses}) => {
       return <tr
       key={item.id}
       >
+        
         <td>{item.title}</td>
         <td>{item.betyg}</td>
-        <td>{item.omfattning}</td>
+        {/* <td>{item.omfattning}</td> */}
       </tr>
     }
   })}
+  </tbody>
 
 </Table>
       {isShown && (
@@ -221,22 +232,22 @@ const Nackademin = ({courses}) => {
       )}
 
       </div>
-      
     <div>
-    {language === "sv" ? 
+  
       <Kursinnehåll>
-          <h4>Kursbeskrivning:</h4>
-          <li><b>Javascript 1 - </b>grundläggande javascript</li>
-          <li><b>Javascript 2 - </b>API-anrop, fetch, querystrings och local storage</li>
-          <li><b>Javascript 3 -</b> React och Redux</li>
-          <li><b>Javascript 4 -</b> Tester med React och Jest</li>
-          <li><b>JS som backend-språk -</b> Node JS </li>
-          <li><b>Interaktion med CMS - </b> Strapi CMS, Postman och Axios </li>
-          <li><b>Frontend-projekt - </b> Hur man jobbar i grupparbete </li>
-          <li><b>LIA 1 & 2 - </b> Lärande I Arbete. Praktik på arbetsplats.</li>
-        </Kursinnehåll>: null}
+          <h4>{t("nackademin.kursbeskrivning")}</h4>
+          <li><b>Javascript 1 - </b> {t("nackademin.desc")}</li>
+          <li><b>Javascript 2 - </b> {t("nackademin.desc2")}</li>
+          <li><b>Javascript 3 -</b> {t("nackademin.desc3")}</li>
+          <li><b>Javascript 4 -</b> {t("nackademin.desc4")}</li>
+          <li><b>{t("nackademin.JS")} -</b> Node JS </li>
+          <li><b>{t("nackademin.CMS")} - </b>{t("nackademin.desc5")} </li>
+          <li><b>{t("nackademin.FE")} - </b>{t("nackademin.desc6")} </li>
+          <li><b>LIA 1 & 2 - </b>{t("nackademin.desc7")}</li>
+        </Kursinnehåll>
         <Knapp>
-        <Link href="https://nackademin.se/utbildningar/frontend-utvecklare/">{t("nackademin.btn")}</Link>
+        <Link href="https://nackademin.se/utbildningar/frontend-utvecklare/"
+        target="_blank">{t("nackademin.btn")}</Link>
         </Knapp>
 
       <div>

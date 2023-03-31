@@ -15,8 +15,7 @@
     "phone": "PHONE:"
   },
   "cv":{
-
-    "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at",
+    "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",
     "erfarenhet": "EXPERIENCE",
     "arbete":"WORK",
     "praktikdates":"October 2022- April 2023",
@@ -31,7 +30,21 @@
     "Betyg": "Grade",
     "Omfattning": "Points",
     "info": "This course is in process and will be done by May 2023.",
-    "btn": "Read more at Nackademin"
+    "btn": "Read more at Nackademin",
+    "btn1": "See more",
+    "kursbeskrivning": "Course Description:",
+    "desc": "Basics in JS",
+    "desc2": "API,  fetch, querystrings & local storage",
+    "des3": "React and Redux",
+    "desc4": "Test Driven Development with React & Jest",
+    "JS": "JavaScript as backend",
+    "CMS": "Interaction with CMS",
+    "desc5": "Strapi CMS, Postman and Axios",
+    "FE": "Frontend project",
+    "desc6":" Working as a team in programming", 
+    "desc7": "Learning At Work. Internship at a workplace.",
+    "total": "of",
+    "avklarade": "courses completed"
   },
   "casespage":{
     "button": "See more",

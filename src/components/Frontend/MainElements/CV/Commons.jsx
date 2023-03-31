@@ -103,7 +103,7 @@ h2{
   font-size: ${fonts.fontSizes.mediumlarge};
   text-decoration:underline;
   text-transform:uppercase;
-  text-align:left;
-
+  text-align:center;
+ 
 }
 `

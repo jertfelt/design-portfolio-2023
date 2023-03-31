@@ -39,18 +39,21 @@ const selectAndClose = (item) => {
 
   return(
     <Others>
-{data && data.map((item,i) => (<>
+{data && data.map((item,i) => (<div key={i}>
 {item.value === selectedPage.value ?
-  <Link 
+<Link 
 href={item.url} 
-key={i}
+key={`${item.url}${i}`}
 onClick={() => selectAndClose(item)}>
 <i>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text === "Startsida" ? <>{t("menu.Startsida")}</> : item.text}</i></Link>: 
 <Link 
 href={item.url} 
-key={item.url}
-onClick={() => selectAndClose(item)}>{item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text === "Startsida" ? <>{t("menu.Startsida")}</> : item.text}</Link>}
-</>
+key={`${item.url}_${i}`}
+onClick={() => selectAndClose(item)}>
+  {item.text === "Konst" ? <>{t("menu.Choice1")}</>: item.text === "Startsida" ? <>
+  {t("menu.Startsida")}</> : item.text}
+</Link>}
+</div>
 )
 
 )}

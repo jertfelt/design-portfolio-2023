@@ -1,6 +1,7 @@
 import { quotesAboutMe, quotesAboutMe_EN} from "@component/data/quotesaboutme";
 import styled from "styled-components";
 import { device, padding } from "@component/components/stylings/Stylings";
+import { useEffect, useState } from "react";
 
 const Section = styled.div`
 min-height:80vh;
@@ -125,12 +126,31 @@ blockquote{
 `
 
 const GridWithQuotes = ({language}) => {
-  console.log(language)
+
+  const [quotes, setQuotes] = useState("")
+  
+
+  useEffect(() => {
+    if(language === "sv"){
+      console.log(language, quotesAboutMe.map(item => item.headline))
+      setQuotes(quotesAboutMe)
+    }
+    else if (language === "en"){
+      console.log(language, quotesAboutMe_EN.map(item => item.headline))
+      setQuotes(quotesAboutMe_EN)
+
+    }
+    else{
+      console.log("Something wrong")
+    }
+  
+  },[language, quotes])
+
   return ( 
   <Section>
       <GridThree>
-        {language === "sv" ? <>
-    {quotesAboutMe.map(item => (
+
+    {quotes && quotes.map(item => (
   <div
   key={item.id}>
     <blockquote>
@@ -139,20 +159,7 @@ const GridWithQuotes = ({language}) => {
   <p><i>{item.name}</i></p>   
   </blockquote>
   </div>
-  ) )}</>:
-  <>
-    {quotesAboutMe_EN.map(item => (
-  <div
-  key={item.id}>
-    <blockquote>
-  <h3>{item.headline}</h3>
-  <h4>“{item.quote}”</h4>
-  <p><i>{item.name}</i></p>   
-  </blockquote>
-  </div>
-  ) )}</>
-  
-  }
+  ) )}
     </GridThree>
   </Section> );
 }

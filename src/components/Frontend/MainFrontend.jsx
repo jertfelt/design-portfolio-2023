@@ -5,6 +5,7 @@ import GridWithQuotes from "./MainElements/QuotesAboutMe";
 import CasesPage from "./MainElements/Cases";
 import Footer from "./MainElements/Footer";
 import CVFrontend from "./MainElements/CV";
+import { useRouter } from "next/router";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -20,8 +21,10 @@ z-index:0;
 
 
 const MainFrontend = () => {
-
-  const language = document.getElementsByTagName('html')[0].getAttribute('lang');
+const router= useRouter();
+const {locales, locale: activeLocale} = router;
+const language = activeLocale;
+console.log(language, "LANGUAGE", activeLocale, "ACTIVE")
 
   return ( 
     <Section>

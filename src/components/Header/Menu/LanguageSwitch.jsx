@@ -2,16 +2,41 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
-const Span = styled.span`
-padding-top:2rem;
+
+const Span = styled.div`
+
+
+`
+
+const Column = styled.div`
+color:${({ theme }) => theme.textSecondary};
 display:flex;
-flex-direction:row-reverse;
+with:100%;
+flex-direction: column;
+gap:1rem;
 align-items:center;
-img{
-  border-radius:29px;
-  width:30px;
-  height:30px;
-}`
+font-size: 1rem;
+line-height:1rem;
+a{
+font-size: 1rem;
+line-height:1rem;
+font-family: Merriweather Sans;
+font-weight:normal;
+}
+font-family: Merriweather Sans;
+
+`
+
+const Current = styled.div`
+color:${({ theme }) => theme.accent};
+`
+
+const FlagAndName = styled.div`
+`
+const Star = styled.p`
+color:${({ theme }) => theme.accent};
+margin-bottom:16px;
+`
 
 export default function LocaleSwitcher({open, setOpen}) {
   const router = useRouter();
@@ -19,22 +44,42 @@ export default function LocaleSwitcher({open, setOpen}) {
   const otherLocales = locales?.filter(
     (locale) => locale !== activeLocale && locale !== "default"
   );
+  console.log(activeLocale, "ACTIVE")
+  console.log(otherLocales, "OTHER?")
 
   return (
-    <span className="">
+    <div>
       {otherLocales?.map((locale) => {
         const { pathname, query, asPath } = router;
         return (
-          <span key={"locale-" + locale}>
-            <Link href={{ pathname, query }} as={asPath} locale={locale}
+          <Column key={"locale-" + locale}>
+      
+            <Current>
+              {activeLocale === "en" ? <>
+              Language: English
+              </> : <>Språk: Svenska</>}
+              
+            </Current>
+            <div>
+            <Link href={{pathname,query}} 
+            as={asPath} 
+            locale={locale}
             onClick={() => setOpen(!open)}>
               <Span>
-                {locale === "en" ? <> Change to English <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1200px-Flag_of_Sweden.svg.png" alt="Nuvarande språk: Svenska"/></> : locale === "sv" ? <>Byt till Svenska <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="Current language: English"></img></> : null}
+                {locale === "en" ? 
+                <FlagAndName>
+                Change to english
+                </FlagAndName>
+                : locale === "sv" ? <FlagAndName>
+                Byt till svenska
+                </FlagAndName> : null}
               </Span>
             </Link>
-          </span>
+            </div>
+            <Star>&#9733;</Star>
+          </Column>
         );
       })}
-    </span>
+    </div>
   );
 }

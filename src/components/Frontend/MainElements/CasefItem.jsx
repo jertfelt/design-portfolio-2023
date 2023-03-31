@@ -87,11 +87,11 @@ const CasefItem = ({item}) => {
           <Description>{item.text}
           </Description>
           
-          <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
-          </Link>
+       
 
         </Link>
-        
+        <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
+          </Link>
       </>
      }
 

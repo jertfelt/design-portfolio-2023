@@ -116,9 +116,10 @@ border-radius: ${({theme}) => theme.borderradius.second};
 padding:1rem;
 `
 
-const CasesPage = () => {
+const CasesPage = ({language}) => {
   const {t} = useTranslation();
-  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
+
+
   const [cases, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
@@ -129,11 +130,8 @@ const CasesPage = () => {
 
 
   useEffect(() => {
-    if(!language){
-     setLang("sv")
-      
-    }
-    if(language !== "en"){
+    
+    if(language === "sv"){
       if(data){
         setCases(data)
         let featured = []
@@ -143,8 +141,7 @@ const CasesPage = () => {
         randomize(data)
       }
     }
-    else{
-      console.log(language)
+    else if (language === "en"){
       if(casesENG){
         setCases(casesENG.casesENG)
         let featured = []
@@ -154,8 +151,14 @@ const CasesPage = () => {
         
       }
     }
+    else{
+     
+      console.log("Another language")
+    }
 
-  },[data, language])
+  },[language])
+
+
 
   return (
       <Container

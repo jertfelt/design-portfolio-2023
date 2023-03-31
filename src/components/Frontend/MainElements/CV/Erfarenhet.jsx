@@ -8,10 +8,10 @@ background-color: ${({theme}) => theme.frontendcolors.alternative};
 width:80%;
 position: relative;
 z-index:1;
-padding-bottom:3rem;
 padding-top:3rem;
 padding:2rem;
-margin-bottom:5em;
+padding-bottom:8rem;
+margin-bottom:10rem;
 @media screen and (max-width:700px){
   background:${({theme}) => theme.frontendcolors.background};
   width:100vw;
@@ -82,7 +82,6 @@ const Erfarenhet = ({erfarenhet}) => {
   const {t} = useTranslation();
   return (  <Wisdom>
     <ErfarenhetStyle>
-    
     <CVContent>
       <h2>{t("cv.erfarenhet")}</h2>
       <Row>
@@ -92,8 +91,8 @@ const Erfarenhet = ({erfarenhet}) => {
         <h3>{item.name}</h3>
       <ul>
       
-      {item.li.map(item => (
-        <li>{item}</li>
+      {item.li.map((item, i) => (
+        <li key={`${item}--${i}`}>{item}</li>
       ))}
         </ul>
       </div>}
@@ -109,7 +108,7 @@ const Erfarenhet = ({erfarenhet}) => {
         <h3>{item.name}</h3>
       <ul>
       {item.li.map(item => (
-        <li>{item}</li>
+        <li key={`${item}--${i}`}>{item}</li>
       ))}
         </ul>
       </>}

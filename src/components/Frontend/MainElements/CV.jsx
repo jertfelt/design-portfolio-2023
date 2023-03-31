@@ -66,9 +66,9 @@ margin-bottom:2rem;
 `
 
 
-const CVFrontend = () => {
+const CVFrontend = ({language}) => {
   const {t} = useTranslation();
-  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
+
   const [coursesDb, setCourses] = useState("")
   const [workDb, setWork] = useState("")
   const [educationDb, setEducation] = useState("")

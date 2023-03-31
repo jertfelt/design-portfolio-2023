@@ -18,7 +18,7 @@ flex-direction: column;
 justify-content: center;
 align-items:center;
 background: ${({ theme }) => theme.contrast};
-height: 120vh;
+height: 100vh;
 width:30vh;
 text-align: left;
 padding: 2rem;
@@ -27,9 +27,9 @@ top:-3rem;
 right:5rem;
 transition: transform 0.3s ease-in-out;
 z-index:10;
-filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.black});
+filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.body});
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-@media (max-width: ${({ theme }) => theme.mobile}) {
+@media (max-width: 800px) {
   width: 100%;
 }
 @media (min-width: 1050px){
@@ -84,6 +84,10 @@ useEffect(() => {
 
   return ( 
     <StyledMenu open={open} ref={ref}>
+    <LocaleSwitcher
+    setOpen={setOpen}
+    open={open}
+    />
     {selectedPage && selectedPage.value==="" &&  <Start 
     setOpen={setOpen}
     open={open}/>}
@@ -102,12 +106,9 @@ useEffect(() => {
    <IllMenu/>
     }
     <Link href="/contact" onClick={() => setOpen(!open)}>
-      &#9993; Kontakt 
+      &#9993; {t("menu.Kontakt")}
     </Link>
-    <LocaleSwitcher
-    setOpen={setOpen}
-    open={open}
-    />
+  
     </StyledMenu>
 );
 }
