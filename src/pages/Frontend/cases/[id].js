@@ -40,7 +40,7 @@ const Page = () => {
 
 
   return (
-  <><HeadIndexFrontend/>
+  <>
       {cases1 &&
       <CaseIndividualPage
       array = {cases1}

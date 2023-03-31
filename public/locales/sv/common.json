@@ -4,6 +4,14 @@
     "Kontakt": "Kontakt",
     "Startsida": "Startsida"
   },
+  "404": {"h2": "Sidan finns inte!",
+"p1": "Du kommer tillbaka till ",
+"link": "startsidan",
+"p2": "om 5 sekunder..."},
+"wip":{
+  "p":"Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.",
+  "btn": " Tillbaka"
+},
   "startsida": {
     "h2": "Frontendare, konstnär, formgivare.",
     "h3": "Utbildad på Konstfack & Nackademin YH Frontend-programmet",

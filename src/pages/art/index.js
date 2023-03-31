@@ -22,7 +22,7 @@ const Art = () => {
  },[])
   return (
     <>
-    <HeadIndexArt/>
+
     <WorkInProgress/>
     </> );
 }

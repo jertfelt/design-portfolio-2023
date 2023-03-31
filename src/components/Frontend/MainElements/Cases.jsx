@@ -109,8 +109,6 @@ h3{
 }
 `
 
-
-
 const Tech = styled.div`
 background:${({theme}) => theme.frontendcolors.contrast};
 border-radius: ${({theme}) => theme.borderradius.second};

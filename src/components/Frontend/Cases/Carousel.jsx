@@ -23,7 +23,8 @@ return (
     disableImagesLoaded={false} // default false
     reloadOnUpdate // default false
     static // default false
-  > <img src={img1} alt={alt1}/>
+  > 
+  <img src={img1} alt={alt1}/>
     <img src={img0} alt={alt0}/>
     <img src={img3} alt={alt3}/>
     <img src={img2} alt={alt2}/>

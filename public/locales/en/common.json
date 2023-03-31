@@ -8,6 +8,10 @@
 "p1": "You'll be transported back to the ",
 "link": "homepage",
 "p2": "within a moment..."},
+"wip":{
+  "p":"The page is under construction. Come back later or contact me for more information. Thanks for your patience.",
+  "btn": "Back"
+},
   "startsida": {
     "h2": "Frontend developer, artist and designer. ",
     "h3": "With a Bachelor degree in visual communication at Konstfack & vocational degree in frontend-programming at Nackademin.",

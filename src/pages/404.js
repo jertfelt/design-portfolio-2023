@@ -284,6 +284,7 @@ gap:1rem;
 `
 const NotFound = () => {
   const router = useRouter()
+  const {t} = useTranslation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -296,8 +297,8 @@ const NotFound = () => {
       <div className="glitch-wrapper">
       <h1 className="glitch" data-glitch="404">404</h1>
       </div>
-      <h2>Sidan finns inte!</h2>
-      <p>Du kommer tillbaka till <Link href="/">startsidan</Link> om 5 sekunder...</p>
+      <h2>{t("404.h2")}</h2>
+      <p>{t("404.p1")}<Link href="/">{t("404.link")}</Link> {t("404.p2")}</p>
       </Section>
   );
 }

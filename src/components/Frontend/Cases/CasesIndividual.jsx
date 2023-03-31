@@ -185,7 +185,7 @@ const CaseIndividualPage = ({array, id}) => {
            img0={item.extra.file03.url}
            alt0={item.extra.file03.alt}
            img1={item.sources.imgurl}
-           alt1={item.souces.imgalt}
+           alt1={item.sources.imgalt}
            img2={item.extra.file01.url}
            alt2={item.extra.file01.alt}
            img3={item.extra.file02.url}

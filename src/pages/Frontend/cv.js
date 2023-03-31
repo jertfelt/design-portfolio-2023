@@ -26,7 +26,7 @@ const FrontendCV = () => {
     }
   },[selectedPage, setSelectedPage])
 
-  return (<><HeadIndexFrontend/>
+  return (<>
   <BackgroundCV>
   <CVFrontend/>
   </BackgroundCV></>  );
