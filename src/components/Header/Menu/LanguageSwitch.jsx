@@ -4,8 +4,14 @@ import styled from "styled-components";
 
 
 const Span = styled.div`
-
-
+font-size:1rem;
+font-weight:bold;
+padding:10px;
+&:hover{
+  background-color:${({ theme }) => theme.accent};
+  color:${({ theme }) => theme.contrast};
+  border-radius:9px;
+}
 `
 
 const Column = styled.div`
@@ -13,18 +19,19 @@ color:${({ theme }) => theme.textSecondary};
 display:flex;
 with:100%;
 flex-direction: column;
-gap:1rem;
+gap:4px;
 align-items:center;
 font-size: 1rem;
 line-height:1rem;
 a{
 font-size: 1rem;
 line-height:1rem;
-font-family: Merriweather Sans;
+font-family: JetBrains Mono;
 font-weight:normal;
+&:hover{
+  color:${({ theme }) => theme.accent};
 }
-font-family: Merriweather Sans;
-
+}
 `
 
 const Current = styled.div`
@@ -68,10 +75,10 @@ export default function LocaleSwitcher({open, setOpen}) {
               <Span>
                 {locale === "en" ? 
                 <FlagAndName>
-                Change to english
+                Change to English
                 </FlagAndName>
                 : locale === "sv" ? <FlagAndName>
-                Byt till svenska
+                Byt till Svenska
                 </FlagAndName> : null}
               </Span>
             </Link>
