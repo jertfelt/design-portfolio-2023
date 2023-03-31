@@ -47,6 +47,7 @@ const BgImg = () => {
       <Image
         alt="Global warming"
         src={landingpic}
+        priority={true}
         placeholder="blur"
         quality={100}
         fill
