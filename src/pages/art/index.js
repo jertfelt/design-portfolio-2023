@@ -1,3 +1,4 @@
+import { HeadIndexArt } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
@@ -10,8 +11,6 @@ export async function getStaticProps({locale}){
     }
   }
 }
-
-
 const Art = () => {
   const {t} = useTranslation();
   const {selectedPage, setSelectedPage} = useContext(AppContext)
@@ -22,6 +21,9 @@ const Art = () => {
    }
  },[])
   return (
-    <WorkInProgress/> );
+    <>
+    <HeadIndexArt/>
+    <WorkInProgress/>
+    </> );
 }
 export default Art;

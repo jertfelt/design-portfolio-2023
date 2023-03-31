@@ -3,6 +3,7 @@ import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 
 import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import { HeadIndexFrontend } from "@component/components/Head";
 export async function getStaticProps({locale}){
   return{
     props:{
@@ -22,6 +23,7 @@ const FrontendPage = () => {
   },[])
   
   return ( <>
+    <HeadIndexFrontend/>
     <MainFrontend/>
     </>
     );

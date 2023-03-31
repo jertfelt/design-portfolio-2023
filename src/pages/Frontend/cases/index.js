@@ -1,4 +1,5 @@
 import CasesPage from "@component/components/Frontend/MainElements/Cases";
+import { HeadIndexFrontend } from "@component/components/Head";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 
@@ -10,7 +11,9 @@ const Cases = () => {
       setSelectedPage({value:"frontend", url:"/frontend"})
     }
   },[])
-  return ( <section><CasesPage/></section> );
+  return ( <section>
+    <HeadIndexFrontend/>
+    <CasesPage/></section> );
 }
  
 export default Cases;

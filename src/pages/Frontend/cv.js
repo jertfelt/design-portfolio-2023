@@ -1,4 +1,5 @@
 import CVFrontend from "@component/components/Frontend/MainElements/CV";
+import { HeadIndexFrontend } from "@component/components/Head";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 import styled from "styled-components"
@@ -17,10 +18,10 @@ const frontendCV = () => {
       setSelectedPage({value:"frontend", url:"/frontend"})
     }
   },[])
-  return (
+  return (<><HeadIndexFrontend/>
   <BackgroundCV>
   <CVFrontend/>
-  </BackgroundCV>  );
+  </BackgroundCV></>  );
 }
  
 export default frontendCV;

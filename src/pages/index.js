@@ -2,6 +2,7 @@ import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import {useTranslation } from "next-i18next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import HeadIndex from "@component/components/Head";
 
 export async function getStaticProps({locale}){
   return{
@@ -114,9 +115,10 @@ background: ${({ theme }) => theme.accentTwo};
 
 const Homepage = () => {
   const {t} = useTranslation();
-  console.log(document.getElementsByTagName('html')[0].getAttribute('lang'))
+
   return ( 
   <>
+  <HeadIndex/>
   <HomepageComponent>
   <ThreeColumnGrid>
   <TextContainer>

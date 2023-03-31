@@ -3,6 +3,7 @@ import { getDb } from "@component/components/api/getDb.js";
 import {useState, useEffect, useCallback, useContext } from "react";
 import CaseIndividualPage from "@component/components/Frontend/Cases/CasesIndividual";
 import { AppContext } from "@component/context/AppContext";
+import { HeadIndexFrontend } from "@component/components/Head";
 
 
 
@@ -39,7 +40,7 @@ const Page = () => {
 
 
   return (
-  <>
+  <><HeadIndexFrontend/>
       {cases &&
       <CaseIndividualPage
       array = {cases}

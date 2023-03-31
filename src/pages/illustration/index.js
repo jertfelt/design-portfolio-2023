@@ -1,3 +1,4 @@
+import { HeadIndexIllustraion } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
@@ -21,7 +22,9 @@ const Illustration = () => {
     }
   },[])
   
-  return ( <section><WorkInProgress/></section> );
+  return ( <>
+  <HeadIndexIllustraion/>
+  <WorkInProgress/></> );
 }
  
 export default Illustration;

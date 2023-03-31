@@ -247,7 +247,7 @@ const Nackademin = ({courses}) => {
         </Kursinnehåll>
         <Knapp>
         <Link href="https://nackademin.se/utbildningar/frontend-utvecklare/"
-        target="_blank">{t("nackademin.btn")}</Link>
+        target="_blank" rel="nofollow">{t("nackademin.btn")}</Link>
         </Knapp>
 
       <div>

@@ -1,7 +1,7 @@
 import GlobalStyle from '@component/components/stylings/globalStyles';
 import { Fragment } from 'react';
 import { ThemeProvider } from 'styled-components';
-import HeadIndex from '@component/components/Head';
+import HeadIndex, { HeadTypography } from '@component/components/Head';
 import Header from '@component/components/Header/Header';
 import Theme, {lightTheme, darkTheme} from '@component/components/stylings/Theme';
 import { useMode } from '@component/components/stylings/useMode';
@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }) =>{
 
   return (
     <Fragment>
-    <HeadIndex/>
+    <HeadTypography/>
     <Theme>
     <ThemeProvider theme={themeMode}>
     <GlobalStyle/>
