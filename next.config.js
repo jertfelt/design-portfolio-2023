@@ -3,7 +3,7 @@ const { i18n } = require("./next-i18next.config");
 
 /** @type {import('next').NextConfig} */
 
-const config = {
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n,
@@ -14,4 +14,4 @@ const config = {
 //   i18n,
 // }
 
-module.exports = config;
+module.exports = nextConfig;

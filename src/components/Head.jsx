@@ -11,7 +11,7 @@ export const HeadTypography = () => {
     <link rel="icon" href={favicon} />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+
   </Head>
 }
 export const HeadIndexArt = () => {
@@ -36,7 +36,7 @@ export const HeadIndexArt = () => {
   <link rel="icon" href={favicon} />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+
       </Head>
 }
 
@@ -63,7 +63,7 @@ export const HeadIndexDesign = () => {
   <link rel="icon" href={favicon} />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+ 
       </Head>
 }
 
@@ -90,7 +90,7 @@ export const HeadIndexIllustraion = () => {
 <link rel="icon" href={favicon} />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+
     </Head>
   )
 }
@@ -118,7 +118,7 @@ export const HeadIndexFrontend = () => {
 <link rel="icon" href={favicon} />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+
 
     </Head>
   )
@@ -149,7 +149,7 @@ const HeadIndex = () => {
 <link rel="icon" href={favicon} />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap" rel="stylesheet"/>
+
 
 </Head>
   )

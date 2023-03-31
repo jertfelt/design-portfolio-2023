@@ -2,7 +2,7 @@ import { Container } from "@component/components/stylings/Containers";
 import styled from "styled-components";
 import { useState, useEffect} from "react";
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
-import { getDb } from "@component/components/api/getDb";
+import { GetDb } from "@component/components/api/getDb";
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
 import Image from "next/image";
 import casesENG from "../../../data/cases_EN.json"
@@ -123,7 +123,7 @@ const CasesPage = ({language}) => {
   const [cases, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
-  const {data, error, loading} = getDb("/cases/")
+  const {data, error, loading} = GetDb("/cases/")
   const randomize = (cases) => {
     setRandom(cases[Math.floor(Math.random()*cases.length)])
   }

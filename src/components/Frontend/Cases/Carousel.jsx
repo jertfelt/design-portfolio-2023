@@ -18,10 +18,10 @@ return (
     disableImagesLoaded={false} // default false
     reloadOnUpdate // default false
     static // default false
-  > <img src={img1}/>
-    <img src={img0}/>
-    <img src={img3}/>
-    <img src={img2}/>
+  > <img src={img1} alt="Case"/>
+    <img src={img0} alt="Case"/>
+    <img src={img3} alt="Case"/>
+    <img src={img2} alt="Case"/>
   </Flickity>
 )
 }

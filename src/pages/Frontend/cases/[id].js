@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getDb } from "@component/components/api/getDb.js";
+import { GetDb } from "@component/components/api/getDb.js";
 import {useState, useEffect, useCallback, useContext } from "react";
 import CaseIndividualPage from "@component/components/Frontend/Cases/CasesIndividual";
 import { AppContext } from "@component/context/AppContext";
@@ -24,13 +24,13 @@ const Page = () => {
 
 
   const [cases, setCases] = useState("")
-  const {data, error, loading} = getDb("/cases/")
+  const {data, error, loading} = GetDb("/cases/")
   //fb:
-  const [result, setResult] = useState(null)
-  const fetchData = useCallback(async () => {
-    const newData = await getData();
-    setResult(newData)
-  })
+  // const [result, setResult] = useState(null)
+  // const fetchData = useCallback(async () => {
+  //   const newData = await getData();
+  //   setResult(newData)
+  // })
   useEffect(() => {
     if(data){
       setCases(data)

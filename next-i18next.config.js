@@ -1,9 +1,9 @@
 const path = require("path");
-const languages = require("./i18n.languages.js");
 
+/** @type import("next").I18NConfig */
 const i18n = {
   defaultLocale: "sv",
-  locales: languages,
+  locales: ["sv", "en"],
   localeDetection: false
 }
 

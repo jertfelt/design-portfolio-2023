@@ -2,7 +2,7 @@ import initFirebase from "./initialize";
 import { getDatabase, onValue, ref } from "firebase/database";
 import { useEffect, useState} from "react";
 
-export function getDb(route1){
+const GetDb =(route1) =>{
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(null)
   const [error, setError] = useState(false)
@@ -33,3 +33,5 @@ export function getDb(route1){
   
   return {data, error, loading}
 }
+
+export default GetDb

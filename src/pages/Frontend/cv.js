@@ -7,21 +7,19 @@ import styled from "styled-components"
 const BackgroundCV = styled.section`
 background:${({theme}) => theme.frontendcolors.accent};
 `
-
-
-
-const frontendCV = () => {
+const FrontendCV = () => {
   const {selectedPage, setSelectedPage} = useContext(AppContext)
 
   useEffect(() => {
     if(selectedPage.value !== "frontend"){
       setSelectedPage({value:"frontend", url:"/frontend"})
     }
-  },[])
+  },[selectedPage, setSelectedPage])
+  
   return (<><HeadIndexFrontend/>
   <BackgroundCV>
   <CVFrontend/>
   </BackgroundCV></>  );
 }
  
-export default frontendCV;
+export default FrontendCV;
