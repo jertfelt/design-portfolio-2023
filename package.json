@@ -17,6 +17,7 @@
     "firebase": "^9.18.0",
     "flickity": "^2.3.0",
     "json-loader": "^0.5.7",
+    "keen-slider": "^6.8.5",
     "next": "^13.2.3",
     "next-i18next": "^13.2.2",
     "npm": "^9.6.2",
@@ -25,6 +26,7 @@
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
     "react-flickity-component": "^4.0.5",
+    "react-multi-carousel": "^2.8.2",
     "sharp": "^0.32.0",
     "styled-components": "^5.3.9"
   },

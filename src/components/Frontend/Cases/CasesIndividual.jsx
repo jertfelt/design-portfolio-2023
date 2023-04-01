@@ -9,6 +9,7 @@ import Image from "next/image";
 import NotFound from "@component/pages/404";
 import Carousel from "./Carousel";
 import { useRouter } from "next/router";
+import {useTranslation } from "next-i18next";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -136,7 +137,7 @@ gap:3rem;
 }`
 
 const CaseIndividualPage = ({array, id}) => {
-
+  const {t} = useTranslation()
   let individual = array.filter(item => {
     return item.id.toString() === id
   })
@@ -179,7 +180,7 @@ const CaseIndividualPage = ({array, id}) => {
             {item.tag}
             </h2>
             <About>
-             <h3>Om projektet:</h3>
+             <h3>{t("casespage.about")}</h3>
              <p>{item.text}</p> 
              <p>{item.moreinfo.text1}</p>
             </About>

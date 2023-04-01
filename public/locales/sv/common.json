@@ -61,6 +61,7 @@
     "avklarade": "kurser avklarade"
   },
   "casespage":{
+    "about": "Om projektet",
     "button": "Se mer",
     "desc": "Här finns ett urval av olika saker jag kodat. En del är från praktiken, andra är studentarbeten, andra är egna experiment.",
     "caseSI":"Praktik Januari - April 2023",
