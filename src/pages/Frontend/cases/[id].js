@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
-// import { GetDb } from "@component/components/api/getDb.js";
+
 import {useState, useEffect, useCallback, useContext } from "react";
 import CaseIndividualPage from "@component/components/Frontend/Cases/CasesIndividual";
 import { AppContext } from "@component/context/AppContext";
 import { HeadIndexFrontend } from "@component/components/Head";
 import cases from "../../../data/cases.json"
-import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
+
+
 
 
 const Page = () => {
@@ -25,13 +26,7 @@ const Page = () => {
 
 
   const [cases1, setCases] = useState("")
-  // const {data, error, loading} = GetDb("/cases/")
-  //fb:
-  // const [result, setResult] = useState(null)
-  // const fetchData = useCallback(async () => {
-  //   const newData = await getData();
-  //   setResult(newData)
-  // })
+
   useEffect(() => {
     if(cases){
       setCases(cases.cases)
@@ -41,7 +36,7 @@ const Page = () => {
 
 
   return (
-  <>
+  <><HeadIndexFrontend/>
       {cases1 &&
       <CaseIndividualPage
       array = {cases1}
@@ -51,5 +46,5 @@ const Page = () => {
   </>
   )
 }
-export {getStaticProps} 
+
 export default Page
