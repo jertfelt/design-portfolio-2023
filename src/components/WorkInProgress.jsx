@@ -6,17 +6,23 @@ import { useTranslation } from "next-i18next";
 
 
 const Section = styled.section`
-background-color: ${({theme}) => theme.body};
+
 width:100%;
 width:100vw;
 margin:0;
 height:100%;
 min-height:100vh;
 z-index:0;
-padding-left:3rem;
+padding-left:30%;
+@media(max-width:800px){
+   padding:0;
+}
 padding-top:5rem;
 display:flex;
 flex-direction:column;
+
+align-items: center;
+justify-content: center;
 width:50%;
 gap:1rem;
 p{
@@ -28,6 +34,7 @@ img{
   border-radius:${({theme}) => theme.borderradius.first};
 }
 button{
+   text-transform:uppercase;
      background-color: ${({theme}) => theme.contrast};
      color:${({theme}) => theme.body};
      width:100px;
@@ -45,14 +52,11 @@ button{
 .glitch-wrapper {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  padding-left:2rem;
-  background-color: ${({theme}) => theme.body};
-}
 
+
+ 
+
+}
 
 .glitch {
   position: relative;
@@ -73,7 +77,7 @@ button{
   text-shadow: -1px 0 #0ff;
   width: 100%;
   color: #fff;
-  background-color: ${({theme}) => theme.body};
+  background-color: ${({theme}) => theme.contrast};
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-before 3s infinite linear alternate-reverse;

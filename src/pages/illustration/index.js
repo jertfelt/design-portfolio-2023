@@ -4,6 +4,7 @@ import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
 import { useContext, useEffect } from "react";
 import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
+import IlluMainPage from "@component/components/Illustration/IllustrationMainPage";
 
 const Illustration = () => {
   const {t} = useTranslation();
@@ -16,8 +17,7 @@ const Illustration = () => {
   },[selectedPage, setSelectedPage])
   
   return ( <>
-
-  <WorkInProgress/></> );
+  <IlluMainPage/></> );
 }
 export {getStaticProps}
 export default withTranslation(Illustration);

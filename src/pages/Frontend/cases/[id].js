@@ -5,9 +5,15 @@ import CaseIndividualPage from "@component/components/Frontend/Cases/CasesIndivi
 import { AppContext } from "@component/context/AppContext";
 import { HeadIndexFrontend } from "@component/components/Head";
 import cases from "../../../data/cases.json"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 
-
-
+export async function getStaticProps({locale}){
+  return{
+    props:{
+      ...(await serverSideTranslations(locale, ["common"]))
+    }
+  }
+}
 
 const Page = () => {
   const router = useRouter()

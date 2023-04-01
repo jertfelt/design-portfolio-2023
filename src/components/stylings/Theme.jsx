@@ -47,7 +47,17 @@ export const darkTheme = {
     secondaryLighter:"#88AD92",
     secondaryLightest:"#d3e1d7",
  
-  }
+  },
+  designcolors:{
+    secondary: "#fcbe03",
+    secondarydarker: "#fcad03",
+    secondarydarkest: "#b07902",
+    primary: "#011064",
+    primarydarker: "##010c4b",
+    primarydarkest: "#000418",
+    button: "#c90d03",
+    buttonhighlight: "#fc281d",
+  },
 }
 export const lightTheme = {
   body: "#edf1f2",
@@ -83,6 +93,16 @@ export const lightTheme = {
     secondaryLightest:"#6c4a63",
     primaryLighter:"#88AD92",
     primaryLightest:"#4a6c53",
+  },
+  designcolors:{
+    primary: "#fcbe03",
+    primarydarker: "#fcad03",
+    primarydarkest: "#b07902",
+    secondary: "#011064",
+    secondarydarker: "##010c4b",
+    secondarydarkest: "#000418",
+    button:"#c90d03",
+    buttonhighlight: "#fc281d",
   },
    lightblue: "#bee5f5",
    purple: "#483d8b",
