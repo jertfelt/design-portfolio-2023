@@ -128,11 +128,24 @@ const HeadIndex = () => {
     
 <Head>
 
-<title>Tova Jertfelt || 2023</title>
-<meta name="title" content="Tova Jertfelt || 2023"/>
-<meta name="description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
-<meta name="author" content="Tova Jertfelt"></meta>
 
+<meta name="author" content="Tova Jertfelt"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<link rel="icon" type="image/png" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+</Head>
+  )
+
+}
+export default HeadIndex
+
+export const HeadHome = () => {
+  <Head>
+ <title>Tova Jertfelt || Frontend, art, design || Home</title>
+<meta name="title" content="Tova Jertfelt || Frontend, art, design"/>
+<meta name="description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>   
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.tovajertfelt.se/"/>
 <meta property="og:title" content="Tova Jertfelt || 2023"/>
@@ -145,13 +158,6 @@ const HeadIndex = () => {
 <meta property="twitter:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
 <meta property="twitter:image" content="/publishing-priset-2.png"/>
 
-<link rel="icon" type="image/png" href="/favicon.ico" />
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-
-</Head>
-  )
-
+  </Head>
 }
-export default HeadIndex

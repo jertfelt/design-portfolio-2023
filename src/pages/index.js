@@ -2,7 +2,7 @@ import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import {useTranslation } from "next-i18next";
 
-import HeadIndex from "@component/components/Head";
+import HeadIndex, { HeadHome } from "@component/components/Head";
 import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
 
 
@@ -109,10 +109,9 @@ background: ${({ theme }) => theme.accentTwo};
 
 const Homepage = () => {
   const {t} = useTranslation();
-
   return ( 
   <>
-  <HeadIndex/>
+  <HeadHome/>
   <HomepageComponent>
   <ThreeColumnGrid>
   <TextContainer>

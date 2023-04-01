@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { contacts } from "@component/data/contactdetails";
 import {useTranslation } from "next-i18next";
-import HeadIndex from "@component/components/Head";
+import HeadIndex, { HeadHome } from "@component/components/Head";
 import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
 
 
@@ -81,7 +81,7 @@ const Contact = () => {
   const {t} = useTranslation();
 
   return ( <>
-  <HeadIndex/>
+  <HeadHome/>
   <Section>
     <h1>{t("contact.h1")}</h1>
     <div>
