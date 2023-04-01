@@ -7,6 +7,7 @@ import { HeadIndexFrontend } from "@component/components/Head";
 import cases from "../../../data/cases.json"
 import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 
+
 const Page = () => {
   const router = useRouter()
   let {id} = router.query 
@@ -51,4 +52,4 @@ const Page = () => {
   )
 }
 export {getStaticProps} 
-export default withTranslation(Page);
+export default Page
