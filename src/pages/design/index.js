@@ -1,4 +1,4 @@
-import { HeadIndexDesign } from "@component/components/Head";
+import HeadIndex, { HeadIndexDesign } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
@@ -16,7 +16,7 @@ const Design = () => {
    }
  },[selectedPage.value, setSelectedPage])
   return ( <>
-
+<HeadIndex/>
   <WorkInProgress/>
   </>
     

@@ -1,4 +1,4 @@
-import { HeadIndexIllustraion } from "@component/components/Head";
+import HeadIndex, { HeadIndexIllustraion } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
@@ -17,6 +17,7 @@ const Illustration = () => {
   },[selectedPage, setSelectedPage])
   
   return ( <>
+  <HeadIndex/>
   <IlluMainPage/></> );
 }
 export {getStaticProps}

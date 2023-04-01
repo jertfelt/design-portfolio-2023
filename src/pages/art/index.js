@@ -1,4 +1,4 @@
-import { HeadIndexArt } from "@component/components/Head";
+import HeadIndex, { HeadIndexArt } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
@@ -17,7 +17,7 @@ const Art = () => {
 
   return (
     <>
-
+<HeadIndex/>
     <ArtMain/>
     </> );
 }

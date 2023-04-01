@@ -49,6 +49,7 @@ font-size:${fonts.fontSizes.large};
 flex-wrap: wrap;
 line-height:2.8rem;
 margin-bottom:-.5rem;
+font-family: JetBrains Mono;
 @media screen and (max-width:700px){
  font-size:${fonts.fontSizes.medium};
 }
@@ -69,26 +70,31 @@ text-transform:uppercase;
 
 const CasefItem = ({item}) => {
   const {t} = useTranslation();
+  console.log(item)
   return (<>
     <CaseContainer key={item.id}
     >
     {item && <>
         <CaseHeader>    
-          <Link href={'/frontend/cases/' + item.id} 
+          {/* <Link href={'/frontend/cases/' + item.id} 
                 state={{data: item.id}}
                 key={item.id}>
                 {item.title}
-          </Link>
+          </Link> */}
+          {item.title}
          </CaseHeader> 
 
-        <Link href={'/frontend/cases/' + item.id} 
-        key={item.id}>   
+        {/* <Link href={'/frontend/cases/' + item.id} 
+        key={item.id}>    */}
           <Subtitle>{item.sub}</Subtitle> 
           <Description>{item.text}
+          {item.moreinfo.text1}<br/><br/>
+          {item.moreinfo.text2}<br/><br/>
+          {item.moreinfo.text3}
           </Description>
-        </Link>
-        <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
-          </Link>
+        {/* </Link> */}
+        {/* <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
+          </Link> */}
       </>
      }
 

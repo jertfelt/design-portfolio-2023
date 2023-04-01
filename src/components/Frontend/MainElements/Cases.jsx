@@ -172,8 +172,7 @@ const CasesPage = () => {
         <Desc>{t("casespage.desc")}
         </Desc>
         </div>
-      {/* {error && <p>Kan inte ladda från databasen, försök igen senare.</p>} */}
-      {/* {loading ? <p>Laddar...</p>: <></>} */}
+
       <Wrapper>
         <CaseList>
         {featuredCases && featuredCases.map((c) => 

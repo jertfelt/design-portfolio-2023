@@ -152,11 +152,10 @@ const CaseIndividualPage = ({array, id}) => {
   useEffect(() => {
     if (id === undefined){
       setShowButts(false)
-     
     }
     else{
       if (Number(id) >= 1){
-     
+
         setBack(true)
       }
       if (Number(id) >= max){
