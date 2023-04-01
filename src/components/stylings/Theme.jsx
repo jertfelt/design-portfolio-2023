@@ -39,6 +39,15 @@ export const darkTheme = {
     alternative: "rgb(135,125,101)",
     alternativecontrast: "#5e6c71",
    },
+  artcolors:{
+    primary: "#6c4a63",
+    secondary:"#4a6c53",
+    primaryLighter:"#AD88A3",
+    primaryLightest:"#E1D3DD",
+    secondaryLighter:"#88AD92",
+    secondaryLightest:"#d3e1d7",
+ 
+  }
 }
 export const lightTheme = {
   body: "#edf1f2",
@@ -67,6 +76,14 @@ export const lightTheme = {
     alternative: "#766c5a",
     alternativecontrast: "#5f8898",
    },
+   artcolors:{
+    secondary: "E1D3DD",
+    primary:"#d3e1d7",
+    secondaryLighter:"#AD88A3",
+    secondaryLightest:"#6c4a63",
+    primaryLighter:"#88AD92",
+    primaryLightest:"#4a6c53",
+  },
    lightblue: "#bee5f5",
    purple: "#483d8b",
    vividblue: "#414870",

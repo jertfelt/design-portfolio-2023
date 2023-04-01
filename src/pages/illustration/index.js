@@ -7,7 +7,7 @@ import withTranslation, {getStaticProps} from '@component/components/utils/getSt
 
 const Illustration = () => {
   const {t} = useTranslation();
-   const {selectedPage, setSelectedPage} = useContext(AppContext)
+  const {selectedPage, setSelectedPage} = useContext(AppContext)
 
   useEffect(() => {
     if(selectedPage.value !== "illustration"){
