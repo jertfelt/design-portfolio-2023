@@ -25,14 +25,16 @@ align-items: center;
 justify-content: center;
 width:50%;
 gap:1rem;
+@media (max-width:800px){
+   padding-left:1rem;
+
+}
 p{
    font-size:32px;
    line-height:48px;
    color:${({theme}) => theme.contrast};
 }
-img{
-  border-radius:${({theme}) => theme.borderradius.first};
-}
+
 button{
    text-transform:uppercase;
      background-color: ${({theme}) => theme.contrast};

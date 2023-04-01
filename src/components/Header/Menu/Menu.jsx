@@ -31,9 +31,19 @@ filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.body});
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 @media (max-width: 800px) {
   width: 100%;
+  width:90vw;
+  padding:0;
+  height:50vh;
+  top:70px;
+  right:0;
+  filter: drop-shadow(-1px 0px 1px ${({ theme }) => theme.contrast});
 }
 @media (min-width: 1050px){
   max-width:25vh;
+}
+@media (max-width: 800px) {
+  font-size: 1.5rem;
+  text-align: center;
 }
 a {
   font-size: 1.5rem;
@@ -43,7 +53,7 @@ a {
   text-decoration: none;
   transition: color 0.3s linear;
   
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: 800px) {
     font-size: 1.5rem;
     text-align: center;
   }
