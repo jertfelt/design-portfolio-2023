@@ -59,15 +59,15 @@ font-size:${fonts.fontSizes.medium};
 color:${({theme}) => theme.white};
 text-align: left;
 margin-top:0;
-
-
-
 `
 export const Subtitle = styled.h4`
 text-transform:uppercase;
 `
 
-
+const Row = styled.div`
+display:flex;
+flex-direction: row;
+gap:1rem;`
 const CasefItem = ({item}) => {
   const {t} = useTranslation();
   console.log(item)
@@ -92,6 +92,10 @@ const CasefItem = ({item}) => {
           {item.moreinfo.text2}<br/><br/>
           {item.moreinfo.text3}
           </Description>
+          <Row>
+        {item.sources.github && <Link href={item.sources.github} target="_blank"><button>Github</button></Link>}
+        {item.sources.link && <Link href={item.sources.link} target="_blank"><button>{t("casespage.button")}</button></Link>}
+        </Row>
         {/* </Link> */}
         {/* <Link href={'/frontend/cases/' + item.id} state={{data: item.id}}><button>{t("casespage.button")}</button>
           </Link> */}
