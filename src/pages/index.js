@@ -4,6 +4,7 @@ import {useTranslation } from "next-i18next";
 
 import HeadIndex, { HeadHome } from "@component/components/Head";
 import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
+import Head from "next/head";
 
 
 const HomepageComponent = styled.section`
@@ -111,7 +112,24 @@ const Homepage = () => {
   const {t} = useTranslation();
   return ( 
   <>
-  <HeadIndex/>
+  <Head>
+  <title>Tova Jertfelt || Frontend, art, design || Home</title>
+  <meta name="title" content="Tova Jertfelt || Frontend, art, design"/>
+<meta name="description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>   
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.tovajertfelt.se/"/>
+<meta property="og:title" content="Tova Jertfelt || 2023"/>
+<meta property="og:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
+<meta property="og:image" content="/publishing-priset-2.png"/>
+
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:url" content="https://www.tovajertfelt.se/"/>
+<meta property="twitter:title" content="Tova Jertfelt || 2023"/>
+<meta property="twitter:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
+<meta property="twitter:image" content="/publishing-priset-2.png"/>
+
+<meta name="author" content="Tova Jertfelt"></meta>
+  </Head>
   <HomepageComponent>
   <ThreeColumnGrid>
   <TextContainer>
