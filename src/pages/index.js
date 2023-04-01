@@ -120,7 +120,7 @@ const Homepage = () => {
 <meta property="og:url" content="https://www.tovajertfelt.se/"/>
 <meta property="og:title" content="Tova Jertfelt || 2023"/>
 <meta property="og:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
-<meta property="og:image" content="/publishing-priset-2.png"/>
+<meta property="og:image" content="./publishing-priset-2.png"/>
 
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:url" content="https://www.tovajertfelt.se/"/>
