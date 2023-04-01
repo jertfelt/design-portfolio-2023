@@ -8,6 +8,7 @@ import HeaderIndividual from "./HeaderCaseIndividual";
 import Image from "next/image";
 import NotFound from "@component/pages/404";
 import Carousel from "./Carousel";
+import { useRouter } from "next/router";
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
@@ -135,6 +136,7 @@ gap:3rem;
 }`
 
 const CaseIndividualPage = ({array, id}) => {
+
   let individual = array.filter(item => {
     return item.id.toString() === id
   })

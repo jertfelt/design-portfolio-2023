@@ -123,16 +123,13 @@ const CasesPage = () => {
   const [casesT, setCases] = useState("")
   const [featuredCases, setFeatured] = useState("");
   const [randomCase, setRandom] = useState("")
-  // const {data, error, loading} = GetDb("/cases/")
+
   const randomize = (cases) => {
     setRandom(cases[Math.floor(Math.random()*cases.length)])
   }
   
-    const language = activeLocale;
+  const language = activeLocale;
 
-  
-
-console.log(cases.cases, cases)
   useEffect(() => {
     
     if(language === "sv"){

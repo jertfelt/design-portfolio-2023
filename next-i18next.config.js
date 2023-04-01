@@ -17,11 +17,3 @@ const next18nextConfig={
 
 module.exports = next18nextConfig;
 
-// module.exports = {
-//   i18n: {
-//     locales: ["sv", "en"],
-//     defaultLocale: "sv",
-//     localeDetection: false,
-//     localePath: path.resolve("./public/locales"),
-//   },
-// };
