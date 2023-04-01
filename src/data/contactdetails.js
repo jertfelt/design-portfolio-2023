@@ -1,10 +1,10 @@
 export const contacts = [
   {
-  type:"email",
+  type:"email:",
   data:"tovajertfelt@gmail.com"
   },
   {
-    type:"phone",
+    type:"phone:",
     data:"+46736843438"
   },
   {

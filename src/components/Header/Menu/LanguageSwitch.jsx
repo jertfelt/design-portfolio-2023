@@ -60,7 +60,7 @@ export default function LocaleSwitcher({open, setOpen}) {
         const { pathname, query, asPath } = router;
         return (
           <Column key={"locale-" + locale}>
-       <Star>&#9733;</Star>
+          <Star>&#9733;</Star>
             <Current>
               {activeLocale === "en" ? <>
               Language: English

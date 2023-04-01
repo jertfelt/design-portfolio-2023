@@ -1,16 +1,10 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import {useTranslation } from "next-i18next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-import HeadIndex from "@component/components/Head";
 
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
+import HeadIndex from "@component/components/Head";
+import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
+
 
 const HomepageComponent = styled.section`
 max-width: 100vw;
@@ -148,4 +142,5 @@ const Homepage = () => {
 );
 }
  
-export default Homepage;
+export {getStaticProps}
+export default withTranslation(Homepage);

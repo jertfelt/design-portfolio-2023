@@ -8,6 +8,7 @@ import DropDownMenu from "./Menu/Menu";
 import { useOnClickOutside } from "../hooks/useOnclickOutside";
 import {useState, useRef, useContext } from 'react';
 import { AppContext } from "@component/context/AppContext";
+import withTranslation, {getStaticProps} from "../utils/getStaticProps";
 
 const HeaderComponent = styled.header`
 left: 0;
@@ -89,5 +90,5 @@ const Header = ({theme, toggleTheme}) => {
   </HeaderComponent>
  );
 }
- 
-export default Header;
+export {getStaticProps}
+export default withTranslation(Header)

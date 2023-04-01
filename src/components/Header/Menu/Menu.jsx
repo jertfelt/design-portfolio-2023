@@ -84,7 +84,6 @@ useEffect(() => {
 
   return ( 
     <StyledMenu open={open} ref={ref}>
-   
     {selectedPage && selectedPage.value==="" &&  <Start 
     setOpen={setOpen}
     open={open}/>}

@@ -1,16 +1,9 @@
 import styled from "styled-components";
 import { contacts } from "@component/data/contactdetails";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 import {useTranslation } from "next-i18next";
-
 import HeadIndex from "@component/components/Head";
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
+import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
+
 
 const Section = styled.section`
 max-width: 100vw;
@@ -94,8 +87,8 @@ const Contact = () => {
     <div>
       {contacts && contacts.map((item, index) => 
       <div key={index}>
-      {item.type === "phone" || item.type === "email"
-      ?<p>{item.type === "phone" ? <>{t("contact.phone")}</> : item.type.toUpperCase()}: {item.data}</p>
+      {item.type === "phone:" || item.type === "email:"
+      ?<p>{item.type === "phone" ? <>{t("contact.phone")}</> : item.type.toUpperCase()}  {item.data}</p>
       : <a href={item.type === "linkedin" ? `https://www.linkedin.com/in/${item.data}` : `https://www.instagram.com/${item.data}`}>
       <button>
         {item.type.toUpperCase()}
@@ -103,7 +96,7 @@ const Contact = () => {
     </a>}
        </div>)}
     </div>
-    <div>
+    {/* <div>
       <h2>{t("contact.form")}</h2>
       <Form name="contactTova" method="POST" data-netlify="true">
         <label htmlFor="inputName">{t("contact.namn")}</label>
@@ -113,8 +106,8 @@ const Contact = () => {
         <label htmlFor="textarea">{t("contact.message")}:</label><textarea name="message" id="textarea"></textarea>
         <button type="submit">{t("contact.sendbtn")}</button>
       </Form>
-    </div>
+    </div> */}
   </Section></> );
 }
- 
-export default Contact;
+export {getStaticProps}
+export default withTranslation(Contact)

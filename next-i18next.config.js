@@ -4,14 +4,15 @@ const path = require("path");
 const i18n = {
   defaultLocale: "sv",
   locales: ["sv", "en"],
-  localeDetection: false
+  localeDetection: false,
+  fs: false,
 }
 
 /** @type import("next-i18next").UserConfig */
 const next18nextConfig={
   i18n,
-  fallbackLng: "sv",
   localePath: path.resolve("./public/locales"),
+  fs: false,
 }
 
 module.exports = next18nextConfig;

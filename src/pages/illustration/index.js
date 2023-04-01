@@ -2,15 +2,8 @@ import { HeadIndexIllustraion } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 import { useContext, useEffect } from "react";
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 
 const Illustration = () => {
   const {t} = useTranslation();
@@ -26,5 +19,5 @@ const Illustration = () => {
 
   <WorkInProgress/></> );
 }
- 
-export default Illustration;
+export {getStaticProps}
+export default withTranslation(Illustration);

@@ -2,15 +2,8 @@ import CasesPage from "@component/components/Frontend/MainElements/Cases";
 import { HeadIndexFrontend } from "@component/components/Head";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
 const Cases = () => {
   const {selectedPage, setSelectedPage} = useContext(AppContext)
 
@@ -22,5 +15,5 @@ const Cases = () => {
   return ( <section>
     <CasesPage/></section> );
 }
- 
-export default Cases;
+export {getStaticProps} 
+export default withTranslation(Cases);

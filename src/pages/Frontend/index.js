@@ -1,16 +1,8 @@
 import MainFrontend from "@component/components/Frontend/MainFrontend";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
-
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 import { HeadIndexFrontend } from "@component/components/Head";
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
 
 
 const FrontendPage = () => {
@@ -28,5 +20,5 @@ const FrontendPage = () => {
     </>
     );
 }
- 
-export default FrontendPage;
+export {getStaticProps} 
+export default withTranslation(FrontendPage);

@@ -8,7 +8,8 @@ import { useMode } from '@component/components/stylings/useMode';
 import AppProvider from '@component/context/AppContext';
 import { appWithTranslation } from 'next-i18next';
 
-const App = ({ Component, pageProps }) =>{
+
+const App = ({ Component, pageProps}) =>{
   const [theme, themeToggler, mountedComponent] = useMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   if(!mountedComponent) return <div/>

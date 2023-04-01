@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 
 const Section = styled.section`
 background-color: ${({theme}) => theme.body};
@@ -277,7 +278,6 @@ gap:1rem;
 `
 const NotFound = () => {
   const router = useRouter()
- 
 
   useEffect(() => {
     setTimeout(() => {
@@ -295,5 +295,5 @@ const NotFound = () => {
       </Section>
   );
 }
-
-export default NotFound;
+export {getStaticProps}
+export default withTranslation(NotFound)

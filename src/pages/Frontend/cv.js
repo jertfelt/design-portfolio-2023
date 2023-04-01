@@ -3,16 +3,7 @@ import { HeadIndexFrontend } from "@component/components/Head";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 import styled from "styled-components"
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
-
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
-
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 
 const BackgroundCV = styled.section`
 background:${({theme}) => theme.frontendcolors.accent};
@@ -31,5 +22,5 @@ const FrontendCV = () => {
   <CVFrontend/>
   </BackgroundCV></>  );
 }
- 
-export default FrontendCV;
+export {getStaticProps} 
+export default withTranslation(FrontendCV);

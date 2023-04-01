@@ -2,15 +2,9 @@ import { HeadIndexArt } from "@component/components/Head";
 import WorkInProgress from "@component/components/WorkInProgress";
 import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 import { useContext, useEffect } from "react";
-export async function getStaticProps({locale}){
-  return{
-    props:{
-      ...(await serverSideTranslations(locale, ["common"]))
-    }
-  }
-}
+
 const Art = () => {
   const {t} = useTranslation();
   const {selectedPage, setSelectedPage} = useContext(AppContext)
@@ -26,4 +20,5 @@ const Art = () => {
     <WorkInProgress/>
     </> );
 }
-export default Art;
+export {getStaticProps} 
+export default withTranslation(Art);
