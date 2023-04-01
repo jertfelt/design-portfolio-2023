@@ -87,7 +87,7 @@ export const lightTheme = {
     alternativecontrast: "#5f8898",
    },
    artcolors:{
-    secondary: "E1D3DD",
+    secondary: "#E1D3DD",
     primary:"#d3e1d7",
     secondaryLighter:"#AD88A3",
     secondaryLightest:"#6c4a63",
