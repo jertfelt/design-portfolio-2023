@@ -22,6 +22,7 @@ padding:0;
 p{
   font-size:  ${fonts.fontSizes.small};
   color: ${({theme}) => theme.white};
+  max-width:40%;
 }
 }
 `
