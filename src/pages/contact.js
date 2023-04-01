@@ -81,7 +81,7 @@ const Contact = () => {
   const {t} = useTranslation();
 
   return ( <>
-  <HeadHome/>
+  <HeadIndex/>
   <Section>
     <h1>{t("contact.h1")}</h1>
     <div>

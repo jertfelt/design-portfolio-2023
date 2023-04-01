@@ -111,7 +111,7 @@ const Homepage = () => {
   const {t} = useTranslation();
   return ( 
   <>
-  <HeadHome/>
+  <HeadIndex/>
   <HomepageComponent>
   <ThreeColumnGrid>
   <TextContainer>

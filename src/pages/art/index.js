@@ -17,7 +17,7 @@ const Art = () => {
 
   return (
     <>
-    <HeadIndexArt/>
+
     <ArtMain/>
     </> );
 }

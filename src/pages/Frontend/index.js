@@ -15,7 +15,7 @@ const FrontendPage = () => {
   },[])
   
   return ( <>
-    <HeadIndexFrontend/>
+
     <MainFrontend/>
     </>
     );
