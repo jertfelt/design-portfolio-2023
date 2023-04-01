@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { flex, device, padding, fonts } from "@component/components/stylings/Stylings";
+import { useTranslation } from "next-i18next";
 
 const FooterStyle = styled.footer`
 display:flex;
@@ -18,7 +19,10 @@ background:${({theme}) => theme.frontendcolors.alternativecontrast};
 height:10vh;
 bottom:120;
 padding:0;
-
+p{
+  font-size:  ${fonts.fontSizes.small};
+  color: ${({theme}) => theme.white};
+}
 }
 `
 
@@ -29,6 +33,7 @@ gap:10px;
 font-family: Arya;
 font-size:  ${fonts.fontSizes.medium};
 line-height: 1.4rem;
+
 
 a{
   border-style: solid;
@@ -44,6 +49,7 @@ a{
 }`
 
 const Footer = () => {
+  const {t} = useTranslation()
   return (
     <FooterStyle>
    
@@ -57,6 +63,7 @@ const Footer = () => {
       target="_blank">Github</Link>
    
       </Links>
+      <p>{t("footerfrontend.text")}</p>
     </FooterStyle>);
 }
 

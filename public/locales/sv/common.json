@@ -4,6 +4,9 @@
     "Kontakt": "Kontakt",
     "Startsida": "Startsida"
   },
+  "footerfrontend":{
+    "text":"Den här sidan är byggd med följande tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
+  },
   "404": {"h2": "Sidan finns inte!",
 "p1": "Du kommer tillbaka till ",
 "link": "startsidan",

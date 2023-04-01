@@ -26,6 +26,9 @@
     "message": "Message",
     "sendbtn": "Send"
   },
+  "footerfrontend":{
+    "text":"This page was built with the following tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
+  },
   "cv":{
     "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",
     "erfarenhet": "EXPERIENCE",
