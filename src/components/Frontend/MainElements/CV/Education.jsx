@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CountingUp from "../Counter";
 import { Bread, CVContent, GridItem, Period, Row } from "./Commons";
 import { Grid } from "@component/components/stylings/Grids";
-import { flex, device, fonts } from "@component/components/stylings/Stylings";
+import {fonts } from "@component/components/stylings/Stylings";
 import Nackademin from "./Nackademin";
 import { useTranslation } from "next-i18next";
 

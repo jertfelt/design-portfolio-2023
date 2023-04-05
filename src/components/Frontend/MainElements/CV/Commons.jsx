@@ -40,6 +40,14 @@ img{
   border-radius: 50%;
   margin-top:1rem;
 }
+@media (max-width:800px){
+  margin:0;
+  padding:0;
+ 
+  h3{
+   font-size:1.2rem;
+  }
+}
 ${props => 
   props.work && 
   css`
@@ -47,21 +55,30 @@ ${props =>
    @media screen and (max-width: 700px){
       width:80vw;
   }
+
+  }
   h3{
     max-width:80vw;
   }
+  @media (max-width:800px){
+
+    margin:0;
+    padding:0;
+    h3{
+     font-size:1.2rem;
+    }
+}
   &:hover{
     @media screen and (min-width:1000px){
       border-radius:${({theme}) => theme.borderradius.third};
       background-color:${({theme}) => theme.frontendcolors.alternativecontrast};
     }
-
-  }
+   
   `}
   ${props => 
   props.techstack && 
   css`
- 
+
     h3{
       text-align:center;
     }
@@ -70,14 +87,22 @@ ${props =>
       grid-template-columns: repeat(2, 1fr);
       column-gap:1rem;
       
-      width:100%;
+      width:90%;
       li{
         &:hover{
           color:${({theme}) => theme.frontendcolors.lightblue};
         }
       }
     }
- 
+    @media (max-width:800px){
+      
+      margin:0;
+      padding:0;
+     
+      h3{
+       font-size:1.2rem;
+      }
+  }
   `}
 `
 
@@ -104,6 +129,9 @@ h2{
   text-decoration:underline;
   text-transform:uppercase;
   text-align:center;
- 
+ @media (max-width:800px){
+   font-size:1.5rem;
+   text-align:left;
+ }
 }
 `

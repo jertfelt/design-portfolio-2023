@@ -38,6 +38,10 @@ font-size: 2.5em;
 padding:1rem;
 min-height:20vh;
 max-height:25vh;
+@media (max-width:500px){
+  text-align:center;
+  font-size:1em;
+}
 `
 
 const LinkTwo = styled.div`

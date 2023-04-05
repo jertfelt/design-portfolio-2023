@@ -29,14 +29,23 @@ transition: transform 0.3s ease-in-out;
 z-index:10;
 filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.body});
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-@media (max-width: 800px) {
-  width: 100%;
-  width:90vw;
+@media (max-width:800px) {
+  width:100%;
+  width:80vw;
   padding:0;
-  height:50vh;
-  top:70px;
-  right:0;
+  height:100vh;
+  font-size:2rem;
+  right:2rem;
   filter: drop-shadow(-1px 0px 1px ${({ theme }) => theme.contrast});
+}
+@media (max-width:300px){
+  width:100%;
+  width:100vw;
+  margin:0;
+  position: absolute;
+  right:-2rem;
+  font-size:1rem;
+  padding:0;
 }
 @media (min-width: 1050px){
   max-width:25vh;
