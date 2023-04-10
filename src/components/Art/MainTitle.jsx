@@ -1,15 +1,22 @@
 import artmadethis1 from "../../../public/art/hel_artmadethis_tovajertfelt.png"
+import ursaktaSign from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt1.png"
+import ocean from "../../../public/art/_60A1364.png"
+import gifVKB from "../../../public/art/ba_gdi_tova_jertfelt_01.gif"
+import viKanBetter from "../../../public/art/vi-kan-battre-tova-jertfelt-kandidatexamen-2016-konstfack--3.png"
+import dreams1 from "../../../public/art/dreams-tova-jertfelt.png"
+import dreams2 from "../../../public/art/dreams-tova-jertfelt-bald.png"
+import dreams3 from "../../../public/art/dreams--2.gif"
 import styled from "styled-components";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 import About from "./About";
+import { useCallback, useEffect, useState } from "react"
+import { useRouter } from "next/router"
 
 
 const Wrapper = styled.div`
 padding-top:10rem;
 z-index:0;
 .mobile{
-  opacity:50%;
   @media (min-width:900px){
     display:none;
   }
@@ -19,53 +26,61 @@ z-index:0;
     display:none;
   }
 }
-
 `
 const TitleOverWrapper = styled.div`
 z-index:1;
 position:absolute;
 top:50vh;
 @media (max-width:900px){
-  top:20vh;
+  top:0vh;
   width:100%;
   max-width:100vw;
 }
 display:flex;
 flex-direction:column;`
 
-const Title = styled.div`
-z-index:1;
-h1{
-  font-size:80px;
-  padding:2rem;
-  padding-left:15rem;
-  background: ${({theme}) => theme.artcolors.primaryLightest};
-  color:${({theme}) => theme.textPrimary};
-  @media (max-width:900px){
-    padding:1rem;
-    font-size:60px;
-    width:100vw;
-    max-width:100%;
-    background:transparent;
-  }
-  padding-top:0;
-  margin-top:-3rem;
-  line-height:60px;
-}
-`
+
 const MainTitle = () => {
-  const {t} = useTranslation();
+  const router= useRouter();
+  const {locale: activeLocale} = router;
+  const language = activeLocale;
+  const [newName, setnewName] = useState("");
+  const [newPic, setPic] = useState(dreams1)
+  
+const shuffle = useCallback(() => {
+  const pics = [artmadethis1, ocean, gifVKB, viKanBetter, dreams3, dreams2, dreams1, ursaktaSign,]
+  const index = Math.floor(Math.random() * pics.length);
+  setPic(pics[index]);
+  const names = ["tankeväckande",  "vacker", "kritisk", "utforskande", "audiovisuell", "taktil",  "multidisciplinär", "digital"]
+  const engnames = [ "beautiful", "thought-provoking", "critical", "experimential", "audiovisual", "tactile",  "multidisciplinary", "digital"]
+
+  if(language === "sv"){
+    const index = Math.floor(Math.random() * names.length);
+    setnewName(names[index]);
+  }
+  else{
+    const index = Math.floor(Math.random() * names.length);
+    setnewName(engnames[index]);
+  }
+
+},[])
+
+  useEffect(() => {
+    const intervalID = setInterval(shuffle, 2000);
+    return () => clearInterval(intervalID);
+  }, [shuffle])
+
   return ( <>
     <Wrapper>
     <Image 
     className="mobile"
     alt="ArtMadeThis Sollentuna 2017" 
-    src={artmadethis1}
+    src={newPic}
     quality={100}
     fill
-    // style={{
-    //   objectFit: 'contain',
-    // }}
+    style={{
+      objectFit: 'cover',
+    }}
     />
     <Image 
     className="notMobile"
@@ -78,8 +93,9 @@ const MainTitle = () => {
     />
     </Wrapper>
     <TitleOverWrapper>
-    <About/>
-    {/* <Title><h1>{t("arttitle.h1")} Tova Jertfelt </h1></Title> */}
+    <About
+    newName={newName}
+    />
     </TitleOverWrapper>
     </> );
 }

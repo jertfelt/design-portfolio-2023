@@ -1,12 +1,8 @@
 import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 const Section = styled.div`
-// // padding:2rem;
-// // padding-top:450px;
 color:${({theme}) => theme.textPrimary};
-background:${({theme}) => theme.artcolors.primary};
+background:${({theme}) => theme.artcolors.primaryLighter};
 margin-top:30vh;
 padding-left:2rem;
 flex-wrap: wrap;
@@ -18,33 +14,8 @@ h2{
 z-index:2;
 `
 
-const About = () => {
-const router= useRouter();
-const {locales, locale: activeLocale} = router;
-const language = activeLocale;
+const About = ({newName}) => {
 const {t} = useTranslation();
-const [newName, setnewName] = useState("");
-const shuffle = useCallback(() => {
-  
-const names = [ "vacker", "tankeväckande", "kritisk", "utforskande", "audiovisuell", "taktil", "mänsklig", "multidisciplinär", "digital"]
-const engnames = [ "beautiful", "thought-provoking", "critical", "experimential", "audiovisual", "tactile", "human", "multidisciplinary", "digital"]
-
-  if(language === "sv"){
-    const index = Math.floor(Math.random() * names.length);
-    setnewName(names[index]);
-  }
-  else{
-    const index = Math.floor(Math.random() * names.length);
-    setnewName(engnames[index]);
-  }
-  
-}, [language]);
-
-useEffect(() => {
-  const intervalID = setInterval(shuffle, 3000);
-  return () => clearInterval(intervalID);
-}, [shuffle])
-
   return (
   <Section>
     <div>

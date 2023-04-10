@@ -3,6 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import Exhibitions from "./Exhibitions";
+import Links from "./Links";
+import Skogen from "./Skogen";
+import { useState } from "react";
+
 
 const Section = styled.div`
 padding-top:450px;
@@ -12,16 +16,60 @@ const Content = styled.div`
 padding:2rem;
 max-width:100%;
 p{
-  text-align:center;
+
   line-height:1.5rem;
+}
+hr{
+  color:${({theme}) => theme.artcolors.primaryLighter};
+}
+.margin{
+  margin-top:2rem;
+}
+`
+const WrapperExhibitions = styled.div`
+background: ${({theme}) => theme.artcolors.primaryLightest};
+color: ${({theme}) => theme.textSecondary};
+padding:2rem;
+padding-bottom:5rem;
+`
+
+const WrapperFooter = styled.footer`
+background:${({theme}) => theme.textPrimary};
+color: ${({theme}) => theme.artcolors.primary};
+height:10vh;
+padding:1rem;
+margin-top:-2rem;
+display:flex;
+flex-direction:row;
+gap:1rem;
+align-items:center;
+justify-content:center;
+button{
+  font-family: JetBrains Mono;
+  background: ${({theme}) => theme.artcolors.primaryLightest};
+color: ${({theme}) => theme.textSecondary};
+border-radius:19px;
+border:none;
+height:2rem;
+padding:8px;
+&:hover{
+  font-weight:bold;
+  background: ${({theme}) => theme.artcolors.primary};
+  color:${({theme}) => theme.artcolors.primaryLightest};
+}
 }
 `
 
 const Body = () => {
-  const router= useRouter();
+const router= useRouter();
 const {locales, locale: activeLocale} = router;
 const language = activeLocale;
 const {t} = useTranslation();
+const [skogenIsTrue, setSkogen] = useState(false)
+const [vKB, setVKB] = useState(false)
+const [tree, setTree] = useState(false)
+const [dream, setDream] = useState(false)
+
   return (<Section>
     <Content>
     <p>
@@ -30,11 +78,40 @@ const {t} = useTranslation();
     <p>
     Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning <Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan&quot;</Link> och jag jobbar gärna med platsspecifika fenomen. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.
     </p>
-    <h3>Utställningar</h3>
-    <Exhibitions language={language}/>
+    <hr className="margin"></hr>
+    <Links
+    skogenIsTrue = {skogenIsTrue}
+    setSkogen = {setSkogen}
+    vKB = {vKB}
+    setVKB = {setVKB}
+    tree = {tree}
+    setTree = {setTree}
+    dream = {dream}
+    setDream = {setDream}
+    // STPLN = {STPLN}
+    // setSTPLN = {setSTPLN}
+
+    />
     
-   
     </Content>
+    <WrapperExhibitions>
+    <h2>Utställningar</h2>
+   
+    <Exhibitions language={language}/>
+    </WrapperExhibitions>
+   
+    {skogenIsTrue && <Skogen id="skogen"/>}
+    
+
+
+    <WrapperFooter>
+    <a href="https://www.instagram.com/jertfelt/"
+    target="_blank">
+    <button>Instagram</button>
+    </a>
+    <p>Hemsidan är byggd av <br/>
+    Tova Jertfelt 2023</p>
+    </WrapperFooter>
     </Section> );
 }
  

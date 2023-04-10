@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import MainTitle from "./MainTitle";
-import About from "./About";
+
 import Body from "./Body";
 
 
@@ -18,8 +18,7 @@ const ArtMain = () => {
   return (
   <Section>
   <MainTitle/>
-    <Body/>
-    
+  <Body/>
   </Section>  );
 }
  

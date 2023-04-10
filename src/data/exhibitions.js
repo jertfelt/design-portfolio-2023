@@ -5,7 +5,7 @@ export const exhibitions_SV = [
         "id": "01" },
       "fields": {
         "title": "URSÄKTA SKOGEN, VI BYGGER OM I-II",
-        "description": "Grupputställning TEMPORARY SPACES, Uppsala Konstnärsklubb 2022",
+        "description": "Grupputställning TEMPORARY SPACES, Uppsala Konstnärsklubb",
         "date": "2022"
       }
     },
@@ -13,7 +13,7 @@ export const exhibitions_SV = [
       "sys": { 
         "id": "02" },
       "fields": {
-        "title": "SKOGEN OCH JAG",
+        "title": "Skogen och jag",
         "description": "Eriksberg bibliotek",
         "date": "2022"
       }
@@ -95,6 +95,16 @@ export const exhibitions_SV = [
         "date": "2015"
     
       }
+    },
+    {
+      "sys": { 
+        "id": "11" },
+      "fields": {
+        "title": "STPLN Malmö",
+        "description": "Porträtt av Malmös kvinnor på skyltfönster",
+        "date": "2014"
+    
+      }
     }
 
   ]
@@ -108,7 +118,7 @@ export const exhibitions_ENG = [
         "id": "01" },
       "fields": {
         "title": "Excuse the forest, we're rebuilding I- II",
-        "description": "Part of RUSMUS Group Exhibition, TEMPORARY SPACES, Uppsala Konstnärsklubb 2022",
+        "description": "Part of RUSMUS Group Exhibition, TEMPORARY SPACES, Uppsala Konstnärsklubb",
         "date": "2022"
       }
     },
@@ -196,6 +206,16 @@ export const exhibitions_ENG = [
         "title": "When I dream, I dream about you",
         "description": "Hornhuset, Hornstull",
         "date": "2015"
+    
+      }
+    },
+    {
+      "sys": { 
+        "id": "11" },
+      "fields": {
+        "title": "STPLN Malmö",
+        "description": "Portrait in typography: the diversity of Malmö",
+        "date": "2014"
     
       }
     }
