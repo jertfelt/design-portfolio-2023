@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useContext, useEffect } from "react";
+import {useContext, useEffect, useState } from "react";
 import { AppContext } from "@component/context/AppContext";
 import Link from "next/link";
 import { useTranslation } from 'next-i18next';
@@ -11,6 +11,10 @@ display:flex;
 flex-direction:column;
 align-items:center;
 border-radius:9px;
+i{
+  color: ${({ theme }) => theme.accent};
+
+}
 `
 
 export const data = [
@@ -24,6 +28,7 @@ export const DynamicLinkToOtherPages = ({
   setOpen, open}) => {
   const {selectedPage, setSelectedPage} = useContext(AppContext)
   const router = useRouter()
+  const [selected, setSelected] = useState(selectedPage.value)
   const { t } = useTranslation("");
 
 useEffect(() => {
@@ -34,13 +39,25 @@ useEffect(() => {
 const selectAndClose = (item) => {
   setSelectedPage({value:item.value, url: item.url})
   setOpen(!open)
-  
 }
 
+useEffect(() => {
+  console.log(router, "test")
+  console.log(router.pathname, "test2")
+  if(router.pathname === "/contact"){
+    setSelected("/contact")
+  }
+  else{
+    setSelected(selectedPage.value)
+  }
+
+},[router, selectedPage.value])
+
+
   return(
-    <Others>
+<Others>
 {data && data.map((item,i) => (<div key={i}>
-{item.value === selectedPage.value ?
+{item.value === selected ?
 <Link 
 href={item.url} 
 key={`${item.url}${i}`}

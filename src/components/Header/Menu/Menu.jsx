@@ -29,6 +29,7 @@ transition: transform 0.3s ease-in-out;
 z-index:10;
 filter: drop-shadow(-10px 0px 10px ${({ theme }) => theme.body});
 transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+
 @media (max-width:800px) {
   width:100%;
   width:80vw;
@@ -69,8 +70,37 @@ a {
   &:hover {
     color: ${({ theme }) => theme.accent};
   }
+  i{
+    color: ${({ theme }) => theme.accent};
+  
+  }
 }
+
+
+.mobileOnly{
+  position:absolute;
+  top:40px;
+  right:1rem;
+  font-size:1rem;
+  border:none;
+  border-radius:19px;
+  padding:10px;
+  cursor:pointer;
+  color:${({ theme }) => theme.accent};
+   background:${({ theme }) => theme.contrast};
+  &:hover{
+     background: ${({ theme }) => theme.accentTwo};
+  color:${({ theme }) => theme.textSecondary};
+ 
+  }
+  @media (min-width:900px){
+    display:none;
+  }
+}
+
 `;
+
+
 
 
 
@@ -79,7 +109,7 @@ const ref= useRef()
 const router = useRouter()
 const {key} = router.query;
 const {selectedPage} = useContext(AppContext)
-
+const [selected, setSelected] = useState(selectedPage.value)
 const { t } = useTranslation();
 
 useEffect(() => {
@@ -101,8 +131,22 @@ useEffect(() => {
    }
   },[open])
 
+  useEffect(() => {
+    console.log(router, "test")
+    console.log(router.pathname, "test2")
+    if(router.pathname === "/contact"){
+      setSelected("/contact")
+    }
+    else{
+      setSelected(selectedPage.value)
+    }
+  
+  },[router, selectedPage.value])
+
   return ( 
     <StyledMenu open={open} ref={ref}>
+    <button className="mobileOnly"
+    onClick={() => setOpen(!open)}>X</button>
     {selectedPage && selectedPage.value==="" &&  <Start 
     setOpen={setOpen}
     open={open}/>}
@@ -118,10 +162,11 @@ useEffect(() => {
     open={open}/>
     }
     {selectedPage && selectedPage.value==="illustration" &&
-   <IllMenu/>
+    <IllMenu/>
     }
     <Link href="/contact" onClick={() => setOpen(!open)}>
-      &#9993; {t("menu.Kontakt")}
+      {selected === "/contact" ? <i> &#9993; {t("menu.Kontakt")}</i> :
+      <>&#9993; {t("menu.Kontakt")}</>}
     </Link>
     <LocaleSwitcher
     setOpen={setOpen}

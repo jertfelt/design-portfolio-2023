@@ -22,7 +22,7 @@ h1{
   color: ${({ theme }) => theme.accentTwo};
   @media (max-width:800px){
     font-size:50px;
-    padding-top:40vh;
+    padding-top:20vh;
   }
 }
 div{
