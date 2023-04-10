@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 const Section = styled.section`
 background-color: ${({theme}) => theme.frontendcolors.background};
 width:100%;
-width:100vw;
+max-width:100vw;
 margin:0;
 height:100%;
 min-height:100vh;

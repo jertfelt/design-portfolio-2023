@@ -12,6 +12,7 @@ z-index: 1;
 @media screen and (max-width:700px){
  display:none;
 }
+
 `
 const Overlay = styled.div`
 position:fixed;
@@ -22,6 +23,7 @@ z-index:1;
 @media screen and (max-width:700px){
   display:none;
 }
+
 `
 const BgTxt = styled.div`
 margin: 0;
@@ -37,6 +39,11 @@ position: relative;
 padding:2rem;
 padding-top:10vh;
 padding-bottom:5vh;
+}
+@media screen and (max-width:700px){
+  max-width:50vw;
+  padding-right:2rem;
+
 }
 `
 

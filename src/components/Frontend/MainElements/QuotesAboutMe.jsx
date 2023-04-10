@@ -63,6 +63,9 @@ display:grid;
 grid-template-columns: repeat(2, 1fr);}
 @media screen and (max-width:700px){
   grid-template-columns: repeat(1, 1fr);
+  padding:0;
+
+  margin:0;
 }
 justify-items:start;
 align-items:start;
@@ -101,6 +104,14 @@ div{
   }
   p{width:90%;
   text-align:left;
+  }
+  @media screen and (max-width:700px){
+    padding:0;
+
+    margin:0;
+    max-width:90%;
+    margin-left:1.5rem;
+    padding-left:.5rem;
   }
   
 }

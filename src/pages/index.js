@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import LinksToPages from "@component/components/Homepage/Links"
 import {useTranslation } from "next-i18next";
-
-import HeadIndex, { HeadHome } from "@component/components/Head";
 import withTranslation, {getStaticProps} from "@component/components/utils/getStaticProps";
 import Head from "next/head";
 
@@ -18,6 +16,16 @@ color: ${({ theme }) => theme.textPrimary};
 @media (max-width: 700px){
   margin-left:-1rem;
   margin-top:-1rem;
+  max-width:100%;
+  padding-top:5rem;
+}
+@media (max-width:500px){
+  margin:0;
+  padding:0;
+  max-width:100%;
+  padding:1rem;
+  padding-top:5rem;
+  
 }
 `
 const TextContainer = styled.div`
@@ -33,17 +41,31 @@ h2{
   font-size:2rem;
   line-height:2rem;
   }
+  @media (max-width:500px){
+    margin:0;
+    padding:0.5rem;
+    max-width:100%;
+    h1{
+      font-size:2rem;
+      line-height:2.5rem;
+    }
+   h2{
+    font-size:1.5rem;
+   }
+  }
 `
 
 
 const ThreeColumnGrid= styled.div`
 margin: 0;
 display:grid;
+@media (max-width:500px){
+  grid-template-columns: repeat(1, 1fr);
+}
 @media (min-width: 700px){
   padding-top:5rem;
   grid-template-columns: repeat(2, 1fr);
   row-gap:1rem;
- 
   grid-template-rows: 1fr;
 }
 ` 

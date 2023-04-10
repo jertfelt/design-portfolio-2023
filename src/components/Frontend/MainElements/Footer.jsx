@@ -64,7 +64,7 @@ const Footer = () => {
       target="_blank">Github</Link>
    
       </Links>
-      <p>{t("footerfrontend.text")}</p>
+      {/* <p>{t("footerfrontend.text")}</p> */}
     </FooterStyle>);
 }
 

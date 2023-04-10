@@ -19,6 +19,7 @@ display:flex;
 flex-direction:column;
 width:50%;
 gap:1rem;
+color:${({theme}) => theme.contrast};
 
 .glitch-wrapper {
   width: 100%;

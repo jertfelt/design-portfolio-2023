@@ -8,8 +8,9 @@ font-size:1rem;
 font-weight:bold;
 padding:10px;
 &:hover{
-  background-color:${({ theme }) => theme.accent};
-  color:${({ theme }) => theme.contrast};
+  background: ${({ theme }) => theme.accentTwo};
+  color:${({ theme }) => theme.textSecondary};
+ 
   border-radius:9px;
 }
 `
@@ -21,13 +22,15 @@ with:100%;
 flex-direction: column;
 gap:4px;
 align-items:center;
-font-size: 1rem;
+font-size: 1.5rem;
 line-height:1rem;
+
 a{
 font-size: 1rem;
 line-height:1rem;
 font-family: JetBrains Mono;
 font-weight:normal;
+
 &:hover{
   color:${({ theme }) => theme.accent};
 }
@@ -36,6 +39,8 @@ font-weight:normal;
 
 const Current = styled.div`
 color:${({ theme }) => theme.accent};
+padding-top:2rem;
+font-size:.9rem;
 `
 
 const FlagAndName = styled.div`
@@ -51,8 +56,7 @@ export default function LocaleSwitcher({open, setOpen}) {
   const otherLocales = locales?.filter(
     (locale) => locale !== activeLocale && locale !== "default"
   );
-  console.log(activeLocale, "ACTIVE")
-  console.log(otherLocales, "OTHER?")
+
 
   return (
     <div>

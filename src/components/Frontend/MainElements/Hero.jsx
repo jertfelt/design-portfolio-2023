@@ -22,7 +22,10 @@ line-height:3.7rem;
  line-height:3rem;
  margin:0;
   }
+  @media screen and (max-width:700px){
+    font-size:2rem;
 
+  }
 `
 
 const HeroPic = styled(Image)`
@@ -39,6 +42,11 @@ height:200px;
 width:200px;
 padding-left:50%;
 }
+
+@media screen and (max-width:700px){
+  height:120px;
+  width:120px;
+ }
 `
 
 

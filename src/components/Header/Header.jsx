@@ -22,6 +22,9 @@ left: 0;
   position: fixed;
   padding:2rem;
   top:0;
+  @media (max-width:500px){
+   max-width:80vw;
+  }
 `
 const NavComponent = styled.nav`
 display: flex;
@@ -43,7 +46,7 @@ display: flex;
     right:2rem;
   }
   color:${({ theme }) => theme.textPrimary};
- 
+  padding-right:2rem;
 `
 
 const LogoNav = styled.div`
