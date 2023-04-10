@@ -69,6 +69,7 @@ const [skogenIsTrue, setSkogen] = useState(false)
 const [vKB, setVKB] = useState(false)
 const [tree, setTree] = useState(false)
 const [dream, setDream] = useState(false)
+const [bedbug, setBedBug] = useState(false)
 
   return (<Section>
     <Content>
@@ -88,6 +89,8 @@ const [dream, setDream] = useState(false)
     setTree = {setTree}
     dream = {dream}
     setDream = {setDream}
+    bedbug = {bedbug}
+    setBedBug={setBedBug}
     // STPLN = {STPLN}
     // setSTPLN = {setSTPLN}
 
@@ -98,6 +101,12 @@ const [dream, setDream] = useState(false)
     <h2>Utställningar</h2>
    
     <Exhibitions language={language}/>
+    <h2>Publiceringar</h2>
+    <h3>
+      Not Like a Bedbug
+    </h3>
+    <h4>Serie publicerad i MAL magasin 2021</h4>
+   
     </WrapperExhibitions>
    
     {skogenIsTrue && <Skogen id="skogen"/>}

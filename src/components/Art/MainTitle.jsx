@@ -74,8 +74,9 @@ const shuffle = useCallback(() => {
     <Wrapper>
     <Image 
     className="mobile"
-    alt="ArtMadeThis Sollentuna 2017" 
+    alt="Various images of art" 
     src={newPic}
+    priority={true}
     quality={100}
     fill
     style={{

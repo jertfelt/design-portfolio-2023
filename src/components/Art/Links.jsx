@@ -35,7 +35,9 @@ const Links = ({
   tree,
   setTree,
   dream,
-  setDream
+  setDream,
+  bedbug,
+  setBedBug
 }) => {
   console.log(skogenIsTrue, setSkogen)
   return ( 
