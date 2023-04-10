@@ -6,3 +6,6 @@ https://soundcloud.com/upload
 https://healerx97.medium.com/adding-a-soundcloud-player-on-your-website-2f4a78b4a7e6
 
 https://github.com/rpearce/react-medium-image-zoom
+
+
+https://rpearce.github.io/react-medium-image-zoom/?path=/story/img--custom-modal-styles

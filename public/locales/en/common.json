@@ -94,5 +94,16 @@
   "bignrtxt": "I started studying frontend development at Nackademin."
   
   }
+  ,
+  "artistpages":{
+    "vikanbattre":{
+      "title":"We Can Do Better",
+      "material": "300+ unique drypoint prints together with handwritten bullying in form of toilet scribbles forms a maze of bullying within a 250 x 360 x 250 cm large cube of torture. In the end, by the exit, waits an animation that is partly made from the drypoint, and tells us of a manifesto.",
+      "smalldescription": "Bachelor of Fine Arts degree project at Konstfack College of Arts, Crafts and Design 2016.",
+      "readLink":"Read the bachelor degree paper here. ",
+      "description1":"Bullying is a problem that affects the whole of society. It influences and permeates our coexistence. Bullying is happening right now, in schools, workplaces and other social contexts. Research shows that bullying stems from destructive group behaviours, that humans as social animals use bullying as a tool to obtain and retain power. Despite this, the image presented in the media is about the individual. In other words: it is the individual that is bullied and it is the individual that does the bullying, which in turn leads to an idea of bullying as an individual problem rather than a social one. This should be criticised, but it should also be changed! My project is about shifting the focus from the individual and towards formulating a movement and influencing opinion. It is about mobilising, inspiring, informing and, in the end, changing things. We can change. It is time. #Wecandobetter "
+    }
+
+  }
   
 }

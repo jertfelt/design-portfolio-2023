@@ -39,12 +39,13 @@ const Links = ({
   bedbug,
   setBedBug
 }) => {
-  console.log(skogenIsTrue, setSkogen)
   return ( 
   <LinkDiv>
     <a href="#skogen" onClick={() => setSkogen(!skogenIsTrue)}><h2>Ursäkta skogen, vi bygger om</h2></a>
     <hr></hr>
-    <Link href="/art/cases/1"><h2>Vi kan bättre</h2></Link>
+    <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>Vi kan bättre</h2></Link>
+    <hr></hr>
+    <Link href="/art/cases/2"><h2>Not like a bedbug</h2></Link>
     <hr></hr>
     <Link href="/art/cases/2"><h2>Jag är ett träd</h2></Link>
     <hr></hr>

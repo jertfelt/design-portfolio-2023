@@ -6,6 +6,7 @@ import Exhibitions from "./Exhibitions";
 import Links from "./Links";
 import Skogen from "./Skogen";
 import { useState } from "react";
+import ViKanBattre from "./ViKanBattre";
 
 
 const Section = styled.div`
@@ -99,7 +100,7 @@ const [bedbug, setBedBug] = useState(false)
     </Content>
     
     {skogenIsTrue && <Skogen id="skogen"/>}
-    
+    {vKB && <ViKanBattre id="VKB"></ViKanBattre>}
     <WrapperExhibitions>
     <h2>Utställningar</h2>
    
