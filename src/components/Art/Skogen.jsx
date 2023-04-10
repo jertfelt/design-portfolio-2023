@@ -28,8 +28,6 @@ img{
   height: 70vh;
 }
 
-
-
 `
 
 const Section = styled.section`
@@ -43,19 +41,20 @@ h2{
   margin-top:0;
   margin-bottom:0;
 }
-
+p{
+  line-height:150%;
+}
 `
 
 const ZoomDiv = styled.div`
 [data-rmiz] {
-  position: relative;
-  
+  position: relative;  
 }
 [data-rmiz-ghost] {
   position: absolute;
   pointer-events: none;
 }
-[data-rmiz-btn-zoom],
+img [data-rmiz-btn-zoom],
 [data-rmiz-btn-unzoom] {
   background-color: ${({theme}) => theme.artcolors.primaryLight};
   border-radius: 50%;
@@ -147,11 +146,7 @@ const ZoomDiv = styled.div`
 }`
 
 const Skogen = () => {
-  const [isZoomed, setIsZoomed] = useState(false)
 
-  const handleZoomChange = useCallback(shouldZoom => {
-    setIsZoomed(shouldZoom)
-  }, [])
   return ( 
   <Section id="skogen">
   <h2>Ursäkta skogen, vi bygger om</h2>
@@ -170,38 +165,26 @@ config={{
 />
 <p>Besökaren möter en artificiell skog, en skog som fått flytta på sig efter att kommunen vill gentrifiera och bygga bort skogen. Besökaren står i den artificiella skogen, omringad av biltrafik, och lyssnar på ljudklipp från kommunen som handlar om dess storslagna planer på att värna om naturen - utan att värna om naturen - i stadsdelen Eriksberg. Kommunen har planer på att bygga hus på/i skogsområdena där så att människan kan vara nära naturen, fast ändå inte. Det blir ett kritiskt projekt, där man får förhålla sig till idén om vad som är mänskligt, naturligt, temporärt och hälsosamt. Till vilket pris? I ljudklippet bryts även in fakta om fladdermössen, som bor i Eriksbergs skogar, ljudet av artificiell fågelsång, och diverse dikter.</p>
 <ImageWrapper>
-  
-<ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange}>
-<ZoomDiv>
+<Zoom>
 <Image src={ursakta1}
+className="customzoom"
 alt="Part One, showing some of the paintings"
 ></Image>
-</ZoomDiv>
-</ControlledZoom>
-
+</Zoom>
 </ImageWrapper>
 
-<ImageWrapper>
- 
-   <Image alt="Sign outside"
-    quality={100}
-    style={{
-      objectFit: 'contain',
-    }}
-    src={ursakta2}/>
-
-    <Image alt="Sign outside"
-    quality={100}
-    style={{
-      objectFit: 'contain',
-    }}
-    src={ursakta1}/> 
-
-  </ImageWrapper>
 <p>Akrylmålningar, torrpastell, ljudinstallation. 
 Verken är till salu </p>
-
-
+<ImageWrapper>
+<Zoom>
+<Image src={ursakta2}
+className="customzoom"
+alt="Part One, showing some of the paintings"
+></Image>
+</Zoom>
+</ImageWrapper>
+<h4>URSÄKTA SKOGEN VI BYGGER OM II</h4>
+<p>I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.</p>
 
   <ImageWrapper>
     <Image alt="Sign outside"
@@ -210,14 +193,22 @@ Verken är till salu </p>
       objectFit: 'contain',
     }}
     src={ursakta3}/>
-
   </ImageWrapper>
-<h4>URSÄKTA SKOGEN VI BYGGER OM II</h4>
-<p>I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.</p>
-
-
   <p>Curator: Alba Folgado</p>
   <p>Läs mer om <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank"/>Rusmus</p>
+  <ImageWrapper>
+<Zoom>
+<Image src={ursakta4}
+className="customzoom"
+alt="Sign outside"
+></Image>
+</Zoom>
+<Image src={ursakta5}
+className="customzoom"
+alt="Sign outside"
+></Image>
+</ImageWrapper>
+
   
   </Section> );
 }
