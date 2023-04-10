@@ -143,11 +143,11 @@ const GridWithQuotes = ({language}) => {
 
   useEffect(() => {
     if(language === "sv"){
-      console.log(language, quotesAboutMe.map(item => item.headline))
+     
       setQuotes(quotesAboutMe)
     }
     else if (language === "en"){
-      console.log(language, quotesAboutMe_EN.map(item => item.headline))
+     
       setQuotes(quotesAboutMe_EN)
 
     }
