@@ -97,6 +97,9 @@ const [bedbug, setBedBug] = useState(false)
     />
     
     </Content>
+    
+    {skogenIsTrue && <Skogen id="skogen"/>}
+    
     <WrapperExhibitions>
     <h2>Utställningar</h2>
    
@@ -109,8 +112,6 @@ const [bedbug, setBedBug] = useState(false)
    
     </WrapperExhibitions>
    
-    {skogenIsTrue && <Skogen id="skogen"/>}
-    
 
 
     <WrapperFooter>

@@ -33,7 +33,8 @@ img{
 const Section = styled.section`
 min-height:50vh;
 padding:2rem;
-padding-bottom:10rem;
+padding-bottom:0;
+margin-bottom:-8px;
 h2{
   font-size:10vh;
   line-height:10vh;
@@ -145,10 +146,14 @@ img [data-rmiz-btn-zoom],
   }
 }`
 
+const Upperpadding = styled.div`
+height:4em;`
+
 const Skogen = () => {
 
   return ( 
   <Section id="skogen">
+    <Upperpadding></Upperpadding>
   <h2>Ursäkta skogen, vi bygger om</h2>
   <p>Tema: Temporary spaces. Mitt bidrag var URSÄKTA SKOGEN VI BYGGER OM, ett verk i två delar: </p>
   <h4>URSÄKTA SKOGEN VI BYGGER OM I</h4>
