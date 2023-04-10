@@ -8,7 +8,6 @@ padding:0;
 margin:0;
 color: ${({theme}) => theme.primaryText};
 background: ${({theme}) => theme.artcolors.primary};
-
 `
 
 
