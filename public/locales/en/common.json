@@ -4,6 +4,13 @@
     "Kontakt": "Contact",
     "Startsida": "Homepage"
   },
+  "artabout":{
+    "h2first": "I create",
+    "h2second": "art."
+  },
+  "arttitle":{
+    "h1":"I'm"
+  },
   "404": {"h2": "Page doesn't exist :(",
 "p1": "You'll be transported back to the ",
 "link": "homepage",

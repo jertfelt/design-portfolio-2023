@@ -4,6 +4,13 @@
     "Kontakt": "Kontakt",
     "Startsida": "Startsida"
   },
+  "artabout":{
+    "h2first": "Jag gör",
+    "h2second": "konst."
+  },
+  "arttitle":{
+    "h1":"Jag är"
+  },
   "footerfrontend":{
     "text":"Den här sidan är byggd med följande tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
   },
