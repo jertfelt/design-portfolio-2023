@@ -45,11 +45,11 @@ const Links = ({
     <hr></hr>
     <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>Vi kan bättre</h2></Link>
     <hr></hr>
-    <Link href="/art/cases/2"><h2>Not like a bedbug</h2></Link>
+    <Link href="#bedbug" onClick={() => setBedBug(!bedbug)}><h2>Not like a bedbug</h2></Link>
     <hr></hr>
-    <Link href="/art/cases/2"><h2>Jag är ett träd</h2></Link>
+    <Link href="#tree" onClick={() => setTree(!tree)}><h2>Jag är ett träd</h2></Link>
     <hr></hr>
-    <Link href="/art/cases/3"><h2>When I dream, I dream about you</h2></Link>
+    <Link href="#dreams" onClick={() => setDream(!dream)}><h2>When I dream, I dream about you</h2></Link>
   </LinkDiv> );
 }
  

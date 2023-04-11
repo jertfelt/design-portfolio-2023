@@ -7,7 +7,9 @@ import Links from "./Links";
 import Skogen from "./Skogen";
 import { useState } from "react";
 import ViKanBattre from "./ViKanBattre";
-
+import NotLikeA from "./NotLikeA";
+import Tree from "./Tree";
+import Dreams from "./Dreams";
 
 const Section = styled.div`
 padding-top:450px;
@@ -16,8 +18,8 @@ color:${({theme}) => theme.textPrimary};
 const Content = styled.div`
 padding:2rem;
 max-width:100%;
+padding-top:10rem;
 p{
-
   line-height:1.5rem;
 }
 hr{
@@ -94,14 +96,21 @@ const [bedbug, setBedBug] = useState(false)
     setBedBug={setBedBug}
     // STPLN = {STPLN}
     // setSTPLN = {setSTPLN}
-
+    //alskardig = {alskardig}
+    //setAlskarDig = {setAlskarDig}
+    //inferno = {inferno}
+    //setInferno = {setInferno}
     />
     
     </Content>
     
     {skogenIsTrue && <Skogen id="skogen"/>}
     {vKB && <ViKanBattre id="VKB"></ViKanBattre>}
+    {bedbug && <NotLikeA id="bedbug"></NotLikeA>}
+    {tree && <Tree id="tree"/>}
+    {dream && <Dreams id="dreams"/>}
     <WrapperExhibitions>
+
     <h2>Utställningar</h2>
    
     <Exhibitions language={language}/>
