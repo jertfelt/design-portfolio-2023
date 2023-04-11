@@ -83,6 +83,18 @@ ${props =>
  `
 }
 ${props => 
+  props.horizontal_gallery && 
+  css`  
+ img{
+  min-width:100vw;
+  width:100%;
+  height:100%;
+ }
+ margin:1rem;
+ margin-left:-2rem;
+ `
+}
+${props => 
   props.horizontal_first && 
   css`  
  img{
