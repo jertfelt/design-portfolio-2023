@@ -96,12 +96,51 @@
   }
   ,
   "artistpages":{
+    "h1":"Ursäkta skogen, vi bygger om",
+    "h2":"Vi kan bättre",
+    "h3":"Jag är ett träd",
     "vikanbattre":{
       "smalldescription": "Kandidatexamen i Konst, Visuell Kommunikation, examensarbete på Konstfack 2016.",
       "readLink":"Läs min uppsats här:",
       "title":"Vi kan bättre",
       "material": "300+ unika torrnålstryck tillsammans med handskriven mobbning i form av toalettklotter skapar en labyrint av mobbning inuti en 250 x 360 x 250 stor tortyr-kub. Längst in väntar en animation och ljud, med bilder gjorda utifrån torrnålen som vittnar om ett manifest och där manifestet läses upp av fyra olika röster.",
       "description1":"Mobbning är ett samhällsproblem. Det påverkar och genomsyrar vår samhörighet med varandra. Mobbning pågår just nu, i skolor, på arbeten och i andra sociala sammanhang. Forskning visar att det är destruktiva gruppbeteenden som utgör mobbning, att det är människan som flockdjur som använder mobbning som verktyg för att få, och behålla, makt. Trots detta är det bilden av individen som man kommunicerar ut i media. Det vill säga: det är individen som blir mobbad och det är individen som mobbar, vilket i sin tur leder till en bild av mobbning som ett individuellt problem istället för ett samhälleligt. Detta bör kritiseras, men också förändras! Det här examensarbetet går ut på att skifta fokus från individen, till att formulera en kamp och driva opinion. Det går ut på att mobilisera, inspirera, informera och även i slutänden förhoppningsvis förändra. Vi kan förändras. Det är dags nu. #Vi kan bättre "
+    },
+    "dreams":{
+      "desc":"Textilkonst, digitalt collage/måleri och animation, 2015.",
+      "desc2": "Utställt på JUSTE Gallery 2015 och Hornhuset, 2015.",
+      "longerdesc":"Återkommande i mitt liv har jag intensiva drömmar. När jag var på utbyte i Riga så drömde jag intensivt, nästan varje natt. Jag bestämde mig för att göra konst utifrån dessa drömmar. Det är subjektivt, men det är också något allmänt i känslan av skräck, stress, hemlängtan och längtan.",
+      "longerdesc2":"I det här projektet jobbade jag med textilkonst, jag tryckte batik och sydde ihop lapptäcke och kuddar som en slags drömbädd. Vidare animerade jag och gjorde stora digitala målningar utifrån avfotograferade textilbitar."
+    },
+    "main":{
+      "first":"Jag är en multidisciplinär konstnär baserad i Sverige. Min body of work är bl.a. grafiska blad, taktila collage, linjeteckning, aktrylmålningar, samt digitalt måleri och collage.",
+      "second":" I mitt konstnärskap så orienterar jag mig främst med ord och bild, gärna i korrelation, antingen i form av spoken word eller text. Genom att kombinera bildkonst, i antingen målning, animation eller torrpastell, med mina texter i form av ljud eller skriven text, söker jag ett samspel mellan det visuella och det språkliga. Det finns varken en under- eller överordning mellan bild och text, utan det är sammanhangen som spelar roll i mina verk.",
+      "third":"Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning ",
+      "linkOmKonst":"hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan",
+      "thirdpart2":" och jag jobbar gärna med platsspecifika fenomen, eller med människans psykets mörker. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.",
+      "h2U":"Utställningar",
+      "h2P":"Publiceringar",
+      "h4MAL":"Serie publicerad i MAL magasin 2021",
+      "footerInfo":"Hemsidan är byggd av "
+
+    },
+    "forest":{
+      "h2":"Ursäkta skogen, vi bygger om",
+      "desc":"Tema: Temporary spaces. Mitt bidrag var URSÄKTA SKOGEN VI BYGGER OM, ett verk i två delar:",
+      "title1":"URSÄKTA SKOGEN VI BYGGER OM I",
+      "longdesc":"Besökaren möter en artificiell skog, en skog som fått flytta på sig efter att kommunen vill gentrifiera och bygga bort skogen. Besökaren står i den artificiella skogen, omringad av biltrafik, och lyssnar på ljudklipp från kommunen som handlar om dess storslagna planer på att värna om naturen - utan att värna om naturen - i stadsdelen Eriksberg. Kommunen har planer på att bygga hus på/i skogsområdena där så att människan kan vara nära naturen, fast ändå inte. Det blir ett kritiskt projekt, där man får förhålla sig till idén om vad som är mänskligt, naturligt, temporärt och hälsosamt. Till vilket pris? I ljudklippet bryts även in fakta om fladdermössen, som bor i Eriksbergs skogar, ljudet av artificiell fågelsång, och diverse dikter.",
+      "material":"Akrylmålningar, torrpastell, ljudinstallation.Verken är till salu.",
+      "title2":"URSÄKTA SKOGEN VI BYGGER OM II",
+      "desc2":"I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.",
+      "linktxt":"Läs mer om",
+      "linktxt2":" här"
+
+    },
+    "tree":{
+      "h2":"Jag är ett träd",
+      "p1":"Utställning September 2021",
+      "desc":"“Jag är ett träd” är en utställning om mindfulness, om att vara sjukskriven, och om mänsklighetens behov av “ordning”. Med torrpastellmålningar, föreställandes tallar, så har jag skapat en skog i utställningsytan. Sedan, genom att spela upp ljudverket, så utsätter jag besökaren för en övning i mindfulness - som sakta med säkert urartar i en storm av känslor och panik. Ljudinspelningen är en blandning av open source, mitt eget sjungande, dagbokstexter, övningsmaterial och ljud jag plockat upp runtom i Uppsala.Jag skapade ungefär 50 stycken träd i olika storlekar som, var för sig eller tillsammans, med eller utan ljudverket, har en egen personlighet. På ett sätt är utställningen därför i allra högsta grad personligt, nästan som ett abstrakt självporträtt."
+
     }
 
 }}

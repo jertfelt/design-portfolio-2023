@@ -96,10 +96,10 @@ const [bedbug, setBedBug] = useState(false)
   return (<Section>
     <Content>
     <p>
-  Jag är en multidisciplinär konstnär baserad i Sverige. Min body of work är bl.a. grafiska blad, taktila collage, linjeteckning, aktrylmålningar, samt digitalt måleri och collage.</p>
-    <p> I mitt konstnärskap så orienterar jag mig främst med ord och bild, gärna i korrelation, antingen i form av spoken word eller text. Genom att kombinera bildkonst, i antingen målning, animation eller torrpastell, med mina texter i form av ljud eller skriven text, söker jag ett samspel mellan det visuella och det språkliga. Det finns varken en under- eller överordning mellan bild och text, utan det är sammanhangen som spelar roll i mina verk. </p>
+    {t("artistpages.main.first")}</p>
+    <p>{t("artistpages.main.second")}</p>
     <p>
-    Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning <Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan&quot;</Link> och jag jobbar gärna med platsspecifika fenomen. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.
+    {t("artistpages.main.third")}<Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;{t("artistpages.main.linkOmKonst")}n&quot;</Link>{t("artistpages.main.thirdpart2")}
     </p>
 
     <hr className="margin"></hr>
@@ -116,8 +116,6 @@ const [bedbug, setBedBug] = useState(false)
     setBedBug={setBedBug}
     // STPLN = {STPLN}
     // setSTPLN = {setSTPLN}
-    //alskardig = {alskardig}
-    //setAlskarDig = {setAlskarDig}
     //inferno = {inferno}
     //setInferno = {setInferno}
     />
@@ -131,14 +129,14 @@ const [bedbug, setBedBug] = useState(false)
     {dream && <Dreams id="dreams"/>}
     <WrapperExhibitions>
 
-    <h2>Utställningar</h2>
+    <h2>{t("artistpages.main.h2U")}</h2>
    
     <Exhibitions language={language}/>
-    <h2>Publiceringar</h2>
+    <h2>{t("artistpages.main.h2P")}</h2>
     <h3>
       Not Like a Bedbug
     </h3>
-    <h4>Serie publicerad i MAL magasin 2021</h4>
+    <h4>{t("artistpages.main.h4MAL")}</h4>
    
     </WrapperExhibitions>
     {/* <Standalones>
@@ -155,7 +153,7 @@ const [bedbug, setBedBug] = useState(false)
     target="_blank">
     <button>Instagram</button>
     </a>
-    <p>Hemsidan är byggd av <br/>
+    <p>{t("artistpages.main.footerinfo")}<br/>
     Tova Jertfelt 2023</p>
     </WrapperFooter>
     </Section> );

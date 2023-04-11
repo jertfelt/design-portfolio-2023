@@ -23,7 +23,7 @@ cursor: pointer;
 color: ${({theme}) => theme.textSecondary};
 user-select: none;
 &:hover{
-  color: ${({theme}) => theme.textPrimary};
+  color: ${({theme}) => theme.artcolors.primaryLighter};
 }
 }
 .right-arrow{

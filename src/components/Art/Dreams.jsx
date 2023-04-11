@@ -9,7 +9,7 @@ import palmyra from "../../../public/art/dreams-tova-jertfelt-palmyra.png"
 import homesick from "../../../public/art/dreams-tova-jertfelt+(4).png"
 import dance from "../../../public/art/dreams-tova-jertfelt.png"
 import { useTranslation } from "next-i18next";
-import { ImageWrapper, Upperpadding, VideoWrapper } from "./ViKanBattre";
+import {Upperpadding, VideoWrapper } from "./ViKanBattre";
 import ImageSlider from "./Slider";
 
 export const images1=[pillow1, pillow2]
@@ -32,7 +32,7 @@ p{
 }
 `
 const Dreams = () => {
-  
+  const {t} = useTranslation()
   return ( 
   <Section id="dreams">
       <VideoWrapper first>
@@ -40,22 +40,22 @@ const Dreams = () => {
     </VideoWrapper>
     <Upperpadding/>
     <h2>When I dream, I dream about <i>you</i>.</h2>
-    <p>Textilkonst, digitalt collage/måleri och animation, 2015.</p><br/>
+    <p>{t("artistpages.dreams.desc")}</p><br/>
     <ImageSlider 
     slides={images1}
     format="horizontal"
     type="dark"/>
    
-    <p>Uställt på JUSTE Gallery 2015 och Hornhuset, 2015.</p>
+    <p>{t("artistpages.dreams.desc2")}</p>
     
-    <p>Återkommande i mitt liv har jag intensiva drömmar. När jag var på utbyte i Riga så drömde jag intensivt, nästan varje natt. Jag bestämde mig för att göra konst utifrån dessa drömmar. Det är subjektivt, men det är också något allmänt i känslan av skräck, stress, hemlängtan och längtan. </p>
+    <p>{t("artistpages.dreams.longerdesc")}</p>
     
     <ImageSlider 
     slides={images2}
     format=""
     type="light"/>
     <br/>
-    <p>I det här projektet jobbade jag med textilkonst, jag tryckte batik och sydde ihop lapptäcke och kuddar som en slags drömbädd. Vidare animerade jag och gjorde stora digitala målningar utifrån avfotograferade textilbitar.</p>
+    <p>{t("artistpages.dreams.longerdesc2")}</p>
   
   </Section> );
 }

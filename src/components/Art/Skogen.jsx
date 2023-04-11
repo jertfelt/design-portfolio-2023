@@ -12,28 +12,21 @@ import ursakta4 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tov
 import ursakta5 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt-2.png"
 import { useCallback, useState } from "react";
 
-// import ursakta6 from "../../../public/art/skylt--jertfelt--klimatneutral+copy.png"
-// import ursakta7 from "../../../public/art/skylt--jertfelt--parken.png"
-// import ursakta8 from "../../../public/art/skylt--jertfelt--pulkabacken+copy.png"
+import ursakta6 from "../../../public/art/skylt--jertfelt--klimatneutral+copy.png"
+import { ImageWrapper } from "./ViKanBattre";
+import ursakta7 from "../../../public/art/skylt--jertfelt--parken-1.png"
+import ursakta8 from "../../../public/art/skylt--jertfelt--pulkabacken+copy.png"
 
-const ImageWrapper = styled.div`
-margin:0;
-padding:0;
-margin-left:-2rem;
-width:100%;
-max-width:90vw;
-position:relative;
-img{
-  width:100vw;
-  height: 70vh;
-}
+import ImageSlider from "./Slider";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
-`
+export const ursaktaImg = [ ursakta5, ursakta4, ursakta3 ]
 
 const Section = styled.section`
 min-height:50vh;
 padding:2rem;
-padding-bottom:0;
+padding-bottom:3rem;
 margin-bottom:-8px;
 h2{
   font-size:10vh;
@@ -44,6 +37,12 @@ h2{
 }
 p{
   line-height:150%;
+}
+.curator{
+  padding-bottom:2rem;
+}
+.link{
+  padding-top:1rem;
 }
 `
 
@@ -146,17 +145,23 @@ img [data-rmiz-btn-zoom],
   }
 }`
 
+const TextInEnglish = styled.div`
+padding-top:3rem;
+padding-bottom:5rem;`
 const Upperpadding = styled.div`
 height:4em;`
 
 const Skogen = () => {
-
+  const router= useRouter();
+  const {t} = useTranslation()
+  const {locale: activeLocale} = router;
+  const language = activeLocale;
   return ( 
   <Section id="skogen">
     <Upperpadding></Upperpadding>
-  <h2>Ursäkta skogen, vi bygger om</h2>
-  <p>Tema: Temporary spaces. Mitt bidrag var URSÄKTA SKOGEN VI BYGGER OM, ett verk i två delar: </p>
-  <h4>URSÄKTA SKOGEN VI BYGGER OM I</h4>
+  <h2>{t("artistpages.forest.h2")}</h2>
+  <p>{t("artistpages.forest.desc")} </p>
+  <h4>{t("artistpages.forest.title1")}</h4>
   <ReactPlayer url="https://soundcloud.com/tova-jertfelt/ursakta-skogen-vi-bygger-om?si=2811fc45bf98463d99bf3583c3e89756&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 width="100%"
 height="100px"
@@ -168,8 +173,9 @@ config={{
   }
 }}
 />
-<p>Besökaren möter en artificiell skog, en skog som fått flytta på sig efter att kommunen vill gentrifiera och bygga bort skogen. Besökaren står i den artificiella skogen, omringad av biltrafik, och lyssnar på ljudklipp från kommunen som handlar om dess storslagna planer på att värna om naturen - utan att värna om naturen - i stadsdelen Eriksberg. Kommunen har planer på att bygga hus på/i skogsområdena där så att människan kan vara nära naturen, fast ändå inte. Det blir ett kritiskt projekt, där man får förhålla sig till idén om vad som är mänskligt, naturligt, temporärt och hälsosamt. Till vilket pris? I ljudklippet bryts även in fakta om fladdermössen, som bor i Eriksbergs skogar, ljudet av artificiell fågelsång, och diverse dikter.</p>
-<ImageWrapper>
+<p>{t("artistpages.forest.longdesc")}</p>
+<p>{t("artistpages.forest.material")} </p>
+<ImageWrapper horizontal>
 <Zoom>
 <Image src={ursakta1}
 className="customzoom"
@@ -178,9 +184,8 @@ alt="Part One, showing some of the paintings"
 </Zoom>
 </ImageWrapper>
 
-<p>Akrylmålningar, torrpastell, ljudinstallation. 
-Verken är till salu </p>
-<ImageWrapper>
+
+<ImageWrapper horizontal>
 <Zoom>
 <Image src={ursakta2}
 className="customzoom"
@@ -188,33 +193,122 @@ alt="Part One, showing some of the paintings"
 ></Image>
 </Zoom>
 </ImageWrapper>
-<h4>URSÄKTA SKOGEN VI BYGGER OM II</h4>
-<p>I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.</p>
+<Upperpadding></Upperpadding>
 
+
+<h4>{t("artistpages.forest.title2")}</h4>
+<p>{t("artistpages.forest.desc2")}</p>
+<br/>
+<Zoom>
   <ImageWrapper>
-    <Image alt="Sign outside"
+    <Image alt="Sign outside text"
     quality={100}
     style={{
       objectFit: 'contain',
     }}
-    src={ursakta3}/>
+    src={ursakta6}/>
   </ImageWrapper>
-  <p>Curator: Alba Folgado</p>
-  <p>Läs mer om <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank"/>Rusmus</p>
-  <ImageWrapper>
-<Zoom>
-<Image src={ursakta4}
-className="customzoom"
-alt="Sign outside"
-></Image>
 </Zoom>
-<Image src={ursakta5}
-className="customzoom"
-alt="Sign outside"
-></Image>
-</ImageWrapper>
-
+{language !== "sv" && 
+<TextInEnglish>
+  <p>Translation: <br></br></p>
+  <h3>
+<b>We strive to a <br/> growing city</b><br/></h3>
+<p> 
+  In 2030 the municipality will become climate neutral.<br/>
+  Noone knows how it will happen.<br/>
+  Our vision is business focus,<br></br>
+  traffic and population growth,<br></br>
+  and straight lines,<br></br>
+  everything from the human point of view.<br></br>
+  Everything in the town shall have a purpose. <br></br>
+  Unproductivity does not belong. <br></br>
+  Ineffectiveness is extinct.<br></br>
+  We want to make our mark. <br></br>
+  Clean away the weed. <br></br>
+  We have new ideals now. <br></br>
+  History does not repeat itself.<br></br>
+  We are taking the nature into consideration.
+</p>
+</TextInEnglish>}
+<Zoom>
+  <ImageWrapper>
+    <Image alt="Sign outside text"
+    quality={100}
+    style={{
+      objectFit: 'contain',
+    }}
+    src={ursakta7}/>
+  </ImageWrapper>
+</Zoom>
+{language !== "sv" && 
+<TextInEnglish>
   
+  <h3>
+<b>This park will be <br/> replaced</b><br/></h3>
+<p> 
+  At the municipality&#39;s inventory<br/>
+  it was decided that it<br/>
+  does not follow our vision for<br></br>
+  green structure. <br/>
+  It no longer fits in with <br/>
+  our new street ideals,<br/>
+  does not match our <br/>
+  fresh urban landscape architecture,<br/>
+  it does not either contribute to<br/>
+  any profit.<br/>
+  We will therefore replace the <br/>
+  bushes, gravel paths, <br/>
+  trees, bird nests and <br/>
+  the ant hill in the southwest corner <br/>
+  with a circular, sustainable <br/>
+  partly underground <br/>
+  parking space that will <br/>
+  have room for nine cars.
+</p>
+</TextInEnglish>}
+
+<Zoom>
+  <ImageWrapper>
+    <Image alt="Sign outside text"
+    quality={100}
+    style={{
+      objectFit: 'contain',
+    }}
+    src={ursakta8}/>
+  </ImageWrapper>
+</Zoom>
+{language !== "sv" && 
+<TextInEnglish>
+  
+  <h3>
+<b>Here we will build <br/> new living spaces</b><br/></h3>
+<p> 
+  350 new apartments <br/>
+  four to sex floors <br/>
+  with a modern touch, <br/>
+  green electricity and <br/>
+  accessible to everyone. <br/>
+  Taking into account the conditions of the area<br/>
+  that is to say current housings<br/>
+  we sadly have to evict<br/>
+  the bats, the aphids, and the vipers. <br/>
+  They have been offered to participate in <br/>
+  the municipality&#39;s planning program<br/>
+  for urban development<br/>
+  but they cannot afford the <br/>
+  down payment.<br/>
+  The sledding hill will remain, <br/>
+  so that the children may play in wintertime.
+</p>
+</TextInEnglish>}
+  <p className="curator">Curator: Alba Folgado</p>
+  <ImageSlider slides={ursaktaImg}
+  format=""
+  type="light"
+></ImageSlider>
+<p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
+
   </Section> );
 }
  

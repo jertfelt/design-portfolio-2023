@@ -102,8 +102,48 @@
       "smalldescription": "Bachelor of Fine Arts degree project at Konstfack College of Arts, Crafts and Design 2016.",
       "readLink":"Read the bachelor degree paper here. ",
       "description1":"Bullying is a problem that affects the whole of society. It influences and permeates our coexistence. Bullying is happening right now, in schools, workplaces and other social contexts. Research shows that bullying stems from destructive group behaviours, that humans as social animals use bullying as a tool to obtain and retain power. Despite this, the image presented in the media is about the individual. In other words: it is the individual that is bullied and it is the individual that does the bullying, which in turn leads to an idea of bullying as an individual problem rather than a social one. This should be criticised, but it should also be changed! My project is about shifting the focus from the individual and towards formulating a movement and influencing opinion. It is about mobilising, inspiring, informing and, in the end, changing things. We can change. It is time. #Wecandobetter "
+    },
+    "dreams":{
+      "desc":"Textile art, digital collage/painting and animation, 2015.",
+      "desc2":"Exhibitioned at JUSTE Gallery and Hornhuset, 2015.",
+      "longerdesc": "I have many reoccuring dreams. When I lived abroad my nights were filled with terrors and alternative universes, that I decided to try and illustrate. It is a subjective piece of art, but it is also something recognizable as we are all have dreams, and can feel terror, stress, homesickness and love while we dream.",
+      "longerdesc2":"In this project I worked with textile art, I printed batik and created a patchwork blanket and pillows that together created a nightmarish bed. I also used the textile prints and animated and created large digital paintings from the different pieces."
     }
 
+  },
+  "main":{
+    "first":"I am a multidisciplinary artist based in Sweden. My body of work is, among everything, graphic sheets, tactile collage, line drawings, acrylic paintings, as well as digital paintings.",
+    "second":" As an artist, I mainly orientate myself with words and images, preferably in correlation, either in the form of spoken word or text. By combining visual art, in either painting, animation or dry pastel, with my texts in the form of sound or written text, I seek an interplay between the visual and the linguistic message. There is neither a subordinate nor a superior order between image and text, but it is the contexts and storytelling that matter in my works. ",
+    "third":"I move between the indignant, emotional and the observant. My manner when it comes to drawing is  ",
+    "linkOmKonst":"drawing image ideas and expressions from the cartoonists who were numerous just under ten years ago.",
+    "thirdpart2":" and I like to work with site-specific phenomena, or to deal with the darkness of humanity. I process psychology, life, death, social issues and human relations to each other and other thigns. I exhibit, code websites, and participate in poetry slams and improv theaters.",
+    "h2U":"Exhibitions",
+    "h2P":"Publications",
+    "h4MAL":"Comic published in MAL 2021",
+    "footerInfo":"Website built by "
+
+  },
+  "h1":"Excuse the forest, we are rebuilding",
+  "h2":"We can do better",
+  "h3":"I'm a tree",
+  "forest":{
+    "h2":"Excuse the forest, we are rebuilding",
+    "desc":"Theme: Temporary spaces. My admission was in two parts:",
+    "title1":"Excuse the forest, we are rebuilding I",
+    "longdesc":"The visitor is met by an artificial forest that has been moved after that the municipality wants to gentrify and build away the forest. The visitor is standing in the artificial echoe of a forest, surrounded by traffic and scrapers, and listens to bird songs. With the song, audio from the municipality communications is echoing through the room, where they talk about their plans to shelter the nature - without actually sheltering the nature. The municipality has plans on building housings on/in the forests there so that the inhabitants can be closer to nature, but at the same time only on their terms. It is a critical project, where the visitor is faced with what is human, nature, temporary and healthy.",
+    "material":" Acryllic paintings, dry pastels, audio installations (spoken word and collage audio). The paintings are for sale.",
+    "title2":"Excuse the forest, we are rebuilding II",
+    "desc2":"In this part I am considering the temporary fixes on society-wide problems. In a changeable city like Uppsala there is a plan on expanding their population, and that means that green areas will shrink in favour for modern housings. In the hunt for change and “improvement” an eye of the storm is born, where fine words such as sustainability, green structures and proximity to nature are used as decorations. At the same time we talk about natural value, what is more or less desirable? The language on the signs, as well as their rhythm and line breaks are taken directly from the communication of Uppsala. I have manipulated the word order so that the contrast between itnention and result is made visible. The work is a portrait, a parody, and a testimony.",
+    "linktxt":"Read more about ",
+    "linktxt2":" here"
+
+  },
+  "tree":{
+    "h2":"I am a tree",
+    "p1":"Exhibition September 2021",
+    "desc":"“I am a tree” is an exhibition about mindfulness, about being on sick leave, and about humanity’s need for order. With dry pastel paitnings, I have created a forest in the exhibition space. Then, as the visitor is listening to the sound piece, I subject the visitor to an exercise in mindfulness - which slowly and surely degenerates into a storm of emotions. The sound recording is a mixture of open source, my own singing, diary texts, practice matieral and sounds I picked up around Uppsala. I created approximately 50 trees of different sizes which, individually or together, with or without the sound work, have their own personality. In a way, the exhibition is therefore very personal, almost like an abstract self-portrait."
+
   }
+
   
 }

@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -39,15 +40,16 @@ const Links = ({
   bedbug,
   setBedBug
 }) => {
+  const {t} = useTranslation()
   return ( 
   <LinkDiv>
-    <a href="#skogen" onClick={() => setSkogen(!skogenIsTrue)}><h2>Ursäkta skogen, vi bygger om</h2></a>
+    <a href="#skogen" onClick={() => setSkogen(!skogenIsTrue)}><h2>{t("artistpages.h1")}</h2></a>
     <hr></hr>
-    <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>Vi kan bättre</h2></Link>
+    <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>{t("artistpages.h1")}</h2></Link>
     <hr></hr>
     <Link href="#bedbug" onClick={() => setBedBug(!bedbug)}><h2>Not like a bedbug</h2></Link>
     <hr></hr>
-    <Link href="#tree" onClick={() => setTree(!tree)}><h2>Jag är ett träd</h2></Link>
+    <Link href="#tree" onClick={() => setTree(!tree)}><h2>{t("artistpages.h1")}</h2></Link>
     <hr></hr>
     <Link href="#dreams" onClick={() => setDream(!dream)}><h2>When I dream, I dream about you</h2></Link>
   </LinkDiv> );
