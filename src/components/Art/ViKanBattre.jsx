@@ -31,11 +31,16 @@ h2{
 p{
   line-height:150%;
   padding-bottom:1rem;
+  @media (min-width:500px){
+    max-width:80vw;
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
 }
 a{
   line-height:150%;
-  background-color:${({theme}) => theme.artcolors.primaryLightest};
-  padding:4px;
+  background-color:${({theme}) => theme.artcolors.primary};
+  padding:6px;
   border-radius:19px;
 }
 `
@@ -68,7 +73,12 @@ img{
   margin-top:-.5rem;
   width:100vw;
   height: 70vh;
+  @media (min-width:500px){
+    height:100vh;
+  }
 }
+
+
 ${props => 
   props.horizontal && 
   css`  

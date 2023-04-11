@@ -29,6 +29,11 @@ h2{
 }
 p{
   padding-bottom:2rem;
+  @media (min-width:500px){
+    max-width:80vw;
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
 }
 `
 const Dreams = () => {
@@ -44,7 +49,7 @@ const Dreams = () => {
     <ImageSlider 
     slides={images1}
     format="horizontal"
-    type="dark"/>
+    type="light"/>
    
     <p>{t("artistpages.dreams.desc2")}</p>
     
@@ -53,7 +58,8 @@ const Dreams = () => {
     <ImageSlider 
     slides={images2}
     format=""
-    type="light"/>
+    type="dark"/>
+    <br/>
     <br/>
     <p>{t("artistpages.dreams.longerdesc2")}</p>
   

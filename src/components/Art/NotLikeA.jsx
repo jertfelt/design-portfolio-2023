@@ -18,9 +18,19 @@ color:${({theme}) => theme.textSecondary};
 p{
   line-height:150%;
   padding-bottom:2rem;
+  @media (min-width:500px){
+    max-width:80vw;
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
 }
 .explanation{
   font-size:12px;
+  @media (min-width:500px){
+    max-width:60vw;
+    font-size:1rem;
+    line-height:1.5rem;
+  }
 }
 h2{
   font-size:10vh;

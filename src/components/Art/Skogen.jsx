@@ -3,20 +3,15 @@ import Image from "next/image";
 import ReactPlayer from "react-player";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
-
 import ursakta1 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022.png"
 import ursakta2 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-vagg2.png"
 import ursakta3 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt3.png"
 import ursakta4 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt1.png"
 import ursakta5 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt-2.png"
-import { useCallback, useState } from "react";
-
 import ursakta6 from "../../../public/art/skylt--jertfelt--klimatneutral+copy.png"
 import { ImageWrapper } from "./ViKanBattre";
 import ursakta7 from "../../../public/art/skylt--jertfelt--parken-1.png"
 import ursakta8 from "../../../public/art/skylt--jertfelt--pulkabacken+copy.png"
-
 import ImageSlider from "./Slider";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -35,8 +30,21 @@ h2{
   margin-top:0;
   margin-bottom:0;
 }
+h4{
+  @media (min-width:500px){
+    max-width:80vw;
+    font-size:2.2rem;
+    line-height:2.8rem;
+    margin-bottom:4px;
+  }
+}
 p{
   line-height:150%;
+  @media (min-width:500px){
+    max-width:80vw;
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
 }
 .curator{
   padding-bottom:2rem;
@@ -147,7 +155,15 @@ img [data-rmiz-btn-zoom],
 
 const TextInEnglish = styled.div`
 padding-top:3rem;
-padding-bottom:5rem;`
+padding-bottom:5rem;
+@media (min-width:500px){
+  p{max-width:70vw;}
+  h3{
+    font-size:30px;
+  }
+}
+
+`
 const Upperpadding = styled.div`
 height:4em;`
 

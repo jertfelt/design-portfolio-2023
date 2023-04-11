@@ -25,6 +25,12 @@ max-width:100%;
 padding-top:10rem;
 p{
   line-height:1.5rem;
+  @media (min-width:500px){
+    max-width:80vw;
+    word-spacing:3px;
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
 }
 hr{
   color:${({theme}) => theme.artcolors.primaryLighter};
@@ -32,19 +38,33 @@ hr{
 .margin{
   margin-top:2rem;
 }
+
 `
 const WrapperExhibitions = styled.div`
 background: ${({theme}) => theme.artcolors.primaryLightest};
 color: ${({theme}) => theme.textSecondary};
 padding:2rem;
 padding-bottom:5rem;
+.description{
+   font-family:JetBrains Mono;
+   padding-left:3rem;
+  @media (min-width:500px){
+   padding-left:3.5rem;
+  }
+}
+h2{
+  color:${({theme}) => theme.artcolors.primary};
+  font-size:2rem;
+}
+
 `
 
 const WrapperFooter = styled.footer`
-background:${({theme}) => theme.textPrimary};
-color: ${({theme}) => theme.artcolors.primary};
+background:${({theme}) => theme.artcolors.primary};
+color: ${({theme}) => theme.artcolors.primaryLightest};
 height:10vh;
 padding:1rem;
+padding-top:2rem;
 margin-top:-2rem;
 display:flex;
 flex-direction:row;
@@ -99,7 +119,7 @@ const [bedbug, setBedBug] = useState(false)
     {t("artistpages.main.first")}</p>
     <p>{t("artistpages.main.second")}</p>
     <p>
-    {t("artistpages.main.third")}<Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;{t("artistpages.main.linkOmKonst")}n&quot;</Link>{t("artistpages.main.thirdpart2")}
+    {t("artistpages.main.third")}<Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;{t("artistpages.main.linkOmKonst")}&quot;</Link>{t("artistpages.main.thirdpart2")}
     </p>
 
     <hr className="margin"></hr>
@@ -129,31 +149,27 @@ const [bedbug, setBedBug] = useState(false)
     {dream && <Dreams id="dreams"/>}
     <WrapperExhibitions>
 
-    <h2>{t("artistpages.main.h2U")}</h2>
+    <h2 className="heading">{t("artistpages.main.h2U")}</h2>
    
     <Exhibitions language={language}/>
-    <h2>{t("artistpages.main.h2P")}</h2>
+    <h2 className="heading">{t("artistpages.main.h2P")}</h2>
     <h3>
       Not Like a Bedbug
     </h3>
-    <h4>{t("artistpages.main.h4MAL")}</h4>
+    <h4 className="description">{t("artistpages.main.h4MAL")}</h4>
    
     </WrapperExhibitions>
-    {/* <Standalones>
-  
-      <Image src={survivor} alt=""/>
-      <Image src={three} alt=""/>
-
-    </Standalones> */}
+    <Standalones>
+      <Image src={three} alt="Three phases of burning out, digital art 2018"/>
+    </Standalones>
 
 
     <WrapperFooter>
-      
     <a href="https://www.instagram.com/jertfelt/"
     target="_blank">
     <button>Instagram</button>
     </a>
-    <p>{t("artistpages.main.footerinfo")}<br/>
+    <p>{t("artistpages.main.footerInfo")}<br/>
     Tova Jertfelt 2023</p>
     </WrapperFooter>
     </Section> );

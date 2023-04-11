@@ -15,13 +15,17 @@ min-height:50vh;
 padding:2rem;
 background: ${({theme}) => theme.artcolors.primaryLighter};
 h2{
- 
   font-size:10vh;
   line-height:10vh;
   margin-bottom:0;
 }
 p{
   line-height:150%;
+  @media (min-width:500px){
+    max-width:80vw;
+    word-spacing:3px;
+    
+  }
 }
 .desc{
   padding-top:4rem;
