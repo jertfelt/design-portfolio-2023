@@ -5,7 +5,10 @@ import gifVKB from "../../../public/art/ba_gdi_tova_jertfelt_01.gif"
 import viKanBetter from "../../../public/art/vi-kan-battre-tova-jertfelt-kandidatexamen-2016-konstfack--3.png"
 import dreams1 from "../../../public/art/dreams-tova-jertfelt.png"
 import dreams2 from "../../../public/art/dreams-tova-jertfelt-bald.png"
-import dreams3 from "../../../public/art/dreams--2.gif"
+import fire from "../../../public/art/fire-color-jertfelt copy.png"
+import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
+import stones from "../../../public/art/stones_tovajertfelt-litografi.jpg"
+
 import styled from "styled-components";
 import Image from "next/image";
 import About from "./About";
@@ -32,7 +35,7 @@ z-index:1;
 position:absolute;
 top:50vh;
 @media (max-width:900px){
-  top:0vh;
+  top:-5rem;
   width:100%;
   max-width:100vw;
 }
@@ -45,10 +48,10 @@ const MainTitle = () => {
   const {locale: activeLocale} = router;
   const language = activeLocale;
   const [newName, setnewName] = useState("");
-  const [newPic, setPic] = useState(dreams1)
+  const [newPic, setPic] = useState(fire)
   
 const shuffle = useCallback(() => {
-  const pics = [artmadethis1, ocean, gifVKB, viKanBetter, dreams3, dreams2, dreams1, ursaktaSign,]
+  const pics = [artmadethis1, ocean, gifVKB, viKanBetter, survivor, dreams2, fire, ursaktaSign,]
   const index = Math.floor(Math.random() * pics.length);
   setPic(pics[index]);
   const names = ["tankeväckande",  "vacker", "kritisk", "utforskande", "audiovisuell", "taktil",  "multidisciplinär", "digital"]

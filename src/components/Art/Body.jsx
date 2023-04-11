@@ -6,10 +6,14 @@ import Exhibitions from "./Exhibitions";
 import Links from "./Links";
 import Skogen from "./Skogen";
 import { useState } from "react";
-import ViKanBattre from "./ViKanBattre";
+import ViKanBattre, { ImageWrapper } from "./ViKanBattre";
 import NotLikeA from "./NotLikeA";
 import Tree from "./Tree";
 import Dreams from "./Dreams";
+import Image from "next/image";
+import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
+import fire from "../../../public/art/qqww.jpg"
+import three from "../../../public/art/fire-color-jertfelt copy.png"
 
 const Section = styled.div`
 padding-top:450px;
@@ -63,6 +67,21 @@ padding:8px;
 }
 `
 
+const Standalones = styled.div`
+margin:0;
+padding:0;
+display:flex;
+flex-direction:column;
+img{
+  width:100%;
+  margin-left:0;
+  height:100%;
+  margin-bottom:0;
+
+}
+padding-bottom:1rem;
+`
+
 const Body = () => {
 const router= useRouter();
 const {locales, locale: activeLocale} = router;
@@ -82,6 +101,7 @@ const [bedbug, setBedBug] = useState(false)
     <p>
     Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning <Link href="https://www.omkonst.com/16-konstfackskolan-varsutstallning.shtml"> &quot;hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan&quot;</Link> och jag jobbar gärna med platsspecifika fenomen. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.
     </p>
+
     <hr className="margin"></hr>
     <Links
     skogenIsTrue = {skogenIsTrue}
@@ -121,10 +141,16 @@ const [bedbug, setBedBug] = useState(false)
     <h4>Serie publicerad i MAL magasin 2021</h4>
    
     </WrapperExhibitions>
-   
+    {/* <Standalones>
+  
+      <Image src={survivor} alt=""/>
+      <Image src={three} alt=""/>
+
+    </Standalones> */}
 
 
     <WrapperFooter>
+      
     <a href="https://www.instagram.com/jertfelt/"
     target="_blank">
     <button>Instagram</button>
