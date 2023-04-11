@@ -41,15 +41,38 @@ const Links = ({
   setBedBug
 }) => {
   const {t} = useTranslation()
+  const changeView = (e) => {
+    console.log(e.target.parentElement.id)
+    switch (e.target.parentElement.id){
+      case "skogen2":
+        setSkogen(!skogenIsTrue)
+        setVKB(false)
+        setTree(false)
+        setDream(false)
+        setBedBug(false)
+        break;
+      case "vKB2":
+        setVKB(!vKB)
+        setTree(false)
+        setDream(false)
+        setBedBug(false)
+        setSkogen(false)
+        break;
+        default:
+          break;
+    }
+  }
   return ( 
   <LinkDiv>
-    <a href="#skogen" onClick={() => setSkogen(!skogenIsTrue)}><h2>{t("artistpages.h1")}</h2></a>
+    <a href="#skogen" 
+    id="skogen2"
+    onClick={(e) => changeView(e)}><h2>{t("artistpages.h1")}</h2></a>
     <hr></hr>
-    <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>{t("artistpages.h1")}</h2></Link>
+    <Link href="#VKB" onClick={() =>setVKB(!vKB)}><h2>{t("artistpages.h2")}</h2></Link>
     <hr></hr>
     <Link href="#bedbug" onClick={() => setBedBug(!bedbug)}><h2>Not like a bedbug</h2></Link>
     <hr></hr>
-    <Link href="#tree" onClick={() => setTree(!tree)}><h2>{t("artistpages.h1")}</h2></Link>
+    <Link href="#tree" onClick={() => setTree(!tree)}><h2>{t("artistpages.h3")}</h2></Link>
     <hr></hr>
     <Link href="#dreams" onClick={() => setDream(!dream)}><h2>When I dream, I dream about you</h2></Link>
   </LinkDiv> );
