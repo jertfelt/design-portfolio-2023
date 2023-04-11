@@ -105,6 +105,12 @@ img{
     height:100%;
     width:100vw;
   }
+  @media (min-width:880px){
+    width:80vw;
+    max-width:700px;
+    padding-left:5rem;
+    margin:2rem;
+  }
 }
 
 ${props => 
@@ -124,6 +130,14 @@ img{
     width:100vw;
   }
 }
+@media (min-width:800px){
+  img{
+    width:50vw;
+    max-width:800px;
+    padding-left:20%;
+  }
+
+}
  @media(min-width:900px){
     img{
       padding-left:2rem;
@@ -132,7 +146,7 @@ img{
       
       
     }
-      
+   
     } `}
 
 ${props => 
@@ -155,7 +169,7 @@ ${props =>
     @media(min-width:800px){
       width:100%;
       max-width:50vw;
-      
+      padding:0;
     }
   }
  `
@@ -169,11 +183,39 @@ ${props =>
   min-width:100vw;
   width:100%;
   height:100%;
+  @media (min-width:800px){
+    min-width:500px;
+    width:100%;
+    max-width:700px;
+
+    height:50%;
+    padding-left:5rem;
+    
+    }
+ }
+ .slap{
+ 
+    @media (min-width:800px){
+      padding-left:0;
+      margin-left:-4rem;
+    
+  }
+ }
+ .wolf{
+
+    @media (min-width:800px){
+      padding-left:12rem;
+      margin-bottom:10rem;
+    
+  }
+ 
  }
  margin-top:2rem;
  margin-bottom:-2.5rem;
  margin-left:-2rem;
+
  `
+ 
 }
 ${props => 
   props.horizontal_gallery && 
@@ -182,6 +224,7 @@ ${props =>
   min-width:100vw;
   width:100%;
   height:100%;
+
  }
  margin:1rem;
  margin-left:-2rem;
@@ -194,7 +237,9 @@ ${props =>
   min-width:100vw;
   width:100%;
   height:100%;
+ 
  }
+ 
  margin-top:-3rem;
  margin-left:-2rem;
  `
@@ -248,11 +293,11 @@ alt="The cube"
 </ImageWrapper>
     <p>{t("artistpages.vikanbattre.description1")}</p>
     <Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
-    <ImageWrapper 
+<ImageWrapper 
     horizontal>
     <Zoom>
 <Image src={vikan5}
-className="customzoom"
+className="slap"
 alt="Detail from the wall, a boy slapping another boy"
 ></Image>
 </Zoom>
@@ -261,7 +306,7 @@ alt="Detail from the wall, a boy slapping another boy"
     horizontal>
     <Zoom>
 <Image src={vikan6}
-className="customzoom"
+className="wolf"
 alt="Detail from the wall, girl chased by wolves"
 ></Image>
 </Zoom>

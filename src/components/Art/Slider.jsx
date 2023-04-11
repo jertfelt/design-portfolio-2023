@@ -30,12 +30,14 @@ user-select: none;
 }
 @media (min-width:800px){
   font-size:4rem;
+  right:20%;
 }
 }
 .right-arrow{
 right: 5px;
 @media (min-width:800px){
-  right:35px;
+  
+  right:20%;
 }
 }
 .right-arrow-dark{
@@ -45,13 +47,15 @@ right: 5px;
     color: ${({theme}) => theme.artcolors.primaryLightest};
   }
   @media (min-width:800px){
-    right:35px;
+   
+    right:20%;
   }
 }
 .left-arrow{
   left: 5px;
   @media (min-width:800px){
-    left:35px;
+   
+    left:10%;
   }
 }
 .left-arrow-dark{
@@ -61,7 +65,7 @@ right: 5px;
     color: ${({theme}) => theme.artcolors.primaryLighter};
   }
   @media (min-width:800px){
-    left:35px;
+    left:10%;
   }
 }
 .slide{
