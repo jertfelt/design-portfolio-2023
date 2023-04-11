@@ -39,7 +39,7 @@ const Dreams = () => {
     
     <p>Textilkonst, digitalt collage/måleri och animation, 2015.</p>
 
-    <Image src={bald} alt=""/>
+    <Image src={bald} alt=""  quality={100}/>
 
     <p>Uställt på JUSTE Gallery 2015 och Hornhuset, 2015.</p>
   

@@ -51,7 +51,7 @@ const MainTitle = () => {
   const [newPic, setPic] = useState(fire)
   
 const shuffle = useCallback(() => {
-  const pics = [artmadethis1, ocean, gifVKB, viKanBetter, survivor, dreams2, fire, ursaktaSign,]
+  const pics = [artmadethis1, ocean, gifVKB, viKanBetter, survivor, dreams2, fire, ursaktaSign, stones]
   const index = Math.floor(Math.random() * pics.length);
   setPic(pics[index]);
   const names = ["tankeväckande",  "vacker", "kritisk", "utforskande", "audiovisuell", "taktil",  "multidisciplinär", "digital"]
