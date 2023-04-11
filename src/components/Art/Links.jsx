@@ -1,9 +1,9 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { linksArt } from "@component/data/linksInArt";
 
 const LinkDiv = styled.div`
-
 font-size: 5vh;
 line-height:7.5vh;
 @media (max-width:800px){
@@ -15,6 +15,10 @@ h2{
   word-spacing: -8.5px;
   margin-bottom: 26px;
   margin-top:6px;
+  @media (min-width:650px){
+    max-width:80%;
+    flex-wrap:wrap;
+  }
 }
 a{
   
@@ -26,6 +30,11 @@ a{
 hr{
   color:${({theme}) => theme.artcolors.primaryLighter};
 }
+${props => 
+  props.first && css`{
+    padding:2rem;
+   
+  }` }
 `
 
 const Links = ({
@@ -38,7 +47,9 @@ const Links = ({
   dream,
   setDream,
   bedbug,
-  setBedBug
+  setBedBug,
+  setLinksOnTop,
+  outsideContent
 }) => {
   const {t} = useTranslation()
   const changeView = (e) => {
@@ -51,6 +62,7 @@ const Links = ({
         setTree(false)
         setDream(false)
         setBedBug(false)
+        setLinksOnTop(false)
         break;
       case "vKB2":
         setVKB(!vKB)
@@ -58,6 +70,7 @@ const Links = ({
         setDream(false)
         setBedBug(false)
         setSkogen(false)
+        setLinksOnTop(false)
         break;
         case "bedbugid":
           setVKB(false)
@@ -65,6 +78,7 @@ const Links = ({
         setDream(false)
         setBedBug(!bedbug)
         setSkogen(false)
+        setLinksOnTop(false)
         break;
         case "treeid":
           setVKB(false)
@@ -72,6 +86,7 @@ const Links = ({
         setDream(false)
         setBedBug(false)
         setSkogen(false)
+        setLinksOnTop(false)
           break;
         case "dreamid":
         setVKB(false)
@@ -79,6 +94,7 @@ const Links = ({
         setDream(!dream)
         setBedBug(false)
         setSkogen(false)
+        setLinksOnTop(false)
           break;
         default:
         setVKB(false)
@@ -86,11 +102,24 @@ const Links = ({
         setDream(false)
         setBedBug(false)
         setSkogen(false)
+        setLinksOnTop(true)
           break;
     }
   }
+
   return ( 
-  <LinkDiv>
+    <>{outsideContent === "yes" ? 
+    <LinkDiv first>
+      {/* {linksArt.map(item => {
+        <div id={item.idDiv}>
+          <a href={item.href} id={item.id} onClick={(e) => changeView(e)}>
+            <h2>
+              {item.translation && <>{t(`"${item.on_click}"`)}</>}
+              {item.translation !== true && <>{item.on_click} </>}
+            </h2>
+          </a>
+        </div>
+      })} */}
     <a href="#skogen" 
     id="skogen2"
     onClick={(e) => changeView(e)}><h2>{t("artistpages.h1")}</h2></a>
@@ -109,7 +138,29 @@ const Links = ({
     <hr></hr>
     <Link href="#dreams"
     id="dreamid" onClick={(e) => changeView(e)}><h2>When I dream, I dream about you</h2></Link>
-  </LinkDiv> );
+    </LinkDiv>
+
+    : <LinkDiv>
+    <a href="#skogen" 
+    id="skogen2"
+    onClick={(e) => changeView(e)}><h2>{t("artistpages.h1")}</h2></a>
+    <hr></hr>
+    <Link href="#VKB" 
+    id="vKB2"
+    onClick={(e) => changeView(e)}><h2>{t("artistpages.h2")}</h2></Link>
+    <hr></hr>
+    <Link href="#bedbug" 
+    id="bedbugid"
+    onClick={(e) => changeView(e)}><h2>Not like a bedbug</h2></Link>
+    <hr></hr>
+    <Link href="#tree" 
+    id="treeid"
+    onClick={(e) => changeView(e)}><h2>{t("artistpages.h3")}</h2></Link>
+    <hr></hr>
+    <Link href="#dreams"
+    id="dreamid" onClick={(e) => changeView(e)}><h2>When I dream, I dream about you</h2></Link>
+  </LinkDiv>}
+  </>);
 }
  
 export default Links;

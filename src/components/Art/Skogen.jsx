@@ -48,9 +48,19 @@ p{
 }
 .curator{
   padding-bottom:2rem;
+  @media (min-width:550px){
+    padding-top:0;
+    margin-top:0;
+    padding-bottom:4rem;
+  }
 }
 .link{
   padding-top:1rem;
+  margin-bottom:0;
+  text-align:center;
+  @media (min-width:550px){
+    padding-top:3rem;
+  }
 }
 `
 
@@ -162,10 +172,29 @@ padding-bottom:5rem;
     font-size:30px;
   }
 }
+@media (min-width:800px){
+  h3{
+    font-size:1.5rem;
+  }
+  p{font-size:1rem;}
+  padding:0;
+}
 
 `
 const Upperpadding = styled.div`
 height:4em;`
+
+const Grid800 = styled.div`
+@media (min-width:800px){
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2rem;
+  padding-left:2rem;
+  row-gap:2rem;
+  align-items:center;
+}
+
+`
 
 const Skogen = () => {
   const router= useRouter();
@@ -210,13 +239,12 @@ alt="Part One, showing some of the paintings"
 </Zoom>
 </ImageWrapper>
 <Upperpadding></Upperpadding>
-
-
 <h4>{t("artistpages.forest.title2")}</h4>
 <p>{t("artistpages.forest.desc2")}</p>
 <br/>
+<Grid800>
 <Zoom>
-  <ImageWrapper>
+  <ImageWrapper grid>
     <Image alt="Sign outside text"
     quality={100}
     style={{
@@ -248,7 +276,7 @@ alt="Part One, showing some of the paintings"
 </p>
 </TextInEnglish>}
 <Zoom>
-  <ImageWrapper>
+  <ImageWrapper grid>
     <Image alt="Sign outside text"
     quality={100}
     style={{
@@ -285,7 +313,7 @@ alt="Part One, showing some of the paintings"
 </TextInEnglish>}
 
 <Zoom>
-  <ImageWrapper>
+  <ImageWrapper grid>
     <Image alt="Sign outside text"
     quality={100}
     style={{
@@ -318,6 +346,7 @@ alt="Part One, showing some of the paintings"
   so that the children may play in wintertime.
 </p>
 </TextInEnglish>}
+</Grid800>
   <p className="curator">Curator: Alba Folgado</p>
   <ImageSlider slides={ursaktaImg}
   format=""

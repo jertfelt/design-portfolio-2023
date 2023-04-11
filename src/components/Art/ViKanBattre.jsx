@@ -27,6 +27,12 @@ h2{
   padding-top:0;
   margin-top:0;
   margin-bottom:0;
+  @media (min-width:900px){
+    padding-left:5rem;
+    padding-right:5rem;
+    max-width:70vw;
+    padding-bottom:2rem;
+  }
 }
 p{
   line-height:150%;
@@ -36,30 +42,52 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
+  @media (min-width:900px){
+    padding-left:5rem;
+    padding-right:5rem;
+    max-width:70vw;
+  }
 }
 a{
   line-height:150%;
   background-color:${({theme}) => theme.artcolors.primary};
   padding:6px;
   border-radius:19px;
+  @media (min-width:900px){
+    margin-left:5rem;
+    max-width:70vw;
+  }
 }
 `
 export const Upperpadding = styled.div`
-height:2em;`
+height:2em;
+@media 
+`
 
 export const VideoWrapper = styled.div`
 margin:2rem;
-margin-bottom:0;
+margin-bottom:5rem;
 margin-left:-2rem;
 max-width:100vw;
 div{
   max-width:100vw;
 }
+@media(min-width:650px){
+  div{
+    width:100%;
+    min-width:100vw;
+  }
+}
+@media (min-width:800px){
+  div{
+    min-width:80vw;
+    padding-left:2rem;
+  }
+}
 ${props => 
   props.first && 
   css` {  
     margin-top:-2rem;
-
   }`}
 `
 export const ImageWrapper = styled.div`
@@ -74,8 +102,63 @@ img{
   width:100vw;
   height: 70vh;
   @media (min-width:500px){
-    height:100vh;
+    height:100%;
+    width:100vw;
   }
+}
+
+${props => 
+  props.max900 && 
+  css` margin:0;
+padding:0;
+margin-left:-2rem;
+width:100%;
+max-width:90vw;
+position:relative;
+img{
+  margin-top:-.5rem;
+  width:100vw;
+  height: 70vh;
+  @media (min-width:500px){
+    height:100%;
+    width:100vw;
+  }
+}
+ @media(min-width:900px){
+    img{
+      padding-left:2rem;
+      max-width:100%;
+      padding-top:0;
+      
+      
+    }
+      
+    } `}
+
+${props => 
+  props.grid && 
+  css`  
+  margin:0;
+  padding:0;
+  margin-left:-2rem;
+  width:100%;
+  max-width:90vw;
+  position:relative;
+  img{
+    margin-top:-.5rem;
+    width:100vw;
+    height: 70vh;
+    @media (min-width:500px){
+      height:100%;
+      width:100vw;
+    }
+    @media(min-width:800px){
+      width:100%;
+      max-width:50vw;
+      
+    }
+  }
+ `
 }
 
 
@@ -163,9 +246,6 @@ alt="The cube"
 ></Image>
 </Zoom>
 </ImageWrapper>
-
- 
-  
     <p>{t("artistpages.vikanbattre.description1")}</p>
     <Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
     <ImageWrapper 

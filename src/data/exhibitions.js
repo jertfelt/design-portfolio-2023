@@ -126,7 +126,7 @@ export const exhibitions_ENG = [
       "sys": { 
         "id": "02" },
       "fields": {
-        "title": "Forest and I",
+        "title": "The forest and I",
         "description": "Eriksberg Library solo exhibition",
         "date": "2022"
       }

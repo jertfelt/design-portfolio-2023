@@ -21,6 +21,19 @@ h2{
     margin-top:0;
   }
 }
+@media (min-width:900px){
+  h1{
+    font-size:3rem;
+    margin-bottom:0;
+  }
+  h2{
+    font-size:5rem;
+    line-height:5rem;
+  }
+  background:transparent;
+  color:${({theme}) => theme.white};
+  letter-spacing:0.8px;
+}
 z-index:2;
 `
 

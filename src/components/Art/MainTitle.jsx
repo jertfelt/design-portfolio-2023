@@ -28,6 +28,9 @@ z-index:0;
   @media (max-width:900px){
     display:none;
   }
+  width:100%;
+  min-width:100vw;
+  height:100%;
 }
 `
 const TitleOverWrapper = styled.div`
@@ -40,7 +43,16 @@ top:50vh;
   max-width:100vw;
 }
 display:flex;
-flex-direction:column;`
+flex-direction:column;
+@media (min-width:900px){
+  top:0vh;
+  left:0%;
+  width:100%;
+  height:100%;
+  background:rgba(1,1,1,0.5);
+}
+ 
+`
 
 
 const MainTitle = () => {
@@ -89,10 +101,11 @@ const shuffle = useCallback(() => {
     <Image 
     className="notMobile"
     alt="ArtMadeThis Sollentuna 2017" 
-    src={artmadethis1}
+    fill
+    src={newPic}
     quality={100}
     style={{
-      objectFit: 'contain',
+      objectFit: 'cover',
     }}
     />
     </Wrapper>

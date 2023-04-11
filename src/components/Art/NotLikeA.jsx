@@ -14,6 +14,7 @@ const Section = styled.section`
 min-height:50vh;
 background: ${({theme}) => theme.artcolors.primaryLightest};
 padding:2rem;
+
 color:${({theme}) => theme.textSecondary};
 p{
   line-height:150%;
@@ -22,6 +23,11 @@ p{
     max-width:80vw;
     font-size:1.2rem;
     line-height:1.8rem;
+  }
+  @media (min-width:900px){
+    padding-top:2rem;
+    line-height:2rem;
+    padding-left:5rem;
   }
 }
 .explanation{
@@ -36,6 +42,9 @@ h2{
   font-size:10vh;
   line-height:10vh;
   margin-bottom:0;
+  @media (min-width:900px){
+    padding-left:5rem;
+  }
 }
 `
 

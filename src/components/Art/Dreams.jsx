@@ -9,7 +9,7 @@ import palmyra from "../../../public/art/dreams-tova-jertfelt-palmyra.png"
 import homesick from "../../../public/art/dreams-tova-jertfelt+(4).png"
 import dance from "../../../public/art/dreams-tova-jertfelt.png"
 import { useTranslation } from "next-i18next";
-import {Upperpadding, VideoWrapper } from "./ViKanBattre";
+import {ImageWrapper, Upperpadding, VideoWrapper } from "./ViKanBattre";
 import ImageSlider from "./Slider";
 
 export const images1=[pillow1, pillow2]
@@ -34,9 +34,33 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
+  
 }
 `
+const Mobile = styled.div`
+@media (min-width:800px){
+  display:none;
+}`
+const NotMobile = styled.div`
+@media (max-width:800px){
+  display:none;
+}
+@media (min-width:900px){
+  display:flex;
+}
+
+`
+
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+  gap:2rem;
+  padding-left:2rem;
+  row-gap:2rem;
+`
+
 const Dreams = () => {
+  
   const {t} = useTranslation()
   return ( 
   <Section id="dreams">
@@ -54,11 +78,39 @@ const Dreams = () => {
     <p>{t("artistpages.dreams.desc2")}</p>
     
     <p>{t("artistpages.dreams.longerdesc")}</p>
-    
+    <Mobile>
     <ImageSlider 
     slides={images2}
     format=""
     type="dark"/>
+    </Mobile>
+    <NotMobile>
+      <Grid>
+        <ImageWrapper grid>
+        <Image src={bald}
+        alt=""/>
+        </ImageWrapper>
+        <ImageWrapper grid>
+        <Image src={palmyra}
+        alt=""/>
+        </ImageWrapper>
+        <ImageWrapper grid>
+        <Image src={homesick}
+        alt=""/>
+        </ImageWrapper>
+        <ImageWrapper grid>
+        <Image src={deathbride}
+        alt=""/>
+        </ImageWrapper>
+    
+      </Grid>
+      <div>
+      <Upperpadding/>
+      <ImageWrapper max900>
+        <Image src={dance} alt=""/>
+      </ImageWrapper>
+      </div>
+    </NotMobile>
     <br/>
     <br/>
     <p>{t("artistpages.dreams.longerdesc2")}</p>

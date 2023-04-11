@@ -10,12 +10,24 @@ h4{
     line-height:1.8rem;
     max-width:70vw;
   }
+  @media (min-width:750px){
+    font-size:1.5rem;
+    line-height:1.8rem;
+  }
 }
 h3{
   @media (min-width:500px){
     font-size:1.2rem;
     line-height:1.8rem;
-    
+  }
+  @media (min-width:750px){
+    font-size:2rem;
+    line-height:2.2rem;
+    max-width:60%;
+  }
+  @media (min-width:900px){
+    font-size:1.8rem;
+    line-height:2.1rem;
   }
   margin-bottom:0;
 }
@@ -24,6 +36,14 @@ h3{
   padding-left:3rem;
   @media (min-width:500px){
    padding-left:3.5rem;
+  }
+  @media (min-width:750px){
+   padding-left:6rem;
+   margin-top:.5rem;
+  }
+  @media (min-width:900px){
+    margin-top:0;
+    font-size:1rem;
   }
 }
 
@@ -37,7 +57,12 @@ margin-bottom:0.2rem;
 @media (min-width:500px){
   margin-bottom:0;
   gap:1rem;
-}`
+}
+@media (min-width:750px){
+  gap:2.5rem;
+ }
+
+`
 
 const Exhibitions = ({language}) => {
   const [xhibitions, setXhbitions] = useState("")

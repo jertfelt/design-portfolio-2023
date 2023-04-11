@@ -23,6 +23,10 @@ const Content = styled.div`
 padding:2rem;
 max-width:100%;
 padding-top:10rem;
+@media (min-width:900px){
+  padding:5rem;
+  padding-top:10rem;
+}
 p{
   line-height:1.5rem;
   @media (min-width:500px){
@@ -30,6 +34,9 @@ p{
     word-spacing:3px;
     font-size:1.2rem;
     line-height:1.8rem;
+  }
+  @media (min-width:900px){
+    max-width:70vw;
   }
 }
 hr{
@@ -45,18 +52,63 @@ background: ${({theme}) => theme.artcolors.primaryLightest};
 color: ${({theme}) => theme.textSecondary};
 padding:2rem;
 padding-bottom:5rem;
-.description{
+.desc{
    font-family:JetBrains Mono;
    padding-left:3rem;
   @media (min-width:500px){
    padding-left:3.5rem;
   }
+  @media (min-width:750px){
+    font-size:1.5rem;
+    line-height:1.8rem;
+    padding-left:6rem;
+  }
+  @media (min-width:900px){
+    padding:0;
+    font-size:1rem;
+  }
+}
+.pub{
+  @media (min-width:500px){
+    font-size:1.2rem;
+    line-height:1.8rem;
+  }
+  @media (min-width:750px){
+    font-size:2rem;
+    line-height:2.2rem;
+    max-width:60%;
+  }
+  @media (min-width:900px){
+    max-width:80%;
+    margin-top:0;
+    font-size:1.8rem;
+  }
+}
+.publ{
+  @media (min-width:900px){
+    padding-top:4rem;
+  }
 }
 h2{
   color:${({theme}) => theme.artcolors.primary};
   font-size:2rem;
+  @media (min-width:750px){
+    font-size:4rem;
+    margin-bottom:1rem;
+   }
+   @media (min-width:900px){
+    margin-top:-8rem;
+  }
 }
 
+@media (min-width:900px){
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2rem;
+  padding-top:10rem;
+  padding-left:2rem;
+  row-gap:2rem;
+}
 `
 
 const WrapperFooter = styled.footer`
@@ -71,6 +123,13 @@ flex-direction:row;
 gap:1rem;
 align-items:center;
 justify-content:center;
+@media (min-width:900px){
+  justify-content:space-between;
+}
+@media(min-width:900px){
+  line-height:2rem;
+  padding-right:2rem;
+}
 button{
   font-family: JetBrains Mono;
   background: ${({theme}) => theme.artcolors.primaryLightest};
@@ -84,6 +143,7 @@ padding:8px;
   background: ${({theme}) => theme.artcolors.primary};
   color:${({theme}) => theme.artcolors.primaryLightest};
 }
+
 }
 `
 
@@ -97,14 +157,13 @@ img{
   margin-left:0;
   height:100%;
   margin-bottom:0;
-
 }
 padding-bottom:1rem;
 `
 
 const Body = () => {
 const router= useRouter();
-const {locales, locale: activeLocale} = router;
+const {locale: activeLocale} = router;
 const language = activeLocale;
 const {t} = useTranslation();
 const [skogenIsTrue, setSkogen] = useState(false)
@@ -112,6 +171,7 @@ const [vKB, setVKB] = useState(false)
 const [tree, setTree] = useState(false)
 const [dream, setDream] = useState(false)
 const [bedbug, setBedBug] = useState(false)
+const [linksOnTop, setLinksOnTop] = useState(true)
 
   return (<Section>
     <Content>
@@ -123,6 +183,7 @@ const [bedbug, setBedBug] = useState(false)
     </p>
 
     <hr className="margin"></hr>
+    {linksOnTop && 
     <Links
     skogenIsTrue = {skogenIsTrue}
     setSkogen = {setSkogen}
@@ -134,11 +195,13 @@ const [bedbug, setBedBug] = useState(false)
     setDream = {setDream}
     bedbug = {bedbug}
     setBedBug={setBedBug}
+    setLinksOnTop={setLinksOnTop}
+    
     // STPLN = {STPLN}
     // setSTPLN = {setSTPLN}
     //inferno = {inferno}
     //setInferno = {setInferno}
-    />
+    />}
     
     </Content>
     
@@ -147,16 +210,39 @@ const [bedbug, setBedBug] = useState(false)
     {bedbug && <NotLikeA id="bedbug"></NotLikeA>}
     {tree && <Tree id="tree"/>}
     {dream && <Dreams id="dreams"/>}
-    <WrapperExhibitions>
 
+    {!linksOnTop && 
+    <Links 
+    skogenIsTrue = {skogenIsTrue}
+    setSkogen = {setSkogen}
+    vKB = {vKB}
+    setVKB = {setVKB}
+    tree = {tree}
+    setTree = {setTree}
+    dream = {dream}
+    setDream = {setDream}
+    bedbug = {bedbug}
+    setBedBug={setBedBug}
+    setLinksOnTop={setLinksOnTop}
+    outsideContent="yes"
+    // STPLN = {STPLN}
+    // setSTPLN = {setSTPLN}
+    //inferno = {inferno}
+    //setInferno = {setInferno}
+    />
+    }
+    <WrapperExhibitions>
     <h2 className="heading">{t("artistpages.main.h2U")}</h2>
-   
+    <div>
     <Exhibitions language={language}/>
-    <h2 className="heading">{t("artistpages.main.h2P")}</h2>
-    <h3>
+    </div>
+    <div className="publ">
+    <h2 className="heading">{t("artistpages.main.h2P")}</h2><div>
+    <h3 className="pub">
       Not Like a Bedbug
     </h3>
-    <h4 className="description">{t("artistpages.main.h4MAL")}</h4>
+    <h4 className="desc">{t("artistpages.main.h4MAL")}</h4></div>
+    </div>
    
     </WrapperExhibitions>
     <Standalones>

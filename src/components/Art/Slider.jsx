@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 const Slider = styled.div`
 position: relative;
+margin-bottom:3rem;
+margin-top:3rem;
 button{
 background:transparent;
 height:2rem;
@@ -20,14 +22,21 @@ border:none;
 font-weight:bold;
 z-index: 10;
 cursor: pointer;
+
 color: ${({theme}) => theme.textSecondary};
 user-select: none;
 &:hover{
   color: ${({theme}) => theme.artcolors.primaryLighter};
 }
+@media (min-width:800px){
+  font-size:4rem;
+}
 }
 .right-arrow{
 right: 5px;
+@media (min-width:800px){
+  right:35px;
+}
 }
 .right-arrow-dark{
   right: 5px;
@@ -35,15 +44,24 @@ right: 5px;
   &:hover{
     color: ${({theme}) => theme.artcolors.primaryLightest};
   }
+  @media (min-width:800px){
+    right:35px;
+  }
 }
 .left-arrow{
   left: 5px;
+  @media (min-width:800px){
+    left:35px;
+  }
 }
 .left-arrow-dark{
   left: 5px;
   color: ${({theme}) => theme.textPrimary};
   &:hover{
     color: ${({theme}) => theme.artcolors.primaryLighter};
+  }
+  @media (min-width:800px){
+    left:35px;
   }
 }
 .slide{
