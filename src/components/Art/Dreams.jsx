@@ -11,6 +11,8 @@ import dance from "../../../public/art/dreams-tova-jertfelt.png"
 import { useTranslation } from "next-i18next";
 import {ImageWrapper, Upperpadding, VideoWrapper } from "./ViKanBattre";
 import ImageSlider from "./Slider";
+import { GridArt } from "./Skogen";
+import Grid from "./Grid";
 
 export const images1=[pillow1, pillow2]
 export const images2=[bald,palmyra,dance,homesick,deathbride]
@@ -19,6 +21,7 @@ const Section = styled.section`
 min-height:50vh;
 padding:2rem;
 padding-bottom:0rem;
+
 h2{
   color:${({theme}) => theme.textPrimary};
   font-size:10vh;
@@ -46,6 +49,7 @@ p{
     padding-left:5rem;
   }
 }
+
 .grid{
   padding-left:0;
   padding-right:2rem;
@@ -69,7 +73,7 @@ const NotMobile = styled.div`
 
 `
 
-const Grid = styled.div`
+const GridDreams = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 1fr);
   gap:2rem;
@@ -88,13 +92,16 @@ const Dreams = () => {
     <Upperpadding/>
     <h2>When I dream, I dream about <i>you</i>.</h2>
     <p>{t("artistpages.dreams.desc")}</p><br/>
+    <Mobile>
     <ImageSlider 
     slides={images1}
     format="horizontal"
     type="light"/>
-   
+    </Mobile>
+    <NotMobile>
+    <Grid className="marginalised" imgs={images1} type="dream"/>
+   </NotMobile>
     <p>{t("artistpages.dreams.desc2")}</p>
-    
     <p>{t("artistpages.dreams.longerdesc")}</p>
     <Mobile>
     <ImageSlider 
@@ -103,7 +110,7 @@ const Dreams = () => {
     type="dark"/>
     </Mobile>
     <NotMobile>
-      <Grid>
+      <GridDreams>
         <ImageWrapper grid>
         <Image src={bald}
         alt=""/>
@@ -124,7 +131,7 @@ const Dreams = () => {
         <Image src={dance} alt=""/>
       </ImageWrapper>
       <p className="grid">{t("artistpages.dreams.longerdesc2")}</p>
-      </Grid>
+      </GridDreams>
       <div>
       <Upperpadding/>
       </div>

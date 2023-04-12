@@ -30,6 +30,11 @@ p{
     padding-left:5rem;
     max-width:70vw;
   }
+  @media (min-width:900px){
+    padding-left:7rem;
+    margin-top:0;
+    max-width:50%;
+  }
 }
 .explanation{
   font-size:12px;
@@ -46,6 +51,10 @@ h2{
   @media (min-width:800px){
     margin-bottom:0;
     padding-left:5rem;
+  }
+  @media (min-width:900px){
+    padding-left:7rem;
+    
   }
 }
 `

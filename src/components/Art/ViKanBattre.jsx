@@ -139,6 +139,10 @@ ${props =>
     }
     padding-left:6rem;
 
+  }@media (min-width:900px){
+
+    padding:0;
+    margin:0;
   }
   
   `}
@@ -200,7 +204,9 @@ ${props =>
       width:100%;
       max-width:50vw;
       padding:0;
+      margin:1rem;
     }
+    
   }
  `
 }
@@ -217,29 +223,12 @@ ${props =>
     min-width:500px;
     width:100%;
     max-width:700px;
-
     height:50%;
     padding-left:5rem;
-    
     }
- }
- .slap{
- 
-    @media (min-width:800px){
-      padding-left:0;
-      margin-left:-4rem;
     
-  }
  }
- .wolf{
 
-    @media (min-width:800px){
-      padding-left:12rem;
-      margin-bottom:10rem;
-    
-  }
- 
- }
  margin-top:2rem;
  margin-bottom:-2.5rem;
  margin-left:-2rem;
@@ -250,6 +239,7 @@ ${props =>
 ${props => 
   props.horizontal_gallery && 
   css`  
+ 
  img{
   min-width:100vw;
   width:100%;
@@ -258,6 +248,7 @@ ${props =>
  }
  margin:1rem;
  margin-left:-2rem;
+ 
  `
 }
 ${props => 
@@ -369,11 +360,13 @@ alt="The cube"
 </Mobile>
 </ImageWrapper>
     <p>{t("artistpages.vikanbattre.description1")}</p>
-    <NotMobile>
+
+<NotMobile>
 <ImageSlider slides={images}
 format="horizontal"
 type="light"/>
 </NotMobile>
+
 <Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
 <Mobile>
 <ImageWrapper 

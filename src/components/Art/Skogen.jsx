@@ -158,6 +158,13 @@ ${props =>
       padding-top:1rem;
       padding-bottom:5rem;
     }
+    @media (min-width:900px){
+      padding-left:5rem;
+      padding-right:5rem;
+      padding-bottom:0;
+      padding-top:0;
+
+    }
   }` }
   ${props => 
     props.sjuhundra && css`{
@@ -182,7 +189,18 @@ ${props =>
  
         
       }
+          @media (min-width:900px){
+      padding-left:3rem;
+      padding-right:3rem;
+      padding-bottom:0;
+      padding-top:0;
+
+    }
     }` }
+`
+
+const MobileView= styled.div`
+
 `
 
 const Skogen = () => {
@@ -236,10 +254,16 @@ alt="Part One, showing some of the paintings"
 <h4 className="title2">{t("artistpages.forest.title2")}</h4>
 <p>{t("artistpages.forest.desc2")}</p>
 <>
+<NotMobile>
+<Grid imgs={ursaktaImg}
+type="skogen"/>
+
+</NotMobile>
 {SkogenSignswithTranslations.map(item => (
   <GridArt attahundra key={item.sys.id}>
-    <Zoom>
+    {language !== "sv" ? <>
       <ImageWrapper grid>
+      <Zoom>
         {item.sys.id === "ursakta6" && 
         <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta6}/>
         }
@@ -249,9 +273,10 @@ alt="Part One, showing some of the paintings"
         {item.sys.id === "ursakta8" && 
         <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta8}/>
         }
+      </Zoom>
       </ImageWrapper>
-    </Zoom>
-    {language !== "sv" && 
+
+    
     <TextInEnglish>
       <p>Translation:</p>
       <h3>
@@ -260,7 +285,32 @@ alt="Part One, showing some of the paintings"
       <p>
         {item.translation.text}
       </p>
-    </TextInEnglish>}
+    </TextInEnglish>
+    </>:
+    <>
+    <ImageWrapper grid>
+      <Zoom>
+        {item.sys.id === "ursakta6" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta6}/>
+        }
+      </Zoom>
+    </ImageWrapper>
+    <ImageWrapper grid>
+      <Zoom>
+    {item.sys.id === "ursakta7" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta7}/>
+        }
+           </Zoom>
+    </ImageWrapper>
+    <ImageWrapper grid>
+      <Zoom>
+        {item.sys.id === "ursakta8" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta8}/>
+        }
+        </Zoom>
+        </ImageWrapper>
+    </>
+    }
   </GridArt>
 ))}
 
@@ -271,11 +321,7 @@ slides={ursaktaImg}
   format=""
   type="light"
 /></Mobile>
-<NotMobile>
-<Grid imgs={ursaktaImg}
-type="skogen"/>
 
-</NotMobile>
 <p className="curator">Curator: Alba Folgado</p>
 <p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
 <hr></hr>

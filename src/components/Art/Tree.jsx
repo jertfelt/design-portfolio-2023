@@ -33,9 +33,14 @@ p{
   @media (min-width:800px){
     padding-left:4rem;
   }
+  
 }
 .desc{
   padding-top:4rem;
+  @media (min-width:900px){
+    padding:5rem;
+    padding-bottom:2rem;
+  }
 }
 color:${({theme}) => theme.textPrimary};
 `
@@ -46,8 +51,14 @@ flex-direction:row;
 width:90vw;
 align-items:center;
 justify-content:space-between;
-
-}`
+}
+@media (min-width:900px){
+  max-width:80vw;
+  padding:1rem;
+  padding-bottom:0;
+  margin:0;
+}
+`
 const Tree = () => {
   const {t} = useTranslation()
   return (<Section id="tree">

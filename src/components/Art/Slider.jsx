@@ -22,7 +22,6 @@ border:none;
 font-weight:bold;
 z-index: 10;
 cursor: pointer;
-
 color: ${({theme}) => theme.textSecondary};
 user-select: none;
 &:hover{
@@ -77,7 +76,18 @@ right: 5px;
   transition-duration: 1s;
   transform: scale(1.08);
 }
+@media (min-width:900px){
+  margin:0;
+  margin-left:-5rem;
+}
 `
+
+const Mobile = styled.div`
+@media (min-width:900px){
+  display:none;
+}
+`
+
 
 const ImageSlider = ({ slides, format, type }) => {
   const [current, setCurrent] = useState(0);
@@ -97,8 +107,7 @@ const ImageSlider = ({ slides, format, type }) => {
   return (
     <Slider className='slider'>
       {type ==="light" ? <button className='left-arrow' onClick={prevSlide}>&lArr;</button>: <button className='left-arrow-dark' onClick={prevSlide}>&lArr;</button>}
-      {type ==="light" ? <button className='right-arrow' onClick={nextSlide}>&rArr;</button>: <button className='right-arrow-dark' onClick={nextSlide}>&rArr;</button>}
-      
+      {type ==="light" ? <button className='right-arrow' onClick={nextSlide}>&rArr;</button>: <button className='right-arrow-dark' onClick={nextSlide}>&rArr;</button>} 
       {slides.map((slide, index) => {
         return (
           <div

@@ -26,10 +26,6 @@ padding-top:10rem;
 @media (min-width:800px){
   padding:5rem;
 }
-@media (min-width:900px){
-  padding:5rem;
-  padding-top:10rem;
-}
 p{
   line-height:1.5rem;
   @media (min-width:500px){
