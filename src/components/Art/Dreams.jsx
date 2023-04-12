@@ -18,6 +18,7 @@ export const images2=[bald,palmyra,dance,homesick,deathbride]
 const Section = styled.section`
 min-height:50vh;
 padding:2rem;
+padding-bottom:0rem;
 h2{
   color:${({theme}) => theme.textPrimary};
   font-size:10vh;
@@ -26,6 +27,11 @@ h2{
   padding-top:0;
   margin-top:0;
   margin-bottom:0;
+  @media (min-width:800px){
+    max-width:70vw;
+    padding-top:1rem;
+    padding-left:5rem;
+  }
 }
 p{
   padding-bottom:2rem;
@@ -34,7 +40,19 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
-  
+  @media (min-width:800px){
+    max-width:70vw;
+    padding-top:0;
+    padding-left:5rem;
+  }
+}
+.grid{
+  padding-left:0;
+  padding-right:2rem;
+}
+hr{
+  color:${({theme}) => theme.artcolors.primaryLighter};
+margin:0;
 }
 `
 const Mobile = styled.div`
@@ -64,7 +82,7 @@ const Dreams = () => {
   const {t} = useTranslation()
   return ( 
   <Section id="dreams">
-      <VideoWrapper first>
+    <VideoWrapper first>
       <ReactPlayer url="https://www.youtube.com/watch?v=ppg8aZ8snZ8"/>
     </VideoWrapper>
     <Upperpadding/>
@@ -102,19 +120,21 @@ const Dreams = () => {
         <Image src={deathbride}
         alt=""/>
         </ImageWrapper>
-    
+        <ImageWrapper grid>
+        <Image src={dance} alt=""/>
+      </ImageWrapper>
+      <p className="grid">{t("artistpages.dreams.longerdesc2")}</p>
       </Grid>
       <div>
       <Upperpadding/>
-      <ImageWrapper max900>
-        <Image src={dance} alt=""/>
-      </ImageWrapper>
       </div>
     </NotMobile>
     <br/>
     <br/>
-    <p>{t("artistpages.dreams.longerdesc2")}</p>
-  
+    <Mobile>
+    <p className="grid">{t("artistpages.dreams.longerdesc2")}</p>
+    </Mobile>
+    <hr/>
   </Section> );
 }
  

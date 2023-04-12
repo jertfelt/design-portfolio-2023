@@ -69,7 +69,9 @@ a{
 `
 export const Upperpadding = styled.div`
 height:2em;
-@media 
+@media (min-width:800px){
+  height:0;
+}
 `
 
 export const VideoWrapper = styled.div`
@@ -96,6 +98,12 @@ ${props =>
   props.first && 
   css` {  
     margin-top:-2rem;
+    @media (min-width:800px){
+   margin:0;
+   padding:0;
+   
+  }
+    
   }`}
 `
 export const ImageWrapper = styled.div`
