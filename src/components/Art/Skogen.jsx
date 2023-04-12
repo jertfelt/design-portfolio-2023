@@ -61,6 +61,13 @@ h2{
     max-width:80%;
     padding-left:5rem;
   }
+  @media (min-width:1040px){
+    padding-left:3rem;
+    font-size:16vh;
+    line-height:14vh;
+    max-width:70vw;
+    margin-top:-4rem;
+  }
 }
 h4{
   color: ${({theme}) => theme.artcolors.primaryLightest};
@@ -86,6 +93,10 @@ p{
     padding-left:5rem;
     padding-right:5rem;
    }
+  @media (min-width:1040px){
+    padding-left:3rem;
+    max-width:60vw;
+  }
 }
 .curator{
   text-align:center;

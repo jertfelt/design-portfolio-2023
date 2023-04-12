@@ -38,6 +38,9 @@ p{
   @media (min-width:900px){
     max-width:70vw;
   }
+  @media (min-width:1040px){
+    max-width:60vw;
+  }
 }
 a{
   color:${({theme}) => theme.artcolors.primaryLightest};
@@ -45,6 +48,10 @@ a{
 }
 hr{
   color:${({theme}) => theme.artcolors.primaryLighter};
+  @media (min-width:1040px){
+    max-width:60vw;
+    margin-left:0;
+  }
 }
 .margin{
   margin-top:2rem;
