@@ -199,10 +199,6 @@ ${props =>
     }` }
 `
 
-const MobileView= styled.div`
-
-`
-
 const Skogen = () => {
   const router= useRouter();
   const {t} = useTranslation()
