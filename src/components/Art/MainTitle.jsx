@@ -44,7 +44,7 @@ top:50vh;
 }
 display:flex;
 flex-direction:column;
-@media (min-width:900px){
+@media (min-width:800px){
   top:0vh;
   left:0%;
   width:100%;
@@ -59,7 +59,7 @@ const MainTitle = () => {
   const router= useRouter();
   const {locale: activeLocale} = router;
   const language = activeLocale;
-  const [newName, setnewName] = useState("");
+  const [newName, setnewName] = useState("digital");
   const [newPic, setPic] = useState(fire)
   
 const shuffle = useCallback(() => {

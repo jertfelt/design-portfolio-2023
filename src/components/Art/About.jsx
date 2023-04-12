@@ -21,7 +21,7 @@ h2{
     margin-top:0;
   }
 }
-@media (min-width:900px){
+@media (min-width:800px){
   h1{
     font-size:3rem;
     margin-bottom:0;

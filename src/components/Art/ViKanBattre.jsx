@@ -12,6 +12,9 @@ import 'react-medium-image-zoom/dist/styles.css'
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import ReactPlayer from 'react-player/lazy'
+import ImageSlider from "./Slider";
+import Grid from "./Grid";
+import { GridArt } from "./Skogen";
 
 const Section = styled.section`
 min-height:50vh;
@@ -21,17 +24,23 @@ color:${({theme}) => theme.textPrimary};
 
 
 h2{
+  
   color:${({theme}) => theme.textPrimary};
   font-size:10vh;
   line-height:10vh;
   padding-top:0;
   margin-top:0;
+  z-index:10;
   margin-bottom:0;
-  @media (min-width:900px){
+  @media (min-width:800px){
     padding-left:5rem;
     padding-right:5rem;
     max-width:70vw;
     padding-bottom:2rem;
+  }
+  @media(min-width:800px){
+   
+   
   }
 }
 p{
@@ -42,7 +51,7 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
-  @media (min-width:900px){
+  @media (min-width:800px){
     padding-left:5rem;
     padding-right:5rem;
     max-width:70vw;
@@ -97,6 +106,7 @@ margin-left:-2rem;
 width:100%;
 max-width:90vw;
 position:relative;
+z-index:2;
 img{
   margin-top:-.5rem;
   width:100vw;
@@ -245,13 +255,22 @@ ${props =>
  `
 }
 `
-
+const Mobile= styled.div`
+@media (min-width:800px){
+  display:none;
+}
+`
+const NotMobile = styled.div`
+@media (max-width:800px){
+  display:none;
+}`
 const ViKanBattre = () => {
   const {t} = useTranslation()
-
+  const images = [vikan7,vikan1,vikan5,vikan6]
   return (
-    <Section id="VKB">
-        <ImageWrapper 
+<Section id="VKB">
+  <Mobile>
+<ImageWrapper 
     horizontal_first>
     <Zoom>
 <Image src={vikan7}
@@ -260,11 +279,13 @@ alt="The entrance"
 ></Image>
 </Zoom>
 </ImageWrapper>
+</Mobile>
       <Upperpadding></Upperpadding>
       
-      <h2>{t("artistpages.vikanbattre.title")}</h2>
+      <h2 >{t("artistpages.vikanbattre.title")}</h2>
       <p>{t("artistpages.vikanbattre.smalldescription")}
       </p>
+  
       <p>{t("artistpages.vikanbattre.material")}</p>
       <VideoWrapper>
     <ReactPlayer url='https://youtu.be/IfffzYAGps4' 
@@ -272,8 +293,42 @@ alt="The entrance"
     </VideoWrapper>
 
 <ImageWrapper>
+<NotMobile>
+        <GridArt sjuhundra>
+          
+          <ImageWrapper grid>
+            <Zoom>
+          <Image src={vikan3}
+
+alt="The cube"
+></Image></Zoom>
+          </ImageWrapper>
+          <ImageWrapper grid>
+            <Zoom>
+          <Image src={vikan2}
+
+alt="The cube"
+></Image></Zoom>
+          </ImageWrapper>
+          <ImageWrapper grid>
+            <Zoom>
+          <Image src={vikan4}
+
+alt="The cube"
+></Image></Zoom>
+          </ImageWrapper>
+        </GridArt>
+      </NotMobile>
+  <Mobile>
 <Zoom>
 <Image src={vikan1}
+className="customzoom"
+alt="The cube"
+></Image>
+</Zoom>
+
+<Zoom>
+<Image src={vikan3}
 className="customzoom"
 alt="The cube"
 ></Image>
@@ -284,20 +339,27 @@ className="customzoom"
 alt="The cube"
 ></Image>
 </Zoom>
+
 <Zoom>
-<Image src={vikan3}
+<Image src={vikan4}
 className="customzoom"
 alt="The cube"
 ></Image>
 </Zoom>
+</Mobile>
 </ImageWrapper>
     <p>{t("artistpages.vikanbattre.description1")}</p>
-    <Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
+    <NotMobile>
+<ImageSlider slides={images}
+format="horizontal"
+type="light"/>
+</NotMobile>
+<Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
+<Mobile>
 <ImageWrapper 
     horizontal>
     <Zoom>
 <Image src={vikan5}
-className="slap"
 alt="Detail from the wall, a boy slapping another boy"
 ></Image>
 </Zoom>
@@ -306,12 +368,11 @@ alt="Detail from the wall, a boy slapping another boy"
     horizontal>
     <Zoom>
 <Image src={vikan6}
-className="wolf"
 alt="Detail from the wall, girl chased by wolves"
 ></Image>
 </Zoom>
 </ImageWrapper>
-
+</Mobile>
     </Section>
     );
 }
