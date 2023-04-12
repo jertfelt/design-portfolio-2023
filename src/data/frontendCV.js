@@ -295,10 +295,10 @@ export const courses_ENG = [
   },
   {
     id:12,
-    betyg: "",
+    betyg: "VG",
     title:"LIA 2",
     omfattning:"60p",
-    done: false,
+    done: true,
   },
   {
     id:13,
