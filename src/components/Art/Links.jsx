@@ -9,6 +9,7 @@ line-height:7.5vh;
 @media (max-width:800px){
   font-size:4vh;
 }
+
 h2{
   font-family: JetBrains Mono;
   letter-spacing: -0.5px;

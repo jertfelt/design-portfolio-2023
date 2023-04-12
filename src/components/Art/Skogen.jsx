@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Image from "next/image";
 import ReactPlayer from "react-player";
 import Zoom from 'react-medium-image-zoom'
@@ -15,30 +15,65 @@ import ursakta8 from "../../../public/art/skylt--jertfelt--pulkabacken+copy.png"
 import ImageSlider from "./Slider";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
+import { SkogenSignswithTranslations } from "@component/data/exhibitions";
+import Grid from "./Grid";
 
 export const ursaktaImg = [ ursakta5, ursakta4, ursakta3 ]
 
-const Section = styled.section`
-min-height:50vh;
-padding:2rem;
-@media (min-width:900px){
-  padding-top:10rem;
+const WrapperPlayer = styled.div`
+padding-top:1rem;
+@media (min-width:800px){
+  padding-left:5rem;
+  
 }
-padding-bottom:3rem;
-margin-bottom:-8px;
+`
+const Mobile = styled.div`
+@media (min-width:700px){
+  display:none;
+}
+`
+
+const NotMobile = styled.div`
+@media (max-width:700px){
+  display:none;
+}
+`
+
+const Section = styled.section`
+padding:2rem;
+padding-bottom:0;
+.material{
+  font-size:1rem;
+}
+hr{
+  color:${({theme}) => theme.artcolors.primaryLighter};
+  margin-top:2rem;
+}
 h2{
   font-size:10vh;
   line-height:10vh;
   padding-top:0;
   margin-top:0;
   margin-bottom:0;
+  max-width:80vw;
+
+  @media (min-width:800px){
+    padding-bottom:2rem;
+    max-width:80%;
+    padding-left:5rem;
+  }
 }
 h4{
+  color: ${({theme}) => theme.artcolors.primaryLightest};
   @media (min-width:500px){
     max-width:80vw;
     font-size:2.2rem;
     line-height:2.8rem;
     margin-bottom:4px;
+  }
+  @media (min-width:800px){
+    padding-left:5rem;
+    padding-right:5rem;
   }
 }
 p{
@@ -48,20 +83,27 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
+  @media (min-width:800px){
+    padding-left:5rem;
+    padding-right:5rem;
+   }
 }
 .curator{
-  padding-bottom:2rem;
+  text-align:center;
+  padding-top:1rem;
   @media (min-width:550px){
-    padding-top:0;
-    margin-top:0;
-    padding-bottom:4rem;
+   padding-top:2rem;
   }
 }
 .link{
-  padding-top:1rem;
   margin-bottom:0;
   text-align:center;
   @media (min-width:550px){
+   
+  }
+}
+.title2{
+  @media (min-width:800px){
     padding-top:3rem;
   }
 }
@@ -79,26 +121,69 @@ padding-bottom:5rem;
 }
 @media (min-width:800px){
   h3{
-    font-size:1.5rem;
+    font-size:1rem;
   }
-  p{font-size:1rem;}
+  p{font-size:1rem;
+    line-height:1.2rem;
+  padding-left:0;}
   padding:0;
+  margin:0;
 }
 
 `
 const Upperpadding = styled.div`
-height:4em;`
-
-const Grid800 = styled.div`
-@media (min-width:800px){
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:2rem;
-  padding-left:2rem;
-  row-gap:2rem;
-  align-items:center;
+height:4em;
+@media (min-width:500px){
+  height:1em;
 }
+@media (min-width:800px){
+  height:0;
+}
+`
 
+export const GridArt = styled.div`
+${props => 
+  props.attahundra && css`{
+    @media (max-width:800px){
+      padding-top:2rem;
+      padding-bottom:0;
+      margin-bottom:-1rem;
+    }
+    @media (min-width:800px){
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:2rem;
+      padding-left:5rem;
+      row-gap:2rem;
+      align-items:center;
+      padding-top:1rem;
+      padding-bottom:5rem;
+    }
+  }` }
+  ${props => 
+    props.sjuhundra && css`{
+      @media (max-width:800px){
+        padding-top:2rem;
+        padding-bottom:0;
+        margin-bottom:-1rem;
+      }
+      @media (min-width:700px){
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:2rem;
+        padding-left:5rem;
+        row-gap:2rem;
+        align-items:center;
+        padding-top:1rem;
+        padding-bottom:2rem;
+        // // grid-template-columns: auto auto auto;
+        // // grid-template-rows: repeat(10, 1fr);
+        // // .item_0 { grid-column: 1 / 2; grid-row: 1 / 4; }
+    
+ 
+        
+      }
+    }` }
 `
 
 const Skogen = () => {
@@ -112,8 +197,11 @@ const Skogen = () => {
   <h2>{t("artistpages.forest.h2")}</h2>
   <p>{t("artistpages.forest.desc")} </p>
   <h4>{t("artistpages.forest.title1")}</h4>
-  <ReactPlayer url="https://soundcloud.com/tova-jertfelt/ursakta-skogen-vi-bygger-om?si=2811fc45bf98463d99bf3583c3e89756&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-  width="80vw"
+
+  <WrapperPlayer>
+  <ReactPlayer 
+  url="https://soundcloud.com/tova-jertfelt/ursakta-skogen-vi-bygger-om?si=2811fc45bf98463d99bf3583c3e89756&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+  width="60vw"
   height="100px"
   config={{
   soundcloud:{
@@ -123,8 +211,10 @@ const Skogen = () => {
   }
 }}
 />
+</WrapperPlayer>
 <p>{t("artistpages.forest.longdesc")}</p>
-<p>{t("artistpages.forest.material")} </p>
+
+<p className="material">{t("artistpages.forest.material")} </p>
 <ImageWrapper horizontal>
 <Zoom>
 <Image src={ursakta1}
@@ -144,121 +234,52 @@ alt="Part One, showing some of the paintings"
 </Zoom>
 </ImageWrapper>
 <Upperpadding></Upperpadding>
-<h4>{t("artistpages.forest.title2")}</h4>
+<h4 className="title2">{t("artistpages.forest.title2")}</h4>
 <p>{t("artistpages.forest.desc2")}</p>
-<br/>
-<Grid800>
-<Zoom>
-  <ImageWrapper grid>
-    <Image alt="Sign outside text"
-    quality={100}
-    style={{
-      objectFit: 'contain',
-    }}
-    src={ursakta6}/>
-  </ImageWrapper>
-</Zoom>
-{language !== "sv" && 
-<TextInEnglish>
-  <p>Translation: <br></br></p>
-  <h3>
-<b>We strive to a <br/> growing city</b><br/></h3>
-<p> 
-  In 2030 the municipality will become climate neutral.<br/>
-  Noone knows how it will happen.<br/>
-  Our vision is business focus,<br></br>
-  traffic and population growth,<br></br>
-  and straight lines,<br></br>
-  everything from the human point of view.<br></br>
-  Everything in the town shall have a purpose. <br></br>
-  Unproductivity does not belong. <br></br>
-  Ineffectiveness is extinct.<br></br>
-  We want to make our mark. <br></br>
-  Clean away the weed. <br></br>
-  We have new ideals now. <br></br>
-  History does not repeat itself.<br></br>
-  We are taking the nature into consideration.
-</p>
-</TextInEnglish>}
-<Zoom>
-  <ImageWrapper grid>
-    <Image alt="Sign outside text"
-    quality={100}
-    style={{
-      objectFit: 'contain',
-    }}
-    src={ursakta7}/>
-  </ImageWrapper>
-</Zoom>
-{language !== "sv" && 
-<TextInEnglish>
-  
-  <h3>
-<b>This park will be <br/> replaced</b><br/></h3>
-<p> 
-  At the municipality&#39;s inventory<br/>
-  it was decided that it<br/>
-  does not follow our vision for<br></br>
-  green structure. <br/>
-  It no longer fits in with <br/>
-  our new street ideals,<br/>
-  does not match our <br/>
-  fresh urban landscape architecture,<br/>
-  it does not either contribute to<br/>
-  any profit.<br/>
-  We will therefore replace the <br/>
-  bushes, gravel paths, <br/>
-  trees, bird nests and <br/>
-  the ant hill in the southwest corner <br/>
-  with a circular, sustainable <br/>
-  partly underground <br/>
-  parking space that will <br/>
-  have room for nine cars.
-</p>
-</TextInEnglish>}
+<>
+{SkogenSignswithTranslations.map(item => (
+  <GridArt attahundra key={item.sys.id}>
+    <Zoom>
+      <ImageWrapper grid>
+        {item.sys.id === "ursakta6" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta6}/>
+        }
+        {item.sys.id === "ursakta7" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta7}/>
+        }
+        {item.sys.id === "ursakta8" && 
+        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta8}/>
+        }
+      </ImageWrapper>
+    </Zoom>
+    {language !== "sv" && 
+    <TextInEnglish>
+      <p>Translation:</p>
+      <h3>
+        {item.translation.first}<br/>{item.translation.second}
+      </h3>
+      <p>
+        {item.translation.text}
+      </p>
+    </TextInEnglish>}
+  </GridArt>
+))}
 
-<Zoom>
-  <ImageWrapper grid>
-    <Image alt="Sign outside text"
-    quality={100}
-    style={{
-      objectFit: 'contain',
-    }}
-    src={ursakta8}/>
-  </ImageWrapper>
-</Zoom>
-{language !== "sv" && 
-<TextInEnglish>
-  
-  <h3>
-<b>Here we will build <br/> new living spaces</b><br/></h3>
-<p> 
-  350 new apartments <br/>
-  four to sex floors <br/>
-  with a modern touch, <br/>
-  green electricity and <br/>
-  accessible to everyone. <br/>
-  Taking into account the conditions of the area<br/>
-  that is to say current housings<br/>
-  we sadly have to evict<br/>
-  the bats, the aphids, and the vipers. <br/>
-  They have been offered to participate in <br/>
-  the municipality&#39;s planning program<br/>
-  for urban development<br/>
-  but they cannot afford the <br/>
-  down payment.<br/>
-  The sledding hill will remain, <br/>
-  so that the children may play in wintertime.
-</p>
-</TextInEnglish>}
-</Grid800>
-  <p className="curator">Curator: Alba Folgado</p>
-  <ImageSlider slides={ursaktaImg}
+</>
+<Mobile>
+<ImageSlider 
+slides={ursaktaImg}
   format=""
   type="light"
-></ImageSlider>
-<p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
+/></Mobile>
+<NotMobile>
+<Grid imgs={ursaktaImg}
+type="skogen"/>
 
+</NotMobile>
+<p className="curator">Curator: Alba Folgado</p>
+<p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
+<hr></hr>
   </Section> );
 }
  

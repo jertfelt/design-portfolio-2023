@@ -25,6 +25,11 @@ h3{
     line-height:2.2rem;
     max-width:60%;
   }
+  @media (min-width:800px){
+    font-size:1.8rem;
+   
+    max-width:80%;
+  }
   @media (min-width:900px){
     font-size:1.8rem;
     line-height:2.1rem;

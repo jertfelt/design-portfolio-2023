@@ -23,6 +23,9 @@ const Content = styled.div`
 padding:2rem;
 max-width:100%;
 padding-top:10rem;
+@media (min-width:800px){
+  padding:5rem;
+}
 @media (min-width:900px){
   padding:5rem;
   padding-top:10rem;
@@ -35,15 +38,24 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
+  
   @media (min-width:900px){
     max-width:70vw;
   }
+}
+a{
+  color:${({theme}) => theme.artcolors.primaryLightest};
+  font-style:italic;
 }
 hr{
   color:${({theme}) => theme.artcolors.primaryLighter};
 }
 .margin{
   margin-top:2rem;
+  @media (min-width:800px){
+  
+    margin-top:5rem;
+  }
 }
 
 `
@@ -52,6 +64,7 @@ background: ${({theme}) => theme.artcolors.primaryLightest};
 color: ${({theme}) => theme.textSecondary};
 padding:2rem;
 padding-bottom:5rem;
+
 .desc{
    font-family:JetBrains Mono;
    padding-left:3rem;
@@ -173,7 +186,8 @@ const [dream, setDream] = useState(false)
 const [bedbug, setBedBug] = useState(false)
 const [linksOnTop, setLinksOnTop] = useState(true)
 
-  return (<Section>
+  return (
+  <Section>
     <Content>
     <p>
     {t("artistpages.main.first")}</p>
