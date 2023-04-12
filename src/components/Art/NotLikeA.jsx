@@ -24,10 +24,11 @@ p{
     font-size:1.2rem;
     line-height:1.8rem;
   }
-  @media (min-width:900px){
+  @media (min-width:800px){
     padding-top:2rem;
     line-height:2rem;
     padding-left:5rem;
+    max-width:70vw;
   }
 }
 .explanation{
@@ -42,7 +43,8 @@ h2{
   font-size:10vh;
   line-height:10vh;
   margin-bottom:0;
-  @media (min-width:900px){
+  @media (min-width:800px){
+    margin-bottom:0;
     padding-left:5rem;
   }
 }
@@ -58,8 +60,8 @@ const NotLikeA = () => {
   return (
   <Section id="bedbug">
     <h2>Not Like a BedBug</h2>
-    <p>Comic drawn for the magazine MAL, with the theme &quot;<i>Does everyone have to live?</i>&quot;, 2021.</p>
-    <ImageWrapper>
+    <p>{t("artpages.bedbug")} &quot;<i>{t("artpages.bedbug2")}</i>&quot; 2021.</p>
+    <ImageWrapper comic>
     <Image src={n1} alt="Page 1"/>
     </ImageWrapper>
     {language !== "sv" && <p>
@@ -69,7 +71,7 @@ const NotLikeA = () => {
       <i>-We still don&#39;t know how many who has perished..<br/></i>
       &quot;Not since the disco fire in Gothenburg*&quot;<br/>
       &quot;Wasn&#39;t that interested in being loyal to a God that burns children alive.&quot;  </p>}
-      <ImageWrapper>
+      <ImageWrapper comic>
     <Image src={n2} alt="Page 2"/>
     </ImageWrapper>
     {language !== "sv" && <p>
@@ -77,7 +79,7 @@ const NotLikeA = () => {
       <br></br>
       &quot;..the less I believe there&#39;s any meaning to life...&quot;<br/>
       &quot;...only pain and chaos.&quot;  </p>}
-      <ImageWrapper>
+      <ImageWrapper comic>
     <Image src={n3} alt="Page 3"/>
     </ImageWrapper>
     {language !== "sv" && <p>
@@ -85,7 +87,7 @@ const NotLikeA = () => {
       <br></br>
       &quot;If there is someone who has created this experiment that we call <i>life</i>&quot;<br/>
       &quot;Then I wonder how this someone thought...&quot; </p>}
-      <ImageWrapper>
+      <ImageWrapper comic>
     <Image src={n4} alt="Page 4"/>
     </ImageWrapper>
     {language !== "sv" && <p>
@@ -93,7 +95,7 @@ const NotLikeA = () => {
       <br></br>
       &quot;Why are children dying in wars and not these repulsive cretins?&quot;<br/>
       &quot;No I don&#39;t believe in God. Not that everything has to live.&quot;  </p>}
-      <ImageWrapper>
+      <ImageWrapper comic>
     <Image src={n5} alt="Page 5"/>
     </ImageWrapper>
     {language !== "sv" && <p>
@@ -101,7 +103,7 @@ const NotLikeA = () => {
       <br></br><i>
       &quot;John Hron was murdered by nazis, Selena Quintanilla was murdered by a groupe, Martin Luther King was shot, Billie Holiday died because of drugs, and unknown man was probably murdered in 1989.&quot;<br/></i>
       &quot;I know that we all are going to die. One by one. It is fine.&quot;  </p>}
-      <ImageWrapper>
+      <ImageWrapper comic>
     <Image src={n6} alt="Page 6"/>
     </ImageWrapper>
     {language !== "sv" && <p>

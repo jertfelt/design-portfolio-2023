@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { UseTranslation, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import ReactPlayer from "react-player";
-import { ImageWrapper, Upperpadding } from "./ViKanBattre";
+import { ImageWrapper,} from "./ViKanBattre";
 import Image from "next/image";
 import tree1 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-2021.png"
 import tree2 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-2021--2.png"
@@ -9,6 +9,8 @@ import tree3 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-
 import tree4 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-2021--4.png"
 import tree5 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-2021--5.png"
 import tree6 from "../../../public/art/jag-ar-ett-trad-liten-eld--tova-jertfelt-2021--6.png"
+import { WrapperPlayer } from "./Skogen";
+import Zoom from 'react-medium-image-zoom'
 
 const Section=styled.section`
 min-height:50vh;
@@ -18,13 +20,18 @@ h2{
   font-size:10vh;
   line-height:10vh;
   margin-bottom:0;
+  @media(min-width:800px){
+    padding-left:4rem;
+  }
 }
 p{
   line-height:150%;
   @media (min-width:500px){
     max-width:80vw;
     word-spacing:3px;
-    
+  }
+  @media (min-width:800px){
+    padding-left:4rem;
   }
 }
 .desc{
@@ -32,19 +39,34 @@ p{
 }
 color:${({theme}) => theme.textPrimary};
 `
+const NotMobileRow = styled.div`
+@media (min-width:800px){
+display:flex;
+flex-direction:row;
+width:90vw;
+align-items:center;
+justify-content:space-between;
 
+}`
 const Tree = () => {
   const {t} = useTranslation()
   return (<Section id="tree">
+    <NotMobileRow>
+      <div>
     <h2>{t("artistpages.tree.h2")}</h2>
     <p>{t("artistpages.tree.p1")}</p>
+    </div>
+    <div>
     <ReactPlayer url="https://soundcloud.com/tova-jertfelt/jag-ar-ett-trad?si=3bcaf94b301446aebdf2c14b4c8b4b06&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" width="100%" height="100px" config={{soundcloud:{
       options:{
         sharing:true
       }
     }}}/>
-        <ImageWrapper horizontal>
-    <Image src={tree1} alt="Jag är ett träd"></Image>
+    </div>
+    </NotMobileRow>
+    <ImageWrapper horizontal>
+      <Zoom>
+    <Image src={tree1} alt="Jag är ett träd"></Image></Zoom>
     <Image src={tree2} alt="Jag är ett träd"></Image>
     <Image src={tree3} alt="Jag är ett träd"></Image>
     <Image src={tree4} alt="Jag är ett träd"></Image>
@@ -55,7 +77,7 @@ const Tree = () => {
         {t("artistpages.tree.desc")}
 
     </p>
-
+    
 
 
   </Section>  );

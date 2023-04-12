@@ -13,7 +13,6 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import ReactPlayer from 'react-player/lazy'
 import ImageSlider from "./Slider";
-import Grid from "./Grid";
 import { GridArt } from "./Skogen";
 
 const Section = styled.section`
@@ -62,8 +61,8 @@ a{
   background-color:${({theme}) => theme.artcolors.primary};
   padding:6px;
   border-radius:19px;
-  @media (min-width:900px){
-    margin-left:5rem;
+  @media (min-width:800px){
+    
     max-width:70vw;
   }
 }
@@ -122,6 +121,19 @@ img{
     margin:2rem;
   }
 }
+
+${props => 
+  props.comic && 
+  css`
+  @media (min-width:800px){
+    img{
+      max-width:70vw;
+    }
+    padding-left:6rem;
+
+  }
+  
+  `}
 
 ${props => 
   props.max900 && 

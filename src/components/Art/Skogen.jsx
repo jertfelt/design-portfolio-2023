@@ -20,11 +20,10 @@ import Grid from "./Grid";
 
 export const ursaktaImg = [ ursakta5, ursakta4, ursakta3 ]
 
-const WrapperPlayer = styled.div`
+export const WrapperPlayer = styled.div`
 padding-top:1rem;
 @media (min-width:800px){
   padding-left:5rem;
-  
 }
 `
 const Mobile = styled.div`
