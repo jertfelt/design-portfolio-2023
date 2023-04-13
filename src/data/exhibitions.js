@@ -230,14 +230,16 @@ export const exhibitions_ENG = [
       },
       "img":{
         "fields":{
-          "alt":"Sign: Vi eftertsträvar en växande stad.",
+          "alt":"Sign: Vi eftersträvar en växande stad.",
         }
       },
       "translation":{
         "first":"We strive to a",
         "second":"growing city",
-        "text":"In 2030 the municipality will become climate neutral.Noone knows how it will happen. Our vision is business focus,traffic and population growth,and straight lines, everything from the human point of view. Everything in the town shall have a purpose. Unproductivity does not belong. Ineffectiveness is extinct. We want to make our mark. Clean away the weed. We have new ideals now. History does not repeat itself. We are taking the nature into consideration."
-      }
+        "text":"In 2030 the municipality will become climate neutral. Noone knows how it will happen. Our vision is business focus, traffic and population growth,and straight lines, everything from the human point of view. Everything in the town shall have a purpose. Unproductivity does not belong. Ineffectiveness is extinct. We want to make our mark. Clean away the weed. We have new ideals now. History does not repeat itself. We are taking the nature into consideration."
+      },
+      "swedishtext":
+      "I den här texten så citerar jag dåvarande kommunalråd, som hade ansvar för plan- och bygggnadsfrågor i Uppsala kommun. Att han själv säger att kommunen ska bli klimatneutral, men ingen vet hur det ska gå till, är intressant.  Ännu intressantare är det när kommunen följer upp det med mer tågtrafik och nya bostäder, som om nya hus är bra för miljön."
       
     },
     {
@@ -253,8 +255,9 @@ export const exhibitions_ENG = [
         "first":"This park will be",
         "second":"replaced",
         "text":"At the municipality's inventory it was decided that it does not follow our vision for green structure. It no longer fits in with our new street ideals, does not match our fresh urban landscape architecture, it does not either contribute to any profit. We will therefore replace the bushes, gravel paths, trees, bird nests and the ant hill in the southwest corner with a circular, sustainable partly underground parking space that will have room for nine cars."
-      }
-      
+      },
+      "swedishtext":
+      "Generellt i deras texter pratar man med stora ord om grönstrukturer, visioner om hållbarhet och modernitet. Men problemet är att samma ord har använts år ut, år in, genom varje landskapstransformation. Här vill jag också påpeka på absurditeten i hur man satsar på produktivitet och effektivitet för människan - på djuren och naturens bekostnad, och långsiktigt oss själva."
     },
     {
       "sys":{
@@ -269,12 +272,13 @@ export const exhibitions_ENG = [
         "first":"Here we will build",
         "second":"new living spaces",
         "text":" 350 new apartments four to sex floors with a modern touch, green electricity and accessible to everyone. Taking into account the conditions of the area that is to say current housings we sadly have to evict the bats, the aphids, and the vipers. They have been offered to participate in the municipality's planning program for urban development but they cannot afford the down payment. The sledding hill will remain, so that the children may play in wintertime."
-      }
+      },
+      "swedishtext":
+      "I Eriksberg vill man bygga över Hammarparken, en bortglömd skogsplätt inklämd mellan hus och motorväg, med nya bostäder och ett parkeringshus. Det man dock inte nämner är att i parken finns det grodor som blir akut hotade, och även fladdermös. Det intressanta är tillägget med pulkabacken, som aldrig varit upp till debatt och som - dessutom - är en gammal sophög man valt att göra om. "
       
     },
 
   ]
-
 
 
   

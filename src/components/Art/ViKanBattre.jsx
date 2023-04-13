@@ -209,6 +209,22 @@ ${props =>
     
   }
  `
+}${props => 
+  props.largeformat&& 
+  css`  
+  margin:0;
+  padding:0;
+  width:100%;
+  max-width:100vw;
+  position:relative;
+  min-width:100vw;
+  img{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+  }
+ `
 }
 
 

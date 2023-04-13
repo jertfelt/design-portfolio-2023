@@ -82,11 +82,6 @@ right: 5px;
 }
 `
 
-const Mobile = styled.div`
-@media (min-width:900px){
-  display:none;
-}
-`
 
 
 const ImageSlider = ({ slides, format, type }) => {
@@ -120,8 +115,14 @@ const ImageSlider = ({ slides, format, type }) => {
               <img src={slide.src} 
               alt='Carousel images'  />
             )}
-            </ImageWrapper>
-            : <ImageWrapper>
+            </ImageWrapper> 
+            : "row" ? <ImageWrapper grid>
+            {index === current && (
+              <img src={slide.src} 
+              alt='Carousel images'  />
+            )}
+            </ImageWrapper> : 
+            <ImageWrapper>
             {index === current && (
               <img src={slide.src} 
               alt='Carousel images'  />

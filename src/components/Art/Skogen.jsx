@@ -1,40 +1,25 @@
 import styled, {css} from "styled-components";
 import Image from "next/image";
 import ReactPlayer from "react-player";
-import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import ursakta1 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022.png"
 import ursakta2 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-vagg2.png"
-import ursakta3 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt3.png"
-import ursakta4 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt1.png"
-import ursakta5 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-skylt-2.png"
-import ursakta6 from "../../../public/art/skylt--jertfelt--klimatneutral+copy.png"
+
 import { ImageWrapper } from "./ViKanBattre";
-import ursakta7 from "../../../public/art/skylt--jertfelt--parken-1.png"
-import ursakta8 from "../../../public/art/skylt--jertfelt--pulkabacken+copy.png"
 import ImageSlider from "./Slider";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { SkogenSignswithTranslations } from "@component/data/exhibitions";
-import Grid from "./Grid";
 
-export const ursaktaImg = [ ursakta5, ursakta4, ursakta3 ]
+import MobileSectionSkogen, { TabletSectionSkogen } from "./Skogen/Mobile";
+import { ursaktaImg } from "./Skogen/Imgs";
+import LessThan1040pxSkogen, { LessThan1040} from "./Skogen/Lessthan1040";
+import GridFrom1040px from "./Skogen/Gridfrom1040";
+import LaptopViewSkogen from "./Skogen/Laptop";
 
 export const WrapperPlayer = styled.div`
 padding-top:1rem;
 @media (min-width:800px){
   padding-left:5rem;
-}
-`
-const Mobile = styled.div`
-@media (min-width:700px){
-  display:none;
-}
-`
-
-const NotMobile = styled.div`
-@media (max-width:700px){
-  display:none;
 }
 `
 
@@ -120,7 +105,7 @@ p{
 `
 
 
-const TextInEnglish = styled.div`
+export const TextInEnglish = styled.div`
 padding-top:3rem;
 padding-bottom:5rem;
 @media (min-width:500px){
@@ -177,6 +162,7 @@ ${props =>
 
     }
   }` }
+  
   ${props => 
     props.sjuhundra && css`{
       @media (max-width:800px){
@@ -193,12 +179,7 @@ ${props =>
         align-items:center;
         padding-top:1rem;
         padding-bottom:2rem;
-        // // grid-template-columns: auto auto auto;
-        // // grid-template-rows: repeat(10, 1fr);
-        // // .item_0 { grid-column: 1 / 2; grid-row: 1 / 4; }
-    
- 
-        
+
       }
           @media (min-width:900px){
       padding-left:3rem;
@@ -208,6 +189,67 @@ ${props =>
 
     }
     }` }
+    
+`
+
+
+
+export const Row1040 = styled.div`
+
+display:grid;
+grid-template-columns: repeat(2, 2fr);
+gap:3rem;
+padding:4rem;
+row-gap:5rem;
+img{
+  margin-top:-4rem;
+}
+
+h4{
+  padding:0;
+  margin:0;
+  font-size:1.5rem;
+  line-height:1.8rem;
+  margin-bottom:1rem;
+  
+}
+p{
+  padding:0;
+  margin:0;
+  padding-top:1rem;
+  width:100%;
+  max-width:40vw;
+}
+
+.frame {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image_0 {
+  z-index: 0;
+  background-image: url(${ursakta1});
+}
+
+.image_1 {
+  z-index: 1;
+  background-image: url(${ursakta2});
+}
+
+
 `
 
 const Skogen = () => {
@@ -215,122 +257,25 @@ const Skogen = () => {
   const {t} = useTranslation()
   const {locale: activeLocale} = router;
   const language = activeLocale;
+  
   return ( 
   <Section id="skogen">
     <Upperpadding></Upperpadding>
-  <h2>{t("artistpages.forest.h2")}</h2>
-  <p>{t("artistpages.forest.desc")} </p>
-  <h4>{t("artistpages.forest.title1")}</h4>
+    <h2>{t("artistpages.forest.h2")}</h2>
+    <p>{t("artistpages.forest.desc")} </p>
 
-  <WrapperPlayer>
-  <ReactPlayer 
-  url="https://soundcloud.com/tova-jertfelt/ursakta-skogen-vi-bygger-om?si=2811fc45bf98463d99bf3583c3e89756&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-  width="60vw"
-  height="100px"
-  config={{
-  soundcloud:{
-    options:{
-      sharing:true
-    }
-  }
-}}
-/>
-</WrapperPlayer>
-<p>{t("artistpages.forest.longdesc")}</p>
-
-<p className="material">{t("artistpages.forest.material")} </p>
-<ImageWrapper horizontal>
-<Zoom>
-<Image src={ursakta1}
-className="customzoom"
-alt="Part One, showing some of the paintings"
-></Image>
-</Zoom>
-</ImageWrapper>
-
-
-<ImageWrapper horizontal>
-<Zoom>
-<Image src={ursakta2}
-className="customzoom"
-alt="Part One, showing some of the paintings"
-></Image>
-</Zoom>
-</ImageWrapper>
-<Upperpadding></Upperpadding>
-<h4 className="title2">{t("artistpages.forest.title2")}</h4>
-<p>{t("artistpages.forest.desc2")}</p>
+<LaptopViewSkogen ursakta1={ursakta1} ursakta2={ursakta2}/>
+<LessThan1040pxSkogen ursakta1={ursakta1} ursakta2={ursakta2}/>  
 <>
-<NotMobile>
-<Grid imgs={ursaktaImg}
-type="skogen"/>
-
-</NotMobile>
-{SkogenSignswithTranslations.map(item => (
-  <GridArt attahundra key={item.sys.id}>
-    {language !== "sv" ? <>
-      <ImageWrapper grid>
-      <Zoom>
-        {item.sys.id === "ursakta6" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta6}/>
-        }
-        {item.sys.id === "ursakta7" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta7}/>
-        }
-        {item.sys.id === "ursakta8" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta8}/>
-        }
-      </Zoom>
-      </ImageWrapper>
-
-    
-    <TextInEnglish>
-      <p>Translation:</p>
-      <h3>
-        {item.translation.first}<br/>{item.translation.second}
-      </h3>
-      <p>
-        {item.translation.text}
-      </p>
-    </TextInEnglish>
-    </>:
-    <>
-    <ImageWrapper grid>
-      <Zoom>
-        {item.sys.id === "ursakta6" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta6}/>
-        }
-      </Zoom>
-    </ImageWrapper>
-    <ImageWrapper grid>
-      <Zoom>
-    {item.sys.id === "ursakta7" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta7}/>
-        }
-           </Zoom>
-    </ImageWrapper>
-    <ImageWrapper grid>
-      <Zoom>
-        {item.sys.id === "ursakta8" && 
-        <Image alt={item.img.fields.alt} quality={100} style={{objectFit:"contain",}} src={ursakta8}/>
-        }
-        </Zoom>
-        </ImageWrapper>
-    </>
-    }
-  </GridArt>
-))}
-
+<LessThan1040>
+  <TabletSectionSkogen ursaktaImg={ursaktaImg}/>
+</LessThan1040>
+<GridFrom1040px language={language}/>
 </>
-<Mobile>
-<ImageSlider 
-slides={ursaktaImg}
-  format=""
-  type="light"
-/></Mobile>
-
+<MobileSectionSkogen ursaktaImg={ursaktaImg}/>
 <p className="curator">Curator: Alba Folgado</p>
 <p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
+
 <hr></hr>
   </Section> );
 }
