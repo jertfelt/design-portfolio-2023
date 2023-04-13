@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Section = styled.div`
 color:${({theme}) => theme.textPrimary};
 background:${({theme}) => theme.artcolors.primaryLighter};
-margin-top:30vh;
+padding-top:30vh;
 padding-left:2rem;
 flex-wrap: wrap;
 max-width:80%;
@@ -34,7 +34,18 @@ h2{
   color:${({theme}) => theme.white};
   letter-spacing:0.8px;
 }
+@media (min-width:1040px){
+  padding-top:20vh;
+  h1{
+    padding-left:20%;
+    
+  }
+  h2{
+    padding-left:50%;
+  }
+}
 z-index:2;
+
 `
 
 const About = ({newName}) => {

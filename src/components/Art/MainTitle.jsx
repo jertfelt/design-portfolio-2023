@@ -51,7 +51,7 @@ flex-direction:column;
   height:100%;
   background:rgba(1,1,1,0.5);
 }
- 
+
 `
 
 
@@ -64,6 +64,7 @@ const MainTitle = () => {
   
 const shuffle = useCallback(() => {
   const pics = [artmadethis1, ocean, gifVKB, viKanBetter, survivor, dreams2, fire, ursaktaSign, stones]
+
   const index = Math.floor(Math.random() * pics.length);
   setPic(pics[index]);
   const names = ["tankeväckande",  "vacker", "kritisk", "utforskande", "audiovisuell", "taktil",  "multidisciplinär", "digital"]
@@ -78,7 +79,7 @@ const shuffle = useCallback(() => {
     setnewName(engnames[index]);
   }
 
-},[])
+},[language])
 
   useEffect(() => {
     const intervalID = setInterval(shuffle, 2000);

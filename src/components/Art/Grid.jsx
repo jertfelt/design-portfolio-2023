@@ -36,3 +36,5 @@ const Grid = ({imgs, type}) => {
 }
  
 export default Grid;
+
+

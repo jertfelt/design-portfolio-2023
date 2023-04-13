@@ -6,12 +6,15 @@ import { ImageWrapper } from "../ViKanBattre";
 import Image from "next/image";
 import { ursaktaImg } from "./Imgs";
 import ImageSlider from "../Slider";
+import { Grid1200px, GridSkogen1200pxMin, Max1200px } from "./Gridfrom1040";
 
 export const MoreThan1040 = styled.div`
 @media (max-width:1040px){
   display:none;
 }`
-const LaptopViewSkogen = ({ursakta1, ursakta2}) => {
+
+
+const LaptopViewSkogen = ({ursakta1, ursakta2, language}) => {
   const {t} = useTranslation()
   return (
 <MoreThan1040>
@@ -58,8 +61,10 @@ alt="Part One, showing some of the paintings"
     <h4>{t("artistpages.forest.title2")}</h4>
     <p>{t("artistpages.forest.desc2")}</p>
     </div>
+
+    
 </Row1040>
-  
+<GridSkogen1200pxMin language={language}/>
 </MoreThan1040>
 
 

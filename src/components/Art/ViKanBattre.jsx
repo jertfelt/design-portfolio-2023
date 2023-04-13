@@ -14,17 +14,20 @@ import Link from "next/link";
 import ReactPlayer from 'react-player/lazy'
 import ImageSlider from "./Slider";
 import { GridArt } from "./Skogen";
+import { NotMobile } from "./Skogen/Mobile";
 
 const Section = styled.section`
 min-height:50vh;
 background: ${({theme}) => theme.artcolors.primaryLighter};
 padding:2rem;
-color:${({theme}) => theme.textPrimary};
+color:${({theme}) => theme.black};
+@media(min-width:1200px){
+  margin-top:-7rem;
+}
 
 
 h2{
-  
-  color:${({theme}) => theme.textPrimary};
+  color:${({theme}) => theme.black};
   font-size:10vh;
   line-height:10vh;
   padding-top:0;
@@ -37,9 +40,16 @@ h2{
     max-width:70vw;
     padding-bottom:2rem;
   }
-  @media(min-width:800px){
+  @media (min-width:1040px){
+    padding-left:3rem;
+    font-size:16vh;
+    line-height:14vh;
+    max-width:70vw;
+    padding-top:2rem;
+  }
+  @media (min-width:1200px){
    
-   
+   margin-bottom:-2rem;
   }
 }
 p{
@@ -55,6 +65,15 @@ p{
     padding-right:5rem;
     max-width:70vw;
   }
+  @media (min-width:1040px){
+    padding-left:4rem;
+    max-width:60vw;
+  }
+  @media (min-width:1200px){
+    font-size:1rem;
+    word-spacing:2px;
+    max-width:60vw;
+  }
 }
 a{
   line-height:150%;
@@ -62,8 +81,10 @@ a{
   padding:6px;
   border-radius:19px;
   @media (min-width:800px){
-    
     max-width:70vw;
+  }
+  @media (min-width:1040px){
+    margin-left:30%;
   }
 }
 `
@@ -94,6 +115,14 @@ div{
     padding-left:2rem;
   }
 }
+@media (min-width:1040px){
+ div{
+  min-width:50vw;
+  padding-left:3rem;
+  padding-bottom:0;
+  margin-bottom:-2rem;
+ }
+}
 ${props => 
   props.first && 
   css` {  
@@ -102,7 +131,13 @@ ${props =>
    margin:0;
    padding:0;
    
-  }
+  }@media (min-width:1040px){
+ div{
+  min-width:50vw;
+  padding-left:3rem;
+  margin-bottom:2rem;
+ }
+}
     
   }`}
 `
@@ -129,7 +164,18 @@ img{
     margin:2rem;
   }
 }
-
+${props => props.row1200 && css`
+max-width:0vw;
+min-width:20vw;
+padding:0;
+margin:0;
+height:100%;
+width:100%;
+img{
+  
+  width:100%;
+}
+`  }
 ${props => 
   props.comic && 
   css`
@@ -144,44 +190,31 @@ ${props =>
     padding:0;
     margin:0;
   }
-  
+  @media (min-width:1040px){
+    img{
+      max-width:50vw;
+    }
+  }
   `}
 
 ${props => 
   props.max900 && 
   css` margin:0;
 padding:0;
-margin-left:-2rem;
+margin:0;
 width:100%;
-max-width:90vw;
+max-width:40vw;
+min-width:40vw;
 position:relative;
+@media (min-width:1200px){
+  max-width:35vw;
+  min-width:35vw;
+}
 img{
-  margin-top:-.5rem;
-  width:100vw;
-  height: 70vh;
-  @media (min-width:500px){
-    height:100%;
-    width:100vw;
-  }
+ width:100%;
+ filter: drop-shadow(4px 4px 10px #000);
 }
-@media (min-width:800px){
-  img{
-    width:50vw;
-    max-width:800px;
-    padding-left:20%;
-  }
-
-}
- @media(min-width:900px){
-    img{
-      padding-left:2rem;
-      max-width:100%;
-      padding-top:0;
-      
-      
-    }
-   
-    } `}
+ `}
 
 ${props => 
   props.grid && 
@@ -287,13 +320,47 @@ const Mobile= styled.div`
   display:none;
 }
 `
-const NotMobile = styled.div`
-@media (max-width:800px){
+const NotMobilePadding = styled.div`
+@media (min-width:1040px){
+  padding-left:5rem;
+}
+`
+
+export const Max1040px = styled.div`
+@media (min-width:1040px){
   display:none;
-}`
+}
+`
+export const Max1200px = styled.div`
+@media (max-width:1040px){
+  display:none;
+}
+@media (min-width:1199px){
+  display:none;
+}
+`
+export const Min1200px = styled.div`
+@media (max-width:1199px){
+  display:none;
+}
+`
+
+const Row1200 = styled.div`
+display:flex;
+flex-direction:row;
+gap:1rem;
+padding-left:3rem;
+p{
+  max-width:50%;
+}
+
+`
+
 const ViKanBattre = () => {
   const {t} = useTranslation()
   const images = [vikan7,vikan1,vikan5,vikan6]
+  const images1040px = [vikan7,vikan1,vikan5]
+
   return (
 <Section id="VKB">
   <Mobile>
@@ -310,19 +377,19 @@ alt="The entrance"
       <Upperpadding></Upperpadding>
       
       <h2 >{t("artistpages.vikanbattre.title")}</h2>
-      <p>{t("artistpages.vikanbattre.smalldescription")}
-      </p>
-  
-      <p>{t("artistpages.vikanbattre.material")}</p>
+    
       <VideoWrapper>
     <ReactPlayer url='https://youtu.be/IfffzYAGps4' 
     />
     </VideoWrapper>
-
+    <p>{t("artistpages.vikanbattre.smalldescription")}
+      </p>
+  
+      <p>{t("artistpages.vikanbattre.material")}</p>
 <ImageWrapper>
 <NotMobile>
+  <NotMobilePadding>
         <GridArt sjuhundra>
-          
           <ImageWrapper grid>
             <Zoom>
           <Image src={vikan3}
@@ -345,6 +412,7 @@ alt="The cube"
 ></Image></Zoom>
           </ImageWrapper>
         </GridArt>
+        </NotMobilePadding>
       </NotMobile>
   <Mobile>
 <Zoom>
@@ -353,7 +421,6 @@ className="customzoom"
 alt="The cube"
 ></Image>
 </Zoom>
-
 <Zoom>
 <Image src={vikan3}
 className="customzoom"
@@ -366,7 +433,6 @@ className="customzoom"
 alt="The cube"
 ></Image>
 </Zoom>
-
 <Zoom>
 <Image src={vikan4}
 className="customzoom"
@@ -375,12 +441,39 @@ alt="The cube"
 </Zoom>
 </Mobile>
 </ImageWrapper>
+
+ 
+    <Min1200px>
+    <Row1200> 
     <p>{t("artistpages.vikanbattre.description1")}</p>
+    <ImageWrapper row1200>
+      <Image src={vikan6} alt="The wolves attacks the weak" quality={100}  style={{
+      objectFit: 'contain',
+    }}></Image>
+    </ImageWrapper>
+    </Row1200>
+    </Min1200px>
+  
+
+
+<Max1200px>
+<p>{t("artistpages.vikanbattre.description1")}</p>
+</Max1200px>
 
 <NotMobile>
+
+<Max1040px>
 <ImageSlider slides={images}
 format="horizontal"
 type="light"/>
+</Max1040px>
+
+<Max1200px>
+<ImageSlider slides={images1040px}
+format="horizontal"
+type="light"/>
+</Max1200px>
+
 </NotMobile>
 
 <Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>

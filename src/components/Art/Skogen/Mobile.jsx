@@ -11,6 +11,11 @@ export const Tablet = styled.div`
   display:none;
 }
 `
+export const NotMobile =styled.div`
+@media (max-width:800px){
+  display:none;
+}
+`
 
 const MobileSectionSkogen = () => {
   return (

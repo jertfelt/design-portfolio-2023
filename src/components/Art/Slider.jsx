@@ -15,6 +15,9 @@ padding:8px;
 display:flex;
 align-items:center;
 top: 50%;
+@media (min-width:1040px){
+  top:80%;
+}
 position:absolute;
 font-size:2rem;
 border-radius:50px;
@@ -25,7 +28,7 @@ cursor: pointer;
 color: ${({theme}) => theme.textSecondary};
 user-select: none;
 &:hover{
-  color: ${({theme}) => theme.artcolors.primaryLighter};
+  color: ${({theme}) => theme.artcolors.primaryLight};
 }
 @media (min-width:800px){
   font-size:4rem;

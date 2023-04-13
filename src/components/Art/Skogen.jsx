@@ -1,20 +1,15 @@
 import styled, {css} from "styled-components";
-import Image from "next/image";
-import ReactPlayer from "react-player";
 import 'react-medium-image-zoom/dist/styles.css'
 import ursakta1 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022.png"
 import ursakta2 from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-tova-jertfelt-2022-vagg2.png"
-
-import { ImageWrapper } from "./ViKanBattre";
-import ImageSlider from "./Slider";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-
 import MobileSectionSkogen, { TabletSectionSkogen } from "./Skogen/Mobile";
 import { ursaktaImg } from "./Skogen/Imgs";
 import LessThan1040pxSkogen, { LessThan1040} from "./Skogen/Lessthan1040";
-import GridFrom1040px from "./Skogen/Gridfrom1040";
+import GridFrom1040px, { GridFrom1200px } from "./Skogen/Gridfrom1040";
 import LaptopViewSkogen from "./Skogen/Laptop";
+import FlipSign from "./Skogen/FlippablePictures";
 
 export const WrapperPlayer = styled.div`
 padding-top:1rem;
@@ -32,6 +27,7 @@ padding-bottom:0;
 hr{
   color:${({theme}) => theme.artcolors.primaryLighter};
   margin-top:2rem;
+  
 }
 h2{
   font-size:10vh;
@@ -52,6 +48,10 @@ h2{
     line-height:14vh;
     max-width:70vw;
     margin-top:-4rem;
+  }
+  @media (min-width:1200px){
+   
+   margin-bottom:-1rem;
   }
 }
 h4{
@@ -82,6 +82,11 @@ p{
     padding-left:3rem;
     max-width:60vw;
   }
+  @media (min-width:1200px){
+    font-size:1rem;
+    word-spacing:2px;
+    max-width:80vw;
+  }
 }
 .curator{
   text-align:center;
@@ -89,12 +94,16 @@ p{
   @media (min-width:550px){
    padding-top:2rem;
   }
+  @media(min-width:1040px){
+    text-align:left;
+  }
 }
 .link{
   margin-bottom:0;
   text-align:center;
-  @media (min-width:550px){
-   
+ 
+  @media(min-width:1040px){
+    text-align:right;
   }
 }
 .title2{
@@ -120,7 +129,15 @@ padding-bottom:5rem;
   }
   p{font-size:1rem;
     line-height:1.2rem;
-  padding-left:0;}
+  padding-left:0;
+@media(min-width:1040px){
+  font-size:1rem;
+  line-height:1.5rem;
+  padding-bottom:1rem;
+  
+  
+}
+}
   padding:0;
   margin:0;
 }
@@ -162,6 +179,14 @@ ${props =>
 
     }
   }` }
+  ${props => 
+  props.threeRepeat && css`{
+      display:grid;
+      padding:5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap:2rem;
+     
+  }` }
   
   ${props => 
     props.sjuhundra && css`{
@@ -202,7 +227,7 @@ gap:3rem;
 padding:4rem;
 row-gap:5rem;
 img{
-  margin-top:-4rem;
+  margin-top:-2rem;
 }
 
 h4{
@@ -248,9 +273,9 @@ p{
   z-index: 1;
   background-image: url(${ursakta2});
 }
-
-
 `
+
+
 
 const Skogen = () => {
   const router= useRouter();
@@ -263,15 +288,13 @@ const Skogen = () => {
     <Upperpadding></Upperpadding>
     <h2>{t("artistpages.forest.h2")}</h2>
     <p>{t("artistpages.forest.desc")} </p>
-
-<LaptopViewSkogen ursakta1={ursakta1} ursakta2={ursakta2}/>
+<LaptopViewSkogen ursakta1={ursakta1} ursakta2={ursakta2} language={language}/>
 <LessThan1040pxSkogen ursakta1={ursakta1} ursakta2={ursakta2}/>  
-<>
 <LessThan1040>
   <TabletSectionSkogen ursaktaImg={ursaktaImg}/>
 </LessThan1040>
 <GridFrom1040px language={language}/>
-</>
+
 <MobileSectionSkogen ursaktaImg={ursaktaImg}/>
 <p className="curator">Curator: Alba Folgado</p>
 <p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>

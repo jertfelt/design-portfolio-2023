@@ -14,7 +14,12 @@ const Section = styled.section`
 min-height:50vh;
 background: ${({theme}) => theme.artcolors.primaryLightest};
 padding:2rem;
-
+@media (min-width:1040px){
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  padding-left:10%;
+}
 color:${({theme}) => theme.textSecondary};
 p{
   line-height:150%;
@@ -69,7 +74,7 @@ const NotLikeA = () => {
   return (
   <Section id="bedbug">
     <h2>Not Like a BedBug</h2>
-    <p>{t("artpages.bedbug")} &quot;<i>{t("artpages.bedbug2")}</i>&quot; 2021.</p>
+    <p>{t("artistpages.bedbug")} &quot;<i>{t("artistpages.bedbug2")}</i>&quot; 2021.</p>
     <ImageWrapper comic>
     <Image src={n1} alt="Page 1"/>
     </ImageWrapper>
