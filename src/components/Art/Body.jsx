@@ -11,13 +11,12 @@ import NotLikeA from "./NotLikeA";
 import Tree from "./Tree";
 import Dreams from "./Dreams";
 import Image from "next/image";
-import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
-import fire from "../../../public/art/qqww.jpg"
 import three from "../../../public/art/fire-color-jertfelt copy.png"
 
 const Section = styled.div`
 padding-top:450px;
 color:${({theme}) => theme.textPrimary};
+
 `
 const Content = styled.div`
 padding:2rem;
@@ -25,6 +24,9 @@ max-width:100%;
 padding-top:10rem;
 @media (min-width:800px){
   padding:5rem;
+}
+@media (min-width:1040px){
+  padding-top:10rem;
 }
 p{
   line-height:1.5rem;
@@ -124,6 +126,9 @@ h2{
   padding-top:10rem;
   padding-left:2rem;
   row-gap:2rem;
+}
+@media (min-width:1040px){
+  padding:10rem;
 }
 `
 
