@@ -76,16 +76,25 @@ p{
   }
 }
 a{
-  line-height:150%;
-  background-color:${({theme}) => theme.artcolors.primary};
-  padding:6px;
-  border-radius:19px;
+ 
+ 
+ text-align:center;
+  
   @media (min-width:800px){
     max-width:70vw;
   }
   @media (min-width:1040px){
     margin-left:30%;
   }
+}
+.link{
+ p{
+  background-color:${({theme}) => theme.artcolors.primary};
+  border-radius:19px;
+  line-height:150%;
+  padding:6px;
+ }
+  
 }
 `
 export const Upperpadding = styled.div`
@@ -339,6 +348,16 @@ export const Max1200px = styled.div`
   display:none;
 }
 `
+export const Max1200px2 = styled.div`
+@media (min-width:1199px){
+  display:none;
+}
+`
+export const Min1040px = styled.div`
+@media (max-width:1040px){
+  display:none;
+}
+`
 export const Min1200px = styled.div`
 @media (max-width:1199px){
   display:none;
@@ -392,23 +411,17 @@ alt="The entrance"
         <GridArt sjuhundra>
           <ImageWrapper grid>
             <Zoom>
-          <Image src={vikan3}
-
-alt="The cube"
+          <Image src={vikan3} alt="The cube"
 ></Image></Zoom>
           </ImageWrapper>
           <ImageWrapper grid>
             <Zoom>
-          <Image src={vikan2}
-
-alt="The cube"
+          <Image src={vikan2} alt="The cube"
 ></Image></Zoom>
           </ImageWrapper>
           <ImageWrapper grid>
             <Zoom>
-          <Image src={vikan4}
-
-alt="The cube"
+          <Image src={vikan4} alt="The cube"
 ></Image></Zoom>
           </ImageWrapper>
         </GridArt>
@@ -462,21 +475,21 @@ alt="The cube"
 
 <NotMobile>
 
-<Max1040px>
+<Max1200px2>
 <ImageSlider slides={images}
 format="horizontal"
 type="light"/>
-</Max1040px>
+</Max1200px2>
 
-<Max1200px>
+<Min1200px>
 <ImageSlider slides={images1040px}
 format="horizontal"
 type="light"/>
-</Max1200px>
+</Min1200px>
 
 </NotMobile>
 
-<Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank"  >{t("artistpages.vikanbattre.readLink")}</Link>
+<Link href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A936493&dswid=9026" target="_blank" className="link"><p>{t("artistpages.vikanbattre.readLink")}</p></Link>
 <Mobile>
 <ImageWrapper 
     horizontal>
