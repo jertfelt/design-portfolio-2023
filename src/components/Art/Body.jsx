@@ -6,12 +6,11 @@ import Exhibitions from "./Exhibitions";
 import Links from "./Links";
 import Skogen from "./Skogen";
 import { useState } from "react";
-import ViKanBattre, { ImageWrapper } from "./ViKanBattre";
+import ViKanBattre from "./ViKanBattre";
 import NotLikeA from "./NotLikeA";
 import Tree from "./Tree";
 import Dreams from "./Dreams";
-import Image from "next/image";
-import three from "../../../public/art/fire-color-jertfelt copy.png"
+
 
 const Section = styled.div`
 padding-top:450px;
@@ -267,10 +266,6 @@ const [linksOnTop, setLinksOnTop] = useState(true)
     </div>
    
     </WrapperExhibitions>
-    <Standalones>
-      <Image src={three} alt="Three phases of burning out, digital art 2018"/>
-    </Standalones>
-
 
     <WrapperFooter>
     <a href="https://www.instagram.com/jertfelt/"
