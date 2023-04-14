@@ -38,7 +38,9 @@ const Document = () => {
       </Head>
       <body>
         <Main />
+        <div id="modal" />
         <NextScript />
+        <noscript>You need to enable JavaScript to run this app.</noscript>
       </body>
     </Html>
   )

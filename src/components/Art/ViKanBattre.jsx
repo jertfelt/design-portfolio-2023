@@ -15,6 +15,8 @@ import ReactPlayer from 'react-player/lazy'
 import ImageSlider from "./Slider";
 import { GridArt } from "./Skogen";
 import { NotMobile } from "./Skogen/Mobile";
+import { useEffect, useState } from "react";
+import { LoadingSection } from "../utils/loading";
 
 const Section = styled.section`
 min-height:50vh;
@@ -91,6 +93,7 @@ a{
  p{
   background-color:${({theme}) => theme.artcolors.primary};
   border-radius:19px;
+  color:${({theme}) => theme.artcolors.primaryLightest};
   line-height:150%;
   padding:6px;
  }
@@ -380,8 +383,10 @@ const ViKanBattre = () => {
   const images = [vikan7,vikan1,vikan5,vikan6]
   const images1040px = [vikan7,vikan1,vikan5]
 
+
   return (
 <Section id="VKB">
+
   <Mobile>
 <ImageWrapper 
     horizontal_first>
@@ -460,7 +465,7 @@ alt="The cube"
     <Row1200> 
     <p>{t("artistpages.vikanbattre.description1")}</p>
     <ImageWrapper row1200>
-      <Image src={vikan6} alt="The wolves attacks the weak" quality={100}  style={{
+      <Image src={vikan6} alt="The wolves attacks the weak" quality={100} style={{
       objectFit: 'contain',
     }}></Image>
     </ImageWrapper>
@@ -508,6 +513,7 @@ alt="Detail from the wall, girl chased by wolves"
 </Zoom>
 </ImageWrapper>
 </Mobile>
+
     </Section>
     );
 }

@@ -116,18 +116,36 @@ const ImageSlider = ({ slides, format, type }) => {
             <ImageWrapper horizontal_gallery>
             {index === current && (
               <img src={slide.src} 
+              placeholder="blur"
+              blurDataURL="URL"
+              style={{
+              objectFit: 'contain',
+              }}
+              fill
               alt='Carousel images'  />
             )}
             </ImageWrapper> 
             : "row" ? <ImageWrapper grid>
             {index === current && (
               <img src={slide.src} 
+              placeholder="blur"
+              blurDataURL="URL"
+              style={{
+              objectFit: 'contain',
+              }}
+              fill
               alt='Carousel images'  />
             )}
             </ImageWrapper> : 
             <ImageWrapper>
             {index === current && (
               <img src={slide.src} 
+              placeholder="blur"
+              blurDataURL="URL"
+              style={{
+              objectFit: 'contain',
+              }}
+              fill
               alt='Carousel images'  />
             )}
             </ImageWrapper>}

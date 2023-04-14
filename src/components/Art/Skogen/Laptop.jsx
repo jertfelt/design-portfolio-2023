@@ -6,7 +6,7 @@ import { ImageWrapper } from "../ViKanBattre";
 import Image from "next/image";
 import { ursaktaImg } from "./Imgs";
 import ImageSlider from "../Slider";
-import { Grid1200px, GridSkogen1200pxMin, Max1200px } from "./Gridfrom1040";
+import { GridSkogen1200pxMin} from "./Gridfrom1040";
 
 export const MoreThan1040 = styled.div`
 @media (max-width:1040px){

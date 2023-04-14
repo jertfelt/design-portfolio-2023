@@ -10,6 +10,9 @@ import LessThan1040pxSkogen, { LessThan1040} from "./Skogen/Lessthan1040";
 import GridFrom1040px, { GridFrom1200px } from "./Skogen/Gridfrom1040";
 import LaptopViewSkogen from "./Skogen/Laptop";
 import FlipSign from "./Skogen/FlippablePictures";
+import { LoadingSection } from "../utils/loading";
+import { useEffect, useState } from "react";
+import Modal from "../utils/ModalLoader";
 
 export const WrapperPlayer = styled.div`
 padding-top:1rem;
@@ -282,9 +285,10 @@ const Skogen = () => {
   const {t} = useTranslation()
   const {locale: activeLocale} = router;
   const language = activeLocale;
-  
+
   return ( 
   <Section id="skogen">
+
     <Upperpadding></Upperpadding>
     <h2>{t("artistpages.forest.h2")}</h2>
     <p>{t("artistpages.forest.desc")} </p>
@@ -300,6 +304,7 @@ const Skogen = () => {
 <p className="link">{t("artistpages.forest.linktxt")} <a href="https://uppsalakonstnarsklubb.se/projekt-och-event/Rusmus" target="_blank">Rusmus</a> {t("artistpages.forest.linktxt2")}</p>
 
 <hr></hr>
+
   </Section> );
 }
  
