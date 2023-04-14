@@ -79,6 +79,11 @@ display:flex;
 width:100%;
 align-items:center;
 justify-content:center;
+@media (min-width:600px) and (max-width:900px){
+  align-items:flex-start;
+  justify-content:flex-start;
+  margin-left:4rem;
+}
 
 `
 

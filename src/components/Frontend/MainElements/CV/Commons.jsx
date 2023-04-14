@@ -78,7 +78,7 @@ ${props =>
   ${props => 
   props.techstack && 
   css`
-
+   
     h3{
       text-align:center;
     }
@@ -103,6 +103,7 @@ ${props =>
        font-size:1.2rem;
       }
   }
+  
   `}
 `
 

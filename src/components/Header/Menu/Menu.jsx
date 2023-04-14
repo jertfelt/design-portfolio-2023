@@ -32,7 +32,8 @@ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 
 @media (max-width:800px) {
   width:100%;
-  width:80vw;
+  width:100vw;
+  margin:0;
   padding:0;
   height:100vh;
   font-size:2rem;
@@ -52,8 +53,10 @@ transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   max-width:25vh;
 }
 @media (max-width: 800px) {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
+  padding-top:2rem;
+
 }
 a {
   font-size: 1.5rem;
