@@ -40,12 +40,13 @@ min-height:20vh;
 max-height:25vh;
 @media (max-width:500px){
   text-align:center;
-  font-size:1em;
+  font-size:1.5rem;
 }
 `
 
 const LinkTwo = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+
 &:hover{
   color: ${({ theme }) => theme.accentTwo};
   transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);

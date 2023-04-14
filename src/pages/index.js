@@ -25,7 +25,6 @@ color: ${({ theme }) => theme.textPrimary};
   max-width:100%;
   padding:1rem;
   padding-top:5rem;
-  
 }
 `
 const TextContainer = styled.div`
