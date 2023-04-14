@@ -3,8 +3,7 @@ import styled from "styled-components"
 import Link from "next/link"
 import { AppContext } from "@component/context/AppContext"
 import {useTranslation } from "next-i18next";
-
-
+import { linksdata } from "./linksdata";
 
 const BackgroundOne = styled.div`
 background-color: ${({ theme }) => theme.body};
@@ -17,14 +16,7 @@ const BackgroundTwo = styled.div`
 background-color: ${({ theme }) => theme.body};
 color: ${({ theme }) => theme.contrast};
 `
-const BackgroundThree = styled.div`
-background-color: ${({ theme }) => theme.body};
-color: ${({ theme }) => theme.contrast};
-`
-const BackgroundFour = styled.div`
-background-color: ${({ theme }) => theme.body};
-color: ${({ theme }) => theme.contrast};
-`
+
 
 const LinkContainer = styled.div`
 display: flex;
@@ -294,7 +286,6 @@ const LinksToPages = () => {
   const {setSelectedPage} = useContext(AppContext);
   const {t} = useTranslation();
   const selection = (e) => {
-
     switch(e.target.outerText){
       case "Frontend,":
         setSelectedPage({value:"frontend", url:"/frontend"})
@@ -317,13 +308,42 @@ const LinksToPages = () => {
   }
   return (  
     <BodyTwo>
+      <>{linksdata.map((item,i) => (
+        <div key={i}
+        onClick={(e => selection(e))}> 
+          <Link href={{pathname: `/${item.link.href}`, query:{key:`${item.link.href}`}}}>
+         <> {item.link.href=== "frontend" ? 
+            <BackgroundOne>
+              <LinkContainer>
+              <LinkOnev2>
+              {item.text}
+              </LinkOnev2>
+              </LinkContainer>
+            </BackgroundOne>
+          : 
+          <BackgroundTwo>
+           <LinkContainer>
+            {item.translation ? <LinkTwo>{t("startsida.headline")}</LinkTwo> :
+            <>
+            {item.link.href === "design" && <LinkThree>{item.text}</LinkThree>}
+            {item.link.href === "illustration" && <LinkFour>{item.text}</LinkFour>}
+            </>}
+           </LinkContainer>
+          </BackgroundTwo>
+          
+          }
+          </>
+          </Link>
+          </div>
+      ))}</>
+{/*   
       <div 
       value="frontendNav"
       onClick={(e) => selection(e)}>
       <Link href={{pathname: "/frontend", query:{key:"frontend"}}}>
       <BackgroundOne>
         <LinkContainer>
-        <LinkOnev2 >
+        <LinkOnev2>
         Frontend,
         </LinkOnev2>
         </LinkContainer>
@@ -343,23 +363,23 @@ const LinksToPages = () => {
       <div
       onClick={(e) => selection(e)}>
       <Link href={{pathname: "/design", query:{key:"design"}}}>
-      <BackgroundThree>
+      <BackgroundTwo>
         <LinkContainer>
         <LinkThree>Design & </LinkThree>
         </LinkContainer>
-      </BackgroundThree>
+      </BackgroundTwo>
       </Link>
       </div> 
       <div 
       onClick={(e) => selection(e)}>
       <Link href={{pathname: "/illustration", query:{key:"illustration"}}}>
-      <BackgroundFour>
+      <BackgroundTwo>
         <LinkContainer>
         <LinkFour>Illustration</LinkFour>
         </LinkContainer>
-      </BackgroundFour> 
+      </BackgroundTwo> 
       </Link>
-      </div>
+      </div> */}
     </BodyTwo>
  );
 }

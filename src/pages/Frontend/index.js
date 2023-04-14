@@ -2,7 +2,7 @@ import MainFrontend from "@component/components/Frontend/MainFrontend";
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
-import HeadIndex, { HeadIndexFrontend } from "@component/components/Head";
+import HeadIndex from "@component/components/Head";
 
 
 const FrontendPage = () => {
@@ -12,10 +12,10 @@ const FrontendPage = () => {
     if(selectedPage.value !== "frontend"){
       setSelectedPage({value:"frontend", url:"/frontend"})
     }
-  },[])
+  },[selectedPage.value, setSelectedPage])
   
   return ( <>
-<HeadIndex/>
+    <HeadIndex/>
     <MainFrontend/>
     </>
     );

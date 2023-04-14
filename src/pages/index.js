@@ -14,7 +14,7 @@ flex-direction: column;
 box-sizing: border-box;
 color: ${({ theme }) => theme.textPrimary};
 @media (max-width: 700px){
-  margin-left:-1rem;
+  
   margin-top:-1rem;
   max-width:100%;
   padding-top:5rem;
