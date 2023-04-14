@@ -4,13 +4,14 @@ import styled from "styled-components";
 
 
 const Span = styled.div`
-font-size:1rem;
+font-size:14px;
 font-weight:bold;
 padding:10px;
+text-align:center;
+
 &:hover{
   background: ${({ theme }) => theme.accentTwo};
   color:${({ theme }) => theme.textSecondary};
- 
   border-radius:9px;
 }
 `
