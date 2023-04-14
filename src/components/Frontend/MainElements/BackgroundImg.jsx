@@ -11,6 +11,7 @@ overflow: hidden;
 z-index: 1;
 @media screen and (max-width:700px){
  display:none;
+ width:0;
 }
 
 `
@@ -22,6 +23,7 @@ background: rgba(50, 57, 57, 0.3);
 z-index:1;
 @media screen and (max-width:700px){
   display:none;
+  width:0;
 }
 
 `
@@ -35,15 +37,16 @@ color:${({theme}) => theme.white};
 text-shadow: 1px 1px 1px ${({theme}) => theme.frontendcolors.background};
 z-index: 1;
 position: relative;
+
 @media screen and (max-width:700px){
-padding:2rem;
+  padding-top:10vh;
+  max-width:100%;
+}
+@media screen and (max-width:500px){
+  padding:2rem;
 padding-top:10vh;
 padding-bottom:5vh;
-}
-@media screen and (max-width:700px){
-  max-width:50vw;
-  padding-right:2rem;
-
+max-width:50vw;
 }
 `
 

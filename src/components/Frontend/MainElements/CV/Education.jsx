@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import CountingUp from "../Counter";
-import { Bread, CVContent, GridItem, Period, Row } from "./Commons";
+import { Bread, CVContent, GridItem, Period} from "./Commons";
 import { Grid } from "@component/components/stylings/Grids";
 import {fonts } from "@component/components/stylings/Stylings";
 import Nackademin from "./Nackademin";
@@ -16,16 +15,19 @@ z-index:1;
 padding-bottom:3rem;
 padding-top:3rem;
 padding:2rem;
+
 @media screen and (max-width:700px){
-  width:100vw;
-  padding:3rem;
+  width:100%;
+  div{
+    padding-left:3rem;
+    max-width:80%;
+  }
+  padding:0;
   padding-bottom:8rem;
-  padding-left:10rem;
+
 }
 @media screen and (max-width:500px){
-  width:100vw;
-  padding:3rem;
-  padding-left:10rem;
+  padding:0;
   padding-bottom:5rem;
 }
 &::before {
@@ -64,24 +66,6 @@ h2{
 `
 
 
-const BlobInGrid = styled.div`
-margin-top:-2rem;
-margin-bottom:2rem;
-padding:0;
-display:flex;
-align-items:center;
-gap:1rem;
-
-span{
-  margin:0;
-  width:100px;
-
-  margin-bottom:1rem;
-}
-@media screen and (max-width:700px){
-  display:none;
-}
-`
 
 export const Knapp = styled.button`
 
@@ -147,7 +131,7 @@ const Education = ({courses, education}) => {
     }
     
     
-    }, [])
+    }, [courses, doneCourses.length])
 
 
 

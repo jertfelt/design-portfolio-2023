@@ -13,16 +13,9 @@ z-index:1;
 padding:2rem;
 padding-bottom:3rem;
 margin-top:4rem;
-@media screen and (max-width:700px){
-  width:100vw;
-  padding:3rem;
-  padding-bottom:8rem;
-  padding-left:10rem;
-}
+
 @media screen and (max-width:500px){
-  width:100vw;
-  padding:3rem;
-  padding-left:10rem;
+ 
   margin-top:-2rem;
 }
 

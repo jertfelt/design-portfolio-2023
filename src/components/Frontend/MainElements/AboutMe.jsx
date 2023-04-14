@@ -9,6 +9,17 @@ import {useTranslation } from "next-i18next";
 const MainSection = styled.section`
 margin-bottom:3rem;
 z-index:3;
+.aboutTxt{
+  @media (max-width:700px){
+
+    max-width:80vw;
+  }
+ @media (max-width:500px){
+  max-width:90vw;
+ }
+
+}
+
 `
 const About = styled.div`
 h2{
@@ -22,6 +33,8 @@ h2{
   padding:2rem;
   transition: all .8s ease-out;
   max-width:200px;
+}
+
 }
 `
 
@@ -68,6 +81,7 @@ line-height:150%;
 @media (max-width:900px){
   font-size:${fonts.fontSizes.mediumsmall};
 }
+
 `
 const Row = styled.div`
 display:flex;
@@ -103,6 +117,7 @@ a:focus{
 
 const Emphasis = styled.span`
 color: ${({theme}) => theme.frontendcolors.lightblue};
+
 `
 
 const LookingForJob= styled.div`
@@ -113,8 +128,7 @@ line-height:1.8rem;
 p{
   width:80%;
 }
-@media screen and (max-width:700px){
-}
+
 `
 
 const AboutMe = () => {
@@ -127,15 +141,15 @@ const AboutMe = () => {
     <Grid 
       about>
         <About><h2>{t("frontendpage.aboutme")}</h2>
-        <p>{t("frontendpage.aboutmetxt1")}<br/>
+        <p className="aboutTxt">{t("frontendpage.aboutmetxt1")}<br/>
          <Emphasis>{t("frontendpage.emphasis1")}</Emphasis> </p></About>
-          <p>{t("frontendpage.aboutmetxt2")}</p>
+          <p className="aboutTxt">{t("frontendpage.aboutmetxt2")}</p>
           <div>
-          <p>{t("frontendpage.aboutmetxt3")}<br/></p>
+          <p className="aboutTxt">{t("frontendpage.aboutmetxt3")}<br/></p>
           </div>
       </Grid>
       <LookingForJob>
-        <p>
+        <p className="aboutTxt">
       <Emphasis>{t("frontendpage.emphasis2")}
           </Emphasis><br/>
            <br/>{t("frontendpage.aboutmetxt4")}

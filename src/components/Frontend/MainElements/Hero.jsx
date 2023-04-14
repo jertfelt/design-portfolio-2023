@@ -43,7 +43,7 @@ width:200px;
 padding-left:50%;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:500px){
   height:120px;
   width:120px;
  }

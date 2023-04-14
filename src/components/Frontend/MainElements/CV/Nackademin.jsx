@@ -38,7 +38,8 @@ p{
 @media screen and (max-width:800px){
   margin:0;
   padding:1rem;
-  max-width:500px;
+  padding:0;
+  margin-left:-3rem;
 }
 padding-top:0;
 margin-top:-1rem;
@@ -55,7 +56,53 @@ width:100%;
 @media screen and (max-width:800px){
   margin:0;
   gap:2rem;
-  width:80%;
+ 
+}
+@media screen and (max-width:700px){
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  div{
+  margin:0;
+  padding:0;
+  margin-left:-2rem;
+  }
+  .correctionmax500{
+    margin-left:-10rem;
+  }
+  .rowInTablet{
+    margin-left:-17rem;
+    display:flex;
+    flex-direction:row;
+    gap:1.5rem;
+    @media screen and (max-width:800px){
+      li{
+        margin-left:0;
+        width:40vw;
+      }
+      gap:6rem;
+      padding-bottom:2rem;
+    }
+    @media screen and (max-width:500px){
+      display:flex;
+      flex-direction:column;
+      margin-left:0;
+      table{
+        margin-left:-5rem;
+        width:70vw;
+      }
+      li{
+        width:50vw;
+        margin-left:-2rem;
+      }
+      button{
+        min-width:40vw;
+        margin-top:2rem;
+        margin-bottom:3rem;
+      }
+    }
+  }
 }
 `
 
@@ -79,8 +126,9 @@ background-color: ${({theme}) => theme.frontendcolors.background};
 line-height:1.5rem;
 color:${({theme}) => theme.textPrimary};
 @media screen and (max-width:800px){
-  bottom:20%;
+  bottom:50%;
 }
+
 `
 
 const Kursinnehåll = styled.ul`
@@ -107,7 +155,7 @@ th, td{
   border-bottom: 1px solid ${({theme}) => theme.lightblue};
 }
 .notDone{
-  color:${({theme}) => theme.frontendcolors.background};
+  color:${({theme}) => theme.purple};
   &:hover{
     color:${({theme}) => theme.frontendcolors.lightblue};
   }
@@ -121,13 +169,12 @@ const Nackademin = ({courses}) => {
   const [doneCourses, setCourses] = useState([]);
   const [all, setAll] = useState([])
   const [isShown, setIsShown] = useState(false);
-  const [language, setLang] = useState(document.getElementsByTagName('html')[0].getAttribute('lang'))
   const {t} = useTranslation()
 
   useEffect(() => {
     setCourses(courses.filter(item => (item.done === true)))
     setAll(shuffle(courses))
-    }, [])
+    }, [courses])
 
     const shuffle = (array) => {
       let currentIndex = array.length, randomIndex;
@@ -178,24 +225,25 @@ const Nackademin = ({courses}) => {
   return (
     <Container>
     <NackademinGrid>
-      <div>
+      <div className="correctionmax500">
     <h3>{t("nackademin.h3")}</h3>
     <h4>{t("nackademin.h4")}</h4>
     <p>2021-2023</p>
     </div>
-    <Row>
+    <Row className="correctionmax500">
       <Canvas
       data={data2}
       options={configdata2}/>
         <h3>{doneCourses.length} {t("nackademin.total")} {courses.length}  {t("nackademin.avklarade")}</h3>
     </Row>
-    <div>
+    <div className="rowInTablet">
+    <div >
     <Table>
       <thead>
   <tr>
     <th>{t("nackademin.kurs")}</th>
     <th>{t("nackademin.Betyg")}</th>
-    {/* <th>{t("nackademin.Omfattning")}</th> */}
+    
   </tr>
   </thead>
   <tbody>
@@ -207,7 +255,7 @@ const Nackademin = ({courses}) => {
       key={item.id}>
         <td>{item.title}</td>
         <td>N/A</td>
-        {/* <td>{item.omfattning}</td> */}
+        
       </tr>
     }
 
@@ -218,7 +266,7 @@ const Nackademin = ({courses}) => {
         
         <td>{item.title}</td>
         <td>{item.betyg}</td>
-        {/* <td>{item.omfattning}</td> */}
+       
       </tr>
     }
   })}
@@ -251,7 +299,7 @@ const Nackademin = ({courses}) => {
         </Knapp>
 
       <div>
-
+      </div>
       </div>
       </div>
 

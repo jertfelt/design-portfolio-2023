@@ -336,50 +336,7 @@ const LinksToPages = () => {
           </Link>
           </div>
       ))}</>
-{/*   
-      <div 
-      value="frontendNav"
-      onClick={(e) => selection(e)}>
-      <Link href={{pathname: "/frontend", query:{key:"frontend"}}}>
-      <BackgroundOne>
-        <LinkContainer>
-        <LinkOnev2>
-        Frontend,
-        </LinkOnev2>
-        </LinkContainer>
-      </BackgroundOne>
-      </Link>
-      </div>
-      <div 
-      onClick={(e) => selection(e)}>
-      <Link href={{pathname: "/art", query:{key:"art"}}}>
-      <BackgroundTwo>
-        <LinkContainer>
-        <LinkTwo>{t("startsida.headline")}</LinkTwo>
-        </LinkContainer>
-      </BackgroundTwo>
-      </Link>
-      </div>
-      <div
-      onClick={(e) => selection(e)}>
-      <Link href={{pathname: "/design", query:{key:"design"}}}>
-      <BackgroundTwo>
-        <LinkContainer>
-        <LinkThree>Design & </LinkThree>
-        </LinkContainer>
-      </BackgroundTwo>
-      </Link>
-      </div> 
-      <div 
-      onClick={(e) => selection(e)}>
-      <Link href={{pathname: "/illustration", query:{key:"illustration"}}}>
-      <BackgroundTwo>
-        <LinkContainer>
-        <LinkFour>Illustration</LinkFour>
-        </LinkContainer>
-      </BackgroundTwo> 
-      </Link>
-      </div> */}
+
     </BodyTwo>
  );
 }

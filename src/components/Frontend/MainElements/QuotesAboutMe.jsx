@@ -18,6 +18,7 @@ z-index:1;
     margin:0;
     margin-left:-2rem;
     width:100%;
+ 
    }
 
 &::before {
@@ -64,8 +65,10 @@ grid-template-columns: repeat(2, 1fr);}
 @media screen and (max-width:700px){
   grid-template-columns: repeat(1, 1fr);
   padding:0;
-
   margin:0;
+  width:80vw;
+  margin-left:2rem;
+  margin-bottom:3rem;
 }
 justify-items:start;
 align-items:start;

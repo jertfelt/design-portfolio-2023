@@ -14,16 +14,21 @@ padding-bottom:8rem;
 margin-bottom:10rem;
 @media screen and (max-width:700px){
   background:${({theme}) => theme.frontendcolors.background};
-  width:100vw;
-  padding:3rem;
+
+  width:100%;
+  
+  padding:0;
   padding-bottom:8rem;
   h2{
+    padding-top:5rem;
     padding-left:10rem;
   }
 }
 @media screen and (max-width:500px){
-  width:100vw;
-  padding:2rem;
+  width:100%;
+ 
+  padding:0;
+  padding-bottom:8rem;
   h2{
     padding-left:3rem;
   }
