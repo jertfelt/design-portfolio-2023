@@ -32,6 +32,7 @@ const Document = () => {
 <meta name="author" content="Tova Jertfelt"></meta>
 
 <meta charset="UTF-8" />
+
 <link rel="icon" type="image/png" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -41,6 +42,7 @@ const Document = () => {
         <div id="modal" />
         <NextScript />
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        
       </body>
     </Html>
   )

@@ -4,6 +4,7 @@ import { AppContext } from "@component/context/AppContext";
 import {useTranslation } from "next-i18next";
 import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 import { useContext, useEffect } from "react";
+import DesignMainPage from "@component/components/Design/DesignMainPage";
 
 
 const Design = () => {
@@ -17,7 +18,7 @@ const Design = () => {
  },[selectedPage.value, setSelectedPage])
   return ( <>
 <HeadIndex/>
-  <WorkInProgress/>
+<DesignMainPage/>
   </>
     
   );
