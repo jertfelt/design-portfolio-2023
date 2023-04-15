@@ -1,11 +1,4 @@
-https://www.geeksforgeeks.org/how-to-add-youtube-videos-in-next-js/
-
-https://nextjs.org/docs/api-reference/next/image
-
-https://soundcloud.com/upload
-https://healerx97.medium.com/adding-a-soundcloud-player-on-your-website-2f4a78b4a7e6
-
-https://github.com/rpearce/react-medium-image-zoom
+https://github.com/ivandotv/nextjs-page-transitions/tree/main/pages
 
 
-https://rpearce.github.io/react-medium-image-zoom/?path=/story/img--custom-modal-styles
+https://dev.to/ivandotv/full-page-transitions-with-next-js-1co5
