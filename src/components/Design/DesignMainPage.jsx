@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import WorkInProgress from "../WorkInProgress";
+import ImgMenu from "./ImageMenu";
 
 
 const Section = styled.div`
@@ -11,8 +12,9 @@ background: ${({theme}) => theme.body};
 `
 
 const DesignMainPage = () => {
-  return (<Section>
-    <WorkInProgress/>
+  return (
+  <Section>
+  <ImgMenu></ImgMenu>  
   </Section>  );
 }
  
