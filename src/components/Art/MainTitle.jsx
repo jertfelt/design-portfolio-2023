@@ -27,7 +27,7 @@ z-index:0;
     display:none;
   }
   width:100%;
-  min-width:100vw;
+
   height:100%;
 }
 
