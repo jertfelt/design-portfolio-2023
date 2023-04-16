@@ -74,6 +74,7 @@ export const lightTheme = {
   textPrimary: "black",
   textSecondary: "white",
   opacity: "rgba(1,1,1,.5)",
+
   borderradius: {
     first:"86% 14% 52% 48% / 50% 52% 48% 50%",
     second:"45% 55% 52% 48% / 50% 25% 75% 50%",
