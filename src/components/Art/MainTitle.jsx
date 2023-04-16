@@ -3,7 +3,6 @@ import ursaktaSign from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-
 import ocean from "../../../public/art/_60A1364.png"
 import gifVKB from "../../../public/art/ba_gdi_tova_jertfelt_01.gif"
 import viKanBetter from "../../../public/art/vi-kan-battre-tova-jertfelt-kandidatexamen-2016-konstfack--3.png"
-import dreams1 from "../../../public/art/dreams-tova-jertfelt.png"
 import dreams2 from "../../../public/art/dreams-tova-jertfelt-bald.png"
 import fire from "../../../public/art/fire-color-jertfelt copy.png"
 import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
@@ -97,6 +96,7 @@ const shuffle = useCallback(() => {
     className="mobile"
     alt="Various images of art" 
     src={newPic}
+    placeholder="blur"
     priority={true}
     quality={100}
     fill
@@ -108,6 +108,8 @@ const shuffle = useCallback(() => {
     className="notMobile"
     alt="ArtMadeThis Sollentuna 2017" 
     fill
+    priority={true}
+    placeholder="blur"
     src={newPic}
     quality={100}
     style={{
