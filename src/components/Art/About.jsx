@@ -23,6 +23,7 @@ h2{
     line-height:4rem;
     margin-top:0;
   }
+  
 }
 
 @media (min-width:800px){
@@ -40,6 +41,9 @@ h2{
   letter-spacing:0.8px;
 }
 @media (min-width:1040px){
+  i{
+    margin-left:-4rem;
+  }
   padding-top:20vh;
   h1{
     padding-left:20%;
@@ -50,7 +54,14 @@ h2{
   }
 }
 z-index:2;
-
+@media (min-width:1200px){
+  h2{
+    font-size:9rem;
+    line-height:9rem;
+   
+  }
+ 
+}
 `
 
 const About = ({newName}) => {
