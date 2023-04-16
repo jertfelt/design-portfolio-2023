@@ -17,6 +17,7 @@ export const darkTheme = {
   startaccent: "#483d8b",
   black: 'rgb(11, 4, 4)',
   white: "#f2f2f2",
+  opacity: "rgba(1,1,1,.5)",
   borderradius: {
     first:"86% 14% 52% 48% / 50% 52% 48% 50%",
     second:"45% 55% 52% 48% / 50% 25% 75% 50%",
@@ -72,6 +73,8 @@ export const lightTheme = {
   white: "#f2f2f2",
   textPrimary: "black",
   textSecondary: "white",
+  opacity: "rgba(1,1,1,.5)",
+
   borderradius: {
     first:"86% 14% 52% 48% / 50% 52% 48% 50%",
     second:"45% 55% 52% 48% / 50% 25% 75% 50%",

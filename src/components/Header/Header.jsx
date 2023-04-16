@@ -25,6 +25,7 @@ left: 0;
   @media (max-width:500px){
    max-width:80vw;
   }
+  
 `
 const NavComponent = styled.nav`
 display: flex;
@@ -47,6 +48,7 @@ display: flex;
   }
   color:${({ theme }) => theme.textPrimary};
   padding-right:2rem;
+  .flex{}
 `
 
 const LogoNav = styled.div`
@@ -76,7 +78,8 @@ const Header = ({theme, toggleTheme}) => {
       </Link>
       </LogoNav>
       <span>
-      <div ref={node}>
+      <div className="flex"
+      ref={node}>
       <Burger 
       open={open} 
       setOpen={setOpen}/>
