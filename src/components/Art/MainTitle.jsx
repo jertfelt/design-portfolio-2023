@@ -8,7 +8,6 @@ import dreams2 from "../../../public/art/dreams-tova-jertfelt-bald.png"
 import fire from "../../../public/art/fire-color-jertfelt copy.png"
 import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
 import stones from "../../../public/art/stones_tovajertfelt-litografi.jpg"
-
 import styled from "styled-components";
 import Image from "next/image";
 import About from "./About";
@@ -32,15 +31,21 @@ z-index:0;
   min-width:100vw;
   height:100%;
 }
+
 `
 const TitleOverWrapper = styled.div`
 z-index:1;
 position:absolute;
-top:50vh;
+@media (max-width:500px){
+  top:40vh;
+}
+
+
 @media (max-width:900px){
-  top:-5rem;
+
   width:100%;
   max-width:100vw;
+  
 }
 display:flex;
 flex-direction:column;
