@@ -16,7 +16,7 @@ h2{
   font-size:2rem;
   line-height:2rem;
   @media (min-width:500px){
-    font-size:3.5rem;
+    font-size:4rem;
     line-height:4rem;
     margin-top:0;
   }
@@ -26,10 +26,7 @@ h2{
     font-size:3rem;
     margin-bottom:0;
   }
-  h2{
-    font-size:5rem;
-    line-height:5rem;
-  }
+ 
   background:transparent;
   color:${({theme}) => theme.white};
   letter-spacing:0.8px;

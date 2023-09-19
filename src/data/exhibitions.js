@@ -1,8 +1,26 @@
 export const exhibitions_SV = [
+  {
+    "sys": { 
+      "id": "008" },
+    "fields": {
+      "title": "Samlade verk",
+      "description": "KEEMCHI Uppsala",
+      "date": "2023"
+    }
+  },
+  {
+    "sys": { 
+      "id": "01" },
+    "fields": {
+      "title": "Paradiset",
+      "description": "Konstnärlig intervention, Rusmus",
+      "date": "2023"
+    }
+  },
   
     {
       "sys": { 
-        "id": "01" },
+        "id": "02" },
       "fields": {
         "title": "URSÄKTA SKOGEN, VI BYGGER OM I-II",
         "description": "Grupputställning TEMPORARY SPACES, Uppsala Konstnärsklubb",
@@ -11,7 +29,7 @@ export const exhibitions_SV = [
     },
     {
       "sys": { 
-        "id": "02" },
+        "id": "031" },
       "fields": {
         "title": "Skogen och jag",
         "description": "Eriksberg bibliotek",
@@ -111,7 +129,24 @@ export const exhibitions_SV = [
 
 
 export const exhibitions_ENG = [
-  
+  {
+    "sys": { 
+      "id": "008" },
+    "fields": {
+      "title": "Solo exhibition",
+      "description": "KEEMCHI Uppsala",
+      "date": "2023"
+    }
+  },
+  {
+    "sys": { 
+      "id": "009" },
+    "fields": {
+      "title": "Paradiset",
+      "description": "Artistic intervention, Rusmus",
+      "date": "2023"
+    }
+  },
     
     {
       "sys": { 

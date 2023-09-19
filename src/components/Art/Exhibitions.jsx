@@ -89,8 +89,7 @@ const Exhibitions = ({language}) => {
         {item.fields.title}
       </h3>
       </YearandTitle>
-      <h4 className="description">{item.fields.description}</h4>
-     
+      <h4 className="description">{item.fields.description}</h4> 
     </Container>
   ))}
   </>  );
