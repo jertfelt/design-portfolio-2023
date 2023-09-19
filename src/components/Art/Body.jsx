@@ -13,7 +13,10 @@ import Dreams from "./Dreams";
 
 
 const Section = styled.div`
-padding-top:450px;
+@media (min-width:800px){
+padding-top:80vh;
+}
+padding-top:550px;
 color:${({theme}) => theme.textPrimary};
 
 `

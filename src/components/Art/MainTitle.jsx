@@ -3,12 +3,10 @@ import ursaktaSign from "../../../public/art/ursakta-roran-vi-bygger-om-uppsala-
 import ocean from "../../../public/art/_60A1364.png"
 import gifVKB from "../../../public/art/ba_gdi_tova_jertfelt_01.gif"
 import viKanBetter from "../../../public/art/vi-kan-battre-tova-jertfelt-kandidatexamen-2016-konstfack--3.png"
-import dreams1 from "../../../public/art/dreams-tova-jertfelt.png"
 import dreams2 from "../../../public/art/dreams-tova-jertfelt-bald.png"
 import fire from "../../../public/art/fire-color-jertfelt copy.png"
 import survivor from "../../../public/art/survivor-tova-jertfelt.jpg"
 import stones from "../../../public/art/stones_tovajertfelt-litografi.jpg"
-
 import styled from "styled-components";
 import Image from "next/image";
 import About from "./About";
@@ -29,18 +27,24 @@ z-index:0;
     display:none;
   }
   width:100%;
-  min-width:100vw;
+
   height:100%;
 }
+
 `
 const TitleOverWrapper = styled.div`
 z-index:1;
 position:absolute;
-top:50vh;
+@media (max-width:500px){
+  top:40vh;
+}
+
+
 @media (max-width:900px){
-  top:-5rem;
+
   width:100%;
   max-width:100vw;
+  
 }
 display:flex;
 flex-direction:column;
@@ -49,7 +53,7 @@ flex-direction:column;
   left:0%;
   width:100%;
   height:100%;
-  background:rgba(1,1,1,0.5);
+  background:${({theme}) => theme.opacity};
 }
 
 `
@@ -92,6 +96,7 @@ const shuffle = useCallback(() => {
     className="mobile"
     alt="Various images of art" 
     src={newPic}
+
     priority={true}
     quality={100}
     fill
@@ -103,6 +108,8 @@ const shuffle = useCallback(() => {
     className="notMobile"
     alt="ArtMadeThis Sollentuna 2017" 
     fill
+    priority={true}
+ 
     src={newPic}
     quality={100}
     style={{

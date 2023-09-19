@@ -5,6 +5,6 @@ NextJS
 ChartJS
 i18next
 Json
-Flickity
+Framer motion (soon)
 Firebase
 

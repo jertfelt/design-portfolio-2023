@@ -2,9 +2,10 @@ import styled, {css} from "styled-components";
 import ImgMenu from "./ImageMenu";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
+import AboutTxt from "./AboutTxt";
 
 
-const Section = styled.div`
+export const Section = styled.div`
 min-height:120vh;
 padding:0;
 margin:0;
@@ -23,10 +24,9 @@ background: ${({theme}) => theme.accentTwo};
 `
 
 const HeaderSquare = styled.div`
-
 width: 100%;
 height: 100%;
-min-height:24vh;
+min-height:40vh;
 width:100vw;
 background-image: linear-gradient(${({ theme }) => theme.accent} 1px, transparent 1px), linear-gradient(to right, ${({ theme }) => theme.accent} 1px, transparent 1px);
 background-position: 0% 50%;
@@ -88,7 +88,7 @@ ${props =>
     props.nogradient && 
     css`
     background: ${({ theme }) => theme.accent};
-    height:8rem;
+    height:18rem;
     `}
 `
 
@@ -103,10 +103,12 @@ const DesignMainPage = () => {
     <FilledSquare>
     <h1>Design for humanity</h1>
     </FilledSquare>
-
     </HeaderSquare>
     </Header>
-  <ImgMenu></ImgMenu>  
+    <AboutTxt/>
+
+  <ImgMenu/>
+  
   </Section>  );
 }
  

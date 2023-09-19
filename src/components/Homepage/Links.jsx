@@ -311,7 +311,9 @@ const LinksToPages = () => {
       <>{linksdata.map((item,i) => (
         <div key={i}
         onClick={(e => selection(e))}> 
-          <Link href={{pathname: `/${item.link.href}`, query:{key:`${item.link.href}`}}}>
+          <Link href={{pathname: `/${item.link.href}`,
+          //  query:{key:`${item.link.href}`}
+           }}>
          <> {item.link.href=== "frontend" ? 
             <BackgroundOne>
               <LinkContainer>
