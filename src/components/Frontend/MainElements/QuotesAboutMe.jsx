@@ -142,22 +142,18 @@ blockquote{
 const GridWithQuotes = ({language}) => {
 
   const [quotes, setQuotes] = useState("")
-  
 
   useEffect(() => {
-    if(language === "sv"){
-     
-      setQuotes(quotesAboutMe)
+    switch(language){
+      case "sv":
+        setQuotes(quotesAboutMe)
+        break;
+        case "en":
+          setQuotes(quotesAboutMe_EN)
+          break;
+          default:
+            console.log("Something wrong with loading quotes")
     }
-    else if (language === "en"){
-     
-      setQuotes(quotesAboutMe_EN)
-
-    }
-    else{
-      console.log("Something wrong")
-    }
-  
   },[language, quotes])
 
   return ( 
