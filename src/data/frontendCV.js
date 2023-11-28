@@ -1,7 +1,7 @@
 export const education =[
   {
      
-        finished:false,
+        finished:true,
         id:1,
         period:"2021-2023",
         school:"Nackademin",
@@ -25,7 +25,7 @@ export const education =[
   export const education_ENG =[
     {
        
-          finished:false,
+          finished:true,
           id:1,
           period:"2021-2023",
           school:"Nackademin",
@@ -50,24 +50,42 @@ export const education =[
 
 
   export const work = [
-  {
-  
+    {
    
-        id:1,
+   
+      id:0,
+      period:"Juni - December 2023",
+      text:"Under min tid som utvecklare på AF så kodade jag i Angular i två olika projekt, främst en intern hemsida åt arbetsförmedlare. Jag jobbade med scss, devops, versionshantering och trunk-based releases. Språket var i Angular och Typescript. ",
+      title:"Frontendutvecklare",
+      workplace:"Arbetsförmedlingen"
+    },
+    {
+   
+   
+      id:1,
+      period:"Oktober 2022-April 2023",
+      text:"Jag gjorde min LIA period hos Vinnovera/Delorean och som junior konsult på Society Icon.",
+      title:"Praktikant frontend",
+      workplace:"Vinnovera"
+    },
+  {
+   
+   
+        id:2,
         period:"Januari 2014 - Pågående",
         text:"Jag har gjort allt från animationer till böcker, film, rapporter och grafiska profiler till förlag, organisationer, tidningar och privatpersoner.",
         title:"Frilansande formgivare & illustratör",
         workplace:"Frilans"
       },
       {
-        id:2,
+        id:3,
         period:"Januari 2019 - Juli 2021",
         text:"Jag var producent av bild, video och grafik åt kommunikation. Jag tog till exempel fram den nya grafiska formen för sociala medier.",
         title:"Digital producent",
         workplace:"Amnesty Sverige"
       },
       {
-        id:3,
+        id:5,
         period:"Januari 2017 - Januari 2019",
         text:"Jag var art director, webbredaktör och formgivare. Ibland även fotograf, illustratör och krönikör. Ansvarig för bl.a. wordpress-publicering, SEO, Episerver, samt formgivning och layout av de olika sidorna. 2018 vann vi Publishingpriset för vår longread OmVärlden Berättar.",
         title:"Webbredaktör & Formgivare",
@@ -79,6 +97,25 @@ export const education =[
 ]
 
 export const work_ENG = [
+  {
+   
+   
+    id:15,
+    period:"June - December 2023",
+    text:"During my time as a developer at Arbetsförmedlingen, I coded in Angular for two different projects, primarily an internal website for employment counselors. I worked with SCSS, DevOps, version control, and trunk-based releases. The language used was Angular and TypeScript. ",
+    title:"Frontend developer",
+    workplace:"Arbetsförmedlingen"
+  },
+  {
+ 
+ 
+    id:11,
+    period:"October 2022-April 2023",
+    text:"During spring 2023 I was an intern in frontend development at the web bureau Delorean (Vinnovera), Stockholm, with Society Icon as a customer.",
+    title:"Internship",
+    workplace:"Vinnovera"
+  },
+
   {
   
    
@@ -190,10 +227,10 @@ export const courses = [
   },
   {
     id:12,
-    betyg: "",
+    betyg: "VG",
     title:"LIA 2",
     omfattning:"60p",
-    done: false,
+    done: true,
   },
   {
     id:13,
@@ -204,10 +241,10 @@ export const courses = [
   },
   {
     id:14,
-    betyg: "",
+    betyg: "VG",
     title:"Examensarbete",
     omfattning:"30p",
-    done: false,
+    done: true,
   } 
 ]
 
@@ -309,10 +346,10 @@ export const courses_ENG = [
   },
   {
     id:14,
-    betyg: "",
+    betyg: "VG",
     title:"Degree work",
     omfattning:"30p",
-    done: false,
+    done: true,
   } 
 ]
 
@@ -320,6 +357,10 @@ export const erfarenhet =[
   {name: "Techstack",
   li: [
     "GIT",
+    "Angular",
+    "TypeScript",
+    "CI/CD",
+    
     "React",
     "NEXT.js",
     "Javascript ES6",
@@ -341,8 +382,8 @@ export const erfarenhet =[
     "MongoDB",
     "Jest",
     "Git Pages",
-    "Styled components"
-  
+    "Styled components",
+    "Devops"
   ]
   },
   {name:"Yrkeskunskaper",
@@ -358,6 +399,7 @@ export const erfarenhet =[
   ]},
   {name:"Programvaror",
   li:[
+    "Jira",
     "Visual studio code",
     "Linear App",
     "Github Desktop",
@@ -374,6 +416,10 @@ export const erfarenhet_ENG =[
   {name: "Techstack",
   li: [
     "GIT",
+    "Angular",
+    "TypeScript",
+    "CI/CD",
+    
     "React",
     "NEXT.js",
     "Javascript ES6",
@@ -395,8 +441,8 @@ export const erfarenhet_ENG =[
     "MongoDB",
     "Jest",
     "Git Pages",
-    "Styled components"
-  
+    "Styled components",
+    "Devops"
   ]
   },
   {name:"Vocational Skills",
@@ -412,6 +458,7 @@ export const erfarenhet_ENG =[
   ]},
   {name:"Programs",
   li:[
+    "Jira",
     "Visual studio code",
     "Linear App",
     "Github Desktop",

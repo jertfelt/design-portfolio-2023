@@ -74,7 +74,13 @@
     "desc":"Here follows featured work that I have coded, during my time as a student, my own personal work or as an intern.",
     "caseSI": "Internship January - April 2023",
     "description Society": "Through Delorean/Vinnovera, I held a consulting assignment as Frontend developer at Society Icon, which is a tech-startup and offers a platform to connect companies with social media influencers in the hope of generating valuable social media marketing campaigns. Before my arrival at the company there had not been anybody working with the frontend of the site since it was built by an agency two years prior and much of the initial work dealt with updating packages/dependencies and refactoring code, such as updating Node and replacing for example jQuery-code that interfered with React applications. After that I worked with a backlog of requested features as well as a total overhaul of the website's design and UI. The platform is built with React and utilizes Redux for state management.",
-    "wannaknowmore": "Society Icon declared bankruptcy in March 2023, so the project is no longer available on the web. Please get in touch if you want to know more about my time as an intern there."
+    "wannaknowmore": "Society Icon declared bankruptcy in March 2023, so the project is no longer available on the web. Please get in touch if you want to know more about my time as an intern there.",
+    "af":"Junior frontend developer",
+    "descriptionAF":"I most recently come from the IT department of the Swedish Public Employment Service, where I worked as a frontend developer, programming an internal tool for ad reviews. We operated in an agile environment, a kind of Kanban-Scrum hybrid, within a large team of over fourteen people. I was responsible for the frontend, which was built using the Angular framework—something I learned on the job without prior knowledge. Additionally, I worked on design systems and how end-users interacted with them. Simultaneously, I provided insights to the design department regarding improvements and the needs of existing components.",
+    "caseGP":"Responsive campaign site with SEO-perspective",
+    "descGP":"Greenpeace wanted a campaign site that handles statistics from Swedish Central Data Bureu, and that would give more details on fossil fuels. The demands were that it should be SEO-friendly, interactive and easy to understand. I did the frontend, UX and some of the illustrations.",
+    "descGP_2":"We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source.",
+    "descGP_3":"We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections."
 
   },
   "frontendpage":{

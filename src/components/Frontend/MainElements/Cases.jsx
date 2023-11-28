@@ -40,6 +40,8 @@ padding-bottom:15rem;
   z-index: -2;
 }
 `
+
+
 const Desc = styled.p`
 font-family: Merriweather Sans;
 color:${({theme}) => theme.white};
@@ -94,7 +96,7 @@ margin: 0 auto;
 }
 `
 
-const SocietyIcon = styled.article`
+const HardCodedCase = styled.article`
 padding:3rem;
 max-width:900px;
 margin: 0 auto;
@@ -113,6 +115,33 @@ const Tech = styled.div`
 background:${({theme}) => theme.frontendcolors.contrast};
 border-radius: ${({theme}) => theme.borderradius.second};
 padding:1rem;
+&:hover{
+  background:${({theme}) => theme.frontendcolors.alternativecontrast};
+}
+`
+
+const Row = styled.article`
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+.blob-af{
+  max-height:100px;
+  margin-left:2rem;
+}
+.blob-si{
+  margin-left:5rem;
+  max-height:200px;
+  min-width:200px;
+}
+.blob-gp{
+  max-height:200px;
+  margin-left:2rem;
+}
+`
+
+const GPImage = styled.img`
+max-width:50vw;
+margin-bottom:3rem;
 `
 
 const CasesPage = () => {
@@ -131,34 +160,26 @@ const CasesPage = () => {
   const language = activeLocale;
 
   useEffect(() => {
-    
-    if(language === "sv"){
-      if(cases){
-        setCases(cases.cases)
-    
-        let featured = []
-        featured.push(cases.cases.filter(item => item.featured === true))
-        console.log(featured, "featured")
-        const doubled = featured.map(nested => nested.map(element => element))
-        setFeatured(doubled[0])
-
-      }
+    switch(language){
+      case "sv":
+        if(cases){
+          setCases(cases.cases)
+          let featured = []
+          featured.push(cases.cases.filter(item => item.featured === true))
+          const doubled = featured.map(nested => nested.map(element => element))
+          setFeatured(doubled[0])
+  
+        }
+        break;
+        default:
+          if(casesENG){
+            setCases(casesENG.casesENG)
+            let featured = []
+            featured.push(casesENG.casesENG.filter(item => item.featured === true))
+            const doubled = featured.map(nested => nested.map(element => element))
+            setFeatured(doubled[0])
+          }
     }
-    else if (language === "en"){
-      if(casesENG){
-        setCases(casesENG.casesENG)
-        let featured = []
-        featured.push(casesENG.casesENG.filter(item => item.featured === true))
-        const doubled = featured.map(nested => nested.map(element => element))
-        setFeatured(doubled[0])
-        
-      }
-    }
-    else{
-     
-      console.log("Another language")
-    }
-
   },[language])
 
 
@@ -174,8 +195,74 @@ const CasesPage = () => {
         </div>
 
       <Wrapper>
+        <HardCodedCase>
+        <CaseContainer>
+          <CaseHeader>
+            Arbetsförmedlingen
+          </CaseHeader>
+          <Subtitle>{t("casespage.af")}</Subtitle>
+          <Row>
+          <Description>
+          {t("casespage.descriptionAF")}
+          
+          </Description>
+          <Tech className="blob-af">
+          <Subtitle>Angular <br/>TypeScript <br/>CI/CD<br/> 
+          </Subtitle>
+          </Tech>
+          </Row>
+          </CaseContainer>
+        </HardCodedCase>
+      <HardCodedCase>
+          <CaseContainer>
+          <CaseHeader>    
+         Society Icon
+         </CaseHeader> 
+          <Subtitle>{t("casespage.caseSI")}</Subtitle> 
+          <Row>
+          <Description>
+            {t("casespage.description Society")}
+            <br></br><br/>
+            {t("casespage.wannaknowmore")}
+            <br/>
+          
+          </Description>
+
+          <Tech className="blob-si"> 
+            
+          <Subtitle>React NODE <br/>React Context <br/>Redux CSS/SASS Axios<br/> Postman Linear</Subtitle>
+          </Tech>
+          </Row>
+          </CaseContainer>
+        </HardCodedCase>
+        <HardCodedCase>
+          <CaseContainer>
+          <CaseHeader>    
+          www.sverigesutslapp.se
+         </CaseHeader> 
+          <Subtitle>{t("casespage.caseGP")}</Subtitle>
+          <Description>
+            {t("casespage.descGP")}
+            <br></br><br/>
+            {t("casespage.descGP_2")}
+            <br/>
+            {t("casespage.descGP_3")}
+          
+          </Description>
+          <Row>
+          <GPImage src="/frontend/greenpeace__2.png" alt="Scrollbar hero och animerad svg"></GPImage>
+         
+
+          <Tech className="blob-gp"> 
+            
+          <Subtitle>NextJS<br/>Netlify <br/>Graph.JS <br/>Styled Components<br/> Firebase<br/> UX</Subtitle>
+          </Tech>
+          </Row>
+          </CaseContainer>
+        </HardCodedCase>
         <CaseList>
         {featuredCases && featuredCases.map((c) => 
+        
               (
               <CasefItem
               key={c.id}
@@ -186,26 +273,7 @@ const CasesPage = () => {
         )}
         </CaseList>
         </Wrapper>
-        <SocietyIcon>
-          <CaseContainer>
-          <CaseHeader>    
-         Society Icon
-         </CaseHeader> 
-          <Subtitle>{t("casespage.caseSI")}</Subtitle> 
-          <Description>
-            {t("casespage.description Society")}
-            <br></br>
-            {t("casespage.wannaknowmore")}
-            <br/>
-          
-          </Description>
-
-          <Tech>
-          <Subtitle>React NODE <br/>React Context <br/>Redux CSS/SASS Axios<br/> Postman Linear</Subtitle>
-          </Tech>
-    
-          </CaseContainer>
-        </SocietyIcon>
+       
         </Content>
       </Container>
     );

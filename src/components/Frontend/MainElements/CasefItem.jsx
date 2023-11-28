@@ -70,11 +70,12 @@ flex-direction: row;
 gap:1rem;`
 const CasefItem = ({item}) => {
   const {t} = useTranslation();
-  console.log(item)
+
   return (<>
     <CaseContainer key={item.id}
     >
     {item && <>
+    
         <CaseHeader>    
           {/* <Link href={'/frontend/cases/' + item.id} 
                 state={{data: item.id}}

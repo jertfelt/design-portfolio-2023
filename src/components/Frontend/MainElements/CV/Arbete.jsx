@@ -59,13 +59,7 @@ const Arbete = ({work}) => {
 <CVContent>
 <h2>{t("cv.arbete")}</h2>
 <Grid cv>
-<GridItem work>
-  <Period>{t("cv.praktikdates")}</Period>
-    <h3>{t("cv.praktikinfo")}
-    </h3>
-    <Bread>{t("cv.praktikinfo2")}
-    </Bread>
-  </GridItem>
+
   {work && work.map(item => item).map((item,index) =>(
     <GridItem 
     work

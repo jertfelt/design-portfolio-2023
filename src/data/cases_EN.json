@@ -1,64 +1,6 @@
 {
   "casesENG": [
-    {
-      "extra": {
-        "file01": {
-          "alt": "Interactive graph",
-          "url": "/frontend/greenpeace__2.png"
-        },
-        "file02": {
-          "alt": "Text and picture",
-          "url": "/frontend/greenpeace__4.png"
-        },
-        "file03": {
-          "alt": "Admin",
-          "url": "/frontend/greenpeace__3.png"
-        }
-      },
-      "featured": true,
-      "id": 0,
-      "moreinfo": {
-        "languages": [
-          {
-            "id": "Javascript",
-            "value": 100
-          }
-        ],
-        "teknik": [
-          "React",
-          "SEO",
-          "Array methods",
-          "UX",
-          "API calls",
-          "Graph.JS",
-          "NextJS",
-          "JSX",
-          "Netlify",
-          "Styled Components",
-          "Firebase"
-        ],
-        "text1": "Fullstack project. Greenpeace wanted a campaign site that handles statistics from Swedish Central Data Bureu, and that would give more details on fossil fuels. The demands were that it should be SEO-friendly, interactive and easy to understand. I did the frontend, UX and some of the illustrations.",
-        "text1part2": "We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source. ",
-        "text1part3": "We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections.",
-        "text2": "We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source. ",
-        "text3": "We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections."
-      },
-      "sources": {
-        "github": "",
-        "imgalt": "Scrolling hero och animated svg",
-        "imgurl": "/frontend/greenpeace__1.png",
-        "link": "https://sverigesutslapp.se"
-      },
-      "sub": "Responsive campaign site with SEO-perspective",
-      "tag": "NextJS",
-      "tags": {
-        "c1": "Netlify",
-        "c2": "NextJS",
-        "c3": "Firebase"
-      },
-      "text": "During 10 weeks me and one other intern created a fullstack project from scratch, with an interactive campaign site, a custom CMS, hosted on Netlify and with data on Firebase. Tech lead: Jonas Stattin, Vinnovera. UX lead: Per Lundgren. Project leader: Harald Mellbom. Frontend developers: myself and Vidar Rehn.",
-      "title": "www.sverigesutslapp.se"
-    },
+   
     {
       "extra": {
         "file01": {
@@ -315,67 +257,7 @@
       },
       "text": "Assignment: To create an application for a community that lends/trades books and audio books. The task at hand was to create a frontend that could communicate with Strapi as the database. ",
       "title": "Strapi: Bookducks"
-    },
-    {
-      "extra": {
-        "file01": {
-          "alt": "Log in or register",
-          "url": "/frontend/ekoline--loggain-2.png"
-        },
-        "file02": {
-          "alt": "Shopping cart",
-          "url": "/frontend/ekoline-3.png"
-        },
-        "file03": {
-          "alt": "Product page",
-          "url": "/frontend/ekoline--produkt.png"
-        }
-      },
-      "featured": true,
-      "id": 5,
-      "moreinfo": {
-        "languages": [
-          {
-            "id": "Javascript",
-            "value": 24.8
-          },
-          {
-            "id": "SCSS",
-            "value": 32.8
-          },
-          {
-            "id": "HTML",
-            "value": 24.8
-          }
-        ],
-        "teknik": [
-          "Localstorage",
-          "JSON",
-          "Querystrings",
-          "Figma",
-          "Github Pages"
-        ],
-        "text1": "The assignment was to have at least three product categories. Each category should have at least 3 products. The products and categories would be stored as JSON, and fetched to the frontend. The following pages were a must: Homepage, Product List, Product Detail Page, Shopping Cart, Confirmation Page, Create User, Log In. All the sites would have a menu that would show categories and links to the product page. The link would be a querystring that determines which product that would be shown. There should also be a link to registrer a new user if the user isn't logged in, i.e. you should be able to see if the user is logged in, or not.",
-        "text1part2": "Homepage: should have a welcoming text and a list of the categories. Product List: A list of the products within a category. Product Detail page: A detailed view of a chosen product. Shopping cart: A list over the products that the user has chosen. Confirmation: A form where the user can do an order and then see a receipt. Create user: A form where the user can create a user account. Log in: A form where the user can log in.",
-        "text1part3": "All the saved user data would be stored in local storage, and the HTML code needed to be semantic. ",
-        "text2": "Homepage: should have a welcoming text and a list of the categories. Product List: A list of the products within a category. Product Detail page: A detailed view of a chosen product. Shopping cart: A list over the products that the user has chosen. Confirmation: A form where the user can do an order and then see a receipt. Create user: A form where the user can create a user account. Log in: A form where the user can log in.",
-        "text3": "All the saved user data would be stored in local storage, and the HTML code needed to be semantic. "
-      },
-      "sources": {
-        "github": "https://github.com/jertfelt/webshop",
-        "imgalt": "Homepage",
-        "imgurl": "/frontend/Ekoline--home.png",
-        "link": "https://jertfelt.github.io/webshop/"
-      },
-      "sub": "Frontend project",
-      "tag": "localstorage",
-      "tags": {
-        "c1": "Agile project",
-        "c2": "JSON",
-        "c3": "querystrings"
-      },
-      "text": "Group assignment at Nackademin. Our group had two weeks time to create a web shop with the help of localstorage and querystrings. In the project we have used agile project methods (kanban and scrum). I was roleplaying tech lead and designer. We also worked with routing in our html-file.",
-      "title": "Web shop: Ekoline"
     }
+ 
   ]
 }
