@@ -17,8 +17,7 @@ min-height:100vh;
 z-index:0;
 @media screen and (max-width:700px){
   background-color: ${({theme}) => theme.frontendcolors.contrast};
- }`
-
+}`
 
 const MainFrontend = () => {
 const router= useRouter();

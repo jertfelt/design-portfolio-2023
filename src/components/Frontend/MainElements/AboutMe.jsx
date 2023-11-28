@@ -159,23 +159,12 @@ const AboutMe = () => {
           <ContactButton><Link href="/contact">{t("frontendpage.contactbtn")}</Link></ContactButton>
           </Row>
       </LookingForJob>
-      <Numbers>
-      <Container
-      xlarge>
-      <Grid numbers>
-        <CountingUp
-          number = {experience}
-          text = {t("frontendpage.countinguptxt")}
-        />
-        <div>
-        <BigNumber>2021</BigNumber>
-        <Text>{t("frontendpage.bignrtxt")}</Text>
-        </div>
-      </Grid>
-    </Container>
-      </Numbers>
+  
     </Container>
   </MainSection> );
 }
  
 export default AboutMe;
+
+
+
