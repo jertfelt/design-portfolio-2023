@@ -53,8 +53,9 @@ h2{
 z-index:2;
 @media (min-width:1200px){
   h2{
-    font-size:9rem;
-    line-height:9rem;
+    text-align:left;
+    font-size:5rem;
+    line-height:4rem;
    
   }
  

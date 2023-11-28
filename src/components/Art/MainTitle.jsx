@@ -36,7 +36,7 @@ const TitleOverWrapper = styled.div`
 z-index:1;
 position:absolute;
 @media (max-width:500px){
-  top:40vh;
+  top:50vh;
 }
 
 
