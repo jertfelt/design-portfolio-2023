@@ -3,6 +3,7 @@ import ImgMenu from "./ImageMenu";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
 import AboutTxt from "./AboutTxt";
+import WorkInProgress from "../WorkInProgress";
 
 
 export const Section = styled.div`
@@ -97,8 +98,8 @@ const DesignMainPage = () => {
   const [notShow, setShow] = useState(false)
   return (
   <Section>
-   <PinkBg nogradient/>
-    <Header>
+   {/* <PinkBg nogradient/> */}
+    {/* <Header>
     <HeaderSquare>
     <FilledSquare>
     <h1>Design for humanity</h1>
@@ -107,7 +108,8 @@ const DesignMainPage = () => {
     </Header>
     <AboutTxt/>
 
-  <ImgMenu/>
+  <ImgMenu/> */}
+  <WorkInProgress></WorkInProgress>
   
   </Section>  );
 }
