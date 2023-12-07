@@ -17,10 +17,10 @@ max-width:80%;
 }
 h2{
   font-size:2rem;
-  line-height:2rem;
+  line-height:3rem;
   @media (min-width:500px){
     font-size:4rem;
-    line-height:4rem;
+    line-height:5rem;
     margin-top:0;
   }
   
@@ -30,6 +30,7 @@ h2{
   padding-top:30vh;
   h1{
     font-size:3rem;
+    
     margin-bottom:0;
   }
  
@@ -55,7 +56,7 @@ z-index:2;
   h2{
     text-align:left;
     font-size:5rem;
-    line-height:4rem;
+    line-height:6rem;
    
   }
  

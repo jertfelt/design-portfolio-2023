@@ -96,7 +96,6 @@ const shuffle = useCallback(() => {
     className="mobile"
     alt="Various images of art" 
     src={newPic}
-
     priority={true}
     quality={100}
     fill

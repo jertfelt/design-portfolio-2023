@@ -104,6 +104,10 @@
   }
   ,
   "artistpages":{
+    "upcoming":{
+      "UpcomingHeader":"Kommande:"
+      
+    },
     "h1":"Ursäkta skogen, vi bygger om",
     "h2":"Vi kan bättre",
     "h3":"Jag är ett träd",

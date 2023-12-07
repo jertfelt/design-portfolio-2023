@@ -315,8 +315,51 @@ export const exhibitions_ENG = [
 
   ]
 
+  export const new_exp_SV = [
+    {
+      "sys": { 
+        "id": "001" },
+      "fields": {
+        "title": "Homage to Yves",
+        "description": "KEEMCHI Odenplan",
+        "date": "Januari 2024"
+      }
 
+    },
+    {
+      "sys": { 
+        "id": "002" },
+      "fields": {
+        "title": "Labyrinten",
+        "description": "Uppsala Konstnärsklubb",
+        "date": "23/3 2024 - 7/4 2024"
+      }
+
+    },
+  ]
   
+  export const new_exp_EN = [
+    {
+      "sys": { 
+        "id": "001" },
+      "fields": {
+        "title": "Homage to Yves",
+        "description": "KEEMCHI Odenplan",
+        "date": "January 2024"
+      }
+
+    },
+    {
+      "sys": { 
+        "id": "002" },
+      "fields": {
+        "title": "Labyrinth",
+        "description": "Uppsala Konstnärsklubb",
+        "date": "23/3 2024 - 7/4 2024"
+      }
+
+    },
+  ]
 
 
 // <Grid attahundra>

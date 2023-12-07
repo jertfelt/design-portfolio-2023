@@ -103,6 +103,9 @@
   }
   ,
   "artistpages":{
+    "upcoming":{
+      "UpcomingHeader":"Upcoming:"
+    },
     "vikanbattre":{
       "title":"We Can Do Better",
       "material": "300+ unique drypoint prints together with handwritten bullying in form of toilet scribbles forms a maze of bullying within a 250 x 360 x 250 cm large cube of torture. In the end, by the exit, waits an animation that is partly made from the drypoint, and tells us of a manifesto.",

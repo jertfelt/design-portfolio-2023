@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import Exhibitions from "./Exhibitions";
 import Links from "./Links";
 import Skogen from "./Skogen";
@@ -10,7 +10,16 @@ import ViKanBattre from "./ViKanBattre";
 import NotLikeA from "./NotLikeA";
 import Tree from "./Tree";
 import Dreams from "./Dreams";
+import UpcomingGrid from "./UpcomingGrid";
 
+const scrollAnimation = keyframes`
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+`;
 
 const Section = styled.div`
 @media (min-width:800px){
@@ -169,6 +178,14 @@ padding:8px;
 
 }
 `
+const Scroll = styled.div`
+display:flex;
+flex-direction:row;
+gap:4rem;
+// article {
+//   animation: ${scrollAnimation} 8s linear infinite;
+// }
+`
 
 const Standalones = styled.div`
 margin:0;
@@ -182,6 +199,34 @@ img{
   margin-bottom:0;
 }
 padding-bottom:1rem;
+`
+const Upcoming = styled.article`
+
+background:${({theme}) => theme.artcolors.secondary};
+color: ${({theme}) => theme.artcolors.primaryLightest};
+
+padding:2rem;
+padding-bottom:5rem;
+padding-left:5rem;
+
+
+h2{
+font-size:4rem;
+margin:0;
+}
+div{
+  margin-top:0;
+  padding-top:0;
+  @media (min-width:900px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+
+    gap:3rem;
+  }
+
+}
+
 `
 
 const Body = () => {
@@ -228,7 +273,8 @@ const [linksOnTop, setLinksOnTop] = useState(true)
     />}
     
     </Content>
-    
+   
+  
     {skogenIsTrue && <Skogen id="skogen"/>}
     {vKB && <ViKanBattre id="VKB"></ViKanBattre>}
     {bedbug && <NotLikeA id="bedbug"></NotLikeA>}
@@ -255,7 +301,17 @@ const [linksOnTop, setLinksOnTop] = useState(true)
     //setInferno = {setInferno}
     />
     }
+    <Upcoming>
+    <h2 className="heading">{t("artistpages.upcoming.UpcomingHeader")}</h2>
+    <div>
+    <Scroll>
+    
+    <UpcomingGrid language={language}></UpcomingGrid>
+    </Scroll>
+    </div>
+    </Upcoming>
     <WrapperExhibitions>
+      
     <h2 className="heading">{t("artistpages.main.h2U")}</h2>
     <div>
     <Exhibitions language={language}/>
