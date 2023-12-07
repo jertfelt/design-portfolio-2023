@@ -79,7 +79,8 @@ export const lightTheme = {
     first:"86% 14% 52% 48% / 50% 52% 48% 50%",
     second:"45% 55% 52% 48% / 50% 25% 75% 50%",
     third: "45% 55% 52% 48% / 50% 25% 75% 50%",
-    fourth: "55% 25% 42% 98% / 90% 95% 5% 60%"
+    fourth: "55% 25% 42% 98% / 90% 95% 5% 60%",
+    simple: "39px"
    },
    frontendcolors:{
     background:  "#867794",

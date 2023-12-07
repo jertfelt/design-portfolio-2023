@@ -28,7 +28,7 @@ ${props =>
   @media screen and ${device.maxtablet}{
   padding:0;
   width:100%;
-  
+
   
 &::before {
   top: 0;

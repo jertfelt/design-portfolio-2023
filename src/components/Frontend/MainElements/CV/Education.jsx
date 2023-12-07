@@ -9,6 +9,8 @@ import { useTranslation } from "next-i18next";
 
 const EducationStyle =styled.section`
 background-color: ${({theme}) => theme.frontendcolors.alternativecontrast};
+margin-bottom:10rem;
+margin-top: 10rem;
 width:80%;
 position: relative;
 z-index:1;

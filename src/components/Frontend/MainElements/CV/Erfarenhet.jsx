@@ -4,7 +4,7 @@ import { CVContent, GridItem, Bread, Row, Period } from "./Commons";
 import { useTranslation } from "next-i18next";
 
 const Wisdom =styled.section`
-background-color: ${({theme}) => theme.frontendcolors.alternative};
+background-color: ${({theme}) => theme.frontendcolors.background};
 width:80%;
 position: relative;
 z-index:1;
@@ -49,7 +49,7 @@ margin-bottom:10rem;
   z-index: -1;
 }
 &::after {
-  background: ${({theme}) => theme.frontendcolors.alternative};
+  background: ${({theme}) => theme.frontendcolors.background};
   content: '';
   display: block;
   height: 50%;
@@ -79,6 +79,7 @@ display:flex;
 width:100%;
 align-items:center;
 justify-content:center;
+
 @media (min-width:600px) and (max-width:900px){
   align-items:flex-start;
   justify-content:flex-start;
@@ -94,22 +95,8 @@ const Erfarenhet = ({erfarenhet}) => {
     <ErfarenhetStyle>
     <CVContent>
       <h2>{t("cv.erfarenhet")}</h2>
-      <Row>
-      {erfarenhet && erfarenhet.map((item,i) => (
-        <GridItem key={i}>
-      {i !== 0 && <div>
-        <h3>{item.name}</h3>
-      <ul>
-      
-      {item.li.map((item, i) => (
-        <li key={`${item}--${i}`}>{item}</li>
-      ))}
-        </ul>
-      </div>}
-      </GridItem>
-      ))}
-      </Row>
       <Centered>
+        
       {erfarenhet && erfarenhet.map((item,i) => (
         <GridItem 
         techstack
@@ -125,6 +112,40 @@ const Erfarenhet = ({erfarenhet}) => {
       </GridItem>
       ))}
       </Centered>
+      <Centered>
+      {erfarenhet && erfarenhet.map((item, i) => (
+        <GridItem 
+        programvaror
+        key={i}>
+          {i === 2  && <div>
+            <h3>{item.name}</h3>
+            <ul>
+            {item.li.map((item, i) => (
+        <li key={`${item}--${i}`}>{item}</li>
+      ))}
+        </ul>
+      </div>}
+        </GridItem>
+      ))}
+    </Centered>
+    <Centered>
+        
+      {erfarenhet && erfarenhet.map((item,i) => (
+        <GridItem 
+        nyckelord
+        key={i}>
+      {i === 1 && <>
+        <h3>{item.name}</h3>
+      <ul>
+      {item.li.map(item => (
+        <li key={`${item}--${i}`}>{item}</li>
+      ))}
+        </ul>
+      </>}
+      </GridItem>
+      ))}
+      </Centered>
+      
       <Grid>
     
      

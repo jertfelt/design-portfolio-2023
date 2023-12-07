@@ -15,7 +15,6 @@ import { useRouter } from "next/router";
 const Content = styled.section`
 min-height:130vh;
 position: relative;
-background-color:rgba(50, 57, 57, 0.1);
 width:100vw;
 height:100%;
 z-index:10;
@@ -38,6 +37,7 @@ padding:1rem;
 width:100%;
 height:50%;
 
+
 a{
 color:${({theme}) => theme.frontendcolors.lightblue};
 font-weight:bold;
@@ -47,12 +47,14 @@ border-radius: ${({theme}) => theme.borderradius.fourth};
 background-color:${({theme}) => theme.frontendcolors.alternativecontrast}; }
 text-decoration:none;}
 `
+
+
 const Title = styled.h2`
 font-family: Arya;
 font-size:72px;
 line-height:1rem;
   border-radius: ${({theme}) => theme.borderradius.first};
-  background-color:${({theme}) => theme.frontendcolors.background};
+  background-color:${({theme}) => theme.frontendcolors.contrast};
   padding:3rem;
   color:${({theme}) => theme.frontendcolors.lightblue}
 padding:2rem;

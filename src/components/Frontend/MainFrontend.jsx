@@ -27,9 +27,11 @@ const language = activeLocale;
     <Section>
     <BgImg/>
     <AboutMe/>
+   
+    <CVFrontend language={language}/>
     <GridWithQuotes language={language}/>
     <CasesPage language={language}/>
-    <CVFrontend language={language}/>
+  
     <Footer/>
    </Section> );
 }

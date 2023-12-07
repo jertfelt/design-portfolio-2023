@@ -122,7 +122,11 @@ color: ${({theme}) => theme.frontendcolors.lightblue};
 
 const LookingForJob= styled.div`
 padding:2rem;
+
+
 font-size:1.2rem;
+max-width: 1000px;
+margin: 0 auto;
 color: ${({theme}) => theme.textPrimary};
 line-height:1.8rem;
 p{
@@ -149,12 +153,12 @@ const AboutMe = () => {
           </div>
       </Grid>
       <LookingForJob>
-        <p className="aboutTxt">
-      <Emphasis>{t("frontendpage.emphasis2")}
-          </Emphasis><br/>
-           <br/>{t("frontendpage.aboutmetxt4")}
-          </p>
+     
           <Row>
+          <p className="aboutTxt">
+      <Emphasis>{t("frontendpage.emphasis2")}
+          </Emphasis>
+          </p>
           <ContactButton><Link href="https://www.linkedin.com/in/tovajertfelt/">Linkedin</Link></ContactButton>
           <ContactButton><Link href="/contact">{t("frontendpage.contactbtn")}</Link></ContactButton>
           </Row>

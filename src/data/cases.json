@@ -257,6 +257,9 @@
       },
       "text": "Skoluppgift: Jag skulle ta fram en applikation för ett community som lånar/byter böcker och ljudböcker. Uppgiften var att skapa en frontend som kan kommunicera med en databas jag skapat i CMS-systemet Strapi.",
       "title": "Strapi: Bookducks"
+    },
+    {
+      "caseHeader":"Studentarbeten Nackademin"
     }
   
   ]

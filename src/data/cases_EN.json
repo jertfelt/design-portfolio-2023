@@ -1,6 +1,5 @@
 {
   "casesENG": [
-   
     {
       "extra": {
         "file01": {
@@ -257,6 +256,9 @@
       },
       "text": "Assignment: To create an application for a community that lends/trades books and audio books. The task at hand was to create a frontend that could communicate with Strapi as the database. ",
       "title": "Strapi: Bookducks"
+    },
+    {
+      "caseHeader":"Studentwork Nackademin"
     }
  
   ]

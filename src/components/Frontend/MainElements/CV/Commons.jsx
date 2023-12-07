@@ -78,17 +78,21 @@ ${props =>
   ${props => 
   props.techstack && 
   css`
+   background-color:${({theme}) => theme.frontendcolors.contrast};
+   border-radius:${({theme}) => theme.borderradius.simple};
    
     h3{
       text-align:center;
     }
     ul{
       display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap:1rem;
-      
+      padding:2rem;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap:2rem;
+     
       width:90%;
       li{
+        color:${({theme}) => theme.white};
         &:hover{
           color:${({theme}) => theme.frontendcolors.lightblue};
         }
@@ -105,6 +109,75 @@ ${props =>
   }
   
   `}
+  ${props => 
+    props.nyckelord && 
+    css`
+     background-color:${({theme}) => theme.frontendcolors.alternative};
+     border-radius:${({theme}) => theme.borderradius.simple};
+     
+      h3{
+        text-align:center;
+      }
+      ul{
+        display:grid;
+        padding:2rem;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap:2rem;
+        text-align:center;
+        width:90%;
+        li{
+          color:${({theme}) => theme.white};
+          &:hover{
+            color:${({theme}) => theme.frontendcolors.lightblue};
+          }
+        }
+      }
+      @media (max-width:800px){
+        
+        margin:0;
+        padding:0;
+       
+        h3{
+         font-size:1.2rem;
+        }
+    }
+    
+    `}
+    ${props => 
+      props.programvaror && 
+      css`
+       background-color:${({theme}) => theme.frontendcolors.alternativecontrast};
+       border-radius:${({theme}) => theme.borderradius.simple};
+       margin-top:2rem;
+       margin-bottom:2rem;
+        h3{
+          text-align:center;
+        }
+        ul{
+          display:grid;
+          padding:2rem;
+          grid-template-columns: repeat(3, 1fr);
+          column-gap:2rem;
+          text-align:center;
+          width:90%;
+          li{
+            color:${({theme}) => theme.white};
+            &:hover{
+              color:${({theme}) => theme.frontendcolors.lightblue};
+            }
+          }
+        }
+        @media (max-width:800px){
+          
+          margin:0;
+          padding:0;
+         
+          h3{
+           font-size:1.2rem;
+          }
+      }
+      
+      `}
 `
 
 export const Row = styled.div`

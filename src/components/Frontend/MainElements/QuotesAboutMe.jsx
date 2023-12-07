@@ -1,12 +1,11 @@
 import { quotesAboutMe, quotesAboutMe_EN} from "@component/data/quotesaboutme";
 import styled from "styled-components";
-import { device, padding } from "@component/components/stylings/Stylings";
+import { device, flex, padding } from "@component/components/stylings/Stylings";
 import { useEffect, useState } from "react";
 
 const Section = styled.div`
 min-height:80vh;
-margin-top:2rem;
-padding:2rem;
+margin-top:-2rem;
 padding-bottom: ${padding.paddingSizes.medium};
 background-color: transparent;
 position: relative;
@@ -57,7 +56,10 @@ z-index:1;
     transform-origin: 100%;
     }
 }
+
 `
+
+
 const GridThree = styled.div`
 display:grid;
 @media screen and ${device.tablet}{
@@ -158,6 +160,7 @@ const GridWithQuotes = ({language}) => {
 
   return ( 
   <Section>
+
       <GridThree>
 
     {quotes && quotes.map(item => (

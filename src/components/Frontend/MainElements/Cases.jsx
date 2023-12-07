@@ -4,7 +4,6 @@ import { useState, useEffect} from "react";
 import { flex, device, fonts } from "@component/components/stylings/Stylings";
 
 import CasefItem, { CaseHeader, Description, Subtitle } from "./CasefItem";
-import Image from "next/image";
 import casesENG from "../../../data/cases_EN.json"
 import { useTranslation } from "next-i18next";
 import { CaseContainer } from "./CasefItem";
@@ -124,8 +123,10 @@ const Row = styled.article`
 display:flex;
 flex-direction: row;
 justify-content: space-between;
+@media screen and ${device.maxtablet}{flex-direction:column;}
+
 .blob-af{
-  max-height:100px;
+  max-height:160px;
   margin-left:2rem;
 }
 .blob-si{
@@ -135,13 +136,19 @@ justify-content: space-between;
 }
 .blob-gp{
   max-height:200px;
+  min-width:30%;
   margin-left:2rem;
 }
 `
 
 const GPImage = styled.img`
-max-width:50vw;
-margin-bottom:3rem;
+max-width:40vw;
+margin-top:1rem;
+margin-bottom:2rem;
+@media screen and ${device.maxtablet}{max-width:80%;}
+&:hover{
+  opacity:80%;
+}
 `
 
 const CasesPage = () => {
@@ -203,15 +210,21 @@ const CasesPage = () => {
           <Subtitle>{t("casespage.af")}</Subtitle>
           <Row>
           <Description>
-          {t("casespage.descriptionAF")}
-          
+          {t("casespage.descriptionAF")}<br/>
+          <br/>
+          <Row>
+          <a href="https://designsystem.arbetsformedlingen.se/" target="_blank">
+       
+            Arbetsförmedligen Designsystem </a>
+            </Row>
           </Description>
           <Tech className="blob-af">
-          <Subtitle>Angular <br/>TypeScript <br/>CI/CD<br/> 
+          <Subtitle>Angular <br/>TypeScript <br/>CI/CD<br/> Jira <br/>CSS/SASS<br/> REST <br/>
           </Subtitle>
           </Tech>
           </Row>
           </CaseContainer>
+      
         </HardCodedCase>
       <HardCodedCase>
           <CaseContainer>
@@ -230,15 +243,16 @@ const CasesPage = () => {
 
           <Tech className="blob-si"> 
             
-          <Subtitle>React NODE <br/>React Context <br/>Redux CSS/SASS Axios<br/> Postman Linear</Subtitle>
+          <Subtitle>React NODE <br/>React Context <br/>Redux <br/>CSS/SASS <br/> Axios<br/> Postman <br/>Linear<br/>REST</Subtitle>
           </Tech>
           </Row>
           </CaseContainer>
         </HardCodedCase>
         <HardCodedCase>
           <CaseContainer>
-          <CaseHeader>    
-          www.sverigesutslapp.se
+          <CaseHeader>
+            <a href="https://sverigesutslapp.se/">
+          www.sverigesutslapp.se</a>    
          </CaseHeader> 
           <Subtitle>{t("casespage.caseGP")}</Subtitle>
           <Description>
@@ -250,16 +264,18 @@ const CasesPage = () => {
           
           </Description>
           <Row>
+          <a href="https://sverigesutslapp.se/">
           <GPImage src="/frontend/greenpeace__2.png" alt="Scrollbar hero och animerad svg"></GPImage>
-         
-
+        </a>
           <Tech className="blob-gp"> 
             
-          <Subtitle>NextJS<br/>Netlify <br/>Graph.JS <br/>Styled Components<br/> Firebase<br/> UX</Subtitle>
+          <Subtitle>NextJS<br/>Netlify <br/>Graph.JS <br/>Chart.js <br/>Styled Components<br/> Firebase<br/> UX</Subtitle>
           </Tech>
           </Row>
           </CaseContainer>
         </HardCodedCase>
+        <hr></hr>
+        <CaseHeader>{t("casespage.headerStudent")}</CaseHeader>
         <CaseList>
         {featuredCases && featuredCases.map((c) => 
         

@@ -356,58 +356,98 @@ export const courses_ENG = [
 export const erfarenhet =[
   {name: "Techstack",
   li: [
-    "GIT",
+   
     "Angular",
-    "TypeScript",
-    "CI/CD",
-    
     "React",
     "NEXT.js",
+    "Vue.js",
+    "Graph.js",
+    "Chart.js",
+    "TypeScript",
     "Javascript ES6",
-    "Node.js",
+    "CI/CD",
+    "Redux",
+    "React Redux",
+    "React Native",
+    "Jest",
+  
+
     "CSS3",
     "SASS",
-    "ARIA-labels",
-    "Media queries",
-    "Graph.js",
-    "HTML5",
-    "Node versions",
-    "Netlify",
-    "BEM",
-    "Google Firebase",
-    "Strapi",
-    "Wordpress",
-    "Vue.js",
-    "EJS",
-    "MongoDB",
-    "Jest",
-    "Git Pages",
     "Styled components",
-    "Devops"
+    "Style Dictionary",
+    "BEM",
+  
+    "HTML5",
+ 
+
+    "Node.js",
+    "Yarn",
+    "EJS",
+    "Express",
+    "Mongoose",
+
+
+    "GIT",
+    
+    "Webview mobile",
+    "REST API"
+
+   
+
+    
   ]
   },
-  {name:"Yrkeskunskaper",
+  {name:"Mjuka värden",
   li:[
     "Ansvarstagande",
-    "Kreativitet",
+    "Kreativ",
+    "Samarbetsvillig",
+    "Snabblärd",
     "Analytisk",
-    "Kommunikation",
-    "Teamarbete i projekt",
-    "Självständighet",
-    "Problemlösning",
-    "Planering",
+    "Kommunikativ",
+    "Iniativrik",
+    "Investerad",
+    "Effektiv",
+    "Envis",
+    "Teammember",
+    "Självständig",
+    "Problemlösningsorienterad",
+    "Fokuserad",
+    "Engagerad",
+    "Driven",
+    "Planerande",
+    "Generös",
+    "Omtänksam",
+    "Ödmjuk",
+    "Lyhörd"
   ]},
   {name:"Programvaror",
   li:[
     "Jira",
-    "Visual studio code",
+    "Trello",
     "Linear App",
-    "Github Desktop",
+    "Bitbucket",
+    "Git Pages",
+    "Github ",
     "Figma",
-    "After Effects",
-    "Github",
+    "Adobe XD",
     "Adobe Photoshop",
     "Adobe Illustrator",
+    "Visual Studio Code",
+    "Postman",
+    "Android Studio",
+    "Expo.Dev",
+    "Google Dev",
+    "Google Firebase",
+    "MongoDB",
+    "Strapi",
+    "Wordpress",
+    "Windows",
+    
+    "Netlify",
+"Red Hat",
+"OCP",
   ]}
 ]
 
@@ -415,57 +455,97 @@ export const erfarenhet =[
 export const erfarenhet_ENG =[
   {name: "Techstack",
   li: [
-    "GIT",
     "Angular",
-    "TypeScript",
-    "CI/CD",
-    
     "React",
     "NEXT.js",
+    "Vue.js",
+    "Graph.js",
+    "Chart.js",
+    "TypeScript",
     "Javascript ES6",
-    "Node.js",
+    "CI/CD",
+    "Redux",
+    "React Redux",
+    "React Native",
+    "Jest",
+  
+
     "CSS3",
     "SASS",
-    "ARIA-labels",
-    "Media queries",
-    "Graph.js",
-    "HTML5",
-    "Node versions",
-    "Netlify",
-    "BEM",
-    "Google Firebase",
-    "Strapi",
-    "Wordpress",
-    "Vue.js",
-    "EJS",
-    "MongoDB",
-    "Jest",
-    "Git Pages",
     "Styled components",
-    "Devops"
+    "Style Dictionary",
+    "BEM",
+  
+    "HTML5",
+ 
+
+    "Node.js",
+    "Yarn",
+    "EJS",
+    "Express",
+    "Mongoose",
+   
+
+
+    "GIT",
+    
+    "Webview mobile",
+    "REST API"
+    
+   
+
+    
   ]
   },
   {name:"Vocational Skills",
   li:[
-    "Responsibility",
-    "Creativity",
+    "Responsible",
+    "Creative",
+    "Collaborative",
+    "Quick learner",
     "Analytical",
-    "Communication",
-    "Teamwork",
+    "Communicative",
+    "Initiative-driven",
+    "Invested",
+    "Efficient",
+    "Tenacious",
+    "Team member",
     "Independent",
-    "Problem solving",
+    "Problem-solving oriented",
+    "Focused",
+    "Engaged",
+    "Driven",
     "Planning",
+    "Generous",
+    "Caring",
+    "Humble",
+    "Attentive"
   ]},
   {name:"Programs",
   li:[
     "Jira",
-    "Visual studio code",
+    "Trello",
     "Linear App",
-    "Github Desktop",
+    "Bitbucket",
+    "Git Pages",
+    "Github ",
     "Figma",
-    "After Effects",
-    "Github",
+    "Adobe XD",
     "Adobe Photoshop",
     "Adobe Illustrator",
+    "Visual Studio Code",
+    "Postman",
+    "Android Studio",
+    "Expo.Dev",
+    "Google Dev",
+    "Google Firebase",
+    "MongoDB",
+    "Strapi",
+    "Wordpress",
+    "Windows",
+    
+    "Netlify",
+"Red Hat",
+"OCP",
   ]}
 ]
