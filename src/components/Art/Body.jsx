@@ -202,8 +202,8 @@ padding-bottom:1rem;
 `
 const Upcoming = styled.article`
 
-background:${({theme}) => theme.artcolors.secondary};
-color: ${({theme}) => theme.artcolors.primaryLightest};
+background:${({theme}) => theme.artcolors.black};
+color: ${({theme}) => theme.artcolors.white};
 
 padding:2rem;
 padding-bottom:5rem;

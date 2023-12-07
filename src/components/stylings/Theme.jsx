@@ -48,6 +48,8 @@ export const darkTheme = {
     primaryLightest:"#E1D3DD",
     secondaryLighter:"#88AD92",
     secondaryLightest:"#d3e1d7",
+    black:"#291925",
+    white:"#FFF9FD",
  
   },
   designcolors:{
@@ -98,6 +100,8 @@ export const lightTheme = {
     secondaryLightest:"#6c4a63",
     primaryLighter:"#88AD92",
     primaryLightest:"#4a6c53",
+    black:"#041809",
+    white:"#e5fdec",
   },
   designcolors:{
     primary: "#fcbe03",

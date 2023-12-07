@@ -6,15 +6,15 @@ const Container = styled.article`
 
 .where{
   margin-bottom:0;
-  color:${({theme}) => theme.artcolors.primaryLightest};
+  
   font-size:1rem;
 }
 h4{
   font-family:JetBrains Mono;
-  color:${({theme}) => theme.artcolors.primaryLightest};
+  color: ${({theme}) => theme.artcolors.white};
 }
 h3{
-  color:${({theme}) => theme.artcolors.secondaryLightest};
+  
   font-size:1.5rem;
 }
 
