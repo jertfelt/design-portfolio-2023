@@ -9,7 +9,7 @@ export const HeadTypography = () => {
   <Head>
     <link rel="icon" href="../../public/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 
   </Head>
 }
@@ -34,7 +34,7 @@ export const HeadIndexArt = () => {
   
   <link rel="icon" href="../../public/favicon.ico"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 
       </Head>
 }
@@ -61,7 +61,7 @@ export const HeadIndexDesign = () => {
   
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
  
       </Head>
 }
@@ -88,7 +88,7 @@ export const HeadIndexIllustraion = () => {
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 
     </Head>
   )
@@ -116,7 +116,7 @@ export const HeadIndexFrontend = () => {
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 
 
     </Head>
@@ -144,10 +144,10 @@ const HeadIndex = () => {
 
 <meta name="author" content="Tova Jertfelt"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta charset="UTF-8" />
+<meta charSet="UTF-8" />
 <link rel="icon" type="image/png" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 </Head>
   )
 
@@ -164,7 +164,6 @@ export const HeadHome = () => {
 <meta property="og:title" content="Tova Jertfelt || 2023"/>
 <meta property="og:description" content="Multidisciplinär frontendare, konstnär, formgivare och illustratör. Högpresterande och kreativ, kärt barn har många yrken!"/>
 <meta property="og:image" content="/publishing-priset-2.png"/>
-
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:url" content="https://www.tovajertfelt.se/"/>
 <meta property="twitter:title" content="Tova Jertfelt || 2023"/>

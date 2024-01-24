@@ -19,7 +19,7 @@ z-index:0;
   background-color: ${({theme}) => theme.frontendcolors.contrast};
 }`
 
-const MainFrontend = () => {
+const FrontendMainPage = () => {
 const router= useRouter();
 const {locales, locale: activeLocale} = router;
 const language = activeLocale;
@@ -36,4 +36,4 @@ const language = activeLocale;
    </Section> );
 }
  
-export default MainFrontend;
+export default FrontendMainPage;

@@ -4,14 +4,13 @@ import Image from "next/image";
 import pillow1 from "../../../public/art/tova_jertfelt_vila_i_frid.png"
 import pillow2 from "../../../public/art/tova_jertfelt_pillow1.png"
 import deathbride from "../../../public/art/death-bride-jertfelt.png"
-import bald from "../../../public/art/dreams-tova-jertfelt-bald.png"
+import bald from "../../../public/art/dreams-bald.png"
 import palmyra from "../../../public/art/dreams-tova-jertfelt-palmyra.png"
 import homesick from "../../../public/art/dreams-tova-jertfelt+(4).png"
 import dance from "../../../public/art/dreams-tova-jertfelt.png"
 import { useTranslation } from "next-i18next";
 import {ImageWrapper, Upperpadding, VideoWrapper } from "./ViKanBattre";
 import ImageSlider from "./Slider";
-import { GridArt } from "./Skogen";
 import Grid from "./Grid";
 
 export const images1=[pillow1, pillow2]

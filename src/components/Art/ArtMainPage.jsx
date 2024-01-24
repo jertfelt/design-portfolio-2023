@@ -14,7 +14,6 @@ background: ${({theme}) => theme.artcolors.primary};
 
 
 const ArtMain = () => {
-
   return (
   <Section>
   <MainTitle/>

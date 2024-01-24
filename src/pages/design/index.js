@@ -21,8 +21,7 @@ const Design = () => {
         HeadIndex / >
         <
         DesignMainPage / >
-        <
-        />
+        </>
 
     );
 }

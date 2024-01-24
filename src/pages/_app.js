@@ -16,7 +16,6 @@ const App = ({ Component, pageProps}) =>{
 
   return (
     <Fragment>
-   
     <Theme>
     <ThemeProvider theme={themeMode}>
     <GlobalStyle/>

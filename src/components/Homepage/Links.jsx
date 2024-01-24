@@ -17,7 +17,6 @@ background-color: ${({ theme }) => theme.body};
 color: ${({ theme }) => theme.contrast};
 `
 
-
 const LinkContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -287,9 +286,12 @@ const LinksToPages = () => {
   const {t} = useTranslation();
   const selection = (e) => {
     switch(e.target.outerText){
-      case "Frontend,":
-        setSelectedPage({value:"frontend", url:"/frontend"})
-        break;
+      case "Frontend,": 
+      setSelectedPage({value:"development", url:"/development"})
+      break;
+      // case "Frontend,":
+      //   setSelectedPage({value:"frontend", url:"/frontend"})
+      //   break;
       case "Art,":
         setSelectedPage({value:"art", url:"/art"})
         break;
@@ -308,13 +310,14 @@ const LinksToPages = () => {
   }
   return (  
     <BodyTwo>
+      <h1>hej</h1>
       <>{linksdata.map((item,i) => (
         <div key={i}
         onClick={(e => selection(e))}> 
           <Link href={{pathname: `/${item.link.href}`,
           //  query:{key:`${item.link.href}`}
            }}>
-         <> {item.link.href=== "frontend" ? 
+         <> {item.link.href=== "development" ? 
             <BackgroundOne>
               <LinkContainer>
               <LinkOnev2>

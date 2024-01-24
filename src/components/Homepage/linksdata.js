@@ -2,11 +2,10 @@ export const linksdata = [
 
 {
   "link": {
-    "href": "frontend", 
-   
+    "href": "development", 
   },
   "text": "Frontend,",
-  "translation": false,
+
   
 },
 {

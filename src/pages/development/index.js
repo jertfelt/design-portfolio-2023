@@ -1,24 +1,26 @@
-import FrontendMainPage from "@component/components/Frontend/FrontendMainPage";
+
 import { AppContext } from "@component/context/AppContext";
 import { useContext, useEffect } from "react";
 import withTranslation, {getStaticProps} from '@component/components/utils/getStaticProps'
 import HeadIndex from "@component/components/Head";
+import DevelopmentPage from "@component/components/Development/DevelopmentPage";
 
 
-const Frontend = () => {
+const Development = () => {
   const {selectedPage, setSelectedPage} = useContext(AppContext)
 
   useEffect(() => {
-    if(selectedPage.value !== "frontend"){
-      setSelectedPage({value:"frontend", url:"/frontend"})
+    if(selectedPage.value !== "development"){
+      setSelectedPage({value:"development", url:"/development"})
     }
   },[selectedPage.value, setSelectedPage])
   
   return ( <>
     <HeadIndex/>
-    <FrontendMainPage/>
+   <DevelopmentPage/>
+    
     </>
     );
 }
 export {getStaticProps} 
-export default withTranslation(Frontend);
+export default withTranslation(Development);

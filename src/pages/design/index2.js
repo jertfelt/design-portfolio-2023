@@ -16,13 +16,15 @@ const Design = () => {
             setSelectedPage({ value: "design", url: "/design" })
         }
     }, [selectedPage.value, setSelectedPage])
-    return ( < >
+
+    return ( 
+  <>
         <
-        HeadIndex / >
+        HeadIndex/>
         <
         DesignMainPage / >
-        <
-        />
+        
+        </>
 
     );
 }
