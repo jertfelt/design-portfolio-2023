@@ -1,36 +1,28 @@
 export const linksdata = [
-
-{
-  "link": {
-    "href": "development", 
+  {
+    link: {
+      href: "programming",
+    },
+    text: "Frontend,",
+    translation: true,
   },
-  "text": "Frontend,",
-
-  
-},
-{
-  "link": {
-    "href": "art", 
-
+  {
+    link: {
+      href: "art",
+    },
+    text: "",
+    translation: true,
   },
-  "text": "",
-  "translation": true,
-  
-},
-{
-  "link": {
-    "href": "design", 
-    
+  {
+    link: {
+      href: "design",
+    },
+    text: "Design & ,",
   },
-  "text": "Design & ,"
-  
-},
-{
-  "link": {
-    "href": "illustration", 
+  {
+    link: {
+      href: "illustration",
+    },
+    text: "Illustration",
   },
-  "text": "Illustration"
-  
-},
-
-]
+];

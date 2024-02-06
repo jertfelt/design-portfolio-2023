@@ -1,6 +1,12 @@
 import { ThemeProvider } from "styled-components";
 
 const sharedTheme = {
+  startpage: {
+    body: "rgb(43, 42, 51)",
+    konstaccent: "#4a6c53",
+    konstaccentTwo: "#d3e1d7",
+    white: "white",
+  },
   fonts: {
     frontendheader: {
       primary: "'Armata', sans-serif",
@@ -15,18 +21,35 @@ const sharedTheme = {
     stats: {
       primary: "'JetBrains Mono', sans-serif",
     },
-  },
-  mobile: {
-    frontend: {
-      h1: "40px",
-      h2: "32px",
-      h3: "24px",
-      lineheight: "150%",
-      bread: "20px",
-      smalldetail: "12px",
-      details: "16px",
+    size: {
+      lineheightCommon: "175%",
+      lineHeightLarge: "200%",
+      lineHeightSmall: "150%",
+      whiteSpace: "wrap",
+      mobile: {
+        frontend: {
+          h1: "48px",
+          h2: "30px",
+          bread: "16px",
+          h3: "20px",
+        },
+      },
+      desktop: {
+        frontend: {
+          bread: "14px",
+          h2: "32px",
+          h1: {
+            size: "128px",
+            letterSpace: "-5%",
+          },
+          h3: "20px",
+          h4: "24px",
+          button: "16px",
+        },
+      },
     },
   },
+
   padding: {
     lg: "5rem",
     m: "3rem",
@@ -87,6 +110,9 @@ const sharedTheme = {
 
 export const darkTheme = {
   ...sharedTheme,
+  start: {
+    accent: "rgb(213, 179, 230)",
+  },
   mode: "dark",
   body: "rgb(43, 42, 51)",
   contrast: "#edf1f2",
@@ -99,24 +125,27 @@ export const darkTheme = {
   black: "rgb(11, 4, 4)",
   white: "#f2f2f2",
   opacity: "rgba(1,1,1,.5)",
+  illustrationContrast: "yellow",
+  designprimer: "gray",
 
   frontendnew: {
-    backgroundone: "#1f3541",
-    backgroundtwo: "#f7f7ff",
-    backgroundlinear: "linear-gradient(180deg, #1f3541 0%, #2F44D1 100%);",
-    backgroundcontrast: "#eedc48",
-    txtprimary: "#f7f7ff",
-    txtlink: "#35abfd",
-    txtsecondary: "#1f3541",
-    txthighlight: "#eedc48",
-    txtcolorheader2: "#f38947",
-    txtcolorheader3: "#fe6b16",
+    pink: "#d03fee",
+    gray: "#e0e6e1",
+    bgSecondary: "#031117",
+    bgPrimary: "#2f44d1",
+    primaryTxt: "white",
+    headerOne: "#EEDC48",
+    headerTwo: "#d03fee",
+    altTxt: "black",
   },
 };
 
 export const lightTheme = {
   ...sharedTheme,
   mode: "light",
+  start: {
+    accent: "rgb(46, 67, 207)",
+  },
   body: "#edf1f2",
   contrast: "#050606",
   accent: "#d5b3e6",
@@ -125,18 +154,18 @@ export const lightTheme = {
   textPrimary: "black",
   textSecondary: "white",
   opacity: "rgba(1,1,1,.5)",
+  illustrationContrast: "yellow",
+  designprimer: "gray",
 
   frontendnew: {
-    backgroundtwo: "#1f3541",
-    backgroundone: "#f7f7ff",
-    backgroundcontrast: "#eedc48",
-    backgroundlinear: "linear-gradient(180deg, #F7F7FF 0%, #D4B2E6 100%);",
-    txtprimary: "#1f3541",
-    txtlink: "#35abfd",
-    txtsecondary: "#f7f7ff",
-    txthighlight: "#f00",
-    txtcolorheader2: "#2f44d1",
-    txtcolorheader3: "#2f44d1",
+    bgSecondary: "#f7f7ff",
+    bgPrimary: "#d4b2e6",
+    primaryTxt: "black",
+    pink: "#d03fee",
+    gray: "#e0e6e1",
+    headerOne: "#2F44D1",
+    headerTwo: "#FF0000",
+    altTxt: "white",
   },
 };
 

@@ -1,39 +1,40 @@
-import { useContext } from "react"
-import styled from "styled-components"
-import Link from "next/link"
-import { AppContext } from "@component/context/AppContext"
-import {useTranslation } from "next-i18next";
+import { useContext } from "react";
+import styled from "styled-components";
+import Link from "next/link";
+import { AppContext } from "@component/context/AppContext";
+import { useTranslation } from "next-i18next";
 import { linksdata } from "./linksdata";
+import { useRouter } from "next/router";
 
 const BackgroundOne = styled.div`
-background-color: ${({ theme }) => theme.body};
-color: ${({ theme }) => theme.contrast};
-&:hover{
-background-color: ${({ theme }) => theme.body};
-}
-`
+  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.contrast};
+  &:hover {
+    background-color: ${({ theme }) => theme.body};
+  }
+`;
 const BackgroundTwo = styled.div`
-background-color: ${({ theme }) => theme.body};
-color: ${({ theme }) => theme.contrast};
-`
+  background-color: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.contrast};
+`;
 
 const LinkContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-position: relative;
-z-index: 0;
-font-size: 2.5em;
-padding:1rem;
-min-height:20vh;
-max-height:25vh;
-@media (max-width:500px){
-  text-align:center;
-  font-size:1.5rem;
-}
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  font-size: 2.5em;
+  padding: 1rem;
+  min-height: 20vh;
+  max-height: 25vh;
+  @media (max-width: 500px) {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+`;
 
 const LinkTwo = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
@@ -75,7 +76,11 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 
 }
 &:hover:before{
-  background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, ${({ theme }) => theme.body} 24px), repeating-linear-gradient(${({ theme }) => theme.accentTwo}, ${({ theme }) => theme.accent});
+  background-image:  repeating-radial-gradient(circle at 0 0, transparent 0, ${({
+    theme,
+  }) => theme.body} 24px), repeating-linear-gradient(${({ theme }) =>
+  theme.startpage.konstaccentTwo}, ${({ theme }) =>
+  theme.startpage.konstaccent});
   
 background-color: #9ac36d;
 }
@@ -95,50 +100,57 @@ background-color: #9ac36d;
   transform: translate(50%, -50%) rotate(135deg) scale(1.1);
   background-size: calc(2*59px) calc(2*59px);
 }
-`
+`;
 const LinkThree = styled.div`
-transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+  transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   line-height: 1em;
-&:hover{
-  color: ${({ theme }) => theme.accentTwo};
-  transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
-}
-&:before{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
+  &:hover {
+    color: ${({ theme }) => theme.accentTwo};
+    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
 
-  clip-path: circle(0% at 50% calc(50%));
-  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
-  background-image: linear-gradient(${({ theme }) => theme.accent} 1px, transparent 1px), linear-gradient(to right, ${({ theme }) => theme.accent} 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-repeat:repeat;
-}
-&:hover:before{
-  clip-path: circle(100% at 50% 50%);
-}
-&:after{
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  
-  --webkit-clip-path: circle(100% at 50% calc(50%));
-  clip-path: circle(100% at 50% calc(50%));
-  transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
-}
-&:hover:after{
-  clip-path: circle(0% at 50% 50%);
+    clip-path: circle(0% at 50% calc(50%));
+    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+    background-image: linear-gradient(
+        ${({ theme }) => theme.designprimer} 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        ${({ theme }) => theme.designprimer} 1px,
+        transparent 1px
+      );
+    background-size: 40px 40px;
+    background-repeat: repeat;
+  }
+  &:hover:before {
+    clip-path: circle(100% at 50% 50%);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
 
-}
-`
+    --webkit-clip-path: circle(100% at 50% calc(50%));
+    clip-path: circle(100% at 50% calc(50%));
+    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  &:hover:after {
+    clip-path: circle(0% at 50% 50%);
+  }
+`;
 const LinkFour = styled.div`
 transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
 &:hover{
@@ -171,12 +183,19 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
   );
 
   background:
-  conic-gradient(at 50% calc(100%/6),${({ theme }) => theme.accentTwo} 60deg,#0000 0),
-  conic-gradient(at calc(100%/6) 50%,#0000 240deg,${({ theme }) => theme.accentTwo} 0),
-  conic-gradient(from 180deg at calc(100%/6) calc(500%/6),${({ theme }) => theme.accentTwo} 60deg,#0000 0),
-  conic-gradient(from 180deg at calc(500%/6),#0000 240deg,${({ theme }) => theme.accentTwo} 0) calc(4*.866*12px) 0,
-  repeating-linear-gradient(-150deg,${({ theme }) => theme.contrast} 0 calc(100%/6),#0000   0 50%),
-  repeating-linear-gradient(-30deg, ${({ theme }) => theme.accent} 0 calc(100%/6),${({ theme }) => theme.body} 0 50%);
+  conic-gradient(at 50% calc(100%/6),${({ theme }) =>
+    theme.illustrationContrast} 60deg,#0000 0),
+  conic-gradient(at calc(100%/6) 50%,#0000 240deg,${({ theme }) =>
+    theme.illustrationContrast} 0),
+  conic-gradient(from 180deg at calc(100%/6) calc(500%/6),${({ theme }) =>
+    theme.textSecondary} 60deg,#0000 0),
+  conic-gradient(from 180deg at calc(500%/6),#0000 240deg,${({ theme }) =>
+    theme.textPrimary} 0) calc(4*.866*12px) 0,
+  repeating-linear-gradient(-150deg,${({ theme }) =>
+    theme.illustrationContrast} 0 calc(100%/6),#0000   0 50%),
+  repeating-linear-gradient(-30deg, ${({ theme }) =>
+    theme.textPrimary} 0 calc(100%/6),${({ theme }) =>
+  theme.textSecondary} 0 50%);
 background-size: calc(6*.866*12px) calc(3*12px);
 background-repeat:repeat;
 }
@@ -202,18 +221,17 @@ background-size: calc(2*59px) calc(2*59px);
 
 }
 
-`
+`;
 
 const BodyTwo = styled.div`
-height:100vh;
-  @media (max-width: 700px){
-    margin-left:-2rem;
-    display:flex;
-    flex-direction:column;
-    gap:.5rem;
+  height: 100vh;
+  @media (max-width: 700px) {
+    margin-left: -2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-`
-
+`;
 
 const LinkOnev2 = styled.div`
 margin:0;
@@ -271,79 +289,88 @@ transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
     0% 100%, 
     0% 50%);
 
-background-image: radial-gradient(${({ theme }) => theme.accent} 2px, transparent 1px);
+background-image: radial-gradient(${({ theme }) =>
+  theme.accent} 2px, transparent 1px);
 background-size: 32px 32px;
 background-color: ${({ theme }) => theme.body};
   @media (max-width: 700px){
     background-color: ${({ theme }) => theme.body};
   }
 }
-`
-
+`;
 
 const LinksToPages = () => {
-  const {setSelectedPage} = useContext(AppContext);
-  const {t} = useTranslation();
+  const { setSelectedPage } = useContext(AppContext);
+  const router = useRouter();
+  const { locale: activeLocale } = router;
+  const language = activeLocale;
+  const { t } = useTranslation();
+
   const selection = (e) => {
-    switch(e.target.outerText){
-      case "Frontend,": 
-      setSelectedPage({value:"development", url:"/development"})
-      break;
-      // case "Frontend,":
-      //   setSelectedPage({value:"frontend", url:"/frontend"})
-      //   break;
+    switch (e.target.outerText) {
+      case "Frontend,":
+        setSelectedPage({ value: "programming", url: "/programming" });
+        break;
       case "Art,":
-        setSelectedPage({value:"art", url:"/art"})
+        setSelectedPage({ value: "art", url: "/art" });
         break;
       case "Konst,":
-        setSelectedPage({value:"art", url:"/art"})
+        setSelectedPage({ value: "art", url: "/art" });
         break;
       case "Design &":
-        setSelectedPage({value:"design", url:"/design"})
+        setSelectedPage({ value: "design", url: "/design" });
         break;
       case "Illustration":
-        setSelectedPage({value:"illustration", url:"/illustration"})
+        setSelectedPage({ value: "illustration", url: "/illustration" });
         break;
-      default: 
-      setSelectedPage({value:"", url:"/"})
+      default:
+        setSelectedPage({ value: "", url: "/" });
     }
-  }
-  return (  
+  };
+  return (
     <BodyTwo>
-      <h1>hej</h1>
-      <>{linksdata.map((item,i) => (
-        <div key={i}
-        onClick={(e => selection(e))}> 
-          <Link href={{pathname: `/${item.link.href}`,
-          //  query:{key:`${item.link.href}`}
-           }}>
-         <> {item.link.href=== "development" ? 
-            <BackgroundOne>
-              <LinkContainer>
-              <LinkOnev2>
-              {item.text}
-              </LinkOnev2>
-              </LinkContainer>
-            </BackgroundOne>
-          : 
-          <BackgroundTwo>
-           <LinkContainer>
-            {item.translation ? <LinkTwo>{t("startsida.headline")}</LinkTwo> :
-            <>
-            {item.link.href === "design" && <LinkThree>{item.text}</LinkThree>}
-            {item.link.href === "illustration" && <LinkFour>{item.text}</LinkFour>}
-            </>}
-           </LinkContainer>
-          </BackgroundTwo>
-          
-          }
-          </>
-          </Link>
+      <>
+        {linksdata.map((item, i) => (
+          <div key={i} onClick={(e) => selection(e)}>
+            <Link
+              href={{
+                pathname: `/${item.link.href}`,
+                //  query:{key:`${item.link.href}`}
+              }}
+            >
+              <>
+                {" "}
+                {item.link.href === "programming" ? (
+                  <BackgroundOne>
+                    <LinkContainer>
+                      <LinkOnev2>{item.text}</LinkOnev2>
+                    </LinkContainer>
+                  </BackgroundOne>
+                ) : (
+                  <BackgroundTwo>
+                    <LinkContainer>
+                      {item.translation ? (
+                        <LinkTwo>{t("startsida.headline")}</LinkTwo>
+                      ) : (
+                        <>
+                          {item.link.href === "design" && (
+                            <LinkThree>{item.text}</LinkThree>
+                          )}
+                          {item.link.href === "illustration" && (
+                            <LinkFour>{item.text}</LinkFour>
+                          )}
+                        </>
+                      )}
+                    </LinkContainer>
+                  </BackgroundTwo>
+                )}
+              </>
+            </Link>
           </div>
-      ))}</>
-
+        ))}
+      </>
     </BodyTwo>
- );
-}
- 
+  );
+};
+
 export default LinksToPages;
