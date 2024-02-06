@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { aboutMe_data } from "./aboutme_data";
 import FooterContentGeneral from "./FooterContentGeneral";
-import Selfie from "../../../public/bild_9(1).svg";
 import Selfie2 from "../../../public/bild_9.png";
+import Image from "next/image";
 
 const urlPicPublishing =
   "https://globalreporting.net/sv/wp-content/uploads/sites/2/2018/11/OmV_pris.jpg";
@@ -15,7 +15,6 @@ const BackGround = styled.section`
     ${({ theme }) => theme.frontendnew.bgSecondary}
   );
 
-  min-height: 100vh;
   margin: 0 auto;
   padding: 0;
   padding: 1rem;
@@ -53,10 +52,18 @@ const Content = styled.main`
     padding-right: 1rem;
   }
 `;
-
-const HeroAbout = styled.article`
+const Wrap = styled.div`
   padding-top: 3rem;
+  width:100%;
+  
+  img {
+    width: 100%;
+    max-width:500px;
+  }
+}
 `;
+
+const HeroAbout = styled.article``;
 
 const TextContent = styled.article`
   p {
@@ -100,8 +107,6 @@ const Quotes = styled.aside`
     line-height: 175%;
   }
 `;
-
-const Wrap = styled.div``;
 
 const HeroOmMig = ({ title, h3, h2 }) => {
   return (
@@ -152,7 +157,7 @@ const ImageSection = ({ language }) => {
 const ImageProfile = () => {
   return (
     <Wrap>
-      <img src={Selfie2} alt="Svartvit bild på Tova" />
+      <Image src={Selfie2} alt="Svartvit bild på Tova" />
     </Wrap>
   );
 };
