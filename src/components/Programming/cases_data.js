@@ -6,6 +6,9 @@ export const cases_data = [
         exists: false,
         url: "",
       },
+      video: {
+        exists: false,
+      },
       url: {
         exists: false,
         adress: "",
@@ -42,14 +45,24 @@ export const cases_data = [
   },
   {
     greenpeace: {
-      title: "SVERIGESUTSLAPP.SE",
+      title: "GREENPEACE",
       picture: {
-        exists: true,
-        adress: "",
-      },
-      url: {
         exists: false,
         adress: "",
+      },
+      video: {
+        exists: true,
+        adress: "https://youtu.be/s5fYHxAL2DQ",
+        txt_en: "Click to see the website",
+        txt: "Klicka för att se hur hemsidan såg ut!",
+        title_en: "Greenpeace Campaign website",
+        title: "Greenpeace Kampanjsida",
+        aria_en: "A recording of the website",
+        aria: "Greenpeace Kampanjsida - en demonstration.",
+      },
+      url: {
+        exists: true,
+        adress: "www.sverigesutslapp.se",
       },
       github: {
         exists: false,
@@ -78,6 +91,101 @@ export const cases_data = [
           "We also built a function where the user can select a year and see the data for that specific year. The data is automatically updated when the Swedish Environmental Protection Agency updates.",
         description_5:
           "We created our own CMS system for Greenpeace, a simple admin page, where they could go in and edit links, image captions and texts, and publish/unpublish entire sections. We used a NoSQL database (Firebase) to quickly and easily publish/unpublish and/or change body text and statistics.",
+      },
+    },
+  },
+  {
+    westcoast: {
+      title: "Westcoast Education",
+      picture: {
+        exists: true,
+        adress:
+          "https://user-images.githubusercontent.com/30622818/215583059-a9a2ffbe-ea35-47ea-8e33-c9d0f2f8f2fd.png",
+        aria: "En printscreen från hemsidan",
+        aria_en: " A printscreen from the website.",
+      },
+      video: {
+        exists: false,
+      },
+      url: {
+        exists: true,
+        adress: "https://westcoast-education.netlify.app/",
+      },
+      github: {
+        exists: true,
+        adress: "https://github.com/jertfelt/westcoast_education-nyhjs4",
+      },
+      sv: {
+        description_1: "Studentarbete: Test Driven Development i React-miljö",
+        description_2:
+          "Vi skulle bygga en enkel hemsida som skulle visa publicerade kurser, och en admin portal för administratörer på skolan där man kunde logga in och editera (ändra, lägga till) kurser och lärare. Det skulle också gå att knyta ihop lärare och kurser, samt att visa om en kurs var publicerad utifrån att det var tillräckligt många studenter tillagda. Jag byggde även en portal, utöver uppgiften, för studenterna så de kunde anmäla sig till kurser, ändra email eller namn och använda sig av enkel pomofocus-timer på deras profilsida. Allt detta byggdes med TDD i åtanke, där jag från början jobbade med test miljöer i localserver och json server, för att sedan migrera projektet till Netlify och Firebase.Skoluppgiften gick ut på att skriva testdrivet, här har jag jobbat med unit-testing och viss interaction testing med hjälp av Jest.",
+        description_3:
+          "Jag har vidare jobbat med styled components, och testat olika filstrukturer. Vidare har jag experimenterat med dark mode/ light mode och tillgänglighet.",
+        description_4:
+          "Jag använde mig av Firebase för att administrera admin-logins, och för att ha en database till studenterna, kurserna och lärare. Här var jag tvungen att läsa på om Firebase funktionalitet. Jag har även valt att hosta hos Netlify, och utforskat möjligheter med att upprätta server.",
+        description_5:
+          "Sidan är fortfarande under uppbyggnad och kan ha vissa buggar.",
+      },
+      en: {
+        description_1:
+          "Student project: Test Driven Development in React environment",
+        description_2:
+          "We were supposed to build a simple website that would display published courses, and an admin portal for school administrators where they could log in and edit (change, add) courses and teachers. It should also be possible to link teachers and courses, and to indicate if a course was published based on whether there were enough students added. I also built a portal, in addition to the task, for the students so they could sign up for courses, change email or name, and use a simple pomofocus timer on their profile page. All this was built with TDD in mind, where I initially worked with test environments in local server and json server, and then migrated the project to Netlify and Firebase. The school assignment was to write test-driven, here I have worked with unit testing and some interaction testing using Jest.",
+        description_3:
+          "Furthermore, I have worked with styled components, and tested different file structures. Furthermore, I have experimented with dark mode/light mode and accessibility.",
+        description_4:
+          "I used Firebase to manage admin logins, and to have a database for students, courses, and teachers. Here, I had to read up on Firebase functionality. I have also chosen to host with Netlify, and explored possibilities with setting up a server.",
+        description_5:
+          "The site is still under construction and may have some bugs.",
+      },
+    },
+  },
+  {
+    mrhr: {
+      title: "Barnrättsspelet",
+      picture: {
+        exists: false,
+        adress: "",
+      },
+      video: {
+        exists: true,
+        adress: "https://youtu.be/EAAQzB4dqYU",
+        txt_en: "Click to see recording of the mobile app",
+        txt: "Klicka för att se inspelning av mobilapp!",
+        title: "Test av appen",
+        title_en: "Test of the app",
+        aria_en: "A record of the app",
+        aria: "En inspelning av hur appen fungerade",
+      },
+      url: {
+        exists: false,
+      },
+      github: {
+        exists: false,
+      },
+      sv: {
+        description_1:
+          "En studie i hur jag konverterar en existerande webbplats till en app. I det här projektet använde jag mig av Expo, en plattform som använder sig av React Native, med målet att göra en app som är kompatibel för både iOS och Android. Jag utgick från hemsidan barnrattspelsspelet.se där målet var att göra korten i mobilformat.",
+        description_2:
+          "Vidare jobbade jag med Android Studio för att emulera mobil på dator, Google Play Console, och av React Native Webview som ett sätt att konvertera existerande React-projekt till en app. Vidare i projektet gjorde jag anpassningar i UI och UX så det blev mer mobilanpassat, genom att införa splashscreens, statusbar, ripple effects,  och en skissartad swipe-funktionalitet.",
+        description_3:
+          "I mitt arbete har jag jobbat med två frågor. 1. Hur skapar jag en app? 2. Hur konverterar jag en del av, eller en hel, webbplats till en app? Den andra frågan är viktig, då jag redan har en existerande kodbas och för att i kravet från beställaren så finns det en önskan om att inte ha fler kodbaser än nödvändigt. På grund av resurser så har man helt enkelt inte råd med att både ha en frontendare och en apputvecklare, och att ha olika kodbaser som måste uppdateras när en förändring sker. Därför behövs en lösning som konverterar existerande kod till en app.",
+        description_4:
+          "Vidare var det också krav på att kodbasen ska passa för både iOS och Android, alltså kodas crossplatform och inte var och en för sig, av samma anledning som punkt ett. Det är också viktigt att det i nuläget inte ska gå att navigera bort till startsidan eller spelet, då det inte finns stöd för det, då det inte kommer vara mobilanpassat, utan appen ska bara innehålla collection-viewer.",
+        description_5:
+          "Min metod har varit undersökande, med fokus på att testa saker och att felsöka när jag stöter på problem. Jag har jobbat i sprints, med en vecka i taget.Jag har dokumenterat hela processen i min rapport, så noggrant som möjligt, för att motivera några val och förklara resonemangen bakom. Jag har utgått från tutorials och dokumentation på olika ramverks hemsidor. Det har inte direkt varit en linjär process utan det har snarare varit sidospår, och ibland har det varit svårt att tidsestimera eller planera då saker kunnat ta oförutsett mycket eller lite tid. Det har också skett att jag lagt ner mycket tid på att försöka lösa ett problem, för att sedan byta inriktning helt, eller lämna den huvudvärken till ett senare skede.",
+      },
+      en: {
+        description_1:
+          "A study on how I convert an existing website into an app. In this project, I used Expo, a platform that uses React Native, with the goal of creating an app that is compatible with both iOS and Android. I started from the website childrensrightsgame.se where the goal was to make the cards in mobile format.",
+        description_2:
+          "Furthermore, I worked with Android Studio to emulate mobile on a computer, Google Play Console, and React Native Webview as a way to convert existing React projects into an app. Further into the project, I made adjustments in UI and UX to make it more mobile-friendly, by introducing splash screens, status bar, ripple effects, and a sketch-like swipe functionality.",
+        description_3:
+          "In my work, I have dealt with two questions. 1. How do I create an app? 2. How do I convert a part of, or an entire, website into an app? The second question is important, as I already have an existing codebase and because the client's requirement includes a wish to not have more codebases than necessary. Due to resources, it simply is not affordable to have both a frontend developer and an app developer, and to have different codebases that need to be updated when a change occurs. Therefore, a solution is needed that converts existing code into an app.",
+        description_4:
+          "Furthermore, there was also a requirement that the codebase should fit for both iOS and Android, i.e., coded cross-platform and not individually, for the same reason as point one. It is also important that currently it should not be possible to navigate back to the home page or the game, as there is no support for it, as it will not be mobile-friendly, but the app should only contain a collection viewer.",
+        description_5:
+          "My method has been investigative, focusing on testing things and troubleshooting when encountering problems. I have worked in sprints, one week at a time. I have documented the entire process in my report, as carefully as possible, to justify some choices and explain the reasoning behind them. I have relied on tutorials and documentation on various framework websites. It has not been a linear process but rather side-tracks, and sometimes it has been difficult to estimate or plan time since things could take unexpectedly much or little time. It has also happened that I have spent a lot of time trying to solve a problem, only to completely change direction, or leave that headache to a later stage.",
       },
     },
   },

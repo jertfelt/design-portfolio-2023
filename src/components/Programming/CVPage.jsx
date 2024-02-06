@@ -4,6 +4,7 @@ import { edu_js } from "./edu_sv";
 import { qualities_sv } from "./qualities_sv";
 import { works_sv } from "./works_sv";
 import { ButtonPrimary, ButtonSecondary } from "./Buttons";
+import FooterContentGeneral from "./FooterContentGeneral";
 
 const BackgroundCV = styled.main`
   background-color: ${({ theme }) => theme.frontendnew.bgSecondary};
@@ -78,28 +79,6 @@ const CvFooter = styled.footer`
   font-size: 14px;
 `;
 
-const BtnContainer = styled.span`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  button {
-    margin-top: 2rem;
-  }
-`;
-
-const Contact = styled.div`
-  padding-top: 2rem;
-`;
-const ContactList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    line-height: 150%;
-  }
-`;
-
 const CVPageContent = () => {
   const router = useRouter();
   const { locales, locale: activeLocale } = router;
@@ -149,26 +128,7 @@ const CVPageContent = () => {
             </div>
           ))}
         </Works>
-        <CvFooter>
-          <BtnContainer>
-            <ButtonPrimary>Om mig</ButtonPrimary>
-            <ButtonPrimary>Arbeten</ButtonPrimary>
-            <ButtonSecondary>LinkedIn</ButtonSecondary>
-          </BtnContainer>
-          <Contact>
-            <p>Kontakt:</p>
-            <ContactList>
-              <li>tovajertfelt@gmail.com</li>
-              <li>0736843438</li>
-              <li>Granitvägen 15B Uppsala</li>
-              <li>discord: jertfelt</li>
-            </ContactList>
-            <p>
-              Hemsida programmerad och designad av Tova Jertfelt 2024 med Figma,
-              NEXT.js, Styled Components, Github, Visual Studio Code.
-            </p>
-          </Contact>
-        </CvFooter>
+        <FooterContentGeneral type="CV" language={language} />
       </Padding>
     </BackgroundCV>
   );

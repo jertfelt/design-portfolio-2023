@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import { cases_data } from "./cases_data";
-import { ButtonPrimary, ButtonSecondary } from "./Buttons";
-import React from "react";
-import greenpeaceVideo from "../../../public/videos/greenpace_demo.mp4";
+import { LinkExternal } from "./Buttons";
+import ReactPlayer from "react-player/lazy";
+import FooterContentGeneral from "./FooterContentGeneral";
 
 const BackgroundCases = styled.main`
   background-color: ${({ theme }) => theme.frontendnew.bgPrimary};
@@ -25,6 +25,9 @@ const BackgroundCases = styled.main`
     white-space: wrap;
     padding-right: 1rem;
   }
+  button {
+    margin-left: 1rem;
+  }
 `;
 
 const ContentTop = styled.div`
@@ -33,6 +36,12 @@ const ContentTop = styled.div`
 `;
 
 const Content = styled.section`
+  .img_desc {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+    margin-top: 4px;
+  }
   padding-left: 2rem;
   padding-right: 2rem;
   h2 {
@@ -48,26 +57,70 @@ const Content = styled.section`
   }
 `;
 
-const VideoComponent = (src) => {
-  <div>
-    <h3>Video:</h3>
-    <video controls>
-      <source src={src} type="video/mp4">
-        {" "}
-        Your browser does not support the video tag.{" "}
-      </source>
-    </video>
-  </div>;
-};
+const VideoWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  max-width: 100%;
+`;
+const VideoFrame = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  max-width: 100%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 const CasesFrontend = () => {
   const router = useRouter();
-  const { locales, locale: activeLocale } = router;
+  const { locale: activeLocale } = router;
   const language = activeLocale;
+
+  const thisLanguage = language;
 
   const getDescription = (item, language, key) => {
     const { en, sv } = item[key];
     return language === "en" ? en : sv;
+  };
+
+  const VideoComponent = ({ src, ariaContent }) => {
+    return (
+      <VideoWrapper>
+        <VideoFrame>
+          <ReactPlayer
+            url={src}
+            width="100%"
+            height="100%"
+            aria-label={ariaContent}
+          />
+        </VideoFrame>
+      </VideoWrapper>
+    );
+  };
+
+  const videoRender = (adress, title, aria, txt) => {
+    return (
+      <>
+        <br />
+        <VideoComponent src={adress} title={title} ariaContent={aria} />
+        <p className="img_desc">{txt}</p>
+      </>
+    );
   };
 
   return (
@@ -83,8 +136,10 @@ const CasesFrontend = () => {
         {cases_data.map((item, i) => (
           <article key={i}>
             {Object.keys(item).map((key) => {
-              const { title, picture } = item[key];
+              const { title, picture, video } = item[key];
               const descriptions = getDescription(item, language, key);
+              const { url, github } = item[key] || {};
+              let label = "";
 
               return (
                 <div key={key}>
@@ -93,14 +148,61 @@ const CasesFrontend = () => {
                     <div key={index}>
                       <p>{description}</p>
                       {index === 1 &&
-                        title === "SVERIGESUTSLAPP.SE" &&
-                        picture.exists && (
-                          <VideoComponent videsrc={greenpeaceVideo} />
-                        )}{" "}
+                        title === "GREENPEACE" &&
+                        video.exists &&
+                        (thisLanguage === "en"
+                          ? videoRender(
+                              video.adress,
+                              video.title_en,
+                              video.aria_en,
+                              video.txt_en
+                            )
+                          : videoRender(
+                              video.adress,
+                              video.title,
+                              video.aria,
+                              video.txt
+                            ))}{" "}
+                      {index === 3 &&
+                        title === "Barnrättsspelet" &&
+                        video.exists &&
+                        (thisLanguage === "en"
+                          ? videoRender(
+                              video.adress,
+                              video.title_en,
+                              video.aria_en,
+                              video.txt_en
+                            )
+                          : videoRender(
+                              video.adress,
+                              video.title,
+                              video.aria,
+                              video.txt
+                            ))}
                     </div>
                   ))}
-                  {title !== "SVERIGESUTSLAPP.SE" && picture.exists && (
-                    <p>bild</p>
+
+                  {picture.exists && (
+                    <ImageWrapper>
+                      <img
+                        src={picture.adress}
+                        alt={
+                          thisLanguage === "en" ? picture.aria_en : picture.aria
+                        }
+                      />
+                    </ImageWrapper>
+                  )}
+                  <br />
+                  {url && url.exists && (
+                    <LinkExternal
+                      linkurl={url.adress}
+                      linktxt="Se mer"
+                    ></LinkExternal>
+                  )}
+                  {github && github.exists && (
+                    <LinkExternal onClick={() => window.open(github.adress)}>
+                      GitHub
+                    </LinkExternal>
                   )}
                 </div>
               );
@@ -108,6 +210,8 @@ const CasesFrontend = () => {
           </article>
         ))}
       </Content>
+
+      <FooterContentGeneral type="work" language={thisLanguage} />
     </BackgroundCases>
   );
 };
