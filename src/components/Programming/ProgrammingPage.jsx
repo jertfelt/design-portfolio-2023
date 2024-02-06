@@ -54,7 +54,7 @@ const NavHeroFrontend = styled.ul`
 
 const ProgrammingPage = (languageurl) => {
   const router = useRouter();
-  const { locales, locale: activeLocale } = router;
+  const { locale: activeLocale } = router;
   const language = activeLocale;
   const linksHero = language === "en" ? programmingLinksen : programmingLinksv;
 

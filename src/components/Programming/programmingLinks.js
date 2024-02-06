@@ -12,5 +12,5 @@ export const programmingLinksv = [
 export const programmingLinksen = [
   cvLink,
   { href: "cases", lable: "CASES" },
-  { href: "about-me", lable: "ABOUT ME" },
+  { href: "aboutme", lable: "ABOUT ME" },
 ];

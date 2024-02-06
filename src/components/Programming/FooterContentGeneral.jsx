@@ -16,9 +16,12 @@ export const FooterFrontend = styled.footer`
 
 export const BtnContainer = styled.span`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+  button {
+    margin-bottom: 0.5rem;
+  }
 `;
 const Contact = styled.div`
   padding-top: 2rem;
