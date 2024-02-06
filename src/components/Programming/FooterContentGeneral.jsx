@@ -20,7 +20,7 @@ export const BtnContainer = styled.span`
   align-items: flex-start;
   justify-content: space-between;
   button {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
 `;
 const Contact = styled.div`
@@ -40,12 +40,22 @@ const FooterContentGeneral = ({ type, language }) => {
     <FooterFrontend>
       <BtnContainer>
         {type === "Om mig" ? (
-          <></>
+          <>
+            {" "}
+            <LinkNavigation
+              href="/programming/cv"
+              linktxt="CV"
+            ></LinkNavigation>
+            <LinkNavigation
+              href="/programming/cases"
+              linktxt={language === "sv" ? "Projekt" : "Cases"}
+            ></LinkNavigation>
+          </>
         ) : type === "CV" ? (
           <>
             {" "}
             <LinkNavigation
-              href="/programming/about-me"
+              href="/programming/about"
               linktxt={language === "sv" ? "Om mig" : "About me"}
             ></LinkNavigation>
             <LinkNavigation
@@ -60,7 +70,7 @@ const FooterContentGeneral = ({ type, language }) => {
         ) : (
           <>
             <LinkNavigation
-              href="/programming/about-me"
+              href="/programming/about"
               linktxt={language === "sv" ? "Om mig" : "About me"}
             ></LinkNavigation>
             <LinkNavigation

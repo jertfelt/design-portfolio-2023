@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+
 const Document = () => {
   return (
     <Html>
@@ -7,7 +7,11 @@ const Document = () => {
         <html lang="sv"></html>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Armata:wght@400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Magra:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Tilt+Warp&display=swap"
           rel="stylesheet"
@@ -15,7 +19,11 @@ const Document = () => {
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
 
         <meta name="title" content="Tova Jertfelt || Frontend, art, design" />
         <meta
@@ -42,11 +50,15 @@ const Document = () => {
 
         <meta name="author" content="Tova Jertfelt"></meta>
 
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
 
         <link rel="icon" type="image/png" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
       </Head>
       <body>
         <Main />

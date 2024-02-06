@@ -6,7 +6,7 @@ const cvLink = {
 export const programmingLinksv = [
   cvLink,
   { href: "cases", lable: "PROJEKT" },
-  { href: "about-me", lable: "OM MIG" },
+  { href: "aboutme", lable: "OM MIG" },
 ];
 
 export const programmingLinksen = [
