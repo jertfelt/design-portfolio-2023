@@ -19,10 +19,10 @@ const Section = styled.section`
     padding: 2rem;
   }
   h1 {
-    font-size: 80px;
+    font-size: 40px;
     color: ${({ theme }) => theme.accentTwo};
     @media (max-width: 800px) {
-      font-size: 50px;
+      font-size: 30px;
       padding-top: 20vh;
     }
   }
@@ -32,46 +32,23 @@ const Section = styled.section`
 
     gap: 16px;
     button {
-      background: ${({ theme }) => theme.accentTwo};
       border: none;
       padding: 10px;
 
-      color: ${({ theme }) => theme.textSecondary};
+      color: ${({ theme }) => theme.accent};
+      background: ${({ theme }) => theme.contrast};
 
       &:hover {
-        color: ${({ theme }) => theme.accent};
-        background: ${({ theme }) => theme.contrast};
+        color: ${({ theme }) => theme.textSecondary};
+        background: ${({ theme }) => theme.accent};
       }
     }
     p {
-      line-height: 1.5rem;
+      line-height: 175%;
       @media (max-width: 800px) {
         line-height: 0.5rem;
       }
     }
-  }
-`;
-
-const Form = styled.form`
-  max-width: 500px;
-  @media (max-width: 700px) {
-    width: 80%;
-  }
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  label {
-    line-height: 1.3rem;
-  }
-  input {
-    max-width: 60%;
-  }
-  textarea {
-    min-width: 50%;
-    max-width: 100%;
-  }
-  button {
-    max-width: 60%;
   }
 `;
 
@@ -87,17 +64,15 @@ const Contact = () => {
           {contacts &&
             contacts.map((item, index) => (
               <div key={index}>
-                {item.type === "phone:" || item.type === "email:" ? (
+                {item.type === "phone:" ? (
                   <p>
-                    {item.type === "phone" ? (
-                      <>{t("contact.phone")}</>
-                    ) : (
-                      item.type.toUpperCase()
-                    )}{" "}
-                    {item.data}
+                    {t("contact.phone")} {item.data}
                   </p>
+                ) : item.type === "email:" ? (
+                  <a href={`mailto:${item.data}`}>{item.data}</a>
                 ) : (
                   <a
+                    target="_blank"
                     href={
                       item.type === "linkedin"
                         ? `https://www.linkedin.com/in/${item.data}`
@@ -110,17 +85,6 @@ const Contact = () => {
               </div>
             ))}
         </div>
-        {/* <div>
-      <h2>{t("contact.form")}</h2>
-      <Form name="contactTova" method="POST" data-netlify="true">
-        <label htmlFor="inputName">{t("contact.namn")}</label>
-        <input type="text" name="name" id="inputName"></input>
-        <label htmlFor="inputEmail">Email:</label>
-        <input type="email" name="email" id="inputEmail"></input>
-        <label htmlFor="textarea">{t("contact.message")}:</label><textarea name="message" id="textarea"></textarea>
-        <button type="submit">{t("contact.sendbtn")}</button>
-      </Form>
-    </div> */}
       </Section>
     </>
   );

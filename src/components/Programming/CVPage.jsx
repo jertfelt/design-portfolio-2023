@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { edu_js } from "./edu_sv";
-import { qualities_sv } from "./qualities_sv";
-import { works_sv } from "./works_sv";
-import { ButtonPrimary, ButtonSecondary } from "./Buttons";
+import { edu_js, edu_eng } from "./edu_sv";
+import { qualities_sv, qualities_en } from "./qualities_sv";
+import { works_sv, works_en } from "./works_sv";
+import { useTranslation } from "next-i18next";
 import FooterContentGeneral from "./FooterContentGeneral";
 
 const BackgroundCV = styled.main`
@@ -69,32 +69,27 @@ const Line = styled.hr`
   margin: 0;
 `;
 
-const CvFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  line-height: 175%;
-  font-family: ${({ theme }) => theme.fonts.stats.primary};
-  font-size: 14px;
-`;
-
 const CVPageContent = () => {
   const router = useRouter();
-  const { locales, locale: activeLocale } = router;
+  const { locale: activeLocale } = router;
   const language = activeLocale;
+  const { t } = useTranslation();
+
+  const eduData = activeLocale === "sv" ? edu_js : edu_eng;
+  const qualitiesData = activeLocale === "sv" ? qualities_sv : qualities_en;
+  const worksData = activeLocale === "sv" ? works_sv : works_en;
 
   return (
     <BackgroundCV>
       <Padding>
         <Intro>
           <h1>CV</h1>
-          <h2>FRONTENDUTVECKLARE</h2>
+          <h2>{t("newFE.cv.subhead")}</h2>
           <h3>tovajertfelt@gmail.com</h3>
         </Intro>
         <Works>
-          <h2>JOBB</h2>
-          {works_sv.map((item, i) => (
+          <h2>{t("newFE.cv.work")}</h2>
+          {worksData.map((item, i) => (
             <div key={i}>
               <h3>{item.place}</h3>
               <p className="lengthTitle">
@@ -106,8 +101,8 @@ const CVPageContent = () => {
           ))}
         </Works>
         <Works>
-          <h2>FÄRDIGHETER</h2>
-          {qualities_sv.map((q, i) => (
+          <h2>{t("newFE.cv.skills")}</h2>
+          {qualitiesData.map((q, i) => (
             <div key={i}>
               <h3>{q.title}</h3>
               <p className="smallerP">{q.skills}</p>
@@ -116,8 +111,8 @@ const CVPageContent = () => {
           ))}
         </Works>
         <Works>
-          <h2>UTBILDNING</h2>
-          {edu_js.map((e, i) => (
+          <h2>{t("newFE.cv.education")}</h2>
+          {eduData.map((e, i) => (
             <div key={i}>
               <h3>{e.school}</h3>
               <h3>

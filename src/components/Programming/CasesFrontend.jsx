@@ -4,6 +4,7 @@ import { cases_data } from "./cases_data";
 import { LinkExternal } from "./Buttons";
 import ReactPlayer from "react-player/lazy";
 import FooterContentGeneral from "./FooterContentGeneral";
+import { useTranslation } from "next-i18next";
 
 const BackgroundCases = styled.main`
   background-color: ${({ theme }) => theme.frontendnew.bgPrimary};
@@ -90,6 +91,7 @@ const CasesFrontend = () => {
   const router = useRouter();
   const { locale: activeLocale } = router;
   const language = activeLocale;
+  const { t } = useTranslation();
 
   const thisLanguage = language;
 
@@ -126,11 +128,8 @@ const CasesFrontend = () => {
   return (
     <BackgroundCases>
       <ContentTop>
-        <h1>Projekt</h1>
-        <h3>
-          Några exempel på vad jag gör, har gjort, kan göra och vill göra inom
-          programmering.
-        </h3>
+        <h1>{t("newFE.cases.title")}</h1>
+        <h3>{t("newFE.cases.h2")}</h3>
       </ContentTop>
       <Content>
         {cases_data.map((item, i) => (

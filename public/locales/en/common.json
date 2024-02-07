@@ -1,24 +1,43 @@
 {
+  "newFE": {
+    "cv": {
+      "subhead": "FRONTEND DEVELOPER",
+      "work": "WORK",
+      "skills": "SKILLS",
+      "education": "EDUCATION"
+    },
+    "start": {
+      "about": "Frontend developer with UX and UI experience.",
+      "h3": " At the moment seeking employment."
+    },
+    "cases": {
+      "title": "CASES",
+      "h2": "Some examples of what I do, have done, can do and want to do within programming."
+    }
+  },
+
   "menu": {
     "Choice1": "Art",
     "Kontakt": "Contact",
     "Startsida": "Homepage"
   },
-  "artabout":{
+  "artabout": {
     "h2first": "I create",
     "h2second": "art."
   },
-  "arttitle":{
-    "h1":"I'm"
+  "arttitle": {
+    "h1": "I'm"
   },
-  "404": {"h2": "Page doesn't exist :(",
-"p1": "You'll be transported back to the ",
-"link": "homepage",
-"p2": "within a moment..."},
-"wip":{
-  "p":"The page is under construction. Come back later or contact me for more information. Thanks for your patience.",
-  "btn": "Back"
-},
+  "404": {
+    "h2": "Page doesn't exist :(",
+    "p1": "You'll be transported back to the ",
+    "link": "homepage",
+    "p2": "within a moment..."
+  },
+  "wip": {
+    "p": "The page is under construction. Come back later or contact me for more information. Thanks for your patience.",
+    "btn": "Back"
+  },
   "startsida": {
     "h2": "Frontend developer, artist and designer. ",
     "h3": "With a Bachelor degree in visual communication at Konstfack & vocational degree in frontend-programming at Nackademin.",
@@ -33,19 +52,19 @@
     "message": "Message",
     "sendbtn": "Send"
   },
-  "footerfrontend":{
-    "text":"This page was built with the following tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
+  "footerfrontend": {
+    "text": "This page was built with the following tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
   },
-  "cv":{
-    "info":"Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",
+  "cv": {
+    "info": "Here comes relevant work, educations and experiences that has to do with my frontendwork. See my whole resume at ",
     "erfarenhet": "EXPERIENCE",
-    "arbete":"WORK",
-    "praktikdates":"October 2022- April 2023",
+    "arbete": "WORK",
+    "praktikdates": "October 2022- April 2023",
     "praktikinfo": "Internship",
-    "praktikinfo2":"During spring 2023 I'm an intern in frontend development at Delorean (Vinnovera), Stockholm.",
-    "education" : "Education"
+    "praktikinfo2": "During spring 2023 I'm an intern in frontend development at Delorean (Vinnovera), Stockholm.",
+    "education": "Education"
   },
-  "nackademin":{
+  "nackademin": {
     "h3": "Frontend Development",
     "h4": "Nackademin - university of applied sciences",
     "kurs": "Course",
@@ -63,100 +82,90 @@
     "CMS": "Interaction with CMS",
     "desc5": "Strapi CMS, Postman and Axios",
     "FE": "Frontend project",
-    "desc6":" Working as a team in programming", 
+    "desc6": " Working as a team in programming",
     "desc7": "Learning At Work. Internship at a workplace.",
     "total": "of",
     "avklarade": "courses completed"
   },
-  "casespage":{
-    "headerStudent":"Studentwork Nackademin",
+  "casespage": {
+    "headerStudent": "Studentwork Nackademin",
     "about": "About the project:",
     "button": "See more",
-    "desc":"Here follows featured work that I have coded, during my time as a student, my own personal work or as an intern.",
+    "desc": "Here follows featured work that I have coded, during my time as a student, my own personal work or as an intern.",
     "caseSI": "Internship January - April 2023",
     "description Society": "Through Delorean/Vinnovera, I held a consulting assignment as Frontend developer at Society Icon, which is a tech-startup and offers a platform to connect companies with social media influencers in the hope of generating valuable social media marketing campaigns. Before my arrival at the company there had not been anybody working with the frontend of the site since it was built by an agency two years prior and much of the initial work dealt with updating packages/dependencies and refactoring code, such as updating Node and replacing for example jQuery-code that interfered with React applications. After that I worked with a backlog of requested features as well as a total overhaul of the website's design and UI. The platform is built with React and utilizes Redux for state management.",
     "wannaknowmore": "Society Icon declared bankruptcy in March 2023, so the project is no longer available on the web. Please get in touch if you want to know more about my time as an intern there.",
-    "af":"Junior frontend developer",
-    "descriptionAF":"I most recently come from the IT department of the Swedish Public Employment Service, where I worked as a frontend developer, programming an internal tool for ad reviews. We operated in an agile environment, a kind of Kanban-Scrum hybrid, within a large team of over fourteen people. I was responsible for the frontend, which was built using the Angular framework—something I learned on the job without prior knowledge. Additionally, I worked on design systems and how end-users interacted with them. Simultaneously, I provided insights to the design department regarding improvements and the needs of existing components.",
-    "caseGP":"Responsive campaign site with SEO-perspective",
-    "descGP":"Greenpeace wanted a campaign site that handles statistics from Swedish Central Data Bureu, and that would give more details on fossil fuels. The demands were that it should be SEO-friendly, interactive and easy to understand. I did the frontend, UX and some of the illustrations.",
-    "descGP_2":"We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source.",
-    "descGP_3":"We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections."
-
+    "af": "Junior frontend developer",
+    "descriptionAF": "I most recently come from the IT department of the Swedish Public Employment Service, where I worked as a frontend developer, programming an internal tool for ad reviews. We operated in an agile environment, a kind of Kanban-Scrum hybrid, within a large team of over fourteen people. I was responsible for the frontend, which was built using the Angular framework—something I learned on the job without prior knowledge. Additionally, I worked on design systems and how end-users interacted with them. Simultaneously, I provided insights to the design department regarding improvements and the needs of existing components.",
+    "caseGP": "Responsive campaign site with SEO-perspective",
+    "descGP": "Greenpeace wanted a campaign site that handles statistics from Swedish Central Data Bureu, and that would give more details on fossil fuels. The demands were that it should be SEO-friendly, interactive and easy to understand. I did the frontend, UX and some of the illustrations.",
+    "descGP_2": "We worked with the tool GraphJS to create interactive graphs for the user. We collected the data and stored it in our own database at Firebase. We also built a function where the user could pick a year and see data for that specific time. Data is automatically updated whenever it is updated from the source.",
+    "descGP_3": "We created a CMS on our own for Greenpeace where they could go in and change links, image texts and texts, as well as publish/ unpublish sections."
   },
-  "frontendpage":{
+  "frontendpage": {
     "hero1": "I am Tova Jertfelt",
     "hero2": "MULTIDISCIPLINARY &",
     "hero2b": "CREATIVE FRONTEND DEVELOPER",
     "hero3": "with several years of experience within visual communication and graphic design. I love that I can, in my working life, combine my three strengths: problem solving, creativity and unquenchable curiosity.",
     "aboutme": "ABOUT",
-    "aboutmetxt1":"I was originally trained at Konstfack as a visual communicator and have nearly ten years of experience working in digital production, web design, graphic design for magazines, both as a freelancer and as a permanent employee. Through this work experience, I am well-versed in having a dialogue about requirements and expectations, being adaptable when necessary, and identifying the core of problems to solve them.",
+    "aboutmetxt1": "I was originally trained at Konstfack as a visual communicator and have nearly ten years of experience working in digital production, web design, graphic design for magazines, both as a freelancer and as a permanent employee. Through this work experience, I am well-versed in having a dialogue about requirements and expectations, being adaptable when necessary, and identifying the core of problems to solve them.",
     "emphasis1": " I also have experience in UX, which facilitates my work in the frontend.",
-    "aboutmetxt2":"I am an ambitious developer looking for new challenges. I am a quick learner, flexible, hardworking programmer with roots in the artistic field and an understanding of both the abstract, logical, and the beautiful. After previously working in design and illustration, I switched to becoming a developer in 2021 and have since been working on the frontend in various projects. I am seeking a workplace that is open-minded, transparent, and allows me to grow both independently and as part of a team. I am reliable, detail-oriented, thirsty for knowledge, and enjoy experimenting. I am fearless, accustomed to juggling multiple tasks simultaneously, and find joy in problem-solving.",
-    "aboutmetxt3":"I am an active and engaged team player who contributes to the overall progress of the team. I can handle many tasks at once, dislike working in silos, while also needing uninterrupted focus when thinking abstractly. I want to work in a team so that I can switch between pair programming, knowledge exchange, and coding independently. I am familiar with agile work, taking responsibility for delivery, and working with tests. With my background in design, I easily grasp UX and UI and constantly strive to improve both my work and others'. I don't put prestige in what I do but prefer a direct, open, and constructive dialogue, while maintaining high standards for my delivery. I enjoy bouncing ideas and code, want to be transparent, and have no problem asking for help when needed. The same goes for offering help!",
-  "emphasis2":"I am looking for a workplace that can provide me with both a challenge and a space to develop and learn more, where I feel I can contribute.",
-  "aboutmetxt4":" I love that in my work, I can combine my three strengths: problem-solving, creativity, and unquenchable curiosity. In fact, I have so much fun coding that I find it difficult to stop working for the day!",
-  "contactbtn": "Contact me",
-  "countinguptxt":"years experience as a digital designer",
-  "bignrtxt": "I started studying frontend development at Nackademin."
-  
-  }
-  ,
-  "artistpages":{
-    "upcoming":{
-      "UpcomingHeader":"Upcoming:"
+    "aboutmetxt2": "I am an ambitious developer looking for new challenges. I am a quick learner, flexible, hardworking programmer with roots in the artistic field and an understanding of both the abstract, logical, and the beautiful. After previously working in design and illustration, I switched to becoming a developer in 2021 and have since been working on the frontend in various projects. I am seeking a workplace that is open-minded, transparent, and allows me to grow both independently and as part of a team. I am reliable, detail-oriented, thirsty for knowledge, and enjoy experimenting. I am fearless, accustomed to juggling multiple tasks simultaneously, and find joy in problem-solving.",
+    "aboutmetxt3": "I am an active and engaged team player who contributes to the overall progress of the team. I can handle many tasks at once, dislike working in silos, while also needing uninterrupted focus when thinking abstractly. I want to work in a team so that I can switch between pair programming, knowledge exchange, and coding independently. I am familiar with agile work, taking responsibility for delivery, and working with tests. With my background in design, I easily grasp UX and UI and constantly strive to improve both my work and others'. I don't put prestige in what I do but prefer a direct, open, and constructive dialogue, while maintaining high standards for my delivery. I enjoy bouncing ideas and code, want to be transparent, and have no problem asking for help when needed. The same goes for offering help!",
+    "emphasis2": "I am looking for a workplace that can provide me with both a challenge and a space to develop and learn more, where I feel I can contribute.",
+    "aboutmetxt4": " I love that in my work, I can combine my three strengths: problem-solving, creativity, and unquenchable curiosity. In fact, I have so much fun coding that I find it difficult to stop working for the day!",
+    "contactbtn": "Contact me",
+    "countinguptxt": "years experience as a digital designer",
+    "bignrtxt": "I started studying frontend development at Nackademin."
+  },
+  "artistpages": {
+    "upcoming": {
+      "UpcomingHeader": "Upcoming:"
     },
-    "vikanbattre":{
-      "title":"We Can Do Better",
+    "vikanbattre": {
+      "title": "We Can Do Better",
       "material": "300+ unique drypoint prints together with handwritten bullying in form of toilet scribbles forms a maze of bullying within a 250 x 360 x 250 cm large cube of torture. In the end, by the exit, waits an animation that is partly made from the drypoint, and tells us of a manifesto.",
       "smalldescription": "Bachelor of Fine Arts degree project at Konstfack College of Arts, Crafts and Design 2016.",
-      "readLink":"Read the bachelor degree paper here. ",
-      "description1":"Bullying is a problem that affects the whole of society. It influences and permeates our coexistence. Bullying is happening right now, in schools, workplaces and other social contexts. Research shows that bullying stems from destructive group behaviours, that humans as social animals use bullying as a tool to obtain and retain power. Despite this, the image presented in the media is about the individual. In other words: it is the individual that is bullied and it is the individual that does the bullying, which in turn leads to an idea of bullying as an individual problem rather than a social one. This should be criticised, but it should also be changed! My project is about shifting the focus from the individual and towards formulating a movement and influencing opinion. It is about mobilising, inspiring, informing and, in the end, changing things. We can change. It is time. #Wecandobetter "
+      "readLink": "Read the bachelor degree paper here. ",
+      "description1": "Bullying is a problem that affects the whole of society. It influences and permeates our coexistence. Bullying is happening right now, in schools, workplaces and other social contexts. Research shows that bullying stems from destructive group behaviours, that humans as social animals use bullying as a tool to obtain and retain power. Despite this, the image presented in the media is about the individual. In other words: it is the individual that is bullied and it is the individual that does the bullying, which in turn leads to an idea of bullying as an individual problem rather than a social one. This should be criticised, but it should also be changed! My project is about shifting the focus from the individual and towards formulating a movement and influencing opinion. It is about mobilising, inspiring, informing and, in the end, changing things. We can change. It is time. #Wecandobetter "
     },
-    "dreams":{
-      "desc":"Textile art, digital collage/painting and animation, 2015.",
-      "desc2":"Exhibitioned at JUSTE Gallery and Hornhuset, 2015.",
+    "dreams": {
+      "desc": "Textile art, digital collage/painting and animation, 2015.",
+      "desc2": "Exhibitioned at JUSTE Gallery and Hornhuset, 2015.",
       "longerdesc": "I have many reoccuring dreams. When I lived abroad my nights were filled with terrors and alternative universes, that I decided to try and illustrate. It is a subjective piece of art, but it is also something recognizable as we are all have dreams, and can feel terror, stress, homesickness and love while we dream.",
-      "longerdesc2":"In this project I worked with textile art, I printed batik and created a patchwork blanket and pillows that together created a nightmarish bed. I also used the textile prints and animated and created large digital paintings from the different pieces."
+      "longerdesc2": "In this project I worked with textile art, I printed batik and created a patchwork blanket and pillows that together created a nightmarish bed. I also used the textile prints and animated and created large digital paintings from the different pieces."
     },
-    "main":{
-      "first":"I am a multidisciplinary artist based in Sweden. My body of work is, among everything, graphic sheets, tactile collage, line drawings, acrylic paintings, as well as digital paintings.",
-      "second":" As an artist, I mainly orientate myself with words and images, preferably in correlation, either in the form of spoken word or text. By combining visual art, in either painting, animation or dry pastel, with my texts in the form of sound or written text, I seek an interplay between the visual and the linguistic message. There is neither a subordinate nor a superior order between image and text, but it is the contexts and storytelling that matter in my works. ",
-      "third":"I move between the indignant, emotional and the observant. My manner when it comes to drawing is  ",
-      "linkOmKonst":"drawing image ideas and expressions from the cartoonists who were numerous just under ten years ago.",
-      "thirdpart2":" and I like to work with site-specific phenomena, or to deal with the darkness of humanity. I process psychology, life, death, social issues and human relations to each other and other thigns. I exhibit, code websites, and participate in poetry slams and improv theaters.",
-      "h2U":"Exhibitions",
-      "h2P":"Publications",
-      "h4MAL":"Comic published in MAL 2021",
-      "footerInfo":"Website built by "
-  
+    "main": {
+      "first": "I am a multidisciplinary artist based in Sweden. My body of work is, among everything, graphic sheets, tactile collage, line drawings, acrylic paintings, as well as digital paintings.",
+      "second": " As an artist, I mainly orientate myself with words and images, preferably in correlation, either in the form of spoken word or text. By combining visual art, in either painting, animation or dry pastel, with my texts in the form of sound or written text, I seek an interplay between the visual and the linguistic message. There is neither a subordinate nor a superior order between image and text, but it is the contexts and storytelling that matter in my works. ",
+      "third": "I move between the indignant, emotional and the observant. My manner when it comes to drawing is  ",
+      "linkOmKonst": "drawing image ideas and expressions from the cartoonists who were numerous just under ten years ago.",
+      "thirdpart2": " and I like to work with site-specific phenomena, or to deal with the darkness of humanity. I process psychology, life, death, social issues and human relations to each other and other thigns. I exhibit, code websites, and participate in poetry slams and improv theaters.",
+      "h2U": "Exhibitions",
+      "h2P": "Publications",
+      "h4MAL": "Comic published in MAL 2021",
+      "footerInfo": "Website built by "
     },
-    "h1":"Excuse the forest, we are rebuilding",
-    "h2":"We can do better",
-    "h3":"I'm a tree",
-    "bedbug":"Comic drawn for the magazine MAL, with the theme",
-    "bedbug2":"Does everyone have to live?",
-    "forest":{
-      "h2":"Excuse the forest, we are rebuilding",
-      "desc":"Theme: Temporary spaces. My admission was in two parts:",
-      "title1":"Excuse the forest, we are rebuilding I",
-      "longdesc":"The visitor is met by an artificial forest that has been moved after that the municipality wants to gentrify and build away the forest. The visitor is standing in the artificial echoe of a forest, surrounded by traffic and scrapers, and listens to bird songs. With the song, audio from the municipality communications is echoing through the room, where they talk about their plans to shelter the nature - without actually sheltering the nature. The municipality has plans on building housings on/in the forests there so that the inhabitants can be closer to nature, but at the same time only on their terms. It is a critical project, where the visitor is faced with what is human, nature, temporary and healthy.",
-      "material":" Acryllic paintings, dry pastels, audio installations (spoken word and collage audio). The paintings are for sale.",
-      "title2":"Excuse the forest, we are rebuilding II",
-      "desc2":"In this part I am considering the temporary fixes on society-wide problems. In a changeable city like Uppsala there is a plan on expanding their population, and that means that green areas will shrink in favour for modern housings. In the hunt for change and “improvement” an eye of the storm is born, where fine words such as sustainability, green structures and proximity to nature are used as decorations. At the same time we talk about natural value, what is more or less desirable? The language on the signs, as well as their rhythm and line breaks are taken directly from the communication of Uppsala. I have manipulated the word order so that the contrast between intention and result is made visible. The work is a portrait, a parody, and a testimony.",
-      "linktxt":"Read more about ",
-      "linktxt2":" here"
-  
+    "h1": "Excuse the forest, we are rebuilding",
+    "h2": "We can do better",
+    "h3": "I'm a tree",
+    "bedbug": "Comic drawn for the magazine MAL, with the theme",
+    "bedbug2": "Does everyone have to live?",
+    "forest": {
+      "h2": "Excuse the forest, we are rebuilding",
+      "desc": "Theme: Temporary spaces. My admission was in two parts:",
+      "title1": "Excuse the forest, we are rebuilding I",
+      "longdesc": "The visitor is met by an artificial forest that has been moved after that the municipality wants to gentrify and build away the forest. The visitor is standing in the artificial echoe of a forest, surrounded by traffic and scrapers, and listens to bird songs. With the song, audio from the municipality communications is echoing through the room, where they talk about their plans to shelter the nature - without actually sheltering the nature. The municipality has plans on building housings on/in the forests there so that the inhabitants can be closer to nature, but at the same time only on their terms. It is a critical project, where the visitor is faced with what is human, nature, temporary and healthy.",
+      "material": " Acryllic paintings, dry pastels, audio installations (spoken word and collage audio). The paintings are for sale.",
+      "title2": "Excuse the forest, we are rebuilding II",
+      "desc2": "In this part I am considering the temporary fixes on society-wide problems. In a changeable city like Uppsala there is a plan on expanding their population, and that means that green areas will shrink in favour for modern housings. In the hunt for change and “improvement” an eye of the storm is born, where fine words such as sustainability, green structures and proximity to nature are used as decorations. At the same time we talk about natural value, what is more or less desirable? The language on the signs, as well as their rhythm and line breaks are taken directly from the communication of Uppsala. I have manipulated the word order so that the contrast between intention and result is made visible. The work is a portrait, a parody, and a testimony.",
+      "linktxt": "Read more about ",
+      "linktxt2": " here"
     },
-    "tree":{
-      "h2":"I am a tree",
-      "p1":"Exhibition September 2021",
-      "desc":"“I am a tree” is an exhibition about mindfulness, about being on sick leave, and about humanity’s need for order. With dry pastel paitnings, I have created a forest in the exhibition space. Then, as the visitor is listening to the sound piece, I subject the visitor to an exercise in mindfulness - which slowly and surely degenerates into a storm of emotions. The sound recording is a mixture of open source, my own singing, diary texts, practice matieral and sounds I picked up around Uppsala. I created approximately 50 trees of different sizes which, individually or together, with or without the sound work, have their own personality. In a way, the exhibition is therefore very personal, almost like an abstract self-portrait."
-  
+    "tree": {
+      "h2": "I am a tree",
+      "p1": "Exhibition September 2021",
+      "desc": "“I am a tree” is an exhibition about mindfulness, about being on sick leave, and about humanity’s need for order. With dry pastel paitnings, I have created a forest in the exhibition space. Then, as the visitor is listening to the sound piece, I subject the visitor to an exercise in mindfulness - which slowly and surely degenerates into a storm of emotions. The sound recording is a mixture of open source, my own singing, diary texts, practice matieral and sounds I picked up around Uppsala. I created approximately 50 trees of different sizes which, individually or together, with or without the sound work, have their own personality. In a way, the exhibition is therefore very personal, almost like an abstract self-portrait."
     }
-
   }
-  
-
-  
 }

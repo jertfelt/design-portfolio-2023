@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import Link from "next/link";
 import { programmingLinksen, programmingLinksv } from "./programmingLinks";
+import { useTranslation } from "next-i18next";
 
 const BackGround = styled.main`
   background: linear-gradient(
@@ -57,14 +58,15 @@ const ProgrammingPage = (languageurl) => {
   const { locale: activeLocale } = router;
   const language = activeLocale;
   const linksHero = language === "en" ? programmingLinksen : programmingLinksv;
+  const { t } = useTranslation();
 
   return (
     <BackGround>
       <Content>
         <HeroFrontend>
           <h1>Tova Jertfelt</h1>
-          <h2>Frontendutvecklare med UX & UI-kompetens</h2>
-          <h3>För tillfället arbetssökande.</h3>
+          <h2>{t("newFE.start.about")}</h2>
+          <h3>{t("newFE.start.h3")}</h3>
         </HeroFrontend>
 
         <NavHeroFrontend>

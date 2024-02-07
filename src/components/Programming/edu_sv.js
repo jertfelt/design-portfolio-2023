@@ -42,3 +42,48 @@ export const edu_js = [
     desc: "Var på utbytestermin i Lettland där jag fick utforska visuell kommunikation, UX-design, produktdesign och textil.",
   },
 ];
+
+export const edu_eng = [
+  {
+    title: "Frontend Development",
+    school: "NACKADEMIN",
+    year: "2021-2023",
+    desc: "Two-year vocational education where we learn HTML, CSS, and a lot of JavaScript, CMS systems, and project work.",
+  },
+  {
+    title: "Preparatory Programming Course",
+    school: "NACKADEMIN",
+    year: "2021",
+    desc: "Basic programming course, where we learned C#.",
+  },
+  {
+    title: "Art History",
+    school: "UPPSALA UNIVERSITY",
+    year: "2021",
+    desc: "",
+  },
+  {
+    title: "Artist-run Initiatives",
+    school: "KONSTFACK",
+    year: "2021",
+    desc: "A summer course for artists where we learned about running our own projects and studio activities. Resulted in me creating my own economic association, LITEN ELD.",
+  },
+  {
+    title: "Course",
+    school: "GIRLS WHO CODE",
+    year: "2018",
+    desc: "An introductory course in CSS, HTML, and JavaScript.",
+  },
+  {
+    title: "Bachelor's Degree in Visual Communication",
+    school: "KONSTFACK",
+    year: "2013-2016",
+    desc: "Three-year bachelor's program involving design, primarily focusing on print, and illustration. Emphasis on artistic practice.",
+  },
+  {
+    title: "Erasmus Exchange Year",
+    school: "ART ACADEMY OF LATVIA",
+    year: "2015",
+    desc: "Was on exchange semester in Latvia where I explored visual communication, UX design, product design, and textiles.",
+  },
+];

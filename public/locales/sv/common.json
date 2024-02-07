@@ -1,27 +1,46 @@
 {
+  "newFE": {
+    "cv": {
+      "subhead": "FRONTENDUTVECKLARE",
+      "work": "JOBB",
+      "skills": "FÄRDIGHETER",
+      "education": "UTBILDNING"
+    },
+    "start": {
+      "about": "Frontendutvecklare med UX & UI-kompetens.",
+      "h3": "För tillfället arbetssökande."
+    },
+    "cases": {
+      "title": "PROJEKT",
+      "h2": "Några exempel på vad jag gör, har gjort, kan göra och vill göra inom programmering."
+    }
+  },
+
   "menu": {
     "Choice1": "Konst",
     "Kontakt": "Kontakt",
     "Startsida": "Startsida"
   },
-  "artabout":{
+  "artabout": {
     "h2first": "Jag gör",
     "h2second": "konst."
   },
-  "arttitle":{
-    "h1":"Jag är"
+  "arttitle": {
+    "h1": "Jag är"
   },
-  "footerfrontend":{
-    "text":"Den här sidan är byggd med följande tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
+  "footerfrontend": {
+    "text": "Den här sidan är byggd med följande tech stack: NEXTjs, Graph.js, i18next, Netlify, Styled components, React Context"
   },
-  "404": {"h2": "Sidan finns inte!",
-"p1": "Du kommer tillbaka till ",
-"link": "startsidan",
-"p2": "om 5 sekunder..."},
-"wip":{
-  "p":"Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.",
-  "btn": " Tillbaka"
-},
+  "404": {
+    "h2": "Sidan finns inte!",
+    "p1": "Du kommer tillbaka till ",
+    "link": "startsidan",
+    "p2": "om 5 sekunder..."
+  },
+  "wip": {
+    "p": "Sidan är under uppbyggnad. Kom tillbaka senare, eller kontakta mig för mer information.",
+    "btn": " Tillbaka"
+  },
   "startsida": {
     "h2": "Frontendare, konstnär, formgivare.",
     "h3": "Utbildad på Konstfack & Nackademin YH Frontend-programmet",
@@ -36,18 +55,16 @@
     "message": "Meddelande",
     "sendbtn": "Skicka"
   },
-  "cv":{
-  
-    "info":"Här följer relevant urval av jobb, utbildningar och erfarenheter som har med frontend att göra. Se gärna hela mitt cv på",
+  "cv": {
+    "info": "Här följer relevant urval av jobb, utbildningar och erfarenheter som har med frontend att göra. Se gärna hela mitt cv på",
     "erfarenhet": "ERFARENHET",
-    "arbete":"Arbete",
-    "praktikdates":"Oktober 2022- April 2023",
+    "arbete": "Arbete",
+    "praktikdates": "Oktober 2022- April 2023",
     "praktikinfo": "Praktik!",
-    "praktikinfo2":"Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.",
+    "praktikinfo2": "Just nu går jag praktik som frontendare hos Vinnovera/Delorean, Stockholm.Våren 2023 var jag även praktiserande junior konsult hos Society Icon via Vinnovera/Deloren.",
     "education": "Utbildning"
-
   },
-  "nackademin":{
+  "nackademin": {
     "h3": "Frontendprogrammet",
     "h4": "Nackademin - Yrkeshögskola",
     "kurs": "Course",
@@ -65,96 +82,91 @@
     "CMS": "Interaktion med CMS",
     "desc5": "Strapi CMS, Postman och Axios",
     "FE": "Frontend-projekt",
-    "desc6":"Hur man jobbar i grupparbete", 
+    "desc6": "Hur man jobbar i grupparbete",
     "desc7": "Lärande I Arbete. Praktik på arbetsplats.",
     "total": "av",
     "avklarade": "kurser avklarade"
   },
-  "casespage":{
-    "headerStudent":"Studentarbeten Nackademin",
+  "casespage": {
+    "headerStudent": "Studentarbeten Nackademin",
     "about": "Om projektet",
     "button": "Se mer",
     "desc": "Här finns ett urval av olika saker jag kodat. En del är från praktiken, andra är studentarbeten, andra är egna experiment.",
-    "af":"Junior frontend utvecklare",
-    "descriptionAF":"Senast kommer jag från Arbetsförmedlingens IT-avdelning där jag jobbade som frontend-utvecklare och programmerade ett internt verktyg för annonsgranskningar. Där jobbade vi i en agil miljö, en slags KanBanScrum-version, i ett stort team på drygt fjorton personer. Jag ansvarade där för frontend, som gjordes i ramverket Angular vilket jag lärde mig på plats och inte hade någon förkunskap i. Jag jobbade även med designsystem och hur man som slutkund jobbade med dem, samtidigt som jag kom med insikter till designavdelningen kring förbättringar och behov av existerande komponenter. ",
-    "caseGP":"Responsiv kampanjsida med SEO-perspektiv och interaktiva grafer",
-    "descGP":"Greenpeace ville ha en hemsida som hanterar statistik från SCB och som ska ge en tydligare bild av biobränsle. Det skulle vara sökbart, interaktivt, och enkelt att ta till sig. Utöver frontend-programmering så illustrerade jag även några illustrationer.",
-    "descGP_2":"Vi jobbade med verktyget GraphJS för att skapa interaktiva grafer för användaren, totalt tre stycken. Datan hämtade vi från bl.a. SCB, och lagrade på vår egen databas i Firebase. Vi byggde även en funktion där användaren kan välja ett år och se datan för det specifika året. Datan uppdateras automatiskt när Naturvårdsverket uppdaterar.",
-    "descGP_3":"Vi skapade ett eget CMS-system för Greenpeace där de kan gå in och ändra i länkar, bildtexter och texter samt avpublicera/publicera hela sektioner.",
- 
-    "caseSI":"Praktik Januari - April 2023",
+    "af": "Junior frontend utvecklare",
+    "descriptionAF": "Senast kommer jag från Arbetsförmedlingens IT-avdelning där jag jobbade som frontend-utvecklare och programmerade ett internt verktyg för annonsgranskningar. Där jobbade vi i en agil miljö, en slags KanBanScrum-version, i ett stort team på drygt fjorton personer. Jag ansvarade där för frontend, som gjordes i ramverket Angular vilket jag lärde mig på plats och inte hade någon förkunskap i. Jag jobbade även med designsystem och hur man som slutkund jobbade med dem, samtidigt som jag kom med insikter till designavdelningen kring förbättringar och behov av existerande komponenter. ",
+    "caseGP": "Responsiv kampanjsida med SEO-perspektiv och interaktiva grafer",
+    "descGP": "Greenpeace ville ha en hemsida som hanterar statistik från SCB och som ska ge en tydligare bild av biobränsle. Det skulle vara sökbart, interaktivt, och enkelt att ta till sig. Utöver frontend-programmering så illustrerade jag även några illustrationer.",
+    "descGP_2": "Vi jobbade med verktyget GraphJS för att skapa interaktiva grafer för användaren, totalt tre stycken. Datan hämtade vi från bl.a. SCB, och lagrade på vår egen databas i Firebase. Vi byggde även en funktion där användaren kan välja ett år och se datan för det specifika året. Datan uppdateras automatiskt när Naturvårdsverket uppdaterar.",
+    "descGP_3": "Vi skapade ett eget CMS-system för Greenpeace där de kan gå in och ändra i länkar, bildtexter och texter samt avpublicera/publicera hela sektioner.",
+
+    "caseSI": "Praktik Januari - April 2023",
     "description Society": " Under min praktikperiod på företaget Society Icon så tog jag över frontenden för deras adminportal, en custom CMS byggt i React där företag kan registrera varumärken, kan skapa kampanjer, välja ut ikoner till kampanjer, m.m. När jag började på praktiken var det en buggig frontend-sida som ingen rört på drygt två års tid. I projektet har jag och en till praktikant som enda frontendare på företaget projektlett och planerat sprints, där fokus har varit att refaktorisera kod, och byta ut komponenter som varit obsolete eller direkt felaktiga. Till exempel bytte vi ut onödig jQuery-kod, skrev om buggiga komponenter, bröt upp långa komponenter, uppgraderade node, och lade in context för att öka optimering. Vi var också UX-orienterade i detta projekt där vi gjorde designändringar i formulär, sidomenyer och på knappar enligt UX/UI och tillgänglighetstänk, så att sidan i framtiden även skulle kunna användas på mobil/tablet.",
-    "wannaknowmore":"Vill du veta mer? Society Icon har gått i konkurs i mars 2023, så projektet är inte längre tillgängligt på webben. Hör av dig så kan jag berätta mer i detalj vad vi gjorde under vår praktikperiod."
+    "wannaknowmore": "Vill du veta mer? Society Icon har gått i konkurs i mars 2023, så projektet är inte längre tillgängligt på webben. Hör av dig så kan jag berätta mer i detalj vad vi gjorde under vår praktikperiod."
   },
-  "frontendpage":{
+  "frontendpage": {
     "hero1": "Jag är Tova Jertfelt",
     "hero2": "MULTIDISCIPLINÄR",
     "hero2b": "& KREATIV FRONTENDARE",
     "hero3": "med flera års erfarenhet av visuell kommunikation och grafisk design. Jag älskar att jag i mitt arbetsliv kan få kombinera mina tre styrkor: problemlösning, kreativitet, och osläckta nyfikenhet.",
-        "aboutme": "OM MIG",
-    "aboutmetxt1":"Jag är från början utbildad på Konstfack som visuell kommunikatör, och har under nästan tio års tid arbetat med till exempel digital produktion, webbdesign, grafisk formgivning på tidningar, via frilans eller som fast anställd. Jag har genom denna arbetslivserfarenhet stor vana för att ha en dialog kring krav och förväntningar, vara föränderlig vid behov, och kunna se kärnan av problemen för att sedan problemlösa dem. ",
+    "aboutme": "OM MIG",
+    "aboutmetxt1": "Jag är från början utbildad på Konstfack som visuell kommunikatör, och har under nästan tio års tid arbetat med till exempel digital produktion, webbdesign, grafisk formgivning på tidningar, via frilans eller som fast anställd. Jag har genom denna arbetslivserfarenhet stor vana för att ha en dialog kring krav och förväntningar, vara föränderlig vid behov, och kunna se kärnan av problemen för att sedan problemlösa dem. ",
     "emphasis1": "Jag har också erfarenhet av UX, vilket underlättar mitt arbete inom frontend.",
-    "aboutmetxt2":"Jag är en ambitiös utvecklare som letar efter nya utmaningar. Jag är en snabblärd, flexibel, hårt arbetande programmerare med rötter från det konstnärliga och förståelse för både det abstrakta, logiska och det vackra. Från att ha tidigare jobbat med formgivning och illustration sadlade jag 2021 om till att bli utvecklare och har sedan dess jobbat med frontend i en rad projekt. Jag letar efter en arbetsplats som har högt i tak, är transparent, och som låter mig växa både självständigt och i ett team.  Jag är leveranssäker, noggrann, törstig för kunskap och gillar att experimentera. Jag är orädd, van med att jonglera olika saker samtidigt, och finner en glädje i att problemlösa.",
-    "aboutmetxt3":"Jag är en aktiv och engagerad team-medarbetare som gärna bidrar till helheten och att vi som team rör oss framåt. Jag är en person som klarar av att ha många bollar i luften, är allergisk mot silos, samtidigt som jag också har behov av att fokusera ostört när jag behöver tänka abstrakt. Jag vill jobba i ett team så jag kan byta mellan parprogrammering, kunskapsutbyten och knacka kod självständigt. Jag är van med agilt arbete, med att ta ansvar för leverans, och att jobba med test. Jag har i och med min bakgrund i design och formgivning lätt för UX och UI, och vill ständigt förbättra både mitt och andras arbete. Jag lägger ingen prestige i det jag gör, utan föredrar en rak och öppen samt konstruktiv dialog, och har samtidigt höga krav på min leverans. Jag tycker om att bolla idéer och kod, vill vara transparent, och har inga problem med att be om hjälp när jag behöver den. Samma sak med att ge hjälp!",
-  "emphasis2":"Jag letar efter en arbetsplats som kan ge mig en utmaning så väl som en plats att utvecklas på och lära mig mer av, och där jag känner att jag kan bidra.",
-  "aboutmetxt4":"Jag älskar att jag i mitt arbetsliv kan få kombinera mina tre styrkor: problemlösning, kreativitet, och osläckta nyfikenhet. Faktum är att jag kan ha så roligt när jag kodar att jag har svårt att sluta jobba för dagen!   ",
-  "contactbtn": "Kontakta mig",
-  "countinguptxt":"års erfarenhet som digital formgivare, både som frilans och anställd.",
-  "bignrtxt": "började jag studera frontendprogrammering genom Nackademin."
-  }
-  ,
-  "artistpages":{
-    "upcoming":{
-      "UpcomingHeader":"Kommande:"
-      
+    "aboutmetxt2": "Jag är en ambitiös utvecklare som letar efter nya utmaningar. Jag är en snabblärd, flexibel, hårt arbetande programmerare med rötter från det konstnärliga och förståelse för både det abstrakta, logiska och det vackra. Från att ha tidigare jobbat med formgivning och illustration sadlade jag 2021 om till att bli utvecklare och har sedan dess jobbat med frontend i en rad projekt. Jag letar efter en arbetsplats som har högt i tak, är transparent, och som låter mig växa både självständigt och i ett team.  Jag är leveranssäker, noggrann, törstig för kunskap och gillar att experimentera. Jag är orädd, van med att jonglera olika saker samtidigt, och finner en glädje i att problemlösa.",
+    "aboutmetxt3": "Jag är en aktiv och engagerad team-medarbetare som gärna bidrar till helheten och att vi som team rör oss framåt. Jag är en person som klarar av att ha många bollar i luften, är allergisk mot silos, samtidigt som jag också har behov av att fokusera ostört när jag behöver tänka abstrakt. Jag vill jobba i ett team så jag kan byta mellan parprogrammering, kunskapsutbyten och knacka kod självständigt. Jag är van med agilt arbete, med att ta ansvar för leverans, och att jobba med test. Jag har i och med min bakgrund i design och formgivning lätt för UX och UI, och vill ständigt förbättra både mitt och andras arbete. Jag lägger ingen prestige i det jag gör, utan föredrar en rak och öppen samt konstruktiv dialog, och har samtidigt höga krav på min leverans. Jag tycker om att bolla idéer och kod, vill vara transparent, och har inga problem med att be om hjälp när jag behöver den. Samma sak med att ge hjälp!",
+    "emphasis2": "Jag letar efter en arbetsplats som kan ge mig en utmaning så väl som en plats att utvecklas på och lära mig mer av, och där jag känner att jag kan bidra.",
+    "aboutmetxt4": "Jag älskar att jag i mitt arbetsliv kan få kombinera mina tre styrkor: problemlösning, kreativitet, och osläckta nyfikenhet. Faktum är att jag kan ha så roligt när jag kodar att jag har svårt att sluta jobba för dagen!   ",
+    "contactbtn": "Kontakta mig",
+    "countinguptxt": "års erfarenhet som digital formgivare, både som frilans och anställd.",
+    "bignrtxt": "började jag studera frontendprogrammering genom Nackademin."
+  },
+  "artistpages": {
+    "upcoming": {
+      "UpcomingHeader": "Kommande:"
     },
-    "h1":"Ursäkta skogen, vi bygger om",
-    "h2":"Vi kan bättre",
-    "h3":"Jag är ett träd",
-    "vikanbattre":{
+    "h1": "Ursäkta skogen, vi bygger om",
+    "h2": "Vi kan bättre",
+    "h3": "Jag är ett träd",
+    "vikanbattre": {
       "smalldescription": "Kandidatexamen i Konst, Visuell Kommunikation, examensarbete på Konstfack 2016.",
-      "readLink":"Läs min uppsats här:",
-      "title":"Vi kan bättre",
+      "readLink": "Läs min uppsats här:",
+      "title": "Vi kan bättre",
       "material": "300+ unika torrnålstryck tillsammans med handskriven mobbning i form av toalettklotter skapar en labyrint av mobbning inuti en 250 x 360 x 250 stor tortyr-kub. Längst in väntar en animation och ljud, med bilder gjorda utifrån torrnålen som vittnar om ett manifest och där manifestet läses upp av fyra olika röster.",
-      "description1":"Mobbning är ett samhällsproblem. Det påverkar och genomsyrar vår samhörighet med varandra. Mobbning pågår just nu, i skolor, på arbeten och i andra sociala sammanhang. Forskning visar att det är destruktiva gruppbeteenden som utgör mobbning, att det är människan som flockdjur som använder mobbning som verktyg för att få, och behålla, makt. Trots detta är det bilden av individen som man kommunicerar ut i media. Det vill säga: det är individen som blir mobbad och det är individen som mobbar, vilket i sin tur leder till en bild av mobbning som ett individuellt problem istället för ett samhälleligt. Detta bör kritiseras, men också förändras! Det här examensarbetet går ut på att skifta fokus från individen, till att formulera en kamp och driva opinion. Det går ut på att mobilisera, inspirera, informera och även i slutänden förhoppningsvis förändra. Vi kan förändras. Det är dags nu. #Vi kan bättre "
+      "description1": "Mobbning är ett samhällsproblem. Det påverkar och genomsyrar vår samhörighet med varandra. Mobbning pågår just nu, i skolor, på arbeten och i andra sociala sammanhang. Forskning visar att det är destruktiva gruppbeteenden som utgör mobbning, att det är människan som flockdjur som använder mobbning som verktyg för att få, och behålla, makt. Trots detta är det bilden av individen som man kommunicerar ut i media. Det vill säga: det är individen som blir mobbad och det är individen som mobbar, vilket i sin tur leder till en bild av mobbning som ett individuellt problem istället för ett samhälleligt. Detta bör kritiseras, men också förändras! Det här examensarbetet går ut på att skifta fokus från individen, till att formulera en kamp och driva opinion. Det går ut på att mobilisera, inspirera, informera och även i slutänden förhoppningsvis förändra. Vi kan förändras. Det är dags nu. #Vi kan bättre "
     },
-    "dreams":{
-      "desc":"Textilkonst, digitalt collage/måleri och animation, 2015.",
+    "dreams": {
+      "desc": "Textilkonst, digitalt collage/måleri och animation, 2015.",
       "desc2": "Utställt på JUSTE Gallery 2015 och Hornhuset, 2015.",
-      "longerdesc":"Återkommande i mitt liv har jag intensiva drömmar. När jag var på utbyte i Riga så drömde jag intensivt, nästan varje natt. Jag bestämde mig för att göra konst utifrån dessa drömmar. Det är subjektivt, men det är också något allmänt i känslan av skräck, stress, hemlängtan och längtan.",
-      "longerdesc2":"I det här projektet jobbade jag med textilkonst, jag tryckte batik och sydde ihop lapptäcke och kuddar som en slags drömbädd. Vidare animerade jag och gjorde stora digitala målningar utifrån avfotograferade textilbitar."
+      "longerdesc": "Återkommande i mitt liv har jag intensiva drömmar. När jag var på utbyte i Riga så drömde jag intensivt, nästan varje natt. Jag bestämde mig för att göra konst utifrån dessa drömmar. Det är subjektivt, men det är också något allmänt i känslan av skräck, stress, hemlängtan och längtan.",
+      "longerdesc2": "I det här projektet jobbade jag med textilkonst, jag tryckte batik och sydde ihop lapptäcke och kuddar som en slags drömbädd. Vidare animerade jag och gjorde stora digitala målningar utifrån avfotograferade textilbitar."
     },
-    "main":{
-      "first":"Jag är en multidisciplinär konstnär baserad i Sverige. Min body of work är bl.a. grafiska blad, taktila collage, linjeteckning, aktrylmålningar, samt digitalt måleri och collage.",
-      "second":" I mitt konstnärskap så orienterar jag mig främst med ord och bild, gärna i korrelation, antingen i form av spoken word eller text. Genom att kombinera bildkonst, i antingen målning, animation eller torrpastell, med mina texter i form av ljud eller skriven text, söker jag ett samspel mellan det visuella och det språkliga. Det finns varken en under- eller överordning mellan bild och text, utan det är sammanhangen som spelar roll i mina verk.",
-      "third":"Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning ",
-      "linkOmKonst":"hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan",
-      "thirdpart2":" och jag jobbar gärna med platsspecifika fenomen, eller med människans psykets mörker. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.",
-      "h2U":"Utställningar",
-      "h2P":"Publiceringar",
-      "h4MAL":"Serie publicerad i MAL magasin 2021",
-      "footerInfo":"Hemsidan är byggd av "
-
+    "main": {
+      "first": "Jag är en multidisciplinär konstnär baserad i Sverige. Min body of work är bl.a. grafiska blad, taktila collage, linjeteckning, aktrylmålningar, samt digitalt måleri och collage.",
+      "second": " I mitt konstnärskap så orienterar jag mig främst med ord och bild, gärna i korrelation, antingen i form av spoken word eller text. Genom att kombinera bildkonst, i antingen målning, animation eller torrpastell, med mina texter i form av ljud eller skriven text, söker jag ett samspel mellan det visuella och det språkliga. Det finns varken en under- eller överordning mellan bild och text, utan det är sammanhangen som spelar roll i mina verk.",
+      "third": "Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning ",
+      "linkOmKonst": "hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan",
+      "thirdpart2": " och jag jobbar gärna med platsspecifika fenomen, eller med människans psykets mörker. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.",
+      "h2U": "Utställningar",
+      "h2P": "Publiceringar",
+      "h4MAL": "Serie publicerad i MAL magasin 2021",
+      "footerInfo": "Hemsidan är byggd av "
     },
-    "forest":{
-      "h2":"Ursäkta skogen, vi bygger om",
-      "desc":"Tema: Temporary spaces. Mitt bidrag var URSÄKTA SKOGEN VI BYGGER OM, ett verk i två delar:",
-      "title1":"URSÄKTA SKOGEN VI BYGGER OM I",
-      "longdesc":"Besökaren möter en artificiell skog, en skog som fått flytta på sig efter att kommunen vill gentrifiera och bygga bort skogen. Besökaren står i den artificiella skogen, omringad av biltrafik, och lyssnar på ljudklipp från kommunen som handlar om dess storslagna planer på att värna om naturen - utan att värna om naturen - i stadsdelen Eriksberg. Kommunen har planer på att bygga hus på/i skogsområdena där så att människan kan vara nära naturen, fast ändå inte. Det blir ett kritiskt projekt, där man får förhålla sig till idén om vad som är mänskligt, naturligt, temporärt och hälsosamt. Till vilket pris? I ljudklippet bryts även in fakta om fladdermössen, som bor i Eriksbergs skogar, ljudet av artificiell fågelsång, och diverse dikter.",
-      "material":"Akrylmålningar, torrpastell, ljudinstallation.Verken är till salu.",
-      "title2":"URSÄKTA SKOGEN VI BYGGER OM II",
-      "desc2":"I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.",
-      "linktxt":"Läs mer om",
-      "linktxt2":" här"
-
+    "forest": {
+      "h2": "Ursäkta skogen, vi bygger om",
+      "desc": "Tema: Temporary spaces. Mitt bidrag var URSÄKTA SKOGEN VI BYGGER OM, ett verk i två delar:",
+      "title1": "URSÄKTA SKOGEN VI BYGGER OM I",
+      "longdesc": "Besökaren möter en artificiell skog, en skog som fått flytta på sig efter att kommunen vill gentrifiera och bygga bort skogen. Besökaren står i den artificiella skogen, omringad av biltrafik, och lyssnar på ljudklipp från kommunen som handlar om dess storslagna planer på att värna om naturen - utan att värna om naturen - i stadsdelen Eriksberg. Kommunen har planer på att bygga hus på/i skogsområdena där så att människan kan vara nära naturen, fast ändå inte. Det blir ett kritiskt projekt, där man får förhålla sig till idén om vad som är mänskligt, naturligt, temporärt och hälsosamt. Till vilket pris? I ljudklippet bryts även in fakta om fladdermössen, som bor i Eriksbergs skogar, ljudet av artificiell fågelsång, och diverse dikter.",
+      "material": "Akrylmålningar, torrpastell, ljudinstallation.Verken är till salu.",
+      "title2": "URSÄKTA SKOGEN VI BYGGER OM II",
+      "desc2": "I mitt verk funderar jag på temporära lösningar på samhällsomfattande problem. I en föränderlig stad som Uppsala finns en plan på att expandera sin befolkningsmängd, och det innebär att grönområden behöver krympas, till förmån för bebyggelse. I jakten på förändring och “förbättring” skapas ett stormens öga, där fina ord som hållbarhet, naturnära och grönstruktur används som dekoration. Samtidigt talar man om naturvärde, vad är mer eller mindre “önskvärt”? Skyltarnas språk, rytm och radbryt är direkt tagna från Uppsalas kommunikation, jag har manipulerat ordföljden så att kontrasten mellan intention och resultat synliggörs. Verket är ett porträtt, en parodi, och ett vittnesmål.",
+      "linktxt": "Läs mer om",
+      "linktxt2": " här"
     },
-    "bedbug":"Serie ritad åt tidningen MAL, med temat",
-    "bedbug2":"Måste alla leva?",
-    "tree":{
-      "h2":"Jag är ett träd",
-      "p1":"Utställning September 2021",
-      "desc":"“Jag är ett träd” är en utställning om mindfulness, om att vara sjukskriven, och om mänsklighetens behov av “ordning”. Med torrpastellmålningar, föreställandes tallar, så har jag skapat en skog i utställningsytan. Sedan, genom att spela upp ljudverket, så utsätter jag besökaren för en övning i mindfulness - som sakta med säkert urartar i en storm av känslor och panik. Ljudinspelningen är en blandning av open source, mitt eget sjungande, dagbokstexter, övningsmaterial och ljud jag plockat upp runtom i Uppsala.Jag skapade ungefär 50 stycken träd i olika storlekar som, var för sig eller tillsammans, med eller utan ljudverket, har en egen personlighet. På ett sätt är utställningen därför i allra högsta grad personligt, nästan som ett abstrakt självporträtt."
-
+    "bedbug": "Serie ritad åt tidningen MAL, med temat",
+    "bedbug2": "Måste alla leva?",
+    "tree": {
+      "h2": "Jag är ett träd",
+      "p1": "Utställning September 2021",
+      "desc": "“Jag är ett träd” är en utställning om mindfulness, om att vara sjukskriven, och om mänsklighetens behov av “ordning”. Med torrpastellmålningar, föreställandes tallar, så har jag skapat en skog i utställningsytan. Sedan, genom att spela upp ljudverket, så utsätter jag besökaren för en övning i mindfulness - som sakta med säkert urartar i en storm av känslor och panik. Ljudinspelningen är en blandning av open source, mitt eget sjungande, dagbokstexter, övningsmaterial och ljud jag plockat upp runtom i Uppsala.Jag skapade ungefär 50 stycken träd i olika storlekar som, var för sig eller tillsammans, med eller utan ljudverket, har en egen personlighet. På ett sätt är utställningen därför i allra högsta grad personligt, nästan som ett abstrakt självporträtt."
     }
-
-}}
+  }
+}
