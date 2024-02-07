@@ -28,6 +28,11 @@ const BackGround = styled.section`
     font-size: ${({ theme }) => theme.fonts.size.mobile.frontend.h2};
     font-family: ${({ theme }) => theme.fonts.frontendheader.primary};
   }
+  h3 {
+    @media (min-width: 1300px) {
+      margin-top: 0;
+    }
+  }
 `;
 
 const Content = styled.main`
@@ -47,7 +52,7 @@ const Content = styled.main`
     padding-left: 2rem;
     padding-right: 9rem;
     padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-top: 8rem;
   }
   @media (min-width: 1100px) {
     padding-left: 8rem;
@@ -82,7 +87,8 @@ const Content = styled.main`
 const Wrap = styled.div`
   padding-top: 1rem;
   width:100%;
-
+  object-fit: contain;
+ 
   img {
     width: 100%;
     max-width:500px; 
@@ -90,6 +96,26 @@ const Wrap = styled.div`
    box-shadow: 0px 14px 10px #d03fee;
    margin-bottom:1rem;
   }
+  @media (max-width: 900px){
+    img{
+      max-width:50vw;
+    }
+  }
+   @media (min-width: 900px) {
+      margin-top: -5rem;
+    }
+    @media (min-width: 1100px) {
+      margin-top: 0;
+    }
+    @media (min-width: 1200px) {
+      margin-top: -3rem;
+    }
+    @media (min-width: 1300px) {
+      margin-top: -4rem;
+    }
+    @media (min-width: 1400px) {
+      margin-top: 3rem;
+    }
   
 }
 `;
@@ -230,12 +256,67 @@ const Quotes = styled.aside`
   }
 `;
 
-const HeroOmMig = ({ title, h3, h2 }) => {
+const GridDesktop = styled.div`
+  @media (max-width: 599px) {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin: 0;
+      margin-top: 0.5rem;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 70vw;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 899px) {
+    padding-top: 3rem;
+    max-width: 70vw;
+    h1 {
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    h2 {
+      margin: 0;
+    }
+    img {
+      margin-left: 40%;
+    }
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    max-width: 100vw;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 3rem;
+    grid-template-areas: "right left";
+  }
+  @media (min-width: 1100px) {
+    img {
+      margin-top: 3rem;
+    }
+  }
+
+  div:nth-child(1) {
+    grid-area: left;
+  }
+  div:nth-child(2) {
+    grid-area: right;
+  }
+  @media (min-width: 1000px) {
+    h1 {
+      padding-top: 5rem;
+    }
+  }
+`;
+
+const HeroOmMig = ({ title, h2 }) => {
   return (
     <>
       <h1>{title}</h1>
       <h2>{h2}</h2>
-      <h3>{h3}</h3>
     </>
   );
 };
@@ -312,26 +393,23 @@ const AboutPage = () => {
   return (
     <BackGround>
       <Content>
-        <ImageProfile language={language} />
-        {aboutMe_data.map((item, indx) => (
-          <>
+        <GridDesktop>
+          <ImageProfile language={language} />
+          {aboutMe_data.map((item, indx) => (
             <HeroAbout key={indx}>
               {language === "sv" ? (
-                <HeroOmMig
-                  title={item.sv.title}
-                  h3={item.sv.h3}
-                  h2={item.sv.sub}
-                />
+                <HeroOmMig title={item.sv.title} h2={item.sv.sub} />
               ) : (
-                <HeroOmMig
-                  title={item.en.title}
-                  h3={item.en.h3}
-                  h2={item.en.sub}
-                />
+                <HeroOmMig title={item.en.title} h2={item.en.sub} />
               )}
             </HeroAbout>
-            <Paragraphs paragraphs={item[language]?.paragraphs || {}} />
-          </>
+          ))}
+        </GridDesktop>
+        {aboutMe_data.map((p, ind) => (
+          <article key={ind}>
+            <h3>{p[language]?.h3}</h3>
+            <Paragraphs paragraphs={p[language]?.paragraphs || {}} />
+          </article>
         ))}
       </Content>
       <ImageSection language={language} />
