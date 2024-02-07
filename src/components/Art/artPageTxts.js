@@ -9,10 +9,9 @@ export const artPageTxt = [
         p2: "I mitt konstnärskap så orienterar jag mig främst med ord och bild, gärna i korrelation, antingen i form av spoken word eller text. Genom att kombinera bildkonst, i antingen målning, animation eller torrpastell, med mina texter i form av ljud eller skriven text, söker jag ett samspel mellan det visuella och det språkliga. Det finns varken en under- eller överordning mellan bild och text, utan det är sammanhangen som spelar roll i mina verk.",
         p3: "Jag rör mig mellan det indignerade, känslokraftiga och det observerande. Mitt manér när det kommer till teckning  “hämtar bildidéer och uttryck från tecknarna som var talrika för ett knappt tiotal år sedan“ enligt OmKonst.se, och jag jobbar gärna med platsspecifika fenomen, eller med människans psykets mörker. Jag bearbetar psykologi, livet, döden, samhällsfrågor och mänsklig relation till varandra och annat. Jag ställer ut, kodar hemsidor, står på open poetry slams, och testar improteater där det finns möjlighet.",
       },
+      titleex: "Utställningar",
       exhibitions: {
-        title: "Utställningar",
-        year_1: {
-          year: "2024",
+        2024: {
           ex_1: {
             what: "Homage to Yves",
             where: "Keemchi Östermalm",
@@ -24,8 +23,7 @@ export const artPageTxt = [
             when: "23/3 2024 - 7/4 2024 ",
           },
         },
-        year_2: {
-          year: "2023",
+        2023: {
           ex_1: {
             what: "Samlade verk",
             where: "Keemchi Uppsala",
@@ -37,8 +35,7 @@ export const artPageTxt = [
             when: "Juni 2023 samt September 2023",
           },
         },
-        year_3: {
-          year: "2022",
+        2022: {
           ex_1: {
             what: "URSÄKTA SKOGEN, VI BYGGER OM, del av RUSMUS Grupputställning",
             where: "Uppsala Konstnärsklubb",
@@ -50,24 +47,21 @@ export const artPageTxt = [
             when: "April 2022",
           },
         },
-        year_4: {
-          year: "2021",
+        2021: {
           ex_1: {
             what: "Jag är ett träd",
             where: "Liten Eld Galleri",
             when: "Augusti 2021",
           },
         },
-        year_5: {
-          year: "2019",
+        2019: {
           ex_1: {
             what: "Modersmål",
             where: "Hässelby Kulturhus",
             when: "Augusti 2021",
           },
         },
-        year_6: {
-          year: "2017",
+        2017: {
           ex_1: {
             what: "Family First Exhibition",
             where: "Södertälje Konsthall",
@@ -84,8 +78,7 @@ export const artPageTxt = [
             when: "Maj 2017",
           },
         },
-        year_7: {
-          year: "2016",
+        2016: {
           ex_1: {
             what: "Vi kan bättre",
             where: "Konstfack Vårutställning",
@@ -97,8 +90,7 @@ export const artPageTxt = [
             when: "",
           },
         },
-        year_7: {
-          year: "2015",
+        2015: {
           ex_1: {
             what: "When I dream, I dream about you",
             where: "Hornhuset, Hornstull, Stockholm",
@@ -116,10 +108,9 @@ export const artPageTxt = [
       btn1: "Exhibitions",
       h1: "I'm Tova Jertfelt",
       h2: "I make tactile, exploratory, digital, provocative, challenging, conceptual, multidisciplinary, spatial, chaotic, thought-provoking and audiovisual art.",
+      titleex: "Exhibitions",
       exhibitions: {
-        title: "Exhibitions",
-        year_1: {
-          year: "2024",
+        2024: {
           ex_1: {
             what: "Homage to Yves",
             where: "Keemchi Östermalm",
@@ -131,8 +122,7 @@ export const artPageTxt = [
             when: "March 23, 2024 - April 7, 2024",
           },
         },
-        year_2: {
-          year: "2023",
+        2023: {
           ex_1: {
             what: "Collected Works",
             where: "Keemchi Uppsala",
@@ -144,8 +134,7 @@ export const artPageTxt = [
             when: "June 2023 and September 2023",
           },
         },
-        year_3: {
-          year: "2022",
+        2022: {
           ex_1: {
             what: "SORRY FOREST, WE'RE REBUILDING, part of RUSMUS Group Exhibition",
             where: "Uppsala Art Club",
@@ -157,24 +146,21 @@ export const artPageTxt = [
             when: "April 2022",
           },
         },
-        year_4: {
-          year: "2021",
+        2021: {
           ex_1: {
             what: "I Am a Tree",
             where: "Liten Eld Gallery",
             when: "August 2021",
           },
         },
-        year_5: {
-          year: "2019",
+        2019: {
           ex_1: {
             what: "Mother Tongue",
             where: "Hässelby Cultural Center",
             when: "August 2019",
           },
         },
-        year_6: {
-          year: "2017",
+        2017: {
           ex_1: {
             what: "Family First Exhibition",
             where: "Södertälje Art Hall",
@@ -191,8 +177,7 @@ export const artPageTxt = [
             when: "May 2017",
           },
         },
-        year_7: {
-          year: "2016",
+        2016: {
           ex_1: {
             what: "We Can Do Better",
             where: "Konstfack Spring Exhibition",
@@ -204,8 +189,7 @@ export const artPageTxt = [
             when: "",
           },
         },
-        year_8: {
-          year: "2015",
+        2015: {
           ex_1: {
             what: "When I Dream, I Dream About You",
             where: "Hornhuset, Hornstull, Stockholm",
