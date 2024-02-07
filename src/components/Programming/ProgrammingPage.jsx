@@ -14,6 +14,15 @@ const BackGround = styled.main`
 const Content = styled.section`
   min-height: 100vh;
   padding: 1rem;
+  @media (min-width: 1050px) {
+    padding-left: 300px;
+  }
+  @media (min-width: 1700px) {
+    padding-left: 500px;
+  }
+  @media (min-height: 1000px) {
+    padding-top: 10vh;
+  }
 `;
 
 const HeroFrontend = styled.article`

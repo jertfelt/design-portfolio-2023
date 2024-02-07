@@ -23,13 +23,14 @@ export const aboutMe_data = [
           title: "Iniativrik & investerad",
           text: "“Hade ynnesten att få jobba med Tova för ett projekt för Greenpeace. Tova var väldigt lyhörd för förändringar och ideer till upplägget. Hon tog även mycket egna initiativ och fyllde i de designhål i upplevelsen som jag inte hunnit till. Det var tydligt att Tova var lika investerad i slutupplevelsen som resten av teamet. Då Tova har en bakgrund i visuell kommunikation gör det henne till en utvecklare som en designer verkligen uppskattar att samarbeta med.”– Per Lundgren, Senior UX Designer, Vinnovera",
         },
-        quote_5: {
-          title: "Ett starkt tillskott",
-          text: "“Tova är en otroligt snabblärd och engagerad frontend utvecklare med ett stort sinne för UX. Tova klarar av att ha koll på många saker samtidigt och utför sitt arbete noggrant. Tova smälter lätt in i gruppen och ser till att den växer, detta genom sitt individuella ansvar i de vardagliga arbetsuppgifter hon har, hennes förståelse kring teamets arbetssätt och att se vilka möjligheter som finns för förbättring. Tova delar gärna med sig av de kompetenser hon besitter till övriga, och ställer professionellt frågor som leder till att mål uppnås. Jag skickar mina varmaste rekommendationer till de som vill ha en effektiv, lösningsorienterad, humoristisk, samarbetsvillig och medmänsklig kollega.” – Basil Madhani, Arbetsförmedlingen",
-        },
+
         quote_6: {
           title: "Teamplayer",
           text: "“Tova är en oerhört kompetent och driven kollega. Hon är generös med sin kunskap och använder den både till extremt hög nivå på leveranserna och till att höja kollegor omkring sig.”– Sonja Dandenell, webbredaktör Amnesty Sverige",
+        },
+        quote_5: {
+          title: "Ett starkt tillskott",
+          text: "“Tova är en otroligt snabblärd och engagerad frontend utvecklare med ett stort sinne för UX. Tova klarar av att ha koll på många saker samtidigt och utför sitt arbete noggrant. Tova smälter lätt in i gruppen och ser till att den växer, detta genom sitt individuella ansvar i de vardagliga arbetsuppgifter hon har, hennes förståelse kring teamets arbetssätt och att se vilka möjligheter som finns för förbättring. Tova delar gärna med sig av de kompetenser hon besitter till övriga, och ställer professionellt frågor som leder till att mål uppnås. Jag skickar mina varmaste rekommendationer till de som vill ha en effektiv, lösningsorienterad, humoristisk, samarbetsvillig och medmänsklig kollega.” – Basil Madhani, Arbetsförmedlingen",
         },
       },
       paragraphs: {
@@ -78,13 +79,14 @@ export const aboutMe_data = [
           title: "Resourceful & Invested",
           text: "“Had the privilege of working with Tova on a project for Greenpeace. Tova was very responsive to changes and ideas for the setup. She also took a lot of initiative and filled in the design gaps in the experience that I hadn't had time for. It was clear that Tova was as invested in the end experience as the rest of the team. Given Tova's background in visual communication, she is a developer that a designer truly appreciates working with.” – Per Lundgren, Senior UX Designer, Vinnovera",
         },
-        quote_5: {
-          title: "A Strong Addition",
-          text: "“Tova is an incredibly quick learner and engaged frontend developer with a great sense of UX. Tova can handle many things at once and performs her work meticulously. Tova easily integrates into the team and ensures its growth, through her individual responsibility in the daily tasks she has, her understanding of the team's working methods, and identifying opportunities for improvement. Tova willingly shares the skills she possesses with others and asks professional questions that lead to achieving goals. I send my warmest recommendations to those who want an efficient, solution-oriented, humorous, collaborative, and compassionate colleague.” – Basil Madhani, Arbetsförmedlingen",
-        },
+
         quote_6: {
           title: "Team Player",
           text: "“Tova is an extremely competent and driven colleague. She is generous with her knowledge and uses it to deliver at an extremely high level and to elevate her colleagues around her.” – Sonja Dandenell, web editor, Amnesty Sweden",
+        },
+        quote_5: {
+          title: "A Strong Addition",
+          text: "“Tova is an incredibly quick learner and engaged frontend developer with a great sense of UX. Tova can handle many things at once and performs her work meticulously. Tova easily integrates into the team and ensures its growth, through her individual responsibility in the daily tasks she has, her understanding of the team's working methods, and identifying opportunities for improvement. Tova willingly shares the skills she possesses with others and asks professional questions that lead to achieving goals. I send my warmest recommendations to those who want an efficient, solution-oriented, humorous, collaborative, and compassionate colleague.” – Basil Madhani, Arbetsförmedlingen",
         },
       },
       paragraphs: {

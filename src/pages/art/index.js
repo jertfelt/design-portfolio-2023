@@ -20,7 +20,7 @@ const Art = () => {
   return (
     <>
       <HeadIndex />
-      <WorkInProgress />
+      <WorkInProgress type="ART" />
       {/* <ArtMain/> */}
     </>
   );

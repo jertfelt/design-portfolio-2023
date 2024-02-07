@@ -300,16 +300,26 @@ const Section = styled.section`
   }
 `;
 
-const WorkInProgress = () => {
+const WorkInProgress = ({ type }) => {
   const router = useRouter();
   const { t } = useTranslation();
   return (
     <Section>
       <div className="glitch-wrapper">
-        <h1 className="glitch" data-glitch="WORK IN PROGRESS">
-          WORK IN PROGRESS
-        </h1>
+        {type === "ART" ? (
+          <h1
+            className="glitch"
+            data-glitch="COMING SOON COMING SOON COMING SOON"
+          >
+            COMING SOON
+          </h1>
+        ) : (
+          <h1 className="glitch" data-glitch="WORK IN PROGRESS">
+            WORK IN PROGRESS
+          </h1>
+        )}
       </div>
+
       <p>{t("wip.p")}</p>
       <SmallPrimaryBtn onClick={() => router.back()}>
         {t("wip.btn")}

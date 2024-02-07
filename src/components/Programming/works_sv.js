@@ -82,7 +82,7 @@ export const works_en = [
     title: "Designer & Illustrator",
     length: "(January 2014 - May 2023)",
     description:
-      "Perform design, animation, graphic design, digital production, photography, illustration, and web editing. Worked for these clients since 2013: WESCF, Staropramen, LSU, Globalportalen, Forum Syd, Amnesty Sweden, Afroswedes National Organization, Afrikagrupperna, BRAND, Global Reporting, Sustainable Gotland, Konstfack, Plan Sweden, RFSU, RE:Public, Södertälje Konsthall, SVN Sweden, Stockholm University, Teskedsorden",
+      "Performing design, animation, graphic design, digital production, photography, illustration, and web editing. Worked for these clients since 2013: WESCF, Staropramen, LSU, Globalportalen, Forum Syd, Amnesty Sweden, Afroswedes National Organization, Afrikagrupperna, BRAND, Global Reporting, Sustainable Gotland, Konstfack, Plan Sweden, RFSU, RE:Public, Södertälje Konsthall, SVN Sweden, Stockholm University, Teskedsorden",
     place: "FREELANCE",
   },
 ];

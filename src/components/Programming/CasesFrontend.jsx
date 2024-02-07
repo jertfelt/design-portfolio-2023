@@ -25,6 +25,15 @@ const BackgroundCases = styled.main`
     line-height: 200%;
     white-space: wrap;
     padding-right: 1rem;
+    @media (min-width: 660px) {
+      max-width: 80vw;
+    }
+    @media (min-width: 820px) {
+      max-width: 70vw;
+    }
+    @media (min-width: 1100px) {
+      max-width: 50vw;
+    }
   }
   button {
     margin-left: 1rem;
@@ -34,6 +43,20 @@ const BackgroundCases = styled.main`
 const ContentTop = styled.div`
   padding-top: 6rem;
   padding-left: 2rem;
+  @media (min-width: 1100px) {
+    padding-top: 10rem;
+    padding-left: 8rem;
+    p {
+      max-width: 60vw;
+    }
+  }
+  @media (min-width: 1400px) {
+    padding-top: 10rem;
+    p {
+      max-width: 60vw;
+    }
+    padding-left: 10rem;
+  }
 `;
 
 const Content = styled.section`
@@ -56,6 +79,35 @@ const Content = styled.section`
   p {
     line-height: 200%;
   }
+  @media (min-width: 500px) and (max-width: 659px) {
+    p {
+      max-width: 90vw;
+    }
+  }
+  @media (min-width: 660px) {
+    p {
+      max-width: 70vw;
+    }
+  }
+  @media (min-width: 900px) {
+    p {
+      max-width: 70vw;
+    }
+  }
+  @media (min-width: 1100px) {
+    padding-left: 8rem;
+    padding-bottom: 6rem;
+    p {
+      max-width: 60vw;
+    }
+  }
+  @media (min-width: 1400px) {
+    p {
+      max-width: 60vw;
+    }
+    padding-left: 10rem;
+    padding-bottom: 12rem;
+  }
 `;
 
 const VideoWrapper = styled.div`
@@ -63,13 +115,24 @@ const VideoWrapper = styled.div`
   padding-top: 56.25%;
   width: 100%;
   max-width: 100%;
+
+  @media (min-width: 820px) {
+    max-width: 60vw;
+  }
 `;
+
 const VideoFrame = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  @media (min-width: 820px) {
+    max-width: 80vw;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -78,7 +141,15 @@ const ImageWrapper = styled.div`
   width: 100%;
   max-width: 100%;
 
+  @media (min-width: 820px) {
+    max-width: 80vw;
+  }
+  @media (min-width: 1300px) {
+    max-width: 60vw;
+  }
+
   img {
+    object-fit: contain;
     position: absolute;
     top: 0;
     left: 0;
@@ -195,13 +266,16 @@ const CasesFrontend = () => {
                   {url && url.exists && (
                     <LinkExternal
                       linkurl={url.adress}
-                      linktxt="Se mer"
+                      linktxt={
+                        thisLanguage === "en" ? "Go to website" : "Se hemsida"
+                      }
                     ></LinkExternal>
                   )}
                   {github && github.exists && (
-                    <LinkExternal onClick={() => window.open(github.adress)}>
-                      GitHub
-                    </LinkExternal>
+                    <LinkExternal
+                      linkurl={github.adress}
+                      linktxt="Github"
+                    ></LinkExternal>
                   )}
                 </div>
               );
