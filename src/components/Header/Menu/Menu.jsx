@@ -126,6 +126,9 @@ const DropDownMenu = ({ open, setOpen }) => {
     selectedPage.value === "programming/cases" ||
     selectedPage.value === "programming/cv";
 
+  const artOptions =
+    selectedPage.value === "art" || selectedPage.value === "art/exhibitions";
+
   const Contact = () => {
     return (
       <Link href="/contact" className="contact" onClick={() => setOpen(!open)}>
@@ -152,7 +155,7 @@ const DropDownMenu = ({ open, setOpen }) => {
         {selectedPage && frontendOptions && (
           <FrontendMenu setOpen={setOpen} open={open} />
         )}
-        {selectedPage && selectedPage.value === "art" && (
+        {selectedPage && artOptions && (
           <ArtMenu setOpen={setOpen} open={open} />
         )}
         {selectedPage && selectedPage.value === "design" && (

@@ -10,7 +10,7 @@ const About = () => {
   const { selectedPage, setSelectedPage } = useContext(AppContext);
 
   useEffect(() => {
-    if (selectedPage.value !== "programming/aboutme") {
+    if (selectedPage.value !== "programming/about") {
       setSelectedPage({
         value: "programming/about",
         url: "/programming/about",

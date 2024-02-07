@@ -10,7 +10,7 @@ const CVPage = () => {
   const { selectedPage, setSelectedPage } = useContext(AppContext);
 
   useEffect(() => {
-    if (selectedPage.value !== "programming") {
+    if (selectedPage.value !== "programming/cv") {
       setSelectedPage({ value: "programming/cv", url: "/programming/cv" });
     }
   }, [selectedPage.value, setSelectedPage]);

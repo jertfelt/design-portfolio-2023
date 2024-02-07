@@ -4,16 +4,16 @@ import withTranslation, {
   getStaticProps,
 } from "@component/components/utils/getStaticProps";
 import HeadIndex from "@component/components/Head";
-import CasesFrontend from "@component/components/Programming/CasesFrontend";
+import ExhibitionsPage from "@component/components/Art/Exhibitions";
 
-const CasesFE = () => {
+const ExhibitionArt = () => {
   const { selectedPage, setSelectedPage } = useContext(AppContext);
 
   useEffect(() => {
-    if (selectedPage.value !== "programming/cases") {
+    if (selectedPage.value !== "art/exhibitions") {
       setSelectedPage({
-        value: "programming/cases",
-        url: "/programming/cases",
+        value: "art/exhibitions",
+        url: "/art/exhibitions",
       });
     }
   }, [selectedPage.value, setSelectedPage]);
@@ -21,9 +21,9 @@ const CasesFE = () => {
   return (
     <>
       <HeadIndex />
-      <CasesFrontend />
+      <ExhibitionsPage />
     </>
   );
 };
 export { getStaticProps };
-export default withTranslation(CasesFE);
+export default withTranslation(ExhibitionArt);

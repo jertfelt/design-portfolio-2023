@@ -94,6 +94,9 @@ const FooterArt = styled.footer`
   }
 `;
 const Buttons = styled.div`
+  a {
+    font-family: Arya;
+  }
   @media (max-width: 819px) {
     display: flex;
     flex-direction: column;
@@ -132,7 +135,9 @@ const ArtPageStart = () => {
       <FooterArt>
         <Buttons>
           <div></div>
-          <ExhibitionsBtn>{artText.btn1}</ExhibitionsBtn>
+          <ExhibitionsBtn>
+            <Link href={"/art/exhibitions"}>{artText.btn1}</Link>
+          </ExhibitionsBtn>
         </Buttons>
         <hr></hr>
       </FooterArt>

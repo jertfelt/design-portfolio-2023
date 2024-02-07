@@ -41,8 +41,6 @@ export const DynamicLinkToOtherPages = ({ setOpen, open }) => {
   };
 
   useEffect(() => {
-    console.log(router, "test");
-    console.log(router.pathname, "test2");
     if (router.pathname === "/contact") {
       setSelected("/contact");
     } else {
@@ -91,5 +89,3 @@ export const DynamicLinkToOtherPages = ({ setOpen, open }) => {
     </Others>
   );
 };
-
-// data.filter(item => item.value !== selectedPage.value)
