@@ -5,6 +5,7 @@ import HeadIndex, { HeadHome } from "@component/components/Head";
 import withTranslation, {
   getStaticProps,
 } from "@component/components/utils/getStaticProps";
+import { LinkBtn } from "@component/components/stylings/ButtonsHomePage";
 
 const Section = styled.section`
   max-width: 100vw;
@@ -31,19 +32,11 @@ const Section = styled.section`
     flex-direction: column;
 
     gap: 16px;
-    button {
-      border: none;
-      padding: 10px;
 
-      color: ${({ theme }) => theme.accent};
-      background: ${({ theme }) => theme.contrast};
-
-      &:hover {
-        color: ${({ theme }) => theme.textSecondary};
-        background: ${({ theme }) => theme.accent};
-      }
-    }
-    p {
+    p,
+    a {
+      font-family: JetBrains Mono;
+      font-size: 20px;
       line-height: 175%;
       @media (max-width: 800px) {
         line-height: 0.5rem;
@@ -79,7 +72,7 @@ const Contact = () => {
                         : `https://www.instagram.com/${item.data}`
                     }
                   >
-                    <button>{item.type.toUpperCase()}</button>
+                    <LinkBtn>{item.type.toUpperCase()}</LinkBtn>
                   </a>
                 )}
               </div>
