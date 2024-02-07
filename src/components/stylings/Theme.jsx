@@ -65,6 +65,11 @@ const sharedTheme = {
     right: "0% 90% 0 0",
   },
 
+  artshared: {
+    green: "#4A6C53",
+    greentxt: "#f7f7f7",
+  },
+
   lightblue: "#bee5f5",
   purple: "#483d8b",
   vividblue: "#414870",
@@ -99,6 +104,10 @@ export const darkTheme = {
   opacity: "rgba(1,1,1,.5)",
   illustrationContrast: "yellow",
   designprimer: "gray",
+  art: {
+    background: "#031117",
+    primaryTxt: "#ffffff",
+  },
 
   frontendnew: {
     pink: "#d03fee",
@@ -128,6 +137,10 @@ export const lightTheme = {
   opacity: "rgba(1,1,1,.5)",
   illustrationContrast: "yellow",
   designprimer: "gray",
+  art: {
+    background: "#D3E1D7",
+    primaryTxt: "#000000",
+  },
 
   frontendnew: {
     bgSecondary: "#f7f7ff",

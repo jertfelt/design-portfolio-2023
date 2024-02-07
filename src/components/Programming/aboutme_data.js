@@ -9,7 +9,7 @@ export const aboutMe_data = [
       quotes: {
         quote_1: {
           title: "Omtänksam & driven",
-          text: "“Tova är väldigt driven och engagerad med ett bra öga för UX och en väldigt omtänksam medmänniska och arbetskamrat som tänker på teamets bästa i alla lägen.”– Christian Fujimaki Ahlsén, Arbetsförmedlingen",
+          text: "“Tova är väldigt driven och engagerad med ett bra öga för UX och en väldigt omtänksam medmänniska och arbetskamrat som tänker på teamets bästa i alla lägen.“– Christian Fujimaki Ahlsén, Arbetsförmedlingen",
         },
         quote_2: {
           title: "Nyfiken & engagerad",

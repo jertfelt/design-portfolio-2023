@@ -6,7 +6,7 @@ import withTranslation, {
   getStaticProps,
 } from "@component/components/utils/getStaticProps";
 import { useContext, useEffect } from "react";
-import ArtMain from "@component/components/Art/ArtMainPage";
+import ArtPageStart from "@component/components/Art/ArtPageStart";
 
 const Art = () => {
   const { selectedPage, setSelectedPage } = useContext(AppContext);
@@ -20,7 +20,8 @@ const Art = () => {
   return (
     <>
       <HeadIndex />
-      <WorkInProgress type="ART" />
+      <ArtPageStart />
+      {/* <WorkInProgress type="ART" /> */}
       {/* <ArtMain/> */}
     </>
   );
