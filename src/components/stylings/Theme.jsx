@@ -8,6 +8,8 @@ const sharedTheme = {
     white: "white",
   },
   fonts: {
+    illustrationTextFont: "Arya",
+
     frontendheader: {
       primary: "'Armata', sans-serif",
       fallback: "'Magra', sans-serif",
@@ -102,13 +104,19 @@ export const darkTheme = {
   black: "rgb(11, 4, 4)",
   white: "#f2f2f2",
   opacity: "rgba(1,1,1,.5)",
-  illustrationContrast: "yellow",
+  illustrationContrast: "#EEDC48",
   designprimer: "gray",
   art: {
     background: "#031117",
     primaryTxt: "#ffffff",
   },
-
+  illustration: {
+    background: "#1B1B1B",
+    contentBg: "#D9D9D9",
+    txt: "black",
+    bgContrast: "white",
+    yellow: "#EEDC48",
+  },
   frontendnew: {
     pink: "#d03fee",
     gray: "#e0e6e1",
@@ -135,11 +143,18 @@ export const lightTheme = {
   textPrimary: "black",
   textSecondary: "white",
   opacity: "rgba(1,1,1,.5)",
-  illustrationContrast: "yellow",
+  illustrationContrast: "#EEDC48",
   designprimer: "gray",
   art: {
     background: "#D3E1D7",
     primaryTxt: "#000000",
+  },
+  illustration: {
+    background: "#EEDC48",
+    contentBg: "#D9D9D9",
+    txt: "black",
+    bgContrast: "black",
+    yellow: "#1B1B1B",
   },
 
   frontendnew: {
