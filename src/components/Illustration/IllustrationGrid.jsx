@@ -31,6 +31,9 @@ const Content = styled.section`
   .alignleft {
     text-align: right;
   }
+  @media (max-width: 900px) {
+    padding: 1rem;
+  }
 `;
 
 const ImageContainer = styled.div`
