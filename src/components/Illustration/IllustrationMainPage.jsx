@@ -16,6 +16,8 @@ const Section = styled.main`
   padding-right: 5rem;
   @media (max-width: 900px) {
     padding-top: 7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 `;
 
