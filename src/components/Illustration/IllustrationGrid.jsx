@@ -202,99 +202,98 @@ const IllustrationGrid = () => {
 
       <SecondRow>
         <ArticleSecondRow>
-          <a href="">
-            <ImgContainer2ndRow>
-              <Img2ndRow
-                alt="Collage, en dödskalle med en halo av ett snäckskal"
-                src={amnesty}
-                quality={100}
-              ></Img2ndRow>
-            </ImgContainer2ndRow>
-          </a>
+          <ImgContainer2ndRow>
+            <Img2ndRow
+              alt="Gåvokort åt Amnesty Sverige"
+              src={amnesty}
+              quality={100}
+            ></Img2ndRow>
+          </ImgContainer2ndRow>
         </ArticleSecondRow>
       </SecondRow>
       <FourthRow>
         <SecondColumn>
           <SecondColumnImageContainer>
-            <SecondColumnImage alt="Your Alt Text" src={whiteblindness} />
+            <SecondColumnImage
+              alt="illustration om rasism"
+              src={whiteblindness}
+            />
           </SecondColumnImageContainer>
         </SecondColumn>
         <FirstColumn>
           <ArticleFirstRow>
             <ImgContainerFirstRow>
-              <ImgFirstRow alt="" src={lsu} quality={100} />
+              <ImgFirstRow
+                alt="Illustration på väska åt LSU"
+                src={lsu}
+                quality={100}
+              />
             </ImgContainerFirstRow>
           </ArticleFirstRow>
           <ArticleFirstRow>
-            <a href="">
-              <ImgContainerFirstRow>
-                <ImgFirstRow alt="" src={frihet} quality={100} />
-              </ImgContainerFirstRow>
-            </a>
+            <ImgContainerFirstRow>
+              <ImgFirstRow
+                alt="Animerad illustration till frihet.se"
+                src={frihet}
+                quality={100}
+              />
+            </ImgContainerFirstRow>
           </ArticleFirstRow>
         </FirstColumn>
       </FourthRow>
       <ThirdRow>
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow
-                alt="Collage, en dödskalle med en halo av ett snäckskal"
-                src={wescf}
-                quality={100}
-              />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow
+              alt="Illustration till WESCF"
+              src={wescf}
+              quality={100}
+            />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow
-                alt="Collage, en dödskalle med en halo av ett snäckskal"
-                src={klimatkamp}
-                quality={100}
-              />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow
+              alt="Illustration till RE:Public"
+              src={klimatkamp}
+              quality={100}
+            />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
       </ThirdRow>
       <FirstRow>
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow
-                alt="Collage till boken Under Ditt Finger, utgiven av Natur & Kultur"
-                src={paflykt}
-                quality={100}
-              />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow
+              alt="Sida ur serien På Flykt, publicerad i magasinet RE:Public"
+              src={paflykt}
+              quality={100}
+            />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow alt="OmVärlden" src={leopard} quality={100} />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow
+              alt="Illustration av en leopard som smyger i skogen"
+              src={leopard}
+              quality={100}
+            />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow
-                alt="Illustrerad bild av en flicka som tittar sig i spegeln"
-                src={isatou}
-                quality={100}
-              />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow alt="Porträtt på Isatou" src={isatou} quality={100} />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
 
         <ArticleFirstRow>
-          <a href="">
-            <ImgContainerFirstRow>
-              <ImgFirstRow alt="" src={inferno} quality={100} />
-            </ImgContainerFirstRow>
-          </a>
+          <ImgContainerFirstRow>
+            <ImgFirstRow
+              alt="Illustration om dödsångest"
+              src={inferno}
+              quality={100}
+            />
+          </ImgContainerFirstRow>
         </ArticleFirstRow>
       </FirstRow>
       <p className="alignleft">2013- 2024</p>
