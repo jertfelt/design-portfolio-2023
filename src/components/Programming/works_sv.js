@@ -1,7 +1,13 @@
 export const works_sv = [
   {
+    title: "Systemutvecklare",
+    length: "(April 2024 - Pågående)",
+    description: "Frontendutvecklare inom UI/UX-teamet.",
+    place: "Lantmäteriet",
+  },
+  {
     title: "Utbildare",
-    length: "(Januari 2024-Pågående)",
+    length: "(Januari 2024-April 2024)",
     description:
       "Deltidsanställd som utbildare på YH-skolor i Sverige. Lär ut bland annat UX/UI ur ett frontend-perspektiv.",
     place: "REKY",
@@ -44,8 +50,15 @@ export const works_sv = [
 ];
 export const works_en = [
   {
+    title: "System developer",
+    length: "(April 2024 - Present)",
+    description:
+      "Frontend developer within the UI/UX design team of the Land Survey authority.",
+    place: "The Land Survey",
+  },
+  {
     title: "Educator",
-    length: "(January 2024 - Present)",
+    length: "(January 2024 - April 2024)",
     description:
       "Part-time employed as an educator at vocational schools in Sweden. Teach, among other things, UX/UI from a frontend perspective.",
     place: "REKY",
