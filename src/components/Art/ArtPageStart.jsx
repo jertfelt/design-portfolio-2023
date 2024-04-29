@@ -79,18 +79,19 @@ const AboutMeArtPage = styled.article`
 `;
 
 const FooterArt = styled.footer`
-  background-color: ${({ theme }) => theme.artshared.green};
+  background-color: ${({ theme }) => theme.art.background};
+  color: ${({ theme }) => theme.art.primaryTxt};
 
   min-height: 10vh;
   margin: 0;
   padding: 2rem;
-  color: ${({ theme }) => theme.artshared.greentxt};
+
   font-size: 28px;
   @media (max-width: 819px) {
     font-size: 18px;
   }
   hr {
-    color: ${({ theme }) => theme.artshared.greentxt};
+    color: ${({ theme }) => theme.art.primaryTxt};
   }
 `;
 const Buttons = styled.div`
