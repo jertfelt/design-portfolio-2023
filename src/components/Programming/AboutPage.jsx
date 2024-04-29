@@ -355,7 +355,7 @@ const ImageSection = ({ language }) => {
         alt={
           language === "sv"
             ? "Tova och Louise står och poserar med pokal och tavla."
-            : "Tova and Louise poses with prize"
+            : "Tova and Louise poses with the Publishing prize"
         }
       />
 

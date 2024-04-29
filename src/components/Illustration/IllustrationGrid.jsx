@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-
 import mona from "../../../public/illustraion/mona-monasar-modersmal-tova-jertfelt.png";
 import klimatkamp from "../../../public/illustraion/republic-jertfelt-klimatkampar-illustration-sydafrika.png";
 import shell from "../../../public/illustraion/shell-is-hell.png";
@@ -11,7 +10,6 @@ import wescf from "../../../public/illustraion/sustainable-development-wescf-tov
 import lsu from "../../../public/illustraion/bag-lsu.png";
 import paflykt from "../../../public/illustraion/pa-flykt-republic-jertfelt-sida3.png";
 import leopard from "../../../public/illustraion/Leopard--print.png";
-import ottar from "../../../public/illustraion/ottar-png-version-tova-jertfelt-2021.png";
 import isatou from "../../../public/illustraion/isatou-portratt-insta.png";
 import inferno from "../../../public/illustraion/inferno-dance-tova-jertfelt-poster-for-sale-print-illustration-tova-jertfelt.png";
 import frihet from "../../../public/illustraion/TJ-GIF1-SDochNMR-hatkarlek_mindregif.gif";
@@ -179,7 +177,6 @@ const IllustrationGrid = () => {
         return shell;
       case "omv":
         return omv;
-
       default:
         return "";
     }

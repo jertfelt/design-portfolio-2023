@@ -30,7 +30,7 @@ export const firstFour = [
       aHref: "/various",
       picture: "shell",
       sv: {
-        alt: "Collage, en dödskalle med en halo av ett snäckskal, har händerna i en bedjande gest.",
+        alt: "Collage. En dödskalle med en gloria i form av ett snäckskal, har händerna i en bedjande gest.",
       },
       en: {
         alt: "Collage of a skull with a halo of a large shell.",

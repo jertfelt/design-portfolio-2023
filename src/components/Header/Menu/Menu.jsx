@@ -133,9 +133,11 @@ const DropDownMenu = ({ open, setOpen }) => {
     return (
       <Link href="/contact" className="contact" onClick={() => setOpen(!open)}>
         {selected === "/contact" ? (
-          <i> &#9993; {t("menu.Kontakt")}</i>
+          <i aria-label={t("menu.Kontakt")}> &#9993; {t("menu.Kontakt")}</i>
         ) : (
-          <>&#9993; {t("menu.Kontakt")}</>
+          <span aria-label={t("menu.Kontakt")}>
+            &#9993; {t("menu.Kontakt")}
+          </span>
         )}
       </Link>
     );
@@ -143,7 +145,11 @@ const DropDownMenu = ({ open, setOpen }) => {
 
   return (
     <StyledMenu open={open} ref={ref}>
-      <button className="mobileOnly" onClick={() => setOpen(!open)}>
+      <button
+        className="mobileOnly"
+        onClick={() => setOpen(!open)}
+        aria-label="Close"
+      >
         X
       </button>
       <Content>
