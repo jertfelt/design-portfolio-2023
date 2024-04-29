@@ -16,8 +16,8 @@ const BackgroundArtPage = styled.main`
 
   padding: 3rem;
   padding-top: 7rem;
-  background-color: ${({ theme }) => theme.artshared.green};
-  color: ${({ theme }) => theme.artshared.greentxt};
+  background-color: ${({ theme }) => theme.art.background};
+  color: ${({ theme }) => theme.art.primaryTxt};
   h1 {
     font-family: Arya;
     font-size: 30px;
@@ -47,22 +47,24 @@ const AboutMeArtPage = styled.article`
 `;
 
 const FooterArt = styled.footer`
-  background-color: ${({ theme }) => theme.artshared.green};
-
   min-height: 10vh;
   margin: 0;
   padding: 2rem;
-  color: ${({ theme }) => theme.artshared.greentxt};
+
   font-size: 28px;
   @media (max-width: 819px) {
     font-size: 18px;
   }
-  hr {
-    color: ${({ theme }) => theme.artshared.greentxt};
+  hr,
+  a {
+    color: ${({ theme }) => theme.art.primaryTxt};
   }
+  background-color: ${({ theme }) => theme.art.background};
+  color: ${({ theme }) => theme.art.primaryTxt};
 `;
 const Buttons = styled.div`
   a {
+    color: ${({ theme }) => theme.art.primaryTxt};
     font-family: Arya;
   }
   @media (max-width: 819px) {

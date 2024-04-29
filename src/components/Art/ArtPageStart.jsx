@@ -93,10 +93,14 @@ const FooterArt = styled.footer`
   hr {
     color: ${({ theme }) => theme.art.primaryTxt};
   }
+  a {
+    color: ${({ theme }) => theme.art.primaryTxt};
+  }
 `;
 const Buttons = styled.div`
   a {
     font-family: Arya;
+    color: ${({ theme }) => theme.art.primaryTxt};
   }
   @media (max-width: 819px) {
     display: flex;
