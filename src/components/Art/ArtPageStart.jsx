@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import { artPageTxt } from "./artPageTxts";
 
 import ArtPageFooter from "./ArtPageFooter";
+import ArtGalleryStart from "./ArtGalleryStart";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -100,7 +101,7 @@ const ArtPageStart = () => {
             <p key={i}>{paragraph}</p>
           ))}
         </AboutMeArtPage>
-        <Gallery></Gallery>
+        <ArtGalleryStart lang={language} />
       </BackgroundArtPage>
       <ArtPageFooter
         page="start"

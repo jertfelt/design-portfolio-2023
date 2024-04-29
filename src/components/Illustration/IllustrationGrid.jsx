@@ -34,7 +34,7 @@ const Content = styled.section`
   }
 `;
 
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
@@ -42,7 +42,7 @@ const ImageContainer = styled.div`
   background: ${({ theme }) => theme.illustration.txt};
 `;
 
-const ImgContainerFirstRow = styled(ImageContainer)`
+export const ImgContainerFirstRow = styled(ImageContainer)`
   height: 400px;
 `;
 const ImgContainer2ndRow = styled(ImageContainer)`
@@ -50,7 +50,7 @@ const ImgContainer2ndRow = styled(ImageContainer)`
   width: 100%;
 `;
 
-const StyledImage = styled(Image)`
+export const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -60,7 +60,7 @@ const StyledImage = styled(Image)`
   }
 `;
 
-const ImgFirstRow = styled(StyledImage)`
+export const ImgFirstRow = styled(StyledImage)`
   max-height: 400px;
 `;
 
@@ -73,7 +73,7 @@ const Article = styled.article`
   overflow: hidden;
 `;
 
-const ArticleFirstRow = styled(Article)`
+export const ArticleFirstRow = styled(Article)`
   max-height: 400px;
 `;
 
@@ -106,7 +106,7 @@ const FirstRow = styled.div`
 const SecondRow = styled.div`
   width: 100%;
 `;
-const ThirdRow = styled.div`
+export const ThirdRow = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
