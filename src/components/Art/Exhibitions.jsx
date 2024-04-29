@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { artPageTxt } from "./artPageTxts";
 import { ExhibitionsBtn } from "./ArtPageBtns";
+import ArtPageFooter from "./ArtPageFooter";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -115,15 +116,7 @@ const ExhibitionsPage = () => {
             ))}
         </AboutMeArtPage>
       </BackgroundArtPage>
-      <FooterArt>
-        <Buttons>
-          <div></div>
-          <ExhibitionsBtn>
-            {/* <Link href={"/art/exhibitions"}>{artText.btn1}</Link> */}
-          </ExhibitionsBtn>
-        </Buttons>
-        <hr></hr>
-      </FooterArt>
+      <ArtPageFooter page="exhibitions" link1={artText.btn1} link2="" />
     </Container>
   );
 };
