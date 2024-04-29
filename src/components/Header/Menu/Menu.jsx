@@ -135,9 +135,7 @@ const DropDownMenu = ({ open, setOpen }) => {
         {selected === "/contact" ? (
           <i aria-label={t("menu.Kontakt")}> &#9993; {t("menu.Kontakt")}</i>
         ) : (
-          <span aria-label={t("menu.Kontakt")}>
-            &#9993; {t("menu.Kontakt")}
-          </span>
+          <>&#9993; {t("menu.Kontakt")}</>
         )}
       </Link>
     );
