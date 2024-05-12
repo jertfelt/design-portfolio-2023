@@ -2,7 +2,8 @@ export const works_sv = [
   {
     title: "Systemutvecklare",
     length: "(April 2024 - Pågående)",
-    description: "Frontendutvecklare inom UI/UX-teamet.",
+    description:
+      "Frontendutvecklare inom UI/UX-teamet. Ansvarig för förvaltning och nyutveckling av designsystemet REDET, samt ansvarig för UX-arbete i samband med designsystemet.",
     place: "Lantmäteriet",
   },
   {
@@ -53,7 +54,7 @@ export const works_en = [
     title: "System developer",
     length: "(April 2024 - Present)",
     description:
-      "Frontend developer within the UI/UX design team of the Land Survey authority.",
+      "Frontend developer within the UI/UX team. Responsible for management and new development of the REDET design system, as well as responsible for UX work in connection with the design system.",
     place: "The Land Survey",
   },
   {

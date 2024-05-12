@@ -2,7 +2,7 @@ export const qualities_sv = [
   {
     title: "FRONTENDUTVECKLING",
     tools:
-      "Verktyg: Git, Bitbucket, CMS-system (Strapi, Wordpress, Squarespace) Firebase, Netlify, Google Dev + Lighthouse, MongoDB, OCP, Android Studio, Expo.Dev, Visual Studio Code, Postman",
+      "Verktyg: Git, Bitbucket, CMS-system (Strapi, Wordpress, Squarespace) Storybook, Firebase, Netlify, Google Dev + Lighthouse, MongoDB, OCP, Android Studio, Expo.Dev, Visual Studio Code, Postman",
     skills:
       "JAVASCRIPT, TYPESCRIPT, REACT, NEXT.JS, ANGULAR,  NODE.JS, HTML/CSS, SASS, STYLED COMPONENTS, CHART.JS, REST.API, VERSIONSHANTERING, CI/CD, REDHAT",
   },
