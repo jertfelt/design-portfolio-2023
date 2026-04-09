@@ -66,11 +66,7 @@ const Contact = () => {
                 ) : (
                   <a
                     target="_blank"
-                    href={
-                      item.type === "linkedin"
-                        ? `https://www.linkedin.com/in/${item.data}`
-                        : `https://www.instagram.com/${item.data}`
-                    }
+                    href={`https://www.linkedin.com/in/${item.data}`}
                   >
                     <LinkBtn>{item.type.toUpperCase()}</LinkBtn>
                   </a>

@@ -318,9 +318,6 @@ const Body = () => {
       </WrapperExhibitions>
 
       <WrapperFooter>
-        <a href="https://www.instagram.com/jertfelt/" target="_blank">
-          <button>Instagram</button>
-        </a>
         <p>
           {t("artistpages.main.footerInfo")}
           <br />
