@@ -65,11 +65,6 @@ const Homepage = () => {
                     LinkedIn
                   </a>
                 </LinkBtn>
-                <LinkBtn className="second">
-                  <a href="https://www.instagram.com/jertfelt/" target="_blank">
-                    Instagram
-                  </a>
-                </LinkBtn>
               </div>
             </ColumnHomePage>
           </TextContainerHomePage>
