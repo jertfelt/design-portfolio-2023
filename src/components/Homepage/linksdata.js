@@ -3,7 +3,7 @@ export const linksdata = [
     link: {
       href: "programming",
     },
-    text: "Frontend,",
+    text: "Frontend",
     translation: true,
   },
   {
@@ -17,7 +17,7 @@ export const linksdata = [
     link: {
       href: "design",
     },
-    text: "Design & ,",
+    text: "Design",
   },
   {
     link: {

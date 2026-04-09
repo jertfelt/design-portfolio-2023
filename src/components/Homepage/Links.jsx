@@ -19,16 +19,16 @@ const LinksToPages = () => {
   const { t } = useTranslation();
   const selection = (e) => {
     switch (e.target.outerText) {
-      case "Frontend,":
+      case "Frontend":
         setSelectedPage({ value: "programming", url: "/programming" });
         break;
-      case "Art,":
+      case "Art":
         setSelectedPage({ value: "art", url: "/art" });
         break;
-      case "Konst,":
+      case "Konst":
         setSelectedPage({ value: "art", url: "/art" });
         break;
-      case "Design &":
+      case "Design":
         setSelectedPage({ value: "design", url: "/design" });
         break;
       case "Illustration":
